@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>continue文 - 次のループの先頭へ移動 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="continue文を使うと、次のループの先頭へ移動できます。for文とwhile文とのブロックの中で使用できます。">
+<title> continue statement-move to the beginning of the next loop  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="You can use the continue statement to move to the beginning of the next loop. It can be used in the block of  for statement and  while statement.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="continue文 - 次のループの先頭へ移動 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="continue文を使うと、次のループの先頭へ移動できます。for文とwhile文とのブロックの中で使用できます。" />
+<meta name="twitter:title" content=" continue statement-move to the beginning of the next loop  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="You can use the continue statement to move to the beginning of the next loop. It can be used in the block of  for statement and  while statement." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210126140655.html">continue文 - 次のループの先頭へ移動</a></h2>
+<h2><a href="/blog/20210126140655.html"> continue statement-move to the beginning of the next loop </a></h2>
 <p>
-  continue文を使うと、次のループの先頭へ移動できます。<a href="/blog/20210115151850.html">for文</a>と<a href="/blog/20210119082326.html">while文</a>とのブロックの中で使用できます。
+  You can use the continue statement to move to the beginning of the next loop. It can be used in the block of <a href="/blog/20210115151850.html"> for statement</a> and <a href="/blog/20210119082326.html"> while statement</a>.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,69 +100,69 @@
 
 
 <pre>
-for (ループ変数初期化;ループする条件;ループ変数更新) {
+for (Initialize loop variable; Condition to loop; Update loop variable) {
   
-  # 次のループへ移動
-  continue;
+  #Move to the next loop
+  continue; continue;
 }
 
-while (ループする条件) {
+while (condition to loop) {
   
-  # 次のループへ移動
-  continue;
+  #Move to the next loop
+  continue; continue;
 }
 </pre>
 <p>
-  for文のブロックの中でcontinue文を使って、次のループへ移動するサンプルです。偶数の時だけスキップして、次のループの先頭に移動しています。
+  This is a sample to move to the next loop by using the continue statement in the block of the for statement. It skips only when it is an even number and moves to the beginning of the next loop.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // for文で合計を求める
+  // Find the total with a for statement
   int32_t total = 0;
-  for (int32_t i = 0; i &lt; 10; i++) {
-    // 偶数のときだけ次のループへ移動
-    if (i % 2 == 0) {
-      continue;
+  for (int32_t i = 0; i &lt;10; i ++) {
+    // Move to the next loop only if it is an even number
+    if (i%2 == 0) {
+      continue; continue;
     }
     
-    total += i;
+    total + = i;
   }
   
   printf("%d\n", total);
 }
 </pre>
 <p>
-  出力結果
+  Output result
 </p>
 <pre>
-25
+twenty five
 </pre>
-<h3>goto文とcontinue文の関係性</h3>
+<h3> Relationship between goto statement and continue statement </h3>
 <p>
-  continue文は、一種のgoto文です。次のループの先頭に移動するという移動先の限定されたgoto文と考えてよいです。
+  The continue statement is a kind of goto statement. You can think of it as a goto statement with a limited destination that moves to the beginning of the next loop.
 </p>
 <p>
-  C言語では、できる限りgoto文を使わずにプログラムを書くのが良い作法とされています。
+  In C language, it is a good practice to write a program without using goto statements as much as possible.
 </p>
-<h3>continue文とif文の使い分け</h3>
+<h3> Use of continue statement and if statement properly </h3>
 <p>
-  continue文と<a href="/blog/20201224090954.html">if文</a>はどのように使い分けるのでしょうか。先ほど書いたサンプルは、if文でも書けますよね。
+  How do you use the continue statement and the <a href="/blog/20201224090954.html"> if statement</a> properly? You can also write the sample you wrote earlier with an if statement.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // for文で合計を求める
+  // Find the total with a for statement
   int32_t total = 0;
-  for (int32_t i = 0; i &lt; 10; i++) {
-    if (i % 2 != 0) {
-      total += i;
+  for (int32_t i = 0; i &lt;10; i ++) {
+    if (i%2! = 0) {
+      total + = i;
     }
   }
   
@@ -172,47 +170,47 @@ int main(void) {
 }
 </pre>
 <p>
-  ぶっちゃけると、すべてのプログラムはwhile文とif文があれば、書けます。それ以外の構文は、シンタックスシュガー(糖衣構文)です。
+  In a nutshell, all programs can be written with a while statement and an if statement. The other syntax is syntactic sugar.
 </p>
 <p>
-  (そのー、もっと厳密に書くと、goto文とif文だけで書ける。でもまぁ、gotoは、使いたくないしね。もっと低レベルのアセンブラになると、単純ジャンプ(C言語のgotoに該当)と条件ジャンプ(C言語のif文に該当)がもっとも基本的な制御命令です。ループは、コードの前方の位置に条件ジャンプすると書く。)
+  (Well, if you write it more strictly, you can write it only with goto and if statements. But well, I don't want to use goto. When it comes to lower level assemblers, simple jumps (corresponding to C language goto) and conditional jumps (Corresponding to the if statement in C language) is the most basic control instruction. The loop is written by conditional jumping to the position before the code.)
 </p>
 <p>
-  ただ、ある分岐を表現するのに、continue文を使った方が、見通しが良いという場合があり、その場合にcontinueを使います。
+  However, there are cases where it is better to use the continue statement to express a branch, in which case continue is used.
 </p>
 <p>
-  たとえば、行の先頭の場合だけを、例外的に扱いたいので、スキップしたいという場合などです。
+  For example, if you want to treat only the beginning of a line as an exception and want to skip it.
 </p>
 <pre>
-while (条件) {
-  // 行が先頭だったらスキップ
+while (condition) {
+  // Skip if the line is at the beginning
   if (line == 1) {
-    continue;
+    continue; continue;
   }
   
-  // メインの処理
+  // Main process
 }
 </pre>
 <p>
-  これは、if文でも書けます。メインの処理の入れ子が一つ深くなっていますね。
+  This can also be written in an if statement. The nesting of the main process is one deeper.
 </p>
 <pre>
-while (条件) {
-  // 行が先頭だったらスキップ
+while (condition) {
+  // Skip if the line is at the beginning
   if (line =! 1) {
-    // メインの処理
+    // Main process
   }
 }
 </pre>
 <p>
-  コンピューターから見ればどちらも同じですが、メイン処理を強調したい場合は、例外的なものをcontinue文で飛ばすという書き方ができます。
+  Both are the same from the computer's point of view, but if you want to emphasize the main process, you can write the exception by skipping the continue statement.
 </p>
 <p>
-  人間の感性や知覚のしやすさのための使い分けという感じでしょうか。
+  Is it a feeling that it is used properly for human sensitivity and ease of perception?
 </p>
-<h3>次のループへ移動する文のPerlとの違い</h3>
+<h3> Differences from Perl in statements that move to the next loop </h3>
 <p>
-  C言語のcontinue文は、Perlの<a href="https://perlzemi.com/blog/20080329120687.html">next文</a>に該当します。
+  The C language continue statement corresponds to Perl's <a href="https://perlzemi.com/blog/20080329120687.html"> next statement</a>.
 </p>
 
   </div>
@@ -240,8 +238,7 @@ while (条件) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

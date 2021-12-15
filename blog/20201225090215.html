@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>C言語の真偽値 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="C言語の真偽値についての解説です。">
+<title> C language truth value  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="This is an explanation of the truth value of C language.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="C言語の真偽値 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="C言語の真偽値についての解説です。" />
+<meta name="twitter:title" content=" C language truth value  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="This is an explanation of the truth value of C language." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20201225090215.html">C言語の真偽値</a></h2>
+<h2><a href="/blog/20201225090215.html"> C language truth value </a></h2>
 <p>
-  C言語の真偽値についての解説です。
+  This is an explanation of the truth value of C language.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -101,26 +99,26 @@
 </div>
 
 
-<h3>C言語の真偽値</h3>
+<h3> C language truth value </h3>
 <p>
-  C言語では0は偽値で、それ以外が真値です。非常にシンプルです。NULLは、C言語では0と等価として定義されるので、偽値です。
+  In C, 0 is a false value and everything else is a true value. It's very simple. NULL is a false value because it is defined as equivalent to 0 in C.
 </p>
 <table>
   <tr>
-    <th>真値</th><td>0以外</td>
+    <th> True value </th> <td> Non-zero </td>
   </tr>
   <tr>
-    <th>偽値</th><td>0</td>
+    <th> False value </th> <td> 0 </td>
   </tr>
 </table>
 <p>
-  <a href="/blog/20201224090954.html">if文</a>で真偽値を使ってみましょう。
+  Let's use the true and false value in the <a href="/blog/20201224090954.html"> if statement</a>.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   int32_t flag = 1;
   // int32_t flag = 0;
   
@@ -133,18 +131,18 @@ int main(void) {
 }
 </pre>
 <p>
-  flagが1の時は「OK」、0のときは「Not OK」と表示されます。
+  When the flag is 1, "OK" is displayed, and when the flag is 0, "Not OK" is displayed.
 </p>
 <p>
-  NULLも使ってみましょう。
+  Let's also use NULL.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
-  const char* string = "Hello";
-  // const char* string = NULL;
+int main (void) {
+  const char * string = "Hello";
+  // const char * string = NULL;
   
   if (string) {
     printf("OK\n");
@@ -155,36 +153,36 @@ int main(void) {
 }
 </pre>
 <p>
-  文字列が代入されているときは「OK」、NULLが代入されているときは「Not OK」と表示されます。
+  "OK" is displayed when a character string is assigned, and "Not OK" is displayed when NULL is assigned.
 </p>
-<h3>C言語には真偽値型は存在しますか?</h3>
+<h3> Is there a false value type in C? </H3>
 <p>
-  <a href="/blog/20201206125815.html">C99</a>でstdbool.hが導入され_Bool型が追加されました。
-</p>
-<p>
-  1か0にしかならない型です。
+  <a href="/blog/20201206125815.html"> C99</a> introduced stdbool.h and added the _Bool type.
 </p>
 <p>
-  ただし処理系が1bitで実装するということは考えにくく、最低1バイト使うので、汎用的に使える<a href="/blog/20201117090747.html">int8_t</a>でよいかもしれないとも思います。
+  It is a type that can only be 1 or 0.
 </p>
 <p>
-  普段は<a href="/blog/20201130082751.html">int32_t</a>を使って、サイズを節約したい場合はint8_tみたいな。
+  However, it is unlikely that the processing system will be implemented with 1 bit, and at least 1 byte is used, so I think that <a href="/blog/20201117090747.html"> int8_t</a> that can be used for general purposes may be sufficient. ..
 </p>
 <p>
-  使うかどうかの判断はお任せします。僕の評価は、あってもよいけど、ないならないでよいという感じです。
-</p>
-<h3>Perlの真偽値との違いは?</h3>
-<p>
-  C言語の真偽値は<a href="https://perlzemi.com/blog/20080323120628.html">Perlの真偽値</a>と似ています。
+  I usually use <a href="/blog/20201130082751.html"> int32_t</a>, and if I want to save size, it's like int8_t.
 </p>
 <p>
-  C言語では、0が偽値で、それ以外が真です。NULLは、0と等価として定義されているので、偽になります。
+  I will leave it to you to decide whether to use it. My evaluation is that it's okay, but it doesn't have to be.
+</p>
+<h3> What is the difference from Perl's boolean value? </H3>
+<p>
+  The C Boolean value is similar to <a href="https://perlzemi.com/blog/20080323120628.html"> Perl Boolean</a>.
 </p>
 <p>
-  Perlでは、数値0, 文字列の0, undef, 空文字列, 空のリストが、偽値で、それ以外は真です。
+  In C, 0 is a false value and everything else is true. NULL is false because it is defined as equivalent to 0.
 </p>
 <p>
-  体感としては真偽値は、PerlとC言語は似た感覚で使えます。
+  In Perl, the number 0, the string 0, undef, the empty string, and the empty list are false values, otherwise true.
+</p>
+<p>
+  As for the true and false value, Perl and C language can be used in a similar way.
 </p>
 
   </div>
@@ -212,8 +210,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

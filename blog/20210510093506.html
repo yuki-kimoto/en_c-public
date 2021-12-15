@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>fprintf関数 - フォーマットした文字列を出力先を指定して出力 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="fprintf関数は、フォーマットした文字列を出力先を指定して出力できます。printf関数は、標準出力に出力しますが、出力先を指定できるのが、fprintf関数です。stdio.hヘッダを読み込むと使えます。">
+<title> fprintf function --outputs the formatted string to the output destination  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="The  fprintf function  can output a formatted character string by specifying the output destination. The  printf function outputs to the standard output, but the fprintf function can specify the output destination. You can use it by reading the  stdio.h header.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="fprintf関数 - フォーマットした文字列を出力先を指定して出力 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="fprintf関数は、フォーマットした文字列を出力先を指定して出力できます。printf関数は、標準出力に出力しますが、出力先を指定できるのが、fprintf関数です。stdio.hヘッダを読み込むと使えます。" />
+<meta name="twitter:title" content=" fprintf function --outputs the formatted string to the output destination  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="The  fprintf function  can output a formatted character string by specifying the output destination. The  printf function outputs to the standard output, but the fprintf function can specify the output destination. You can use it by reading the  stdio.h header." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,34 +60,34 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library.html">
-        <span itemprop="name">C標準ライブラリ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C standard library </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library/stdio.html">
-        <span itemprop="name">stdio.h</span>
-      </a>
-      <meta itemprop="position" content="3" />
+        <span itemprop = "name"> stdio.h </span>
+     </a>
+      <meta itemprop = "position" content = "3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210510093506.html">fprintf関数 - フォーマットした文字列を出力先を指定して出力</a></h2>
+<h2><a href="/blog/20210510093506.html"> fprintf function --outputs the formatted string to the output destination </a></h2>
 <p>
-  <b>fprintf関数</b>は、フォーマットした文字列を出力先を指定して出力できます。<a href="/blog/20210419083246.html">printf関数</a>は、標準出力に出力しますが、出力先を指定できるのが、fprintf関数です。<a href="/blog/20210418083246.html">stdio.h</a>ヘッダを読み込むと使えます。
+  The <b> fprintf function </b> can output a formatted character string by specifying the output destination. The <a href="/blog/20210419083246.html"> printf function</a> outputs to the standard output, but the fprintf function can specify the output destination. You can use it by reading the <a href="/blog/20210418083246.html"> stdio.h</a> header.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -109,72 +107,72 @@
 
 <pre>
 #include &lt;stdio.h&gt;
-int fprintf(FILE *fp, const char *format, ...);
+int fprintf (FILE * fp, const char * format, ...);
 </pre>
-<h3>標準出力に出力する</h3>
+<h3> Output to standard output </h3>
 <p>
-  fprintf関数を使って、標準出力に出力してみましょう。printf関数と同じことをします。<a href="/blog/20210512083754.html">stdout</a>は、標準出力ストリームを意味するFILE構造体へのポインタです。
+  Let's use the fprintf function to output to standard output. Do the same as the printf function. <a href="/blog/20210512083754.html"> stdout</a> is a pointer to a FILE structure that means a standard output stream.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 
-int main(void) {
-  const char* message = "Hello";
-  fprintf(stdout, "%s\n", message);
+int main (void) {
+  const char * message = "Hello";
+  fprintf (stdout, "%s\n", message);
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 Hello
 </pre>
-<h3>標準エラー出力に出力する</h3>
+<h3> Output to standard error output </h3>
 <p>
-  fprintf関数を使って、標準エラー出力に出力してみましょう。<a href="/blog/20210511083754.html">stderr</a>は、標準エラーストリームを意味するFILE構造体へのポインタです。
+  Let's use the fprintf function to output to standard error output. <a href="/blog/20210511083754.html"> stderr</a> is a pointer to the FILE structure, which means standard error stream.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 
-int main(void) {
-  const char* message = "Hello";
-  fprintf(stderr, "%s\n", message);
+int main (void) {
+  const char * message = "Hello";
+  fprintf (stderr, "%s\n", message);
 }
 </pre>
 <p>
-  出力結果です。エラー出力に出力されます。
+  This is the output result. It is output to the error output.
 </p>
 <pre>
 Hello
 </pre>
-<h3>ファイルに出力する</h3>
+<h3> Output to file </h3>
 <p>
-  fprintf関数を使って、ファイルに出力してみましょう。fopen関数でファイルを開いて、ファイルに書き込んでみましょう。開いたファイルはfclose関数で閉じています。
+  Let's print it to a file using the fprintf function. Let's open the file with the fopen function and write to the file. The opened file is closed with the fclose function.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // 書き込み用にファイルを開く
-  const char* out_file = "output.txt";
-  FILE* out_fp = fopen(out_file, "w");
+  // Open the file for writing
+  const char * out_file = "output.txt";
+  FILE * out_fp = fopen (out_file, "w");
   if (out_fp == NULL) {
-    fprintf(stderr, "Can't open file %s\n", out_file);
-    exit(1);
+    fprintf (stderr, "Can't open file%s\n", out_file);
+    exit (1);
   }
   
-  // fprintf関数でファイルに書き込む
-  const char* message = "Hello";
-  fprintf(out_fp, "%s\n", message);
+  // Write to a file with the fprintf function
+  const char * message = "Hello";
+  fprintf (out_fp, "%s\n", message);
   
-  // ファイルを閉じる
-  fclose(out_fp);
+  // Close the file
+  fclose (out_fp);
 }
 </pre>
 <p>
-  output.txtを開いてみましょう。以下の内容が出力されています。
+  Let's open output.txt. The following contents are output.
 </p>
 <pre>
 Hello
@@ -205,8 +203,7 @@ Hello
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

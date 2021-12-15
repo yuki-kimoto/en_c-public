@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>NULL - ヌルポインタ定数 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="NULLはヌルポインタ定数と呼ばれ「整数の0」または「(void*)にキャストした整数の0」として「stddef.h」で定義されています。">
+<title> NULL --Null pointer constant  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="NULL  is called a null pointer constant and is defined in "stddef.h" as "integer 0" or "integer 0 cast to (void *)".">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="NULL - ヌルポインタ定数 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="NULLはヌルポインタ定数と呼ばれ「整数の0」または「(void*)にキャストした整数の0」として「stddef.h」で定義されています。" />
+<meta name="twitter:title" content=" NULL --Null pointer constant  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="NULL  is called a null pointer constant and is defined in "stddef.h" as "integer 0" or "integer 0 cast to (void *)"." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,34 +60,34 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library.html">
-        <span itemprop="name">C標準ライブラリ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C standard library </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library/stddef.html">
-        <span itemprop="name">stddef.h</span>
-      </a>
-      <meta itemprop="position" content="3" />
+        <span itemprop = "name"> stddef.h </span>
+     </a>
+      <meta itemprop = "position" content = "3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210213090234.html">NULL - ヌルポインタ定数</a></h2>
+<h2><a href="/blog/20210213090234.html"> NULL --Null pointer constant </a></h2>
 <p>
-  <b>NULL</b>はヌルポインタ定数と呼ばれ「整数の0」または「(void*)にキャストした整数の0」として「stddef.h」で定義されています。
+  <b> NULL </b> is called a null pointer constant and is defined in "stddef.h" as "integer 0" or "integer 0 cast to (void *)".
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -108,21 +106,21 @@
 
 
 <p>
-  <a href="/blog/20210211090234.html">ポインタ</a>にNULLを代入したものはヌルポインタと呼ばれます。NULLはあらゆるポインタ型に代入できます。
+  Substituting NULL for <a href="/blog/20210211090234.html"> pointer</a> is called a null pointer. NULL can be assigned to any pointer type.
 </p>
 <pre>
-// ヌルポインタ
-void* ptr = NULL;
-int32_t* int32_ptr = NULL;
-float* float_ptr = NULL;
+// Null pointer
+void * ptr = NULL;
+int32_t * int32_ptr = NULL;
+float * float_ptr = NULL;
 </pre>
-<h3>NULLのサンプル</h3>
+<h3> NULL sample </h3>
 <p>
-  NULLのサンプルです。
+  This is a null sample.
 </p>
-<h4>メモリ割り当てのチェック</h4>
+<h4> Check memory allocation </h4>
 <p>
-  以下のサンプルでは、<a href="/blog/20210209082644.html">calloc関数</a>のメモリ割り当てに失敗した場合はNULLが返されます。ですので、メモリが割り当てられていることのチェックに利用できます。
+  In the sample below, NULL is returned if the memory allocation of the <a href="/blog/20210209082644.html"> calloc function</a> fails. Therefore, it can be used to check that memory is allocated.
 </p>
 <pre>
 #include &lt;stddef.h&gt;
@@ -130,29 +128,29 @@ float* float_ptr = NULL;
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-int main(void) {
-  // ポインタ
-  int32_t* nums = calloc(sizeof(int32_t), 10);
+int main (void) {
+  // Pointer
+  int32_t * nums = calloc (sizeof (int32_t), 10);
   
-  // ポインタがNULLではない
-  if (nums != NULL) {
+  // Pointer is not null
+  if (nums! = NULL) {
     printf("Success\n");
   }
   else {
     printf("Fail\n");
   }
-  free(nums);
+  free (nums);
 }
 </pre>
 <p>
-  出力結果
+  Output result
 </p>
 <pre>
 Success
 </pre>
-<h4>木のノードで子要素が存在するか</h4>
+<h4> Is there a child element in the node of the tree? </H4>
 <p>
-  木のノードで、子要素が存在するかどうかのチェックのサンプルです。
+  This is a sample of checking if a child element exists in a node of a tree.
 </p>
 <pre>
 #include &lt;stddef.h&gt;
@@ -161,35 +159,35 @@ Success
 #include &lt;stdlib.h&gt;
 
 struct myapp_node {
-  struct myapp_node* first_child;
-  struct myapp_node* last_child;
-};
+  struct myapp_node * first_child;
+  struct myapp_node * last_child;
+};;
 
-int main(void) {
+int main (void) {
   
-  // 親ノード
-  struct myapp_node* parent = calloc(sizeof(struct myapp_node), 1);
+  // Parent node
+  struct myapp_node * parent = calloc (sizeof (struct myapp_node), 1);
   
-  // 子ノード
-  struct myapp_node* first_child = calloc(sizeof(struct myapp_node), 1);
+  // Child node
+  struct myapp_node * first_child = calloc (sizeof (struct myapp_node), 1);
   
-  // 親ノードの最初の子に代入
-  parent-&gt;first_child = first_child;
+  // Assign to the first child of the parent node
+  parent-&gt;first_child= first_child;
   
-  if (parent-&gt;first_child != NULL) {
+  if (parent-&gt;first_child! = NULL) {
     printf("Have First Child\n");
   }
 
-  if (parent-&gt;last_child == NULL) {
+  if (parent-&gt;last_child== NULL) {
     printf("Don't Have Last Child\n");
   }
   
-  free(parent);
-  free(first_child);
+  free (parent);
+  free (first_child);
 }
 </pre>
 <p>
-  出力結果
+  Output result
 </p>
 <pre>
 Have First Child
@@ -220,8 +218,7 @@ Have First Child
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

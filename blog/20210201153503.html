@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>ヘッダファイルのインクルードガード - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="ヘッダを二重に読み込まれないようにするインクルードガードと呼ばれるテクニックがあります。">
+<title> Header file include guard  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="There is a technique called include guard that prevents double loading of headers.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="ヘッダファイルのインクルードガード - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="ヘッダを二重に読み込まれないようにするインクルードガードと呼ばれるテクニックがあります。" />
+<meta name="twitter:title" content=" Header file include guard  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="There is a technique called include guard that prevents double loading of headers." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/compile.html">
-        <span itemprop="name">コンパイル</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Compile </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210201153503.html">ヘッダファイルのインクルードガード</a></h2>
+<h2><a href="/blog/20210201153503.html"> Header file include guard </a></h2>
 <p>
-  ヘッダを二重に読み込まれないようにするインクルードガードと呼ばれるテクニックがあります。
+  There is a technique called include guard that prevents double loading of headers.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,7 +100,7 @@
 
 
 <p>
-  たとえば、以下のヘッダファイルは「spvm_field.h」というヘッダファイルですが、インクルードガードのテクニックが使われています。
+  For example, the following header file is a header file called "spvm_field.h", which uses the include guard technique.
 </p>
 <pre>
 #ifndef SPVM_FIELD_H
@@ -113,15 +111,15 @@
 enum {
   SPVM_FIELD_C_FLAG_PRIVATE = 1,
   SPVM_FIELD_C_FLAG_PUBLIC = 2,
-};
+};;
 
 struct spvm_field {
-  const char* name;
-  const char* signature;
-  SPVM_TYPE* type;
-  SPVM_PACKAGE* package;
-  SPVM_OP* op_field;
-  SPVM_OP* op_name;
+  const char * name;
+  const char * signature;
+  SPVM_TYPE * type;
+  SPVM_PACKAGE * package;
+  SPVM_OP * op_field;
+  SPVM_OP * op_name;
   int32_t id;
   int32_t index;
   int32_t flag;
@@ -130,70 +128,70 @@ struct spvm_field {
   int32_t offset;
   int32_t has_setter;
   int32_t has_getter;
-};
+};;
 
-SPVM_FIELD* SPVM_FIELD_new(SPVM_COMPILER* compiler);
+SPVM_FIELD * SPVM_FIELD_new (SPVM_COMPILER * compiler);
 
 #endif
 </pre>
 <p>
-  インクルードガードの部分を取り出してみましょう。
+  Let's take out the include guard part.
 </p>
 <pre>
 #ifndef SPVM_FIELD_H
 #define SPVM_FIELD_H
 
-// ヘッダの内容
+// Header content
 
 #endif
 </pre>
 <p>
-  これは、単純なマクロです。プリプロセッサで処理されます。
+  This is a simple macro. It is processed by the preprocessor.
 </p>
 <p>
-  もし「SPVM_FIELD_H」というマクロが定義されていなかったら「SPVM_FIELD_H」を定義して、ヘッダの内容を読み込むという意味です。
+  If the macro "SPVM_FIELD_H" is not defined, it means to define "SPVM_FIELD_H" and read the contents of the header.
 </p>
 <p>
-  一回目にヘッダファイルが読み込まれたときに「SPVM_FIELD_H」が定義されますので、二回目に読み込まれるときは、ヘッダの内容は読み込まれません。
+  "SPVM_FIELD_H" is defined when the header file is read the first time, so the contents of the header are not read when it is read the second time.
 </p>
-<h3>なぜインクルードガードが必要なの?</h3>
+<h3> Why do you need an include guard? </H3>
 <p>
-  ヘッダファイルが二回以上読み込まれる場合の副作用の影響をなくすためです。
-</p>
-<p>
-  たとえば、関数のプロトタイプ宣言は同じものを複数行ってもコンパイルエラーにはなりませんが、enumや構造体の定義を複数回行うと、コンパイルエラーになってしまいます。
-</p>
-<h3>そもそも2回以上ヘッダが読み込まれるC言語プログラムってどうなのよ?</h3>
-<p>
-  はい、おっしゃる通りですね。
+  This is to eliminate the side effects of reading the header file more than once.
 </p>
 <p>
-  ソースコードを分割コンパイルして、ヘッダを1度だけ読み込むようにする。ヘッダどうしでは、できるかぎりヘッダを読み込まない。それが、上手なC言語プログラムだと思います。
+  For example, if you make multiple prototype declarations of a function, you will not get a compile error, but if you define an enum or structure multiple times, you will get a compile error.
+</p>
+<h3> What about a C language program in which the header is read more than once? </H3>
+<p>
+  Yes, you're right.
 </p>
 <p>
-  ただし、ヘッダでヘッダを読み込みたい場合も、あります。たとえば「stdint.h」をヘッダで読み込んでしまうという場合を挙げておきます。
+  Compile the source code separately so that the header is read only once. Do not read headers between headers as much as possible. I think that is a good C language program.
 </p>
 <p>
-  頻繁に利用するヘッダを、C言語ソースファイル側ではなくって、ヘッダ側で読み込んでおきたいという場合ですね。
+  However, there may be times when you want to read the header in the header. For example, let's take a case where "stdint.h" is read in the header.
 </p>
-<h3>#pragma onceはどうですか?</h3>
 <p>
-  インクルードガードの方法として「#pragma once」を使う方法があります。
+  You want to read frequently used headers on the header side instead of the C language source file side.
+</p>
+<h3> How about #pragma once? </h3>
+<p>
+  There is a method of using "#pragma once" as an include guard method.
 </p>
 <pre>
 #pragma once
 </pre>
 <p>
-  コンパイラが対応しているなら、インクルードガードのためのマクロ名を作成する必要がないので、簡単そうです。
+  If the compiler supports it, it seems easy because you don't need to create a macro name for include guard.
 </p>
 <p>
-  「お勧め!」とははっきり僕が言えないのは、広い環境でこのプラグマが対応しているのかどうかを僕が知らないことと、C言語仕様ではなく処理系独自のものだということですね。
+  What I can't say "recommended!" Is that I don't know if this pragma is compatible in a wide environment, and that it is unique to the implementation, not the C language specification. ..
 </p>
 <p>
-  マクロを使ったインクルードガードは、不具合なく、どこでも動くと自信を持って言えます。
+  Include guard using macros can be said with confidence that it works anywhere without any problems.
 </p>
 <p>
-  僕自身は、不確実性をなるべく減らすプログラミング手法を好みますが、ここら辺は、好みなので、あまり気にしないでください。
+  I personally like programming techniques that reduce uncertainty as much as possible, but I like this area, so don't worry too much about it.
 </p>
 
   </div>
@@ -221,8 +219,7 @@ SPVM_FIELD* SPVM_FIELD_new(SPVM_COMPILER* compiler);
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

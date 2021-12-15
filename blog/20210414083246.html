@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>strncmp関数 - 部分文字列を比較する - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="strncmp関数は文字列を部分的に比較する関数です。指定した文字数「n」で、辞書順で「s1」が「s2」より大きい場合は、正の数を、同じ場合は0を、小さい場合は負の数を返します。">
+<title> strncmp function-Compare substrings  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="The  strncmp function  is a function that partially compares  strings. Returns a positive number if the specified number of characters "n" and "s1" is greater than "s2" in dictionary order, 0 if they are the same, and a negative number if they are smaller.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="strncmp関数 - 部分文字列を比較する - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="strncmp関数は文字列を部分的に比較する関数です。指定した文字数「n」で、辞書順で「s1」が「s2」より大きい場合は、正の数を、同じ場合は0を、小さい場合は負の数を返します。" />
+<meta name="twitter:title" content=" strncmp function-Compare substrings  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="The  strncmp function  is a function that partially compares  strings. Returns a positive number if the specified number of characters "n" and "s1" is greater than "s2" in dictionary order, 0 if they are the same, and a negative number if they are smaller." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,34 +60,34 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library.html">
-        <span itemprop="name">C標準ライブラリ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C standard library </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library/string.html">
-        <span itemprop="name">string.h</span>
-      </a>
-      <meta itemprop="position" content="3" />
+        <span itemprop = "name"> string.h </span>
+     </a>
+      <meta itemprop = "position" content = "3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210414083246.html">strncmp関数 - 部分文字列を比較する</a></h2>
+<h2><a href="/blog/20210414083246.html"> strncmp function-Compare substrings </a></h2>
 <p>
-  <b>strncmp関数</b>は<a href="/blog/20210331101342.html">文字列</a>を部分的に比較する関数です。指定した文字数「n」で、辞書順で「s1」が「s2」より大きい場合は、正の数を、同じ場合は0を、小さい場合は負の数を返します。
+  The <b> strncmp function </b> is a function that partially compares <a href="/blog/20210331101342.html"> strings</a>. Returns a positive number if the specified number of characters "n" and "s1" is greater than "s2" in dictionary order, 0 if they are the same, and a negative number if they are smaller.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -108,25 +106,25 @@
 
 
 <p>
-  「<a href="/blog/20210303101711.html">string.h</a>」をインクルードすると使えます。
+  You can use it by including "<a href="/blog/20210303101711.html"> string.h</a>".
 </p>
 <pre>
 #include &lt;string.h&gt;
-int strncmp(const char *s1, const char *s2, size_t n);
+int strncmp (const char * s1, const char * s2, size_t n);
 </pre>
-<h3>strncmp関数のサンプル</h3>
+<h3> Sample strncmp function </h3>
 <p>
-  strncmp関数で文字列を比較するサンプルです。一致した場合に、Matchと表示します。
+  This is a sample that compares strings with the strncmp function. If there is a match, Match is displayed.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
 
-int main(void) {
-  const char* module_name = "Foo::Bar::Baz";
+int main (void) {
+  const char * module_name = "Foo::Bar::Baz";
   
-  // 先頭がFoo::Barで始まっているか調べる
-  if (strncmp(module_name, "Foo::Bar", strlen("Foo::Bar")) == 0) {
+  // Find out if it starts with Foo::Bar
+  if (strncmp (module_name, "Foo::Bar", strlen ("Foo::Bar")) == 0) {
     printf("Match\n");
   }
   else {
@@ -134,12 +132,12 @@ int main(void) {
   }
 }
 </pre>
-<h3>文字列の全体を比較するには?</h3>
+<h3> How to compare whole strings? </H3>
 <p>
-  文字列の全体を比較するにはstrcmp関数を使用します。
+  Use the strcmp function to compare the entire string.
 </p>
 <ul>
-  <li><a href="/blog/20210413090615.html">strcmp関数 - 文字列を比較する</a></li>
+  <li> <a href="/blog/20210413090615.html"> strcmp function-Compare strings</a> </li>
 </ul>
 
   </div>
@@ -167,8 +165,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

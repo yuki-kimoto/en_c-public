@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>C言語の文字列 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="C言語の文字列について解説します。C言語には、文字列という型はなく、文字の配列を使って文字列を表現します。C言語の文字列は「\0」で終わります。printf関数の「%s」というフォーマットで文字列を出力できます。">
+<title> C language string  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="I will explain about  C language strings . In C language, there is no type called a character string, and a character string is expressed using a  array of characters. C language strings end with "\ 0". You can print a string in the format "%s" of the printf function.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="C言語の文字列 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="C言語の文字列について解説します。C言語には、文字列という型はなく、文字の配列を使って文字列を表現します。C言語の文字列は「\0」で終わります。printf関数の「%s」というフォーマットで文字列を出力できます。" />
+<meta name="twitter:title" content=" C language string  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="I will explain about  C language strings . In C language, there is no type called a character string, and a character string is expressed using a  array of characters. C language strings end with "\ 0". You can print a string in the format "%s" of the printf function." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210331101342.html">C言語の文字列</a></h2>
+<h2><a href="/blog/20210331101342.html"> C language string </a></h2>
 <p>
-  <b>C言語の文字列</b>について解説します。C言語には、文字列という型はなく、文字の<a href="/blog/20210129143859.html">配列</a>を使って文字列を表現します。C言語の文字列は「\0」で終わります。printf関数の「%s」というフォーマットで文字列を出力できます。
+  I will explain about <b> C language strings </b>. In C language, there is no type called a character string, and a character string is expressed using a <a href="/blog/20210129143859.html"> array</a> of characters. C language strings end with "\ 0". You can print a string in the format "%s" of the printf function.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -104,109 +102,109 @@
 <pre>
 #include &lt;stdio.h&gt;
 
-int main(void) {
-  // 文字列は、文字の配列で表現し、「\0」で終わる。
-  char string[4];
-  string[0] = 'a';
-  string[1] = 'b';
-  string[2] = 'c';
-  string[3] = '\0';
+int main (void) {
+  // The string is represented by an array of characters and ends with "\ 0".
+  char string [4];
+  string [0] ='a';
+  string [1] ='b';
+  string [2] ='c';
+  string [3] ='\ 0';
   
-  // 文字列を出力
+  // Output string
   printf("%s\n", string);
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 abc
 </pre>
-<h4>char型は文字を表現する型</h4>
+<h4> char type is a type that expresses characters </h4>
 <p>
-  <a href="/blog/20201204103322.html">char型</a>はC言語で文字を表現する型で「符号あり、または符号なしの8bit整数」として定義されています。ASCII文字コードを代入することを想定していると考えられます。
+  <a href="/blog/20201204103322.html"> char type</a> is a type that expresses characters in C language and is defined as "signed or unsigned 8-bit integer". It is thought that it is supposed to assign an ASCII character code.
 </p>
-<h4>文字リテラル</h4>
+<h4> Character literals </h4>
 <p>
-  「'a'」は文字リテラルです。対応するASCIIコードに変換されます。「'a'」の場合は、97に変換されます。
+  "'A'" is a character literal. Converted to the corresponding ASCII code. If it is "'a'", it will be converted to 97.
 </p>
-<h4>文字列リテラル</h4>
+<h4> String literal </h4>
 <p>
-  文字列リテラルを使って、文字列を簡単に表現することができます。文字列リテラルは、文字配列の先頭の<a href="/blog/20210211090234.html">アドレス</a>を返すので<a href="/blog/20201208125815.html">char*型</a>で受け取ります。文字列が変更されないようにconst修飾子をつけておくのがよいでしょう。以下が、文字列を表現するC言語のお勧めの表現です。
-</p>
-<pre>
-#include &lt;stdio.h&gt;
-
-int main(void) {
-  // 文字列リテラル
-  const char* string = "abc";
-  
-  // 文字列を出力
-  printf("%s\n", string);
-}
-</pre>
-<h3>動的に文字列を作成</h3>
-<p>
-  動的に文字列を作成するには、<a href="/blog/20210209082644.html">calloc関数</a>を使って、メモリを確保します。使い終わったら、<a href="/blog/20210329101342.html">free関数</a>で解放します。
+  You can easily represent strings using string literals. A string literal returns the <a href="/blog/20210211090234.html"> address</a> at the beginning of the string array, so <a href="/blog/20201208125815.html"> char * type</a> You will receive it at>. It's a good idea to add the const modifier so that the string doesn't change. The following is the recommended C language expression for expressing a character string.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
 
-int main(void) {
-  // 長さが3の文字列のためにメモリを確保。
-  // C言語の文字列の末尾は「\0」である必要があるため、1バイト多く確保する
-  char* string = calloc(4, sizeof(char));
+int main (void) {
+  // String literal
+  const char * string = "abc";
   
-  string[0] = 'a';
-  string[1] = 'b';
-  string[2] = 'c';
-  string[3] = '\0';
-  
+  // Output string
   printf("%s\n", string);
-
-  // 使い終わったら解放
-  free(string);
 }
 </pre>
+<h3> Dynamically create strings </h3>
 <p>
-  出力結果です。
-</p>
-<pre>
-abc
-</pre>
-<p>
-  C言語の文字列は「\0」で終わるので、余分にメモリを確保しておいても特に問題はありません。定数文字列ではなく、追加する必要があるのであれば、多くメモリ領域をとることもできます。100バイトのメモリ領域を確保する例です。
+  To create a string dynamically, use the <a href="/blog/20210209082644.html"> calloc function</a> to allocate memory. When you are done using it, release it with the <a href="/blog/20210329101342.html"> free function</a>.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-int main(void) {
-  // 長さが3の文字列のためにメモリを確保。
-  // C言語の文字列の末尾は「\0」である必要があるため、1バイト多く確保する
-  char* string = calloc(100, sizeof(char));
+int main (void) {
+  // Allocate memory for strings of length 3.
+  // Since the end of the C language string must be "\ 0", reserve 1 byte more.
+  char * string = calloc (4, sizeof (char));
   
-  string[0] = 'a';
-  string[1] = 'b';
-  string[2] = 'c';
-  string[3] = '\0';
+  string [0] ='a';
+  string [1] ='b';
+  string [2] ='c';
+  string [3] ='\ 0';
   
   printf("%s\n", string);
-  
-  // 使い終わったら解放
-  free(string);
+
+  // Release when finished using
+  free (string);
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 abc
 </pre>
-<h3>文字列のメモリ領域の再割り当て</h3>
 <p>
-  文字列のメモリ領域の再割り当てをするには、新しくメモリを確保し、<a href="/blog/20210221132505.html">memcpy関数</a>で、前の文字列をコピーします。以前のメモリ領域を解放し、新しい文字列を再代入します。
+  Since the C language character string ends with "\ 0", there is no problem even if you reserve extra memory. It can take up a lot of memory space if you need to add it instead of a constant string. This is an example of allocating a memory area of ​​100 bytes.
+</p>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main (void) {
+  // Allocate memory for strings of length 3.
+  // Since the end of the C language string must be "\ 0", reserve 1 byte more.
+  char * string = calloc (100, sizeof (char));
+  
+  string [0] ='a';
+  string [1] ='b';
+  string [2] ='c';
+  string [3] ='\ 0';
+  
+  printf("%s\n", string);
+  
+  // Release when finished using
+  free (string);
+}
+</pre>
+<p>
+  This is the output result.
+</p>
+<pre>
+abc
+</pre>
+<h3> Reallocate memory area for strings </h3>
+<p>
+  To reallocate the memory area of ​​the string, allocate new memory and use the <a href="/blog/20210221132505.html"> memcpy function</a> to copy the previous string. Frees the old memory area and reassigns the new string.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
@@ -214,107 +212,107 @@ abc
 #include &lt;stdint.h&gt;
 #include &lt;string.h&gt;
 
-int main(void) {
-  // 長さが3の文字列のためにメモリを確保。
-  // C言語の文字列の末尾は「\0」である必要があるため、1バイト多く確保する
+int main (void) {
+  // Allocate memory for strings of length 3.
+  // Since the end of the C language string must be "\ 0", reserve 1 byte more.
   int32_t capacity = 4;
-  char* string = calloc(capacity, sizeof(char));
+  char * string = calloc (capacity, sizeof (char));
   
-  string[0] = 'a';
-  string[1] = 'b';
-  string[2] = 'c';
-  string[3] = '\0';
+  string [0] ='a';
+  string [1] ='b';
+  string [2] ='c';
+  string [3] ='\ 0';
   
-  printf("Before %s\n", string);
+  printf("Before%s\n", string);
 
-  // 長さを5にしたい
+  // I want the length to be 5
   int32_t new_capacity = 6;
-  char* new_string = calloc(new_capacity, sizeof(char));
+  char * new_string = calloc (new_capacity, sizeof (char));
   
-  // 前の文字列をコピー
-  memcpy(new_string, string, capacity - 1);
+  // Copy the previous string
+  memcpy (new_string, string, capacity --1);
   
-  // 新しい文字を追加
-  new_string[3] = 'd';
-  new_string[4] = 'e';
-  new_string[5] = '\0';
+  // Add new characters
+  new_string [3] ='d';
+  new_string [4] ='e';
+  new_string [5] ='\ 0';
   
-  // 古い文字列を解放
-  free(string);
+  // Free the old string
+  free (string);
   
-  // 新しい文字列と入れ替え
+  // Replace with a new string
   string = new_string;
   new_string = NULL;
   
-  printf("After  %s\n", string);
+  printf("After%s\n", string);
 
-  free(string);
+  free (string);
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 Before abc
-After  abcde
+After abcde
 </pre>
 <p>
-  メモリ領域の再割り当ては<a href="http://www.c-tipsref.com/reference/stdlib/realloc.html">realloc関数</a>を使ってもでき、高速ですが、reallocは、処理系によって実装が異なり、バグが再現しにくいという経験があるので、パフォーマンスに問題がなければ、callocを使ってメモリの再割り当てを行う方が安心と感じます。
+  Reallocating the memory area can also be done using the <a href="http://www.c-tipsref.com/reference/stdlib/realloc.html"> realloc function</a>, which is fast, but realloc is , Implementation differs depending on the processing system, and I have experienced that bugs are difficult to reproduce, so if there is no performance problem, I feel that it is safer to reallocate memory using calloc.
 </p>
-<h3>文字列の長さ</h3>
+<h3> String length </h3>
 <p>
-  文字列の長さを取得するには<a href="/blog/20210405101342.html">strlen関数</a>を使用します。<a href="/blog/20210303101711.html">string.h</a>を読み込むと、strlen関数を使用できます。
+  Use the <a href="/blog/20210405101342.html"> strlen function</a> to get the length of the string. You can use the strlen function by reading <a href="/blog/20210303101711.html"> string.h</a>.
 </p>
 <pre>
 #include &lt;string.h&gt;
-size_t strlen(const char *s);
+size_t strlen (const char * s);
 </pre>
 <p>
-  C言語では文字列は「\0」で終わるという約束事があります。strlen関数は、この約束事を前提として、文字列の長さを計算します。つまり、「\0」が見つかるまで、ループして、文字数をカウントしていくということです。逆にいえば、文字列が「\0」で終わっていない場合は、意図しないメモリ領域まで進み、バッファオーバーランが起こります。
+  In C language, there is a promise that strings end with "\ 0". The strlen function assumes this convention and calculates the length of the string. In other words, it loops and counts the number of characters until "\ 0" is found. Conversely, if the string does not end with "\ 0", it will go to an unintended memory area and a buffer overrun will occur.
 </p>
 <p>
-  strlenを使う場合は、文字列が「\0」で終わる文字列に対して使用していることを必ず確認してください。
+  When using strlen, make sure that you are using it for strings ending in "\ 0".
 </p>
 <p>
-  strlen関数で、文字列の長さを求めるサンプルです。
+  This is a sample to find the length of a character string with the strlen function.
 </p>
 <pre>
 #include &lt;string.h&gt;
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-int main(void) {
-  const char* string = "Hello";
+int main (void) {
+  const char * string = "Hello";
   
-  int32_t string_length = strlen(string);
+  int32_t string_length = strlen (string);
   
   printf("%d\n", string_length);
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
-5
+Five
 </pre>
-<h3>文字の検索</h3>
+<h3> Character search </h3>
 <p>
-  文字を検索するにはstrchr関数を使います。文字を後ろから検索するstrrchr関数もあります。
+  Use the strchr function to search for characters. There is also a strrchr function that searches for characters from the back.
 </p>
-<h3>文字列の検索</h3>
+<h3> String search </h3>
 <p>
-  文字列を検索するには<a href="/blog/20210406101342.html">strstr関数</a>を使用します。strstr関数で、文字列が含まれているかをチェックするサンプルです。戻り値がNULLでないことを確認すればOKです。
+  Use the <a href="/blog/20210406101342.html"> strstr function</a> to search for a string. This is a sample to check if a string is included with the strstr function. It is OK if you confirm that the return value is not NULL.
 </p>
 <pre>
 #include &lt;string.h&gt;
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-int main(void) {
-  const char* message = "I like orange\n";
-  const char* match = "orange";
+int main (void) {
+  const char * message = "I like orange\n";
+  const char * match = "orange";
   
-  if (strstr(message, match) != NULL) {
+  if (strstr (message, match)! = NULL) {
     printf("Match\n");
   }
   else {
@@ -323,14 +321,14 @@ int main(void) {
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 Match
 </pre>
-<h3>文字列のコピー</h3>
+<h3> Copy of string </h3>
 <p>
-  文字列をコピーしてみましょう。<a href="/blog/20210405101342.html">strlen関数</a>で文字列の長さを計算、<a href="/blog/20210209082644.html">calloc関数</a>でメモリ領域を確保、<a href="/blog/20210221132505.html">memcpy関数</a>で文字列をコピーします。
+  Let's copy the string. <aCalculate the length of the string with the href = "/blog/20210405101342.html"> strlen function</a>, and allocate the memory area with the <a href="/blog/20210209082644.html"> calloc function</a> , <a href="/blog/20210221132505.html"> memcpy function</a> to copy the string.
 </p>
 <pre>
 #include &lt;string.h&gt;
@@ -338,35 +336,35 @@ Match
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-int main(void) {
-  const char* string1 = "Hello";
+int main (void) {
+  const char * string1 = "Hello";
   
-  int32_t string1_length = strlen(string1);
+  int32_t string1_length = strlen (string1);
   
-  char* string2_tmp = calloc(string1_length + 1, sizeof(char));
-  memcpy(string2_tmp, string1, string1_length);
+  char * string2_tmp = calloc (string1_length + 1, sizeof (char));
+  memcpy (string2_tmp, string1, string1_length);
   
-  const char* string2 = string2_tmp;
+  const char * string2 = string2_tmp;
   string2_tmp = NULL;
   
   printf("%s\n", string2);
   
-  free((void*)string2);
+  free ((void *) string2);
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 Hello
 </pre>
-<h4>文字列のコピーを行う他の方法</h4>
+<h4> Other ways to copy strings </h4>
 <p>
-  文字列のコピーを行うのに、<a href="http://www9.plala.or.jp/sgwr-t/lib/strcpy.html">strcpy関数</a>や<a href="http://www9.plala.or.jp/sgwr-t/lib/strncpy.html">strncpy関数</a>を使う方法もあります。
+  To copy a string, <a href="http://www9.plala.or.jp/sgwr-t/lib/strcpy.html"> strcpy function</a> or <a href="http You can also use the "> strncpy function</a> at //www9.plala.or.jp/sgwr-t/lib/strncpy.html".
 </p>
-<h3>文字列の連結</h3>
+<h3> Concatenation of strings </h3>
 <p>
-  文字列の連結ってC言語でどうやるんでしょう? 二つの文字列を連結して、結果を返す。うーん、悩みますね。「えっ、自前でやれってこと?」。はい。そうです。二つの文字列の長さを計算して、連結後の文字列の長さを計算して、元の文字列を順番にコピーします。
+  How do you concatenate strings in C? Concatenate two strings and return the result. Well, I'm worried. "Well, do you do it yourself?" Yes. that's right. Calculate the length of the two strings, calculate the length of the string after concatenation, and copy the original strings in order.
 </p>
 <pre>
 #include &lt;string.h&gt;
@@ -374,46 +372,46 @@ Hello
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-int main(void) {
-  const char* string1 = "ab";
-  const char* string2 = "cde";
+int main (void) {
+  const char * string1 = "ab";
+  const char * string2 = "cde";
   
-  int32_t string1_length = strlen(string1);
-  int32_t string2_length = strlen(string2);
+  int32_t string1_length = strlen (string1);
+  int32_t string2_length = strlen (string2);
   
   int32_t string3_length = string1_length + string2_length;
-  char* string3_tmp = calloc(string3_length + 1, sizeof(char));
+  char * string3_tmp = calloc (string3_length + 1, sizeof (char));
   
-  memcpy(string3_tmp, string1, string1_length);
-  memcpy(string3_tmp + string1_length, string2, string2_length);
+  memcpy (string3_tmp, string1, string1_length);
+  memcpy (string3_tmp + string1_length, string2, string2_length);
   
-  const char* string3 = string3_tmp;
+  const char * string3 = string3_tmp;
   string3_tmp = NULL;
   
   printf("%s\n", string3);
   
-  free((void*)string3);
+  free ((void *) string3);
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 abcde
 </pre>
 <p>
-  「毎回、これやるんですか?」「はい。必要になれば。」「こういう処理って、何回もでてきませんか?」「何回もでてきます(笑)。」
+  "Do you do this every time?" "Yes. If necessary." "Why don't you do this kind of processing many times?" "It comes out many times (laughs)."
 </p>
-<h4>文字列の連結を行う他の方法</h4>
+<h4> Other ways to concatenate strings </h4>
 <p>
-  自分自身の末尾に、文字列を追加する場合は、<a href="http://www9.plala.or.jp/sgwr-t/lib/strcat.html">strcat関数</a>や<a href="http://www9.plala.or.jp/sgwr-t/lib/strncat.html">strncat関数</a>も使えます。
+  If you want to add a string to the end of yourself, <a href="http://www9.plala.or.jp/sgwr-t/lib/strcat.html"> strcat function</a> or <a href="http://www9.plala.or.jp/sgwr-t/lib/strcat.html"> You can also use a href = "http://www9.plala.or.jp/sgwr-t/lib/strncat.html"> strncat function</a>.
 </p>
-<h3>文字列の置換</h3>
+<h3> String replacement </h3>
 <p>
-  文字列の置換ってC言語でどうやるんでしょう? うーん、悩みますね。「えっ、自前でやれってこと?」。はい。そうです。
+  How do you replace strings in C? Well, I'm worried. "Well, do you do it yourself?" Yes. that's right.
 </p>
 <p>
-  「Foo::Bar::Baz」を「Foo/Bar/Baz」に置換する処理を書いてみましょう。
+  Let's write a process to replace "Foo::Bar::Baz" with "Foo / Bar / Baz".
 </p>
 <pre>
 #include &lt;string.h&gt;
@@ -421,96 +419,96 @@ abcde
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-int main(void) {
-  const char* module_name = "Foo::Bar::Baz";
-  int32_t module_name_length = strlen(module_name);
+int main (void) {
+  const char * module_name = "Foo::Bar::Baz";
+  int32_t module_name_length = strlen (module_name);
   
-  // 多めに確保するのはOK
-  char* module_path_tmp = calloc(module_name_length, module_name_length);
+  // It is OK to secure a large amount
+  char * module_path_tmp = calloc (module_name_length, module_name_length);
   
   int32_t module_path_tmp_index = 0;
-  for (int32_t i = 0; i &lt; module_name_length; i++) {
+  for (int32_t i = 0; i &lt;module_name_length; i ++) {
     
-    if (module_name[i] == ':' &amp;&amp; module_name[i + 1] == ':') {
-      module_path_tmp[module_path_tmp_index] = '/';
-      i++;
-      module_path_tmp_index++;
+    if (module_name [i] ==':' &amp;&amp; module_name [i + 1] ==':') {
+      module_path_tmp [module_path_tmp_index] ='/';
+      i ++;
+      module_path_tmp_index ++;
     }
     else {
-      module_path_tmp[module_path_tmp_index] = module_name[i];
-      module_path_tmp_index++;
+      module_path_tmp [module_path_tmp_index] = module_name [i];
+      module_path_tmp_index ++;
     }
   }
   
-  const char* module_path = module_path_tmp;
+  const char * module_path = module_path_tmp;
   module_path_tmp = NULL;
 
   printf("%s\n", module_path);
   
-  free((void*)module_path);
+  free ((void *) module_path);
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
-Foo/Bar/Baz
+Foo / Bar / Baz
 </pre>
-<h3>文字列関数</h3>
+<h3> String function </h3>
 <p>
-  C言語の文字列に関する関数は<a href="/blog/20210303101711.html">string.h</a>にあります。
+  Functions for strings in C can be found in <a href="/blog/20210303101711.html"> string.h</a>.
 </p>
-<h3>C言語でUnicodeって扱えるの?</h3>
+<h3> Can Unicode be handled in C? </H3>
 <p>
-  C言語でUnicodeを扱えるライブラリとしてutf8procを紹介しておきます。UTF-8, UTF-16, UTF-32の変換が可能です。
+  I will introduce utf8proc as a library that can handle Unicode in C language. UTF-8, UTF-16, UTF-32 conversion is possible.
 </p>
 <ul>
-  <li><a href="https://github.com/JuliaStrings/utf8proc">utf8proc</a></li>
+  <li> <a href="https://github.com/JuliaStrings/utf8proc"> utf8proc</a> </li>
 </ul>
 <p>
-  Unicodeの扱いについては、詳しくは書かないですが、ざっと、僕が考えていることを書いておきます。
+  I won't go into details about how to handle Unicode, but I'll briefly describe what I'm thinking about.
 </p>
 <p>
-  C言語標準関数やC言語仕様だけでは、Unicodeを扱うことは難しいです。
+  It is difficult to handle Unicode only with C language standard functions and C language specifications.
 </p>
-<h4>UTF-8について</h4>
+<h4> About UTF-8 </h4>
 <p>
-  文字列の出力は、ソースコードの文字列ががUTF-8であって、UNIX/Linux/Macの環境であれば、そのまま出力できます。
-</p>
-<p>
-  UTF-8はASCIIコードの上位互換ですので、過去に作られたC言語のライブラリは、そのまま使うことができます。
+  The character string output can be output as it is if the source code character string is UTF-8 and the environment is UNIX / Linux / Mac.
 </p>
 <p>
-  Webの用途として、C言語を使う場合は、UTF-8で文字列を扱うのがよさそうです。UTF-8は、単なるバイト列であり、エンディアンを意識する必要がありません。
+  UTF-8 is upward compatible with ASCII code, so you can use the C language library created in the past as it is.
 </p>
 <p>
-  単なるバイト列ということは、C言語では、UTF-8の文字列を以下のように表現できるということです。ソースコードはUTF-8で保存したとします。
+  When using C language for the purpose of the Web, it seems better to handle character strings in UTF-8. UTF-8 is just a byte string and you don't have to be endian.
+</p>
+<p>
+  A simple byte string means that in C language, a UTF-8 string can be expressed as follows. Suppose you saved the source code in UTF-8.
 </p>
 <pre>
-// C言語におけるUTF-8の表現
-const char* string = "あいうえお";
+// UTF-8 representation in C
+const char * string = "aiueo";
 </pre>
-<h4>マルチバイト文字、UTF-16、UTF-32について</h4>
+<h4> About multibyte characters, UTF-16, UTF-32 </h4>
 <p>
-  C言語には、マルチバイト文字を扱う仕組みが用意されています。マルチバイト文字には、2種類あって、2バイト文字と4バイト文字です。
+  The C language has a mechanism for handling multibyte characters. There are two types of multibyte characters, double-byte characters and 4-byte characters.
 </p>
 <p>
-  2バイト文字というのは、たとえば、Shift_JISのような1文字を2バイトで表現するコードと、UTF-16LEやUTF-16BEのような原則2バイトで1文字を表現するUnicodeの符号化方式での利用が想定されています。
+  Double-byte characters are, for example, a code that expresses one character in two bytes such as Shift_JIS, and a Unicode encoding method that expresses one character in principle two bytes such as UTF-16LE and UTF-16BE. It is expected to be used.
 </p>
 <p>
-  4バイト文字というのは、Unicodeの一つの符号化体系のUTF-32あるいは、Unicodeのコードポイントを保存することが想定されています。UTF-32は、Unicodeのコードポイントと、1対1で対応します。つまり、UTF-32とは、Unicodeのコードポイントのことです。
+  4-byte characters are supposed to store UTF-32, a Unicode coding system, or Unicode code points. UTF-32 has a one-to-one correspondence with Unicode code points. In other words, UTF-32 is a Unicode code point.
 </p>
 <p>
-  2バイト文字は、Windowsで使わざるをえません。Windowsの内部文字コードは、UTF-16LEで、Unicode環境でコンパイルされたWindows APIは、UTF-16LEの文字列を受け取るからです。
+  Double-byte characters have to be used on Windows. This is because the internal character code of Windows is UTF-16LE, and the Windows API compiled in the Unicode environment receives the UTF-16LE string.
 </p>
 <p>
-  2バイト文字と、4バイト文字は、UTF-8と異なり、簡単に出力できません。「中身を、み、みたい。でも、みれない。」みたいな。
+  Unlike UTF-8, double-byte characters and 4-byte characters cannot be output easily. It's like "I want to see the contents, but I can't see it."
 </p>
 <p>
-  UTF-8がいいんだ。でも、現実は、それだけじゃないんだ、変換が、必要なんだ。これが現実なんだ～。みたいな。
+  UTF-8 is good. But the reality is that it's not the only thing, it needs conversion. This is the reality ~. Like.
 </p>
 <p>
-  マルチバイト文字は、UTF-8を表現するために、使うものではないので、頭の中で、こんがらないようにしておきましょう。
+  Multibyte characters aren't used to represent UTF-8, so don't be afraid to keep them in your head.
 </p>
 
   </div>
@@ -538,8 +536,7 @@ const char* string = "あいうえお";
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

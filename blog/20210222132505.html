@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>C言語の型変換規則 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="C言語の型変換規則について解説します。この解説では、よく使う型変換規則を中心にして、実用の観点から解説します。">
+<title> Conversion from signed integer type to floating point type (with information loss)  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="The explanation assumes the case of tml "> float,  double.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="C言語の型変換規則 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="C言語の型変換規則について解説します。この解説では、よく使う型変換規則を中心にして、実用の観点から解説します。" />
+<meta name="twitter:title" content=" Conversion from signed integer type to floating point type (with information loss)  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="The explanation assumes the case of tml "> float,  double." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,8 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-      <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
-    </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-      <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
-    </li>
-    <li>
-      here
-    </li>
-  </ul>
-</div>
-<h2><a href="/blog/20210222132505.html">C言語の型変換規則</a></h2>
-<p>
-  C言語の型変換規則について解説します。この解説では、よく使う型変換規則を中心にして、実用の観点から解説します。
+    <p>
+  The explanation assumes the case of tml "> float</a>, <a href="/blog/20201203133213.html"> double</a>.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -101,318 +79,51 @@
 </div>
 
 
-<h3>ビット幅の小さい符号あり整数からビット幅の大きい符号あり整数への変換(情報喪失なし)</h3>
 <p>
-  ビット幅の小さい符号あり整数からビット幅の大きい符号あり整数への変換について解説します。
-</p>
-<p>
-  符号あり整数型として、<a href="/blog/20201117090747.html">int8_t</a>, <a href="/blog/20201126090559.html">int16_t</a>, <a href="/blog/20201130082751.html">int32_t</a>, <a href="/blog/20201127082751.html">int64_t</a>の場合を想定して解説します。
-</p>
-<p>
-  ビット幅の小さい符号あり整数からビット幅の大きい符号あり整数への変換は数値の絶対値と符号の情報は失われずに保持されます。
-</p>
-<pre>
-#include &lt;stdio.h&gt;
-#include &lt;stdint.h&gt;
-
-int main(void) {
-  
-  // int8_tからint32_tへ変換
-  int8_t num_i8 = -15;
-  int32_t num_i32 = num_i8;
-  
-  printf("%d\n", num_i32);
-}
-</pre>
-<p>
-  出力結果です。
-</p>
-<pre>
--15
-</pre>
-<p>
-  2の補数表現で、マイナスを表現していると想定すると、次のようなビットレベルの変換が行われていることになります。
-</p>
-<pre>
-// -15 8bit符号あり整数
-1001111
-
-// -15 32bit符号あり整数
-10000000 00000000 00000000 00001111
-</pre>
-<h3>ビット幅の小さい符号なし整数からビット幅の大きい符号なし整数への変換(情報喪失なし)</h3>
-<p>
-  ビット幅の小さい符号なし整数からビット幅の大きい符号なし整数への変換について解説します。
-</p>
-<p>
-  符号なし整数型として、<a href="/blog/20201122084622.html">uint8_t</a>, <a href="/blog/20201120084622.html">uint16_t</a>, <a href="/blog/20201111150850.html">uint32_t</a>, <a href="/blog/20201109150850.html">uint64_t</a>の場合を想定して解説します。
-</p>
-<p>
-  ビット幅の小さい符号なし整数からビット幅の大きい符号なし整数への変換は数値の情報は失われずに保持されます。
-</p>
-<pre>
-#include &lt;stdio.h&gt;
-#include &lt;stdint.h&gt;
-
-int main(void) {
-  
-  // int8_tからint32_tへ変換
-  uint8_t num_ui8 = 15;
-  uint32_t num_ui32 = num_ui8;
-  
-  printf("%d\n", num_ui32);
-}
-</pre>
-<p>
-  出力結果です。
-</p>
-<pre>
-15
-</pre>
-<p>
-  次のようなビットレベルの変換が行われていることになります。
-</p>
-<pre>
-// 15 8bit符号なし整数
-0001111
-
-// 15 32bit符号なし整数
-00000000 00000000 00000000 00001111
-</pre>
-<h3>ビット幅の大きい符号あり整数からビット幅の小さい符号あり整数への変換(情報喪失あり)</h3>
-<p>
-  ビット幅の大きい符号あり整数からビット幅の小さい符号あり整数への変換について解説します。
-</p>
-<p>
-  符号あり整数型として、<a href="/blog/20201117090747.html">int8_t</a>, <a href="/blog/20201126090559.html">int16_t</a>, <a href="/blog/20201130082751.html">int32_t</a>, <a href="/blog/20201127082751.html">int64_t</a>の場合を想定して解説します。
-</p>
-<p>
-  ビット幅の大きい符号あり整数からビット幅の小さい符号あり整数への変換は、上位ビットが切り捨てられて解釈された値になります。
-</p>
-<p>
-  正しく変換できるのは、変換前の値が、変換後の型で表現できる数値の範囲に収まっていた場合です。
-</p>
-<p>
-  正しく変換できた場合のサンプルです。
-</p>
-<pre>
-#include &lt;stdio.h&gt;
-#include &lt;stdint.h&gt;
-
-int main(void) {
-  
-  // int16_tからint8_tへ変換
-  int16_t num_i16 = -128;
-  int8_t num_i8 = num_i16;
-  
-  printf("%d\n", num_i8);
-}
-</pre>
-<p>
-  出力結果です。
-</p>
-<pre>
--128
-</pre>
-<p>
-  2の補数表現で、マイナスを表現していると想定すると、次のようなビットレベルの変換が行われていることになります。
-</p>
-<pre>
-// -128 16bit符号あり整数
-11111111 10000000
-
-// -128 8bit符号あり整数
-10000000
-</pre>
-<p>
-  情報喪失ありのサンプルです。
-</p>
-<pre>
-#include &lt;stdio.h&gt;
-#include &lt;stdint.h&gt;
-
-int main(void) {
-  
-  // int16_tからint8_tへ変換
-  int16_t num_i16 = -257;
-  int8_t num_i8 = num_i16;
-  
-  printf("%d\n", num_i8);
-}
-</pre>
-<p>
-  出力結果です。
-</p>
-<pre>
--1
-</pre>
-<p>
-  2の補数表現で、マイナスを表現していると想定すると、次のようなビットレベルの変換が行われていることになります。
-</p>
-<pre>
-// -257 16bit符号あり整数
-11111110 11111111
-
-// -1 8bit符号あり整数
-11111111
-</pre>
-<h3>ビット幅の大きい符号なし整数からビット幅の小さい符号なし整数への変換(情報喪失あり)</h3>
-<p>
-  ビット幅の大きい符号なし整数からビット幅の小さい符号なし整数への変換について解説します。
-</p>
-<p>
-  符号なし整数型として、<a href="/blog/20201122084622.html">uint8_t</a>, <a href="/blog/20201120084622.html">uint16_t</a>, <a href="/blog/20201111150850.html">uint32_t</a>, <a href="/blog/20201109150850.html">uint64_t</a>の場合を想定して解説します。
-</p>
-<p>
-  ビット幅の大きい符号なし整数からビット幅の小さい符号なし整数への変換は、上位ビットが切り捨てられて解釈された値になります。
-</p>
-<p>
-  正しく変換できるのは、変換前の値が、変換後の型で表現できる数値の範囲に収まっていた場合です。
-</p>
-<p>
-  正しく変換できた場合のサンプルです。
-</p>
-<pre>
-#include &lt;stdio.h&gt;
-#include &lt;stdint.h&gt;
-
-int main(void) {
-  
-  // int16_tからint8_tへ変換
-  uint16_t num_ui16 = 255;
-  uint8_t num_ui8 = num_ui16;
-  
-  printf("%d\n", num_ui8);
-}
-</pre>
-<p>
-  出力結果です。
-</p>
-<pre>
-255
-</pre>
-<p>
-  次のようなビットレベルの変換が行われていることになります。
-</p>
-<pre>
-// 255 16bit符号なし整数
-00000000 10000000
-
-// -128 8bit符号なし整数
-10000000
-</pre>
-<p>
-  情報喪失ありのサンプルです。
-</p>
-<pre>
-#include &lt;stdio.h&gt;
-#include &lt;stdint.h&gt;
-
-int main(void) {
-  
-  // int16_tからint8_tへ変換
-  uint16_t num_ui16 = 257;
-  uint8_t num_ui8 = num_ui16;
-  
-  printf("%d\n", num_ui8);
-}
-</pre>
-<p>
-  出力結果です。
-</p>
-<pre>
-1
-</pre>
-<p>
-  次のようなビットレベルの変換が行われていることになります。
-</p>
-<pre>
-// 257 16bit符号なし整数
-00000001 00000001
-
-// 1 8bit符号なし整数
-00000001
-</pre>
-<h3>ビット幅の小さい浮動小数点型からビット幅の大きい浮動小数点型への変換(情報喪失なし)</h3>
-<p>
-  ビット幅の小さい浮動小数点型からビット幅の大きい浮動小数点型への変換について解説します。
-</p>
-<p>
-  浮動小数点型として、<a href="/blog/20201202133213.html">float</a>,<a href="/blog/20201203133213.html">double</a>の場合を想定して解説します。
-</p>
-<p>
-  ビット幅の小さい浮動小数点型からビット幅の大きい浮動小数点型への変換は数値の情報は失われずに保持されます。
+  When converting from a floating-point type with a large bit width to a floating-point type with a small bit width, if the value before the change exceeds the number of significant digits that the changed type can represent, the number of significant digits after the change is changed. Maximum number of significant digits that the type can represent.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // float型からdouble型へ変換
-  float num_f = 2.5f;
-  double num_d = num_f;
-  
-  printf("%f\n", num_d);
-}
-</pre>
-<p>
-  出力結果です。
-</p>
-<pre>
-2.500000
-</pre>
-<h3>ビット幅の大きい浮動小数点型からビット幅の小さい浮動小数点型への変換(情報喪失あり)</h3>
-<p>
-  ビット幅の大きい浮動小数点型からビット幅の小さい浮動小数点型への変換について解説します。
-</p>
-<p>
-  浮動小数点型として、<a href="/blog/20201202133213.html">float</a>,<a href="/blog/20201203133213.html">double</a>の場合を想定して解説します。
-</p>
-<p>
-  ビット幅の大きい浮動小数点型からビット幅の小さい浮動小数点型への変換は、変更前の値が、変更後の型が表現できる有効桁数を超えていた場合は、有効桁数が変更後の型が表現できる有効桁数の最大になります。
-</p>
-<pre>
-#include &lt;stdio.h&gt;
-
-int main(void) {
-  
-  // double型からfloat型へ変換
+  // Convert from double type to float type
   double num_d = 2.111111111111111111111111111111;
   float num_f = num_d;
   
-  printf("double: %.50f\nfloat:  %.50f\n", num_d, num_f);
+  printf("double:%.50f\nfloat:%.50f\n", num_d, num_f);
 }
 </pre>
 <p>
-  出力結果です。精度が落ちていることが確認できます。
+  This is the output result. You can see that the accuracy has dropped.
 </p>
 <pre>
 double: 2.11111111111111116045435665000695735216140747070312
-float:  2.11111116409301757812500000000000000000000000000000
+float: 2.11111116409301757812500000000000000000000000000000
 </pre>
-<h3>符号あり整数型から浮動小数点型への変換(情報喪失あり)</h3>
+<h3><a href="/blog/20210222132505.html"> Conversion from signed integer type to floating point type (with information loss) </a></h3>
 <p>
-  符号あり整数型から浮動小数点型への変換について解説します。
+  Describes the conversion from signed integer type to floating point type.
 </p>
 <p>
-  符号あり整数型を浮動小数点型に変換する場合は、数値の情報が失われる場合があります。
+  Numerical information may be lost when converting signed integer types to floating point types.
 </p>
 <p>
-  double型は64bitです。double型で正しく表現可能な整数型は、最大int32_t型までです。int64_t型の場合は、数値の情報が失われる場合があります。
+  The double type is 64bit. The maximum integer type that can be correctly represented by double type is int32_t type. For int64_t type, numeric information may be lost.
 </p>
 <p>
-  float型は64bitです。float型で正しく表現可能な整数型は、最大int16_t型まです。int64_t型、int32_t型の場合は、数値の情報が失われる可能性があります。
+  The float type is 64bit. The maximum integer type that can be correctly expressed by float type is int16_t type. In the case of int64_t type and int32_t type, numerical information may be lost.
 </p>
 <p>
-  正しく変換できた場合のサンプルです。
+  This is a sample when the conversion is successful.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // int32_t型からdouble型へ変換
+  // Convert from int32_t type to double type
   int32_t num_i32 = INT32_MAX;
   double num_d = num_i32;
   
@@ -420,21 +131,21 @@ int main(void) {
 }
 </pre>
 <p>
-  出力結果です。int32_t型の最大値<a href="/blog/20201129082751.html">INT32_MAX</a>(2147483647)を、double型で表現できています。
+  This is the output result. The maximum value <a href="/blog/20201129082751.html"> INT32_MAX</a> (2147483647) of int32_t type can be expressed by double type.
 </p>
 <pre>
 2147483647.000000
 </pre>
 <p>
-  数値の情報が失われるサンプルです。
+  This is a sample in which numerical information is lost.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // int32_t型からfloat型へ変換
+  // Convert from int32_t type to float type
   int32_t num_i32 = INT32_MAX;
   float num_f = num_i32;
   
@@ -442,34 +153,34 @@ int main(void) {
 }
 </pre>
 <p>
-  出力結果です。おや、精度が足りなかったため、よく見ると、値が変わっていますね。
+  This is the output result. Ah, the accuracy wasn't enough, so if you look closely, the value has changed.
 </p>
 <pre>
 2147483648.000000
 </pre>
-<h3>浮動小数点型から符号あり整数型への変換(情報喪失あり)</h3>
+<h3> Conversion from floating point type to signed integer type (with information loss) </h3>
 <p>
-  浮動小数点型から符号あり整数型への変換について解説します。
+  Describes the conversion from floating-point type to signed integer type.
 </p>
 <p>
-  浮動小数点型から符号あり整数型へ変換すると、小数点以下の情報が、削除されます。
+  Converting from a floating-point type to a signed integer type removes the information after the decimal point.
 </p>
 <p>
-  doubleは、int64_t型への変換であれば、情報喪失はありません。それ以下のビット数の符号あり整数型の場合は、情報喪失が発生する可能性があります。
+  If double is a conversion to int64_t type, there is no information loss. Information loss may occur if the number of bits is less than that of a signed integer type.
 </p>
 <p>
-  floatは、int32_t型への変換であれば、情報喪失はありません。それ以下のビット数の符号あり整数型の場合は、情報喪失が発生する可能性があります。
+  If float is converted to int32_t type, there is no information loss. Information loss may occur if the number of bits is less than that of a signed integer type.
 </p>
 <p>
-  正しく変換できた場合のサンプルです。
+  This is a sample when the conversion is successful.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // int32_t型からdouble型へ変換
+  // Convert from int32_t type to double type
   double num_d = 33.43;
   int64_t num_i64 = num_d;
   
@@ -477,149 +188,146 @@ int main(void) {
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
-33
+33 33
 </pre>
-<h3>同一サイズの符号あり整数型と符号なし整数型の相互の変換(情報喪失なし)</h3>
+<h3> Mutual conversion between signed integer type and unsigned integer type of the same size (no information loss) </h3>
 <p>
-  同一サイズの符号あり整数型と符号なし整数型の相互の変換について解説します。
+  This section describes the mutual conversion between signed and unsigned integer types of the same size.
 </p>
 <p>
-  符号あり整数型として、<a href="/blog/20201117090747.html">int8_t</a>, <a href="/blog/20201126090559.html">int16_t</a>, <a href="/blog/20201130082751.html">int32_t</a>, <a href="/blog/20201127082751.html">int64_t</a>の場合を想定して解説します。
+  As a signed integer type, <a href="/blog/20201117090747.html"> int8_t</a>, <a href="/blog/20201126090559.html"> int16_t</a>, <a href="/ The explanation is based on the assumption of blog / 20201130082751.html "> int32_t</a>, <a href="/blog/20201127082751.html"> int64_t</a>.
 </p>
 <p>
-  符号なし整数型として、<a href="/blog/20201122084622.html">uint8_t</a>, <a href="/blog/20201120084622.html">uint16_t</a>, <a href="/blog/20201111150850.html">uint32_t</a>, <a href="/blog/20201109150850.html">uint64_t</a>の場合を想定して解説します。
+  As an unsigned integer type, <a href="/blog/20201122084622.html"> uint8_t</a>, <a href="/blog/20201120084622.html"> uint16_t</a>, <a href="/ I will explain assuming the case of blog / 20201111150850.html "> uint32_t</a>, <a href="/blog/20201109150850.html"> uint64_t</a>.
 </p>
 <p>
-  同一サイズの符号あり整数型と符号なし整数型の相互の変換は、内部のビット表現を変えません。内部のビット表現を、符号ありとして解釈するか、符号なしとして解釈するかという意味の変換のみになります。
+  Mutual conversion between signed and unsigned integers of the same size does not change the internal bit representation. It is only a conversion that means whether the internal bit representation is interpreted as signed or unsigned.
 </p>
 <p>
-  同一サイズの符号あり整数型と符号なし整数型の相互の変換を行うサンプルです。
+  This is a sample that converts between signed and unsigned integer types of the same size.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   int8_t num_i8 = -1;
-  uint8_t num_ui8= num_i8;
+  uint8_t num_ui8 = num_i8;
   
-  printf("num_ui8: %d\n", num_ui8);
+  printf("num_ui8:%d\n", num_ui8);
   
   int8_t num_i8_again = num_ui8;
   
-  printf("num_i8_again: %d\n", num_i8_again);
+  printf("num_i8_again:%d\n", num_i8_again);
 }
 </pre>
 <p>
-  出力結果。
+  Output result.
 </p>
 <pre>
 num_ui8: 255
 num_i8_again: -1
 </pre>
 <p>
-  ビットレベルでは、何の変換も行われていません。負の値は、2の補数で表現されていると想定します。
+  No conversion has been done at the bit level. Negative values ​​are assumed to be represented by two's complement.
 </p>
 <pre>
-// -1 8bit符号あり整数
+// -1 8bit signed integer
 11111111
 
-// 255 8bit符号なし整数
+// 255 8bit unsigned integer
 11111111
 </pre>
-<h3>異なるポインタ型の相互の変換</h3>
+<h3> Mutual conversion of different pointer types </h3>
 <p>
-  異なるポインタ型の相互の変換は、一般的なCコンパイラでは、警告が発生します。ほぼすべての場合において、これは作成者が意図していない動作で、バグだと考えます。
+  Conversion between different pointer types will give a warning in a typical C compiler. In almost all cases, this is an unintended behavior by the author and is considered a bug.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 
 int main (void) {
-  int32_t* nums_i32_ptr;
-  int8_t* nums_i8_ptr = nums_i32_ptr;
+  int32_t * nums_i32_ptr;
+  int8_t * nums_i8_ptr = nums_i32_ptr;
 }
 </pre>
 <p>
-  gccにおける警告の内容です。
+  The content of the warning in gcc.
 </p>
 <p>
-  ポインタについては、以下の記事を参考にしてください。
+  Please refer to the following articles for pointers.
 </p>
 <ul>
-  <li><a href="/blog/20210211090234.html">ポインタとアドレス</a></li>
+  <li> <a href="/blog/20210211090234.html"> Pointers and addresses</a> </li>
 </ul>
-<h3>汎用ポインタ型「void*」とポインタ型の相互の変換</h3>
+<h3> Mutual conversion between general-purpose pointer type "void *" and pointer type </h3>
 <p>
-  <a href="/blog/20210215090234.html">汎用ポインタ型「void*」</a>とポインタ型の相互の変換は、C言語では、どちらの方向でも、仕様上許可されます。C言語が期待する動作ですので、<a href="/blog/20210217081559.html">型キャスト</a>しなくても、警告はでません。これは、型チェックが厳密なプログラミング言語に慣れ親しんでいると「あれっ、これ大丈夫なんか?」と感じるので、書いておきます。
+  <a href="/blog/20210215090234.html"> General-purpose pointer type "void *"</a> and pointer type are allowed to be converted to each other in C language by design in either direction. This is the behavior that C language expects, so even if you do not <a href="/blog/20210217081559.html"> typecast</a>, you will not be warned. I'll write this because I feel "Oh, is this okay?" When type checking is familiar with strict programming languages.
 </p>
 <p>
-  ただし、汎用ポインタ型が指しているデータが、意図していないポインタ型に代入された場合には、プログラムとしては、間違いですので、気をつけましょう。
+  However, if the data pointed to by the general-purpose pointer type is assigned to an unintended pointer type, it is a mistake for the program, so be careful.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 
 int main (void) {
-  int32_t* nums_i32_ptr;
+  int32_t * nums_i32_ptr;
   
-  // 他のポインタ型から汎用ポインタ型への型変換
-  void* void_ptr = nums_i32_ptr;
+  // Type conversion from other pointer types to generic pointer types
+  void * void_ptr = nums_i32_ptr;
   
-  // 汎用ポインタ型から他のポインタ型への型変換
-  int32_t* nums_i32_ptr2 = void_ptr;
+  // Type conversion from generic pointer types to other pointer types
+  int32_t * nums_i32_ptr2 = void_ptr;
 }
 </pre>
-<h3>ポインタ型を警告を出さずに整数型に変換する、また、その逆の変換</h3>
+<h3> Convert pointer type to integer type without warning, and vice versa </h3>
 <p>
-  ポインタ型を警告を出さずに整数型に変換する方法について記しておきます。また、警告を出さずに、逆の変換をする方法について書いておきます。
+  Here's how to convert a pointer type to an integer type without warning. Also, I will write about how to do the reverse conversion without issuing a warning.
 </p>
 <p>
-  <a href="/blog/20210215090234.html">汎用ポインタ型「void*」</a>を、符号あり整数型、または、符号なし整数型に、変換すると一般的な処理系では、警告が発生します。
+  If you convert <a href="/blog/20210215090234.html"> general-purpose pointer type "void *"</a> to a signed integer type or an unsigned integer type, a warning will be issued in general processing systems. Occurs.
 </p>
 <p>
-  また、その逆の変換においても、警告が発生します。
+  A warning is also issued for the reverse conversion.
 </p>
 <p>
-  このような変換は、一般的には、間違いですが、データのコンテナを、オブジェクト「void*」と整数「int32_t」(あるいは、32bit浮動小数点 float)で、共有したいという、理想的には、嫌だが、実用的には、重複したコードを書きたくないがために、やりたいような場合が、ときどきあります。
+  Such a transformation is generally a mistake, but ideally you don't want to share a container of data between the object "void *" and the integer "int32_t" (or a 32-bit floating point float). But in practice, there are times when you want to do it because you don't want to write duplicate code.
 </p>
 <p>
-  そのような場合に、警告を出さずに、型変換を行う方法を記しておきます。intptr_tという、特別な型を使います。intptr_tは、ポインタ型のサイズと同じであることが保証された符号あり整数型で、ポインタ型と符号あり整数型の変換を許可します。符号なし整数型の場合はuintptr_tという型もあります。
+  In such a case, I will describe how to perform type conversion without issuing a warning. We use a special type called intptr_t. intptr_t is a signed integer type that is guaranteed to be the same size as the pointer type, and allows conversion between pointer type and signed integer type. For unsigned integer types, there is also a type called uintptr_t.
 </p>
 <pre>
 #include &lt;stdlib.h&gt;
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-int main(void) {
-  // 汎用コンテナ
-  void** elements = calloc(sizeof(void*), 10);
+int main (void) {
+  // General purpose container
+  void ** elements = calloc (sizeof (void *), 10);
   
-  // ここに、32bit整数型を保存したいんだ。だって、コンテナを32bit整数用に実装するの二重実装になっちゃうし
-  // とりあえず、間に合わせたいよー
+  // I want to save a 32-bit integer type here. Because it will be a double implementation of implementing the container for 32-bit integers.
+  // For the time being, I want to make it in time
   int32_t num = 100;
-  elements[0] = (void*)(intptr_t)num;
+  elements [0] = (void *) (intptr_t) num;
   
-  // 取り出し
-  int32_t num_again = (intptr_t)elements[0];
+  // take out
+  int32_t num_again = (intptr_t) elements [0];
   
   printf("%d\n", num_again);
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 100
 </pre>
 <p>
-  これは、厳密には間違い(16bitのCPU処理系ではアウト)ですが、32bit以上のCPU処理系がが、世界のすべてである、と仮定した場合は、正しいプログラムです。
+  This is strictly a mistake (out for 16-bit CPU processing systems), but it is a correct program assuming that 32-bit or higher CPU processing systems are all in the world.
 </p>
-<h3>上記の解説はC言語仕様上の型変換規則の解説ではないのですか?</h3>
-<p>
-  はい。上記の解説はC言語仕様上の型変換規則の解説ではありません。実用でよく使うである型変換を、例示的に示して、C言語仕様上の型変換規則と矛盾がないように解説したものです。
-</p>
+<h3> Isn't the above explanation an explanation of the type conversion rules in the C language specification? </H>
 
   </div>
   <div class="bottom">
@@ -646,8 +354,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

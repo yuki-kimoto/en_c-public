@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>C言語ソースコードをコンパイルする - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="C言語ソースコードをコンパイルしてみましょう。ここで解説するのは、C言語ソースコードからオブジェクトファイルを生成する、純粋なコンパイルです。">
+<title> Compile C language source code  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="Let's compile the C language source code. This is a pure compilation that produces an object file from C source code.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="C言語ソースコードをコンパイルする - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="C言語ソースコードをコンパイルしてみましょう。ここで解説するのは、C言語ソースコードからオブジェクトファイルを生成する、純粋なコンパイルです。" />
+<meta name="twitter:title" content=" Compile C language source code  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="Let's compile the C language source code. This is a pure compilation that produces an object file from C source code." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/compile.html">
-        <span itemprop="name">コンパイル</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Compile </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20201214140830.html">C言語ソースコードをコンパイルする</a></h2>
+<h2><a href="/blog/20201214140830.html"> Compile C language source code </a></h2>
 <p>
-  C言語ソースコードをコンパイルしてみましょう。ここで解説するのは、C言語ソースコードからオブジェクトファイルを生成する、純粋なコンパイルです。
+  Let's compile the C language source code. This is a pure compilation that produces an object file from C source code.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,81 +100,81 @@
 
 
 <p>
-  オブジェクトファイルは、機械語で書かれたプログラムの部品のことだと考えてください。
+  Think of an object file as a part of a program written in machine language.
 </p>
 <p>
-  コンパイルとは、テキストで書かれたC言語ソースファイルを、機械語で書かれたオブジェクトファイルに変換する作業のことです。
+  Compiling is the process of converting a C language source file written in text into an object file written in machine language.
 </p>
 <p>
-  コンパイルを行うには「-c」オプションを使用します。
+  Use the "-c" option to compile.
 </p>
 <pre>
-# C言語ソースファイルをコンパイルする
-gcc -c 入力ソースコードファイル名
+#Compile C language source files
+gcc -c input source code file name
 </pre>
 <p>
-  「test.c」というファイルから「test.o」というオブジェクトファイルを生成してみましょう。
+  Let's create an object file called "test.o" from a file called "test.c".
 </p>
 <pre>
 // test.c
 
 #include &lt;stdio.h&gt;
 
-int main(void) {
-  printf("Hello World!\n");
+int main (void) {
+  printf("Hello World! \ N");
 }
 </pre>
 <p>
-  gccコマンドを実行します。「test.o」というオブジェクトファイルが生成されます。
+  Execute the gcc command. An object file called "test.o" will be generated.
 </p>
 <pre>
 gcc -c test.c
 </pre>
 <p>
-  出力ファイル名を自分で指定したい場合は「-o」オプションが使用できます。
+  If you want to specify the output file name yourself, you can use the "-o" option.
 </p>
 <pre>
-gcc -o test2.o -c test.c 
+gcc -o test2.o -c test.c
 </pre>
-<h3>リンクを行ってオブジェクトファイルから実行ファイルを生成する</h3>
+<h3> Link to generate an executable file from the object file </h3>
 <p>
-  ひとつのオブジェクトファイルから実行ファイルを生成してみましょう。この作業をリンクと呼びますが、ひとつのオブジェクトファイルから、ひとつの実行ファイルを生成するので、リンクという感じはしません。
+  Let's generate an executable file from one object file. This work is called a link, but it doesn't feel like a link because it creates one executable file from one object file.
 </p>
 <p>
-  先ほど生成したオブジェクトファイル「test.o」から実行ファイル「test」を生成します。
+  Generate the executable file "test" from the object file "test.o" generated earlier.
 </p>
 <pre>
-# オブジェクトファイルから実行ファイルを生成する
+#Generate an executable file from an object file
 gcc -o test test.o
 </pre>
 <p>
-  「test」が実行ファイルとして実行できるかを確認してみましょう。
+  Let's check if "test" can be executed as an executable file.
 </p>
 <pre>
 ./test
 </pre>
-<h3>複数のオブジェクトファイルから一つの実行ファイルを生成できますか?</h3>
+<h3> Can one executable file be generated from multiple object files? </h3>
 <p>
-  はい。複数のオブジェクトファイルから一つの実行ファイルを生成できます。
+  Yes. You can generate one executable file from multiple object files.
 </p>
 <pre>
 gcc -o test test.o foo.o bar.o
 </pre>
 <p>
-  これについては、分割コンパイルの解説で行いたいと思います。
+  I'll do this in the discussion of split compilation.
 </p>
-<h3>gcc以外のコンパイラは存在しますか?</h3>
+<h3> Is there a compiler other than gcc? </H3>
 <p>
-  gccは、GNUプロジェクトによって作成された、UNIX/LinuxのデフォルトのC言語コンパイラだと考えてください。
-</p>
-<p>
-  他のメーカーで作成されているC言語コンパイラがあり、コンパイル速度、リンク速度、実行速度の点で、優れている場合があります。
+  Think of gcc as the default C language compiler for UNIX / Linux created by the GNU Project.
 </p>
 <p>
-  UNIX/Linuxにおけるポータビリティやオープンソース文化への親和性という点で、gccは優れていると考えます。
+  There are C language compilers made by other manufacturers, which may be superior in terms of compilation speed, link speed, and execution speed.
 </p>
 <p>
-  企業製品の場合は、広告メッセージが誇大である場合も多く、もともと存在する製品が用途的に十分使える場合であっても、企業支配力を増加させることが、開発の動機になっていることもあるので、その点を差し引いて品質評価を行うと良いと思います。
+  I think gcc is excellent in terms of portability in UNIX / Linux and its affinity for open source culture.
+</p>
+<p>
+  In the case of corporate products, the advertising message is often exaggerated, and even if the original product can be used sufficiently for its intended purpose, increasing corporate control may be the motivation for development. Since there is, I think it is better to subtract that point and perform quality evaluation.
 </p>
 
   </div>
@@ -204,8 +202,7 @@ gcc -o test test.o foo.o bar.o
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

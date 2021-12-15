@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>memmove関数 - メモリ領域をバイト単位でコピーする - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="memmove関数は、メモリ領域をバイト単位でコピーする関数です。「string.h」をインクルードします。memcpy関数は、コピー先とコピー元のデータ領域が重なっていた場合には、動作は保証されませんが、memmove関数は保証されます。">
+<title> memmove function-copy memory area in bytes  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="The  memmove function  is a function that copies the memory area in bytes. Include " string.h". The  memcpy function is not guaranteed to work if the copy destination and copy source data areas overlap, but the memmove function is guaranteed. increase.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="memmove関数 - メモリ領域をバイト単位でコピーする - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="memmove関数は、メモリ領域をバイト単位でコピーする関数です。「string.h」をインクルードします。memcpy関数は、コピー先とコピー元のデータ領域が重なっていた場合には、動作は保証されませんが、memmove関数は保証されます。" />
+<meta name="twitter:title" content=" memmove function-copy memory area in bytes  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="The  memmove function  is a function that copies the memory area in bytes. Include " string.h". The  memcpy function is not guaranteed to work if the copy destination and copy source data areas overlap, but the memmove function is guaranteed. increase." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,34 +60,34 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library.html">
-        <span itemprop="name">C標準ライブラリ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C standard library </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library/string.html">
-        <span itemprop="name">string.h</span>
-      </a>
-      <meta itemprop="position" content="3" />
+        <span itemprop = "name"> string.h </span>
+     </a>
+      <meta itemprop = "position" content = "3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210412082820.html">memmove関数 - メモリ領域をバイト単位でコピーする</a></h2>
+<h2><a href="/blog/20210412082820.html"> memmove function-copy memory area in bytes </a></h2>
 <p>
-  <b>memmove関数</b>は、メモリ領域をバイト単位でコピーする関数です。「<a href="/blog/20210303101711.html">string.h</a>」をインクルードします。<a href="/blog/20210221132505.html">memcpy関数</a>は、コピー先とコピー元のデータ領域が重なっていた場合には、動作は保証されませんが、memmove関数は保証されます。
+  The <b> memmove function </b> is a function that copies the memory area in bytes. Include "<a href="/blog/20210303101711.html"> string.h</a>". The <a href="/blog/20210221132505.html"> memcpy function</a> is not guaranteed to work if the copy destination and copy source data areas overlap, but the memmove function is guaranteed. increase.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -110,20 +108,20 @@
 <pre>
 #include &lt;string.h&gt;
 
-void *memmove(void *buf1, const void *buf2, size_t n);
+void * memmove (void * buf1, const void * buf2, size_t n);
 </pre>
 <p>
-  第一引数はコピー先の<a href="/blog/20210211090234.html">アドレス</a>です。<a href="/blog/20210215090234.html">汎用ポインタ型</a>ですので、どのポインタ型でも大丈夫です。
+  The first argument is the <a href="/blog/20210211090234.html"> address</a> of the copy destination. <a href="/blog/20210215090234.html"> General-purpose pointer type</a>, so any pointer type is fine.
 </p>
 <p>
-  第二引数はコピー元の<a href="/blog/20210211090234.html">アドレス</a>です。<a href="/blog/20210215090234.html">汎用ポインタ型</a>ですので、どのポインタ型でも大丈夫です。
+  The second argument is the <a href="/blog/20210211090234.html"> address</a> of the copy source. <a href="/blog/20210215090234.html"> General-purpose pointer type</a>, so any pointer type is fine.
 </p>
 <p>
-  第三引数にバイトサイズを指定します。size_t型です。<a href="/blog/20201130082751.html">int32_t</a>型までの範囲で0以上の数値であれば、まず安心です。0の指定は有効な引数で、この場合コピーは行われません。
+  Specify the byte size in the third argument. It is size_t type. <a href="/blog/20201130082751.html"> int32_t</a> If the value is 0 or more in the range up to the type, it is safe first. Specifying 0 is a valid argument, in which case no copy will be done.
 </p>
-<h3>文字列をの先頭の文字を削除する</h3>
+<h3> Delete the first character of the string </h3>
 <p>
-  memmove関数で<a href="/blog/20210331101342.html">文字列</a>をの先頭の文字を削除するするサンプルです。領域が重なっているのでmemmove関数を使います。<a href="/blog/20210405101342.html">strlen関数</a>で文字列の長さを取得しています。
+  This is a sample to delete the first character of <a href="/blog/20210331101342.html"> string</a> with the memmove function. Since the areas overlap, use the memmove function. I am getting the length of the string with the <a href="/blog/20210405101342.html"> strlen function</a>.
 </p>
 <pre>
 #include &lt;string.h&gt;
@@ -131,28 +129,28 @@ void *memmove(void *buf1, const void *buf2, size_t n);
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
-  // 変数名
-  const char* var_name = "$foo";
+int main (void) {
+  // Variable name
+  const char * var_name = "$foo";
   
-  // 変数名の長さ
-  int32_t var_name_length = strlen(var_name);
+  // Variable name length
+  int32_t var_name_length = strlen (var_name);
   
-  // 変数名をコピー
-  char* var_name_alphabet = calloc(var_name_length + 1, sizeof(char));
-  memcpy(var_name_alphabet, var_name, var_name_length);
+  // Copy the variable name
+  char * var_name_alphabet = calloc (var_name_length + 1, sizeof (char));
+  memcpy (var_name_alphabet, var_name, var_name_length);
   
-  // 変数名をアルファベットの部分だけにする
-  memmove(var_name_alphabet, var_name_alphabet + 1, var_name_length - 1);
-  var_name_alphabet[var_name_length - 1] = '\0';
+  // Make the variable name only the alphabet part
+  memmove (var_name_alphabet, var_name_alphabet + 1, var_name_length --1);
+  var_name_alphabet [var_name_length --1] ='\ 0';
   
   printf("%s\n", var_name_alphabet);
   
-  free(var_name_alphabet);
+  free (var_name_alphabet);
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 foo
@@ -183,8 +181,7 @@ foo
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

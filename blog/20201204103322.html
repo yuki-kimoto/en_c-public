@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>char - 文字を表現する型 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="charは、文字を表現する型です。char型は、ASCII文字コード(0～127)を表現することが想定されていると考えられます。char型は、8bit符号あり整数型か、8bit符号なし整数型として定義されています。">
+<title> char --Type that represents a character  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="char is a type that represents a character. The char type is supposed to represent ASCII character codes (0 to 127). The char type is defined as an 8-bit signed integer type or an 8-bit unsigned integer type.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="char - 文字を表現する型 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="charは、文字を表現する型です。char型は、ASCII文字コード(0～127)を表現することが想定されていると考えられます。char型は、8bit符号あり整数型か、8bit符号なし整数型として定義されています。" />
+<meta name="twitter:title" content=" char --Type that represents a character  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="char is a type that represents a character. The char type is supposed to represent ASCII character codes (0 to 127). The char type is defined as an 8-bit signed integer type or an 8-bit unsigned integer type." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/types.html">
-        <span itemprop="name">C言語の型</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C type </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20201204103322.html">char - 文字を表現する型</a></h2>
+<h2><a href="/blog/20201204103322.html"> char --Type that represents a character </a></h2>
 <p>
-  charは、文字を表現する型です。char型は、ASCII文字コード(0～127)を表現することが想定されていると考えられます。char型は、8bit符号あり整数型か、8bit符号なし整数型として定義されています。
+  char is a type that represents a character. The char type is supposed to represent ASCII character codes (0 to 127). The char type is defined as an 8-bit signed integer type or an 8-bit unsigned integer type.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,102 +100,102 @@
 
 
 <pre>
-# 文字を表現する型
+#Type that represents a character
 char
 </pre>
-<h3>charのサンプルコード</h3>
+<h3> char sample code </h3>
 <p>
-  charを使ったサンプルコードです。
+  This is a sample code using char.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
-  char ch = 'a';
+int main (void) {
+  char ch ='a';
   
   printf("%c\n", ch);
 }
 </pre>
 <p>
-  <a href="/blog/20210419083246.html">printf関数</a>のフォーマット指定子で「%c」を使っています。
+  "%C" is used in the format specifier of <a href="/blog/20210419083246.html"> printf function</a>.
 </p>
 <p>
-  出力結果。
+  Output result.
 </p>
 <pre>
 a
 </pre>
-<h3>なぜchar型は、符号ありか符号なしかがはっきりしていないのですか?</h3>
+<h3> Why is it unclear whether the char type has a sign or not? </h3>
 <p>
-  歴史的な経緯で、charを8bit符号あり整数として実装した処理系と8bit符号なし整数として実装した処理系があったからだと考えられます。そのためC言語仕様では、charは8bit符号あり整数または、8bit符号なし整数として定義されています。
+  It is thought that this is because there was a processing system that implemented char as an 8-bit signed integer and a processing system that implemented it as an 8-bit unsigned integer for historical reasons. Therefore, in the C language specification, char is defined as an 8-bit signed integer or an 8-bit unsigned integer.
 </p>
-<h3>幅が8bitであることは保証されていますか?</h3>
+<h3> Is it guaranteed that the width is 8bit? </H3>
 <p>
-  はい、幅が8bitであることは保証されています。
+  Yes, the width is guaranteed to be 8 bits.
 </p>
-<h3>8bitの数値を扱うときは、int8_t, uint8_tを使う</h3>
+<h3> Use int8_t and uint8_t when dealing with 8-bit numbers </h3>
 <p>
-  文字ではなく、8bitの数値を表現するときは、符号あり、符号なしが、定義されている<a href="/blog/20201117090747.html">int8_t</a>, <a href="/blog/20201122084622.html">uint8_t</a>を使いましょう。
+  When expressing an 8-bit number instead of a character, signed and unsigned are defined <a href="/blog/20201117090747.html"> int8_t</a>, <a href="/blog". Use 20201122084622.html "> uint8_t</a>.
 </p>
-<h3>charではなく、int8_t, uint8_tを全部の箇所で使ったらいいのでは?</h3>
+<h3> Should I use int8_t and uint8_t in all places instead of char? </H3>
 <p>
-  理想的には、そうです。ただし、歴史的な経緯からC言語では文字や文字列を受け取る関数の引数の型は「char」や「char*」です。
-</p>
-<p>
-  文字や文字列を関数の引数に渡すことを考えると、文字の表現には「char」、文字列の表現には「char*」を使っておくと、型キャストがいらないという点で、簡潔でわかりやすくなります。
+  Ideally, that's right. However, for historical reasons, in C language, the argument types of functions that receive characters and strings are "char" and "char *".
 </p>
 <p>
-  また、文字の場合は、符号ありと符号なしで区別ができないことで困るということがあまりありません。もし困った場合は、その場合だけ、int8_tあるいはuint8_tに型キャストできます。
+  Considering passing a character or string as a function argument, using "char" to represent the character and "char *" to represent the string is concise in that it does not require a typecast. It will be easier to understand.
 </p>
 <p>
-  すべてを置き換えるというよりも、広く普及している記述を尊重しつつ、必要性が高い部分で、新しく便利な機能を使っていくのは、過去と現在と未来を調和させる非常に良い方法の一つだと考えています。
-</p>
-<h3>C言語でUnicodeを表現することはできますか?</h3>
-<p>
-  まず前提として「コードポイントであるUnicode」と「実際の符号化であるUTF-8やUTF-16やUTF-32」を区別できていることを前提とします。
-</p>
-<h4>Unicodeコードポイント</h3>
-<p>
-  Unicode(デファクトスタンダードであるUCS-4)は、最大31bitで、一つの文字を表現します。つまり、包括的に表現しようと思うと、4バイト必要だということです。つまり、<a href="<a href="/blog/20201130082751.html">int32_t型</a>が必要です。一番大きなビットの32bit目は、利用されないことが仕様上保証されているので、<a href="/blog/20201111150850.html">uint32_t型</a>を使う必要はありません。
+  Also, in the case of characters, there is not much trouble because it is not possible to distinguish between signed and unsigned. If you are in trouble, you can only typecast to int8_t or uint8_t.
 </p>
 <p>
-  またC11で追加されたchar32_tを使うこともできます。
+  Rather than replacing everything, it's one of the best ways to reconcile the past, present and future, while respecting the widespread description and using new and useful features where it's needed. I think it's one.
 </p>
-<h4>UTF-8</h4>
+<h3> Is it possible to express Unicode in C? </H3>
 <p>
-  UTF-8は、Unicodeコードポイントを1～4バイトの可変長で符号化する符号化形式です。UTF-8は、単なるバイト列で、エンディアンを意識する必要がないです。つまり、文字あるいは文字列はcharの配列として表現できます。
+  First of all, it is assumed that "Unicode which is a code point" and "UTF-8, UTF-16 and UTF-32 which are actual coding" can be distinguished.
+</p>
+<h4> Unicode code point </h3>
+<p>
+  Unicode (the de facto standard UCS-4) expresses one character with a maximum of 31 bits. In other words, if you want to express it comprehensively, you need 4 bytes. In other words, <a href="<a href="/blog/20201130082751.html"> int32_t type</a> is required. The 32nd bit of the largest bit is guaranteed not to be used by the specifications. , <a href="/blog/20201111150850.html"> uint32_t type</a> does not need to be used.
+</p>
+<p>
+  You can also use char32_t added in C11.
+</p>
+<h4> UTF-8 </h4>
+<p>
+  UTF-8 is a coding format that encodes Unicode code points with a variable length of 1 to 4 bytes. UTF-8 is just a byte string and you don't have to be endian. That is, a character or string can be represented as an array of chars.
 </p>
 <pre>
-// C言語におけるUTF-８の表現(ソースコードはUTF-8で保存)
-const char* ch = "あ";
-const char* string = "あいうえお";
+// UTF-8 representation in C (source code saved in UTF-8)
+const char * ch = "A";
+const char * string = "aiueo";
 </pre>
 <p>
-  UTF-8はprintf関数で、普通に出力できます。
+  UTF-8 is a printf function and can be output normally.
 </p>
 <pre>
 printf("%s\n", string);
 </pre>
-<h4>UTF-32</h4>
+<h4> UTF-32 </h4>
 <p>
-  UTF-32は、これが符号化であるという点を除いて、Unicodeコードポイントとまったく同じものです。Unicodeコードポイントの解説を読んでください。
+  UTF-32 is exactly the same as the Unicode code point, except that it is coded. Read the Unicode code point description.
 </p>
 <p>
-  UTF-32は、エンディアンを意識する必要があります。
+  UTF-32 needs to be endian conscious.
 </p>
-<h4>UTF-16</h4>
+<h4> UTF-16 </h4>
 <p>
-  UTF-16は、Unicodeを一文字を2バイトで表現する符号化形式です。ただし、Unicodeで表現する必要のある文字は、2バイトで表現できる文字の集合を超えています。その場合は、サロゲートペアと呼ばれる方法で、4バイトを使って表現します。
-</p>
-<p>
-  通常は2バイトなので、C言語では、一つの文字はuint16_tで表現できます、4バイトになる場合は、uint16_tふたつで表現できます。
+  UTF-16 is an encoding format that expresses Unicode in 2 bytes. However, the characters that need to be represented in Unicode exceed the set of characters that can be represented in 2 bytes. In that case, it is expressed using 4 bytes by a method called surrogate pair.
 </p>
 <p>
-  また、C11で追加された、char16_tを使うこともできます。
+  Normally, it is 2 bytes, so in C language, one character can be represented by uint16_t, and if it is 4 bytes, it can be represented by two uint16_t.
 </p>
 <p>
-  UTF-16は、エンディアンを意識する必要があります。
+  You can also use char16_t added in C11.
+</p>
+<p>
+  UTF-16 needs to be endian conscious.
 </p>
 
   </div>
@@ -225,8 +223,7 @@ printf("%s\n", string);
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

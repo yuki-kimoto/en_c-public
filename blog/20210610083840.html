@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>ファイル入出力 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="C言語のファイル入出力の入門的な解説です。ファイル入出力の方法には、一文字づつを読み書きする方法や、数バイトづつ読み書きする方法、ファイル全体を読み書きする方法を紹介します。">
+<title> File input / output  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="This is an introductory explanation of C language file input / output. As for the file input / output method, we will introduce the method of reading and writing one character at a time, the method of reading and writing several bytes at a time, and the method of reading and writing the entire file.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="ファイル入出力 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="C言語のファイル入出力の入門的な解説です。ファイル入出力の方法には、一文字づつを読み書きする方法や、数バイトづつ読み書きする方法、ファイル全体を読み書きする方法を紹介します。" />
+<meta name="twitter:title" content=" File input / output  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="This is an introductory explanation of C language file input / output. As for the file input / output method, we will introduce the method of reading and writing one character at a time, the method of reading and writing several bytes at a time, and the method of reading and writing the entire file." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,9 +60,9 @@
     
   </div>
   <div class="middle">
-    <h2><a href="/blog/20210610083840.html">ファイル入出力</a></h2>
+    <h2><a href="/blog/20210610083840.html"> File input / output </a></h2>
 <p>
-  C言語のファイル入出力の入門的な解説です。ファイル入出力の方法には、一文字づつを読み書きする方法や、数バイトづつ読み書きする方法、ファイル全体を読み書きする方法を紹介します。
+  This is an introductory explanation of C language file input / output. As for the file input / output method, we will introduce the method of reading and writing one character at a time, the method of reading and writing several bytes at a time, and the method of reading and writing the entire file.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -82,310 +80,310 @@
 </div>
 
 
-<h3>ファイルをオープンする</h3>
+<h3> Open the file </h3>
 <p>
-  ファイル入出力するためには、まず最初にファイルをオープンする必要があります。
+  In order to input / output a file, you must first open the file.
 </p>
 <p>
-  <a href="/blog/20210513075631.html">fopen関数</a>を使うと、ファイルを開くことができます。<a href="/blog/20210418083246.html">stdio.h</a>ヘッダを読み込むと使えます。
+  You can use the <a href="/blog/20210513075631.html"> fopen function</a> to open the file. You can use it by reading the <a href="/blog/20210418083246.html"> stdio.h</a> header.
 </p>
 <pre>
-FILE* fopen(const char *file_name, const char *mode);
+FILE * fopen (const char * file_name, const char * mode);
 </pre>
 <p>
-  第一引数は、開きたいファイルのファイル名です。第二引数は、モードです。ファイルオープンに成功すると、ファイルストリームを表現する「FILE*型」の値が返されます。
+  The first argument is the filename of the file you want to open. The second argument is the mode. If the file is opened successfully, a value of "FILE * type" representing the file stream is returned.
 </p>
-<h4>モードの一覧</h4>
+<h4> List of modes </h4>
 <p>
-  モードの一覧です。
+  A list of modes.
 </p>
 <table>
-  <tr><th>モード</th><th>動作</th></tr>
-  <tr><td>r</td><td>読み込み(ファイルがないときはエラー)</td></tr>
-  <tr><td>w</td><td>書き込み(ファイルがないときは新規作成)</td></tr>
-  <tr><td>a</td><td>追加書き込み(ファイルがないときは新規作成)</td></tr>
-  <tr><td>r+</td><td>読み込みと書き込み(ファイルがないときはエラー)</td></tr>
-  <tr><td>w+</td><td>読み込みと書き込み(ファイルがないときは新規作成)</td></tr>
-  <tr><td>a+</td><td>読み込みと追加書き込み(ファイルがないときは新規作成)</td></tr>
+  <tr> <th> Mode </th> <th> Behavior </th> </tr>
+  <tr> <td> r </td> <td> Read (error if there is no file) </td> </tr>
+  <tr> <td> w </td> <td> Write (create new if there is no file) </td> </tr>
+  <tr> <td> a </td> <td> Additional write (create new if there is no file) </td> </tr>
+  <tr> <td> r + </td> <td> Read and write (error if there is no file) </td> </tr>
+  <tr> <td> w + </td> <td> Read and write (create new if there is no file) </td> </tr>
+  <tr> <td> a + </td> <td> Read and add write (create new if there is no file) </td> </tr>
 </table>
 <p>
-  書き込みは、ファイルの内容がクリアされ、新しい内容で書き込むことを意味します。追加書き込みは、ファイルの末尾に追加して、書き込むことを意味します。
+  Writing means that the contents of the file are cleared and you are writing with new contents. Additional write means to add to the end of the file and write.
 </p>
 <p>
-  上記のモードはバイナリモードを意味する「b」と組み合わせることができます。
+  The above modes can be combined with "b" which means binary mode.
 </p>
 <pre>
 br
 bw
 </pre>
 <p>
-  デフォルトの動作は、テキストモードオープンされ、Windowsの場合にはファイルに含まれる改行文字である「CR」「LF」の並びが「\n」に置き換えられます。
+  The default behavior is to open in text mode, and in the case of Windows, the line feed characters "CR" and "LF" contained in the file are replaced with "\ n".
 </p>
 <p>
-  バイナリモードでは、このような置き換えはされません。
+  In binary mode, this replacement is not possible.
 </p>
-<h3>ファイルをクローズする</h3>
+<h3> Close the file </h3>
 <p>
-  ファイル入出力が終わったら、ファイルを閉じる必要があります。
+  When you have finished inputting and outputting the file, you need to close the file.
 </p>
 <p>
-  <a href="/blog/20210509093506.html">fclose関数</a>でファイルを閉じることができます。<a href="/blog/20210418083246.html">stdio.h</a>ヘッダを読み込むと使えます。
+  You can close the file with the <a href="/blog/20210509093506.html"> fclose function</a>. You can use it by reading the <a href="/blog/20210418083246.html"> stdio.h</a> header.
 </p>
 <pre>
-int fclose(FILE* fp);
+int fclose (FILE * fp);
 </pre>
 <p>
-  引数は閉じたいファイルのファイルストリームです。ファイルクローズが、成功した場合は0、エラーの場合はEOFを返します。ファイルをクローズすると、バッファは、フラッシュされます。バッファとは、書き込みデータを一時的に保存している、メモリ領域のことです。フラッシュとは、バッファのデータを、書き出すことを言います。
+  The argument is the file stream of the file you want to close. Returns 0 if the file close is successful, EOF if it is an error. The buffer is flushed when the file is closed. A buffer is a memory area that temporarily stores write data. Flash means writing out the data in the buffer.
 </p>
-<h3>ファイルから一文字読み込む</h3>
+<h3> Read one character from a file </h3>
 <p>
-  ファイルから一文字読み込むには、<a href="/blog/20210519082217.html">fgetc関数</a>を使います。
+  To read a single character from a file, use the <a href="/blog/20210519082217.html"> fgetc function</a>.
 </p>
 <p>
-  fgetc関数は、ファイルから1文字読み込む関数です。<a href="/blog/20210418083246.html">stdio.h</a>ヘッダを読み込むと使えます。
+  The fgetc function is a function that reads one character from a file. You can use it by reading the <a href="/blog/20210418083246.html"> stdio.h</a> header.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
-int fgetc(FILE *fp);
+int fgetc (FILE * fp);
 </pre>
 <p>
-  ファイルストリームから1文字読み込み、読み込んだ文字を返します。ファイルの最後に到達した場合は、EOFが返ります。
+  Reads one character from the file stream and returns the read character. If the end of the file is reached, EOF is returned.
 </p>
-<h3>ファイルから一文字づつ読み込む</h3>
+<h3> Read character by character from a file </h3>
 <p>
-  ファイルから1文字づつ読み込むサンプルです。fgetc関数のサンプルです。<a href="/blog/20210513075631.html">fopen関数</a>で読み込みモードでファイルを開き、<a href="/blog/20210519082217.html">fgetc関数</a>で1文字づつ読み込み、標準出力に出力し、<a href="/blog/20210509093506.html">fclose関数</a>でファイルを閉じています。
+  This is a sample to read one character at a time from a file. This is a sample of the fgetc function. Open the file in read mode with the <a href="/blog/20210513075631.html"> fopen function</a> and use the <a href="/blog/20210519082217.html"> fgetc function</a> one character at a time. It is read, output to standard output, and the file is closed with the <a href="/blog/20210509093506.html"> fclose function</a>.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // ファイルを読み込みモードで開く
-  const char* in_file = "input.txt";
-  FILE* in_fp = fopen(in_file, "r");
+  // Open the file in read mode
+  const char * in_file = "input.txt";
+  FILE * in_fp = fopen (in_file, "r");
   if (in_fp == NULL) {
-    fprintf(stderr, "Can't open file %s\n", in_file);
-    exit(1);
+    fprintf (stderr, "Can't open file%s\n", in_file);
+    exit (1);
   }
   
-  // 読み込んで、標準出力に出力
+  // Read and output to standard output
   int32_t ch;
-  while(ch = fgetc(in_fp)) {
-    // EOFが返ってきた場合
+  while (ch = fgetc (in_fp)) {
+    // If EOF is returned
     if (ch == EOF) {
-      // ファイルの末尾かチェックする
-      if (feof(in_fp)) {
+      // Check if it is the end of the file
+      if (feof (in_fp)) {
         break;
       }
     }
-    fputc(ch, stdout);
+    fputc (ch, stdout);
   }
   
-  // fclose関数でファイルを閉じる
-  fclose(in_fp);
+  // Close the file with the fclose function
+  fclose (in_fp);
 }
 </pre>
 <p>
-  入力ファイル「input.txt」です。
+  It is an input file "input.txt".
 </p>
 <pre>
 Hello
 World!
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 Hello
 World!
 </pre>
-<h3>ファイルに書き出す</h3>
+<h3> Export to file </h3>
 <p>
-  上記のサンプルの出力先を「output.txt」にしてみましょう。
+  Let's set the output destination of the above sample to "output.txt".
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // ファイルを読み込みモードで開く
-  const char* in_file = "input.txt";
-  FILE* in_fp = fopen(in_file, "r");
+  // Open the file in read mode
+  const char * in_file = "input.txt";
+  FILE * in_fp = fopen (in_file, "r");
   if (in_fp == NULL) {
-    fprintf(stderr, "Can't open file %s\n", in_file);
-    exit(1);
+    fprintf (stderr, "Can't open file%s\n", in_file);
+    exit (1);
   }
 
-  // ファイルを書き込みモードで開く
-  const char* out_file = "output.txt";
-  FILE* out_fp = fopen(out_file, "w");
+  // Open the file in write mode
+  const char * out_file = "output.txt";
+  FILE * out_fp = fopen (out_file, "w");
   if (out_fp == NULL) {
-    fprintf(stderr, "Can't open file %s\n", out_file);
-    exit(1);
+    fprintf (stderr, "Can't open file%s\n", out_file);
+    exit (1);
   }
   
-  // 読み込んで、ファイルにに出力
+  // Read and output to file
   int32_t ch;
-  while(ch = fgetc(in_fp)) {
-    // EOFが返ってきた場合
+  while (ch = fgetc (in_fp)) {
+    // If EOF is returned
     if (ch == EOF) {
-      // ファイルの末尾かチェックする
-      if (feof(in_fp)) {
+      // Check if it is the end of the file
+      if (feof (in_fp)) {
         break;
       }
     }
-    fputc(ch, out_fp);
+    fputc (ch, out_fp);
   }
   
-  // fclose関数でファイルを閉じる
-  fclose(in_fp);
-  fclose(out_fp);
+  // Close the file with the fclose function
+  fclose (in_fp);
+  fclose (out_fp);
 }
 </pre>
-<h3>数バイト単位で読み書きする</h3>
+<h3> Read / write in units of several bytes </h3>
 <p>
-  数バイト単位で読み書きするサンプルです。<a href="/blog/20210520080906.html">fread関数</a>で、入力ファイルから数バイトづつ読み込み、<a href="/blog/20210613143712.html">fwrite関数</a>で、出力ファイルへ数バイトづつ書き込みます。
+  This is a sample to read and write in units of several bytes. <a href="/blog/20210520080906.html"> fread function</a> reads several bytes from the input file, and <a href="/blog/20210613143712.html"> fwrite function</a> Writes a few bytes to the output file.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // ファイルを読み込みモードで開く
-  const char* in_file = "input.txt";
-  FILE* in_fp = fopen(in_file, "r");
+  // Open the file in read mode
+  const char * in_file = "input.txt";
+  FILE * in_fp = fopen (in_file, "r");
   if (in_fp == NULL) {
-    fprintf(stderr, "Can't open file %s\n", in_file);
-    exit(1);
+    fprintf (stderr, "Can't open file%s\n", in_file);
+    exit (1);
   }
 
-  // ファイルを書き込みモードで開く
-  const char* out_file = "output.txt";
-  FILE* out_fp = fopen(out_file, "w");
+  // Open the file in write mode
+  const char * out_file = "output.txt";
+  FILE * out_fp = fopen (out_file, "w");
   if (out_fp == NULL) {
-    fprintf(stderr, "Can't open file %s\n", out_file);
-    exit(1);
+    fprintf (stderr, "Can't open file%s\n", out_file);
+    exit (1);
   }
 
-  // 読み込んで、他のファイルに出力
-  while(1) {
+  // Read and output to another file
+  while (1) {
     
-    // 4バイトづつ読み込み
-    char buffer[16];
+    // Read 4 bytes at a time
+    char buffer [16];
     int32_t read_unit = 1;
     int32_t read_count = 4;
-    size_t real_read_count = fread(buffer, read_unit, read_count, in_fp);
+    size_t real_read_count = fread (buffer, read_unit, read_count, in_fp);
     
-    // 4バイトづつ書き込み
-    fwrite(buffer, read_unit, real_read_count, out_fp);
+    // Write 4 bytes at a time
+    fwrite (buffer, read_unit, real_read_count, out_fp);
     
-    if (real_read_count &lt; read_count) {
+    if (real_read_count &lt;read_count) {
       break;
     }
   }
   
-  // fclose関数でファイルを閉じる
-  fclose(in_fp);
+  // Close the file with the fclose function
+  fclose (in_fp);
 }
 </pre>
 <p>
-  入力ファイル「input.txt」です。
+  It is an input file "input.txt".
 </p>
 <pre>
 Hello
 World!
 </pre>
 <p>
-  出力ファイル「output.txt」です。
+  The output file is "output.txt".
 </p>
 <pre>
 Hello
 World!
 </pre>
-<h3>ファイル全体を読み書きする</h3>
+<h3> Read and write the entire file </h3>
 <p>
-  ファイル全体を読み書きするサンプルです。<a href="/blog/20210526085256.html">ftell関数</a>と<a href="/blog/20210525075439.html">fseek関数</a>を使って、ファイルのサイズを取得して、<a href="/blog/20210209082644.html">calloc関数</a>でメモリを確保し、<a href="/blog/20210520080906.html">fread関数</a>で、ファイル全体を読み込み、<a href="/blog/20210613143712.html">fwrite関数</a>で、書き込んでいます。
+  This is a sample to read and write the entire file. Use the <a href="/blog/20210526085256.html"> ftell function</a> and the <a href="/blog/20210525075439.html"> fseek function</a> to get the size of the file. , <a href="/blog/20210209082644.html"> calloc function</a> to allocate memory, and <a href="/blog/20210520080906.html"> fread function</a> to fill the entire file. It is read and written with the <a href="/blog/20210613143712.html"> fwrite function</a>.
 </p>
 <p>
-  ファイルは、読み書きする場合に、バイナリモードで開いています。
+  The file is open in binary mode when reading and writing.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 #include &lt;stdlib.h&gt;
 
-int main(void) {
-  // ファイルを開く
-  const char* in_file = "input.txt";
-  FILE* in_fp = fopen(in_file, "rb");
+int main (void) {
+  // Open the file
+  const char * in_file = "input.txt";
+  FILE * in_fp = fopen (in_file, "rb");
   if (in_fp == NULL) {
-    fprintf(stderr, "Can't open file %s at %s line %d\n", in_file, __FILE__, __LINE__);
-    exit(1);
+    fprintf (stderr, "Can't open file%s at%s line%d\n", in_file, __FILE__, __LINE__);
+    exit (1);
   }
 
-  // ファイルを書き込みモードで開く
-  const char* out_file = "output.txt";
-  FILE* out_fp = fopen(out_file, "wb");
+  // Open the file in write mode
+  const char * out_file = "output.txt";
+  FILE * out_fp = fopen (out_file, "wb");
   if (out_fp == NULL) {
-    fprintf(stderr, "Can't open file %s\n", out_file);
-    exit(1);
+    fprintf (stderr, "Can't open file%s\n", out_file);
+    exit (1);
   }
 
-  // ファイルの末尾に位置指定子を移動
-  fseek(in_fp, 0, SEEK_END);
+  // Move the position specifier to the end of the file
+  fseek (in_fp, 0, SEEK_END);
   
-  // ファイルの末尾の位置を取得。これは、ファイサイズになります。
-  size_t file_size = (int32_t)ftell(in_fp);
+  // Get the position of the end of the file. This will be phi size.
+  size_t file_size = (int32_t) ftell (in_fp);
   
-  // メモリ確保
-  char* buffer = calloc(file_size + 1, sizeof(char));
+  // Allocate memory
+  char * buffer = calloc (file_size + 1, sizeof (char));
 
-  // ファイルの先頭に位置指定子を移動
-  fseek(in_fp, 0, SEEK_SET);
+  // Move the position specifier to the beginning of the file
+  fseek (in_fp, 0, SEEK_SET);
   
-  // ファイルを読み込み
-  size_t read_count = fread(buffer, sizeof(char), file_size, in_fp);
-  if (read_count != file_size) {
-    fprintf(stderr, "Can't read file %s at %s line %d\n", in_file, __FILE__, __LINE__);
-    exit(1);
+  // Read the file
+  size_t read_count = fread (buffer, sizeof (char), file_size, in_fp);
+  if (read_count! = file_size) {
+    fprintf (stderr, "Can't read file%s at%s line%d\n", in_file, __FILE__, __LINE__);
+    exit (1);
   }
   
-  // 出力ファイルへ書き込み
-  fwrite(buffer, sizeof(char), file_size, out_fp);
+  // Write to output file
+  fwrite (buffer, sizeof (char), file_size, out_fp);
   
-  // ファイルを閉じる
-  fclose(in_fp);
+  // Close the file
+  fclose (in_fp);
 }
 </pre>
 <p>
-  入力ファイル「input.txt」です。
+  It is an input file "input.txt".
 </p>
 <pre>
 Hello
 World!
 </pre>
 <p>
-  出力ファイル「output.txt」です。
+  The output file is "output.txt".
 </p>
 <pre>
 Hello
 World!
 </pre>
-<h3>行単位でファイルから読み込むには?</h3>
+<h3> How to read from a file line by line? </H3>
 <p>
-  C言語標準では、簡単に行単位で、ファイルから読み込む方法がありません。工夫すればできますが、自前のメモリ管理が必要になります。ネットに掲載されているものは、固定の配列を利用して、行が途中で切れる可能性があるものが多いですね。
+  In the C language standard, there is no easy way to read from a file, line by line. You can do it with some ingenuity, but you will need to manage your own memory. Many of the things posted on the net use a fixed array and there is a possibility that the line will be cut off in the middle.
 </p>
 <p>
-  現在(2021年6月16日記載)は、メモリ容量も大きくなったので、全部読み込んじゃって、それから処理するのが、楽ですね。
+  Currently (listed on June 16, 2021), the memory capacity has also increased, so it's easier to read everything and then process it.
 </p>
 <p>
-  行単位で読み込みたい場合は、テキスト処理が得意なプログラミング言語を使うのもよいかもしれません。
+  If you want to read line by line, you may want to use a programming language that is good at text processing.
 </p>
 
   </div>
@@ -413,8 +411,7 @@ World!
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

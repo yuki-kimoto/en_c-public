@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>uintptr_t - ポインタ型のサイズの符号なし整数型 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="uintptr_tは、ポインタ型のサイズを持つ符号なし整数型です。たとえば、ポインタ型が32bitで表現される処理系であれば、32bit符号なし整数型、ポインタ型が64bitで表現される処理系であれば、64bit符号なし整数型として定義されます。uintptr_tは、C99で導入されました。">
+<title> uintptr_t --Pointer type size unsigned integer type  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="uintptr_t is an unsigned integer type with a pointer type size. For example, if the pointer type is a processing system expressed in 32 bits, it is defined as a 32-bit unsigned integer type, and if the pointer type is a processing system expressed in 64 bits, it is defined as a 64-bit unsigned integer type. uintptr_t was introduced in  C99.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="uintptr_t - ポインタ型のサイズの符号なし整数型 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="uintptr_tは、ポインタ型のサイズを持つ符号なし整数型です。たとえば、ポインタ型が32bitで表現される処理系であれば、32bit符号なし整数型、ポインタ型が64bitで表現される処理系であれば、64bit符号なし整数型として定義されます。uintptr_tは、C99で導入されました。" />
+<meta name="twitter:title" content=" uintptr_t --Pointer type size unsigned integer type  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="uintptr_t is an unsigned integer type with a pointer type size. For example, if the pointer type is a processing system expressed in 32 bits, it is defined as a 32-bit unsigned integer type, and if the pointer type is a processing system expressed in 64 bits, it is defined as a 64-bit unsigned integer type. uintptr_t was introduced in  C99." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/types.html">
-        <span itemprop="name">C言語の型</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C type </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210223131724.html">uintptr_t - ポインタ型のサイズの符号なし整数型</a></h2>
+<h2><a href="/blog/20210223131724.html"> uintptr_t --Pointer type size unsigned integer type </a></h2>
 <p>
-  uintptr_tは、ポインタ型のサイズを持つ符号なし整数型です。たとえば、ポインタ型が32bitで表現される処理系であれば、32bit符号なし整数型、ポインタ型が64bitで表現される処理系であれば、64bit符号なし整数型として定義されます。uintptr_tは、<a href="/blog/20201206125815.html">C99</a>で導入されました。
+  uintptr_t is an unsigned integer type with a pointer type size. For example, if the pointer type is a processing system expressed in 32 bits, it is defined as a 32-bit unsigned integer type, and if the pointer type is a processing system expressed in 64 bits, it is defined as a 64-bit unsigned integer type. uintptr_t was introduced in <a href="/blog/20201206125815.html"> C99</a>.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -101,26 +99,26 @@
 </div>
 
 
-<h3>汎用ポインタ型との相互の型変換</h3>
+<h3> Mutual type conversion with general-purpose pointer types </h3>
 <p>
-  uintptr_t型は、<a href="/blog/20210215090234.html">汎用ポインタ型「void*」</a>と相互変換が保証されます。相互の変換でビット表現は、変わりません。
+  The uintptr_t type is guaranteed to be interchanged with the <a href="/blog/20210215090234.html"> general-purpose pointer type "void *"</a>. Bit representation does not change due to mutual conversion.
 </p>
 <p>
-  uintptr_tとvoid*を相互変換するサンプルプログラムです。
+  This is a sample program that converts uintptr_t and void * to each other.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 
-int main(void) {
-  void* ptr;
+int main (void) {
+  void * ptr;
   
-  uintptr_t iptr = (uintptr_t)ptr;
+  uintptr_t iptr = (uintptr_t) ptr;
   
-  void* ptr_again = (void*)iptr;
+  void * ptr_again = (void *) iptr;
 }
 </pre>
 <p>
-  同じ用途として、ポインタ型のサイズの符号あり整数型「<a href="/blog/20210225131724.html">uintptr_t</a>」があります。
+  The same use is for the pointer type size signed integer type "<a href="/blog/20210225131724.html"> uintptr_t</a>".
 </p>
 
   </div>
@@ -148,8 +146,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

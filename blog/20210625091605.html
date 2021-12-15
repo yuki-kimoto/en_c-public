@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>関数プロトタイプ宣言 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="関数プロトタイプ宣言は、関数定義における関数名、引数、戻り値の部分だけを行うものです。">
+<title> Function prototype declaration  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="The function prototype declaration only performs the function name, argument, and return value in the  function definition.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="関数プロトタイプ宣言 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="関数プロトタイプ宣言は、関数定義における関数名、引数、戻り値の部分だけを行うものです。" />
+<meta name="twitter:title" content=" Function prototype declaration  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="The function prototype declaration only performs the function name, argument, and return value in the  function definition." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,9 +60,9 @@
     
   </div>
   <div class="middle">
-    <h2><a href="/blog/20210625091605.html">関数プロトタイプ宣言</a></h2>
+    <h2><a href="/blog/20210625091605.html"> Function prototype declaration </a></h2>
 <p>
-  関数プロトタイプ宣言は、<a href="/blog/20210214090234.html">関数定義</a>における関数名、引数、戻り値の部分だけを行うものです。
+  The function prototype declaration only performs the function name, argument, and return value in the <a href="/blog/20210214090234.html"> function definition</a>.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -83,121 +81,121 @@
 
 
 <pre>
-// 関数プロトタイプ宣言
-int32_t foo(int32_t args1, double args2);
+// Function prototype declaration
+int32_t foo (int32_t args1, double args2);
 </pre>
 <p>
-  実務的な用途では、関数プロトタイプ宣言は、関数定義より上で行われます。
+  For practical purposes, function prototype declarations are made above the function definition.
 </p>
 <pre>
-// 関数プロトタイプ宣言
-int32_t foo(int32_t args1, double args2);
+// Function prototype declaration
+int32_t foo (int32_t args1, double args2);
 
-// 関数定義
-int32_t foo(int32_t args1, double args2) {
-  // 処理
+// Function definition
+int32_t foo (int32_t args1, double args2) {
+  // process
 }
 </pre>
 <p>
-  <a href="/blog/20210622081112.html">分割コンパイル</a>できるように構成されたプログラムでは、関数プロトタイプ宣言は、ヘッダに配置されます。
+  In a program configured to <a href="/blog/20210622081112.html"> split compilation</a>, the function prototype declaration is placed in the header.
 </p>
 <p>
-  <b>mylib.h</b>
+  <b> mylib.h </b>
 </p>
 <pre>
-// 関数プロトタイプ宣言
-int32_t foo(int32_t args1, double args2);
+// Function prototype declaration
+int32_t foo (int32_t args1, double args2);
 &lt;pre&gt;
 
-&lt;b&gt;mylib.c&lt;/b&gt;
+&lt;b&gt; mylib.c &lt;/b&gt;
 
 &lt;pre&gt;
-// 関数定義
-int32_t foo(int32_t args1, double args2) {
-  // 処理
+// Function definition
+int32_t foo (int32_t args1, double args2) {
+  // process
 }
 </pre>
-<h3>そもそも何のための関数プロトタイプ宣言なの?</h3>
+<h3> What is the function prototype declaration for? </H3>
 <p>
-  そもそも何のための関数プロトタイプ宣言なのですか?
+  What is the function prototype declaration for?
 </p>
 <p>
-  C言語の仕様やコンパイル技術について、少し知る必要があります。
+  You need to know a little about the C language specifications and compilation techniques.
 </p>
 <p>
-  C言語は、関数定義より後に、関数呼び出しがあった場合には、関数を見つけることができません。
+  C language cannot find a function if there is a function call after the function definition.
 </p>
 <pre>
 int main (void) {
-  // 見つからない
-  foo(1, 2.5);
+  // can not find
+  foo (1, 2.5);
 }
 
-// 関数定義
-int32_t foo(int32_t args1, double args2) {
-  // 処理
+// Function definition
+int32_t foo (int32_t args1, double args2) {
+  // process
 }
 </pre>
 <p>
-  関数プロトタイプ宣言は、これを解決することができます。
+  Function prototype declarations can solve this.
 </p>
 <pre>
-int32_t foo(int32_t args1, double args2);
+int32_t foo (int32_t args1, double args2);
 
 int main (void) {
-  // 見つかる
-  foo(1, 2.5);
+  // Found
+  foo (1, 2.5);
 }
 
-// 関数定義
-int32_t foo(int32_t args1, double args2) {
-  // 処理
+// Function definition
+int32_t foo (int32_t args1, double args2) {
+  // process
 }
 </pre>
 <p>
-  さらに別のソースファイルから、この関数を呼び出したいとします。そうした場合に、処理の実体である関数定義ではなく、関数の仕様、つまり名前と引数と戻り値だけをヘッダで、公開します。
+  Suppose you want to call this function from yet another source file. In such a case, only the function specifications, that is, the name, arguments, and return value, are exposed in the header, not the function definition that is the substance of the process.
 </p>
 <p>
-  <b>mylib.h</b>
+  <b> mylib.h </b>
 </p>
 <pre>
-int32_t foo(int32_t args1, double args2);
+int32_t foo (int32_t args1, double args2);
 </pre>
 <p>
-  <b>mylib.c</b>
+  <b> mylib.c </b>
 </p>
 <pre>
 #include "mylib.h"
 
-// 関数定義
-int32_t foo(int32_t args1, double args2) {
-  // 処理
+// Function definition
+int32_t foo (int32_t args1, double args2) {
+  // process
 }
 </pre>
 <p>
-  <b>myapp.c</b>
+  <b> myapp.c </b>
 </p>
 <pre>
 #include "mylib.h"
 
 int main (void) {
-  // 見つかる
-  foo(1, 2.5);
+  // Found
+  foo (1, 2.5);
 }
 </pre>
 <p>
-  これだけで、他のソースファイル(ここではmyapp.c)がコンパイルできます。もちろん、mylib.cもコンパイルできます。つまり、<a href="/blog/20201214140830.html">コンパイル</a>するためには、関数の実体は必要ではなく、関数の仕様がわかればよいということです。
+  This is all you need to compile other source files (here myapp.c). Of course, you can also compile mylib.c. In other words, in order to <a href="/blog/20201214140830.html"> compile</a>, you don't need the substance of the function, you just need to know the specifications of the function.
 </p>
 <pre>
-# 分割コンパイル
+# Split compilation
 gcc -c -o myapp.o myapp.c
 gcc -c -o mylib.o mylib.c
 </pre>
 <p>
-  そして、<a href="/blog/20201215105104.html">リンク</a>のタイミングで、関数の実体を結びつけます。
+  Then, at the timing of <a href="/blog/20201215105104.html"> link</a>, the entity of the function is connected.
 </p>
 <pre>
-# リンクして実行ファイル生成
+#Link to generate executable file
 gcc -o myapp myapp.o mylib.o
 </pre>
 
@@ -226,8 +224,7 @@ gcc -o myapp myapp.o mylib.o
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

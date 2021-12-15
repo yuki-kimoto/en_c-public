@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>C言語における動的配列は自作するかライブラリを使う - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="C言語には、静的配列と動的にメモリ確保を行う方法はありますが、動的配列ライブラリがありませんので、自作するかライブラリを使います。">
+<title> Create your own dynamic array in C language or use a library  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="In C language, there is a method to dynamically allocate memory with  static array, but since there is no dynamic array library, you can create your own or library. Is used.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="C言語における動的配列は自作するかライブラリを使う - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="C言語には、静的配列と動的にメモリ確保を行う方法はありますが、動的配列ライブラリがありませんので、自作するかライブラリを使います。" />
+<meta name="twitter:title" content=" Create your own dynamic array in C language or use a library  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="In C language, there is a method to dynamically allocate memory with  static array, but since there is no dynamic array library, you can create your own or library. Is used." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,9 +60,9 @@
     
   </div>
   <div class="middle">
-    <h2><a href="/blog/20210323082708.html">C言語における動的配列は自作するかライブラリを使う</a></h2>
+    <h2><a href="/blog/20210323082708.html"> Create your own dynamic array in C language or use a library </a></h2>
 <p>
-  C言語には、<a href="/blog/20210129143859.html">静的配列</a>と動的にメモリ確保を行う方法はありますが、動的配列ライブラリがありませんので、自作するかライブラリを使います。
+  In C language, there is a method to dynamically allocate memory with <a href="/blog/20210129143859.html"> static array</a>, but since there is no dynamic array library, you can create your own or library. Is used.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -83,21 +81,21 @@
 
 
 <p>
-  なぜ動的配列という使用頻度の高いライブラリがないのかというと、ライブラリの内部でメモリ確保が必要なライブラリは、C言語のコアには入らないという方針があるような気がします。
+  The reason why there is no frequently used library called dynamic array is that there is a policy that libraries that require memory allocation inside the library are not included in the core of C language.
 </p>
 <p>
-  動的配列の例として<a href="https://github.com/yuki-kimoto/SPVM/blob/master/lib/SPVM/Builder/src/spvm_list.c">プログラミング言語SPVMの内部実装で使用している動的配列の実装例</a>を一つのサンプルとして書いておきます。
+  <a href="https://github.com/yuki-kimoto/SPVM/blob/master/lib/SPVM/Builder/src/spvm_list.c"> Used in the internal implementation of the programming language SPVM as an example of a dynamic array I will write an implementation example of the dynamic array</a> as a sample.
 </p>
 <p>
-  依存はないので、ヘッダとソースをコピペして使うことができます。
+  There are no dependencies, so you can copy and paste the header and source.
 </p>
-<h3>C言語における動的配列の実装例</h3>
+<h3> Implementation example of dynamic array in C language </h3>
 <p>
-  解説はないですが、動的配列の作成、配列の要素の取得と設定、先頭や末尾から取り出しという基本的な関数だけですので、ヘッダを見れば、使い方はわかると思います。配列の要素は<a href="/blog/20210215090234.html">汎用ポインタ型 void*</a>です。
+  There is no explanation, but since it is only the basic functions of creating a dynamic array, getting and setting the elements of the array, and fetching from the beginning and end, you can see how to use it by looking at the header. The elements of the array are <a href="/blog/20210215090234.html"> general-purpose pointer type void *</a>.
 </p>
-<h4>spvm_list.h</h4>
+<h4> spvm_list.h </h4>
 <p>
-  動的配列のヘッダです。
+  Dynamic array header.
 </p>
 <pre>
 #ifndef SPVM_LIST_H
@@ -110,26 +108,26 @@ struct spvm_list;
 typedef struct spvm_list SPVM_LIST;
 
 struct spvm_list {
-  void** values;
+  void ** values;
   int32_t length;
   int32_t capacity;
-};
+};;
 
-SPVM_LIST* SPVM_LIST_new(int32_t capacity);
-void SPVM_LIST_free(SPVM_LIST* array);
-void SPVM_LIST_maybe_extend(SPVM_LIST* array);
+SPVM_LIST * SPVM_LIST_new (int32_t capacity);
+void SPVM_LIST_free (SPVM_LIST * array);
+void SPVM_LIST_maybe_extend (SPVM_LIST * array);
 
-void SPVM_LIST_push(SPVM_LIST* array, void* value);
-void* SPVM_LIST_fetch(SPVM_LIST* array, int32_t index);
-void SPVM_LIST_store(SPVM_LIST* array, int32_t index, void* value);
-void* SPVM_LIST_pop(SPVM_LIST* array);
-void* SPVM_LIST_shift(SPVM_LIST* array);
+void SPVM_LIST_push (SPVM_LIST * array, void * value);
+void * SPVM_LIST_fetch (SPVM_LIST * array, int32_t index);
+void SPVM_LIST_store (SPVM_LIST * array, int32_t index, void * value);
+void * SPVM_LIST_pop (SPVM_LIST * array);
+void * SPVM_LIST_shift (SPVM_LIST * array);
 
 #endif
 </pre>
-<h4>spvm_list.c</h4>
+<h4> spvm_list.c </h4>
 <p>
-  動的配列の実装です。
+  An implementation of a dynamic array.
 </p>
 <pre>
 #include &lt;string.h&gt;
@@ -138,108 +136,108 @@ void* SPVM_LIST_shift(SPVM_LIST* array);
 
 #include "spvm_list.h"
 
-SPVM_LIST* SPVM_LIST_new(int32_t capacity) {
+SPVM_LIST * SPVM_LIST_new (int32_t capacity) {
   
-  assert(capacity &gt;= 0);
+  assert (capacity&gt; = 0);
   
-  SPVM_LIST* array = calloc(1, sizeof(SPVM_LIST));
+  SPVM_LIST * array = calloc (1, sizeof (SPVM_LIST));
   
-  array-&gt;length = 0;
+  array-&gt;length= 0;
   
   if (capacity == 0) {
-    array-&gt;capacity = 1;
+    array-&gt;capacity= 1;
   }
   else {
-    array-&gt;capacity = capacity;
+    array-&gt;capacity= capacity;
   }
   
-  void** values = calloc(array-&gt;capacity, sizeof(void*));
+  void ** values ​​= calloc (array-&gt;capacity, sizeof (void *));
   
-  array-&gt;values = values;
+  array-&gt;values​​= values;
   
   return array;
 }
 
-void SPVM_LIST_maybe_extend(SPVM_LIST* array) {
+void SPVM_LIST_maybe_extend (SPVM_LIST * array) {
   
-  assert(array);
+  assert (array);
   
   int32_t length = array-&gt;length;
   int32_t capacity = array-&gt;capacity;
   
-  if (length &gt;= capacity) {
+  if (length&gt; = capacity) {
     int32_t new_capacity = capacity * 2;
     
-    void** new_values = calloc(new_capacity, sizeof(void*));
-    memcpy(new_values, array-&gt;values, capacity * sizeof(void*));
-    free(array-&gt;values);
-    array-&gt;values = new_values;
+    void ** new_values ​​= calloc (new_capacity, sizeof (void *));
+    memcpy (new_values, array-&gt;values, capacity * sizeof (void *));
+    free (array-&gt;values);
+    array-&gt;values​​= new_values;
     
-    array-&gt;capacity = new_capacity;
+    array-&gt;capacity= new_capacity;
   }
 }
 
-void SPVM_LIST_free(SPVM_LIST* array) {
+void SPVM_LIST_free (SPVM_LIST * array) {
   
-  free(array-&gt;values);
-  free(array);
+  free (array-&gt;values);
+  free (array);
 }
 
-void SPVM_LIST_push(SPVM_LIST* array, void* value) {
+void SPVM_LIST_push (SPVM_LIST * array, void * value) {
   
-  SPVM_LIST_maybe_extend(array);
+  SPVM_LIST_maybe_extend (array);
   
   int32_t length = array-&gt;length;
   
-  *(void**)&amp;array-&gt;values[length] = value;
+  * (void **) &amp; array-&gt;values​​[length] = value;
   array-&gt;length++;
 }
 
-void* SPVM_LIST_fetch(SPVM_LIST* array, int32_t index) {
-  assert(array);
-  assert(index &gt;= 0);
-  assert(index &lt; array-&gt;length);
+void * SPVM_LIST_fetch (SPVM_LIST * array, int32_t index) {
+  assert (array);
+  assert (index&gt; = 0);
+  assert (index &lt;array-&gt;length);
   
   
-  return *(void**)&amp;array-&gt;values[index];
+  return * (void **) &amp; array-&gt;values​​[index];
 }
 
-void SPVM_LIST_store(SPVM_LIST* array, int32_t index, void* value) {
+void SPVM_LIST_store (SPVM_LIST * array, int32_t index, void * value) {
   
-  assert(array);
-  assert(index &gt;= 0);
-  assert(index &lt; array-&gt;length);
+  assert (array);
+  assert (index&gt; = 0);
+  assert (index &lt;array-&gt;length);
   
-  *(void**)&amp;array-&gt;values[index] = value;
+  * (void **) &amp; array-&gt;values​​[index] = value;
 }
 
-void* SPVM_LIST_pop(SPVM_LIST* array) {
+void * SPVM_LIST_pop (SPVM_LIST * array) {
   
-  assert(array-&gt;length &gt;= 0);
+  assert (array-&gt;length&gt; = 0);
   
-  if (array-&gt;length == 0) {
+  if (array-&gt;length== 0) {
     return NULL;
   }
   else {
-    array-&gt;length--;
-    return *(void**)&amp;array-&gt;values[array-&gt;length];
+    array-&gt;length-;
+    return * (void **) &amp; array-&gt;values​​[array-&gt;length];
   }
 }
 
-void* SPVM_LIST_shift(SPVM_LIST* array) {
+void * SPVM_LIST_shift (SPVM_LIST * array) {
   
-  assert(array-&gt;length &gt;= 0);
+  assert (array-&gt;length&gt; = 0);
   
-  if (array-&gt;length == 0) {
+  if (array-&gt;length== 0) {
     return NULL;
   }
   else {
-    void* return_value = array-&gt;values[0];
-    for (int32_t i = 0; i &lt; array-&gt;length - 1; i++) {
-      array-&gt;values[i] = array-&gt;values[i + 1];
+    void * return_value = array-&gt;values​​[0];
+    for (int32_t i = 0; i &lt;array-&gt;length--1; i ++) {
+      array-&gt;values​​[i] = array-&gt;values​​[i + 1];
     }
 
-    array-&gt;length--;
+    array-&gt;length-;
     return return_value;
   }
 }
@@ -270,8 +268,7 @@ void* SPVM_LIST_shift(SPVM_LIST* array) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>feof関数 - ファイルの末尾かチェックする - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="feof関数を使うと、入力ファイルストリームがファイルの末尾に到達したかをチェックすることができます。stdio.hヘッダを読み込むと使えます。">
+<title> feof function-check if it is at the end of the file  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="You can use the feof function to check if the input file stream has reached the end of the file. You can use it by reading the  stdio.h header.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="feof関数 - ファイルの末尾かチェックする - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="feof関数を使うと、入力ファイルストリームがファイルの末尾に到達したかをチェックすることができます。stdio.hヘッダを読み込むと使えます。" />
+<meta name="twitter:title" content=" feof function-check if it is at the end of the file  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="You can use the feof function to check if the input file stream has reached the end of the file. You can use it by reading the  stdio.h header." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,34 +60,34 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library.html">
-        <span itemprop="name">C標準ライブラリ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C standard library </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library/stdio.html">
-        <span itemprop="name">stdio.h</span>
-      </a>
-      <meta itemprop="position" content="3" />
+        <span itemprop = "name"> stdio.h </span>
+     </a>
+      <meta itemprop = "position" content = "3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210524090409.html">feof関数 - ファイルの末尾かチェックする</a></h2>
+<h2><a href="/blog/20210524090409.html"> feof function-check if it is at the end of the file </a></h2>
 <p>
-  feof関数を使うと、入力ファイルストリームがファイルの末尾に到達したかをチェックすることができます。<a href="/blog/20210418083246.html">stdio.h</a>ヘッダを読み込むと使えます。
+  You can use the feof function to check if the input file stream has reached the end of the file. You can use it by reading the <a href="/blog/20210418083246.html"> stdio.h</a> header.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -109,14 +107,14 @@
 
 <pre>
 #include &lt;stdio.h&gt;
-int feof(FILE *fp);
+int feof (FILE * fp);
 </pre>
 <p>
-  引数は、ファイルストリームです。戻り値は、末尾に到達していた場合は、0ではない値、末尾に到達していた場合は、0です。
+  The argument is a file stream. The return value is a non-zero value if it has reached the end, and 0 if it has reached the end.
 </p>
-<h2>feof関数のサンプル</h2>
+<h2> Feof function sample </h2>
 <p>
-  feof関数を使ったサンプルは<a href="/blog/20210519082217.html">fgetc関数</a>のサンプルの中にあります。
+  A sample using the feof function can be found in the <a href="/blog/20210519082217.html"> fgetc function</a> sample.
 </p>
 
   </div>
@@ -144,8 +142,7 @@ int feof(FILE *fp);
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>文字リテラル - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="文字リテラルは、ASCIIコードのひとつの文字をソースコード上で表現するものです。「'」でASCIIコードの一つの文字を囲みます。">
+<title> Character literal  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="A character literal is a representation of a single character in ASCII code on the source code. Enclose one character in the ASCII code with "'".">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="文字リテラル - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="文字リテラルは、ASCIIコードのひとつの文字をソースコード上で表現するものです。「'」でASCIIコードの一つの文字を囲みます。" />
+<meta name="twitter:title" content=" Character literal  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="A character literal is a representation of a single character in ASCII code on the source code. Enclose one character in the ASCII code with "'"." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210429092832.html">文字リテラル</a></h2>
+<h2><a href="/blog/20210429092832.html"> Character literal </a></h2>
 <p>
-  文字リテラルは、ASCIIコードのひとつの文字をソースコード上で表現するものです。「'」でASCIIコードの一つの文字を囲みます。
+  A character literal is a representation of a single character in ASCII code on the source code. Enclose one character in the ASCII code with "'".
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,104 +100,104 @@
 
 
 <pre>
-// 文字リテラル
+// Character literal
 'a'
 'b'
 </pre>
 <p>
-  これは<a href="/blog/20201204103322.html">char型</a>で、ASCIIコードの値になります。ASCIIコードの文字として出力したい場合はprintf関数の「%c」を使います。
+  This is a <a href="/blog/20201204103322.html"> char type</a> and will be an ASCII code value. If you want to output as ASCII code characters, use "%c" of the printf function.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 
-int main(void) {
+int main (void) {
   
-  char ch = 'a';
+  char ch ='a';
   
-  // ASCIIコード(数値)
+  // ASCII code (number)
   printf("%d\n", ch);
   
-  // ASCIIコードに対応する文字
+  // Characters corresponding to ASCII code
   printf("%c\n", ch);
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 97
 a
 </pre>
-<h3>文字リテラルのエスケープシーケンス</h3>
+<h3> Character literal escape sequences </h3>
 <p>
-  文字リテラルのエスケープシーケンスです。「\t」「\n」で、タブや改行を表現できます。
+  Escape sequence of character literals. You can express tabs and line breaks with "\ t" and "\ n".
 </p>
 <table>
-  <tr><th>\t</th><td>タブ</td></tr>
-  <tr><th>\n</th><td>改行(LF)</td></tr>
-  <tr><th>\0</th><td>ヌル文字</td></tr>
+  <tr> <th> \ t </th> <td> Tab </td> </tr>
+  <tr> <th>\n </th> <td> Line feed (LF) </td> </tr>
+  <tr> <th> \ 0 </th> <td> null character </td> </tr>
 </table>
 <p>
-  文字リテラルのエスケープシーケンスのサンプルです。
+  This is a sample escape sequence for character literals.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // 文字リテラルのエスケープシーケンス
-  printf("%d %d %d\n", '\t', '\n', '\0');
+  // Character literal escape sequences
+  printf("%d%d%d\n",'\ t','\ n','\ 0');
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 9 10 0
 </pre>
-<h4>ASCIIコードの任意の文字</h4>
+<h4> Any character in ASCII code </h4>
 <p>
-  「\x16進数ASCIIコード」というエスケープシーケンスを使って、ASCIIコードの任意の文字を表現できます。以下はASCIIコードの「a」を16進数で表現しています。
+  You can use the escape sequence "\ x hexadecimal ASCII code" to represent any character in the ASCII code. The following represents the ASCII code "a" in hexadecimal.
 </p>
 <pre>
-\x61
+\ x61
 </pre>
 <p>
-  文字リテラルのエスケープシーケンスでASCIIコードの任意の文字を使用するサンプルです。
+  This is a sample that uses any character of ASCII code in the escape sequence of a character literal.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // 文字リテラルのエスケープシーケンス
-  printf("%c\n", '\x61');
+  // Character literal escape sequences
+  printf("%c\n",'\ x61');
 }
 </pre>
 <p>
-  出力結果です。aが出力されます。
+  This is the output result. a is output.
 </p>
 <pre>
 a
 </pre>
-<h4>エスケープシーケンスの一覧</h4>
+<h4> Escape sequence list </h4>
 <table>
-<tr><th>記号</th><th>意味
-</th></tr><tr><td>\a</td><td>ベル
-</td></tr><tr><td>\b</td><td>バックスペース
-</td></tr><tr><td>\f</td><td>ページ送り（クリア）
-</td></tr><tr><td>\n</td><td>改行(ラインブレーク)
-</td></tr><tr><td>\r</td><td>改ページ
-</td></tr><tr><td>\t</td><td>タブ
-</td></tr><tr><td>\v</td><td>垂直タブ
-</td></tr><tr><td>\\</td><td>\
-</td></tr><tr><td>\?</td><td>?
-</td></tr><tr><td>\'</td><td>シングルクォーテーション(')
-</td></tr><tr><td>\"</td><td>ダブルクォーテーション(")
-</td></tr><tr><td>\0</td><td>ヌル文字
-</td></tr><tr><td>\N</td><td>8進定数
-</td></tr><tr><td>\xN</td><td>16進定数
-</td></tr>
+<tr> <th> Symbol </th> <th> Meaning
+</th> </tr> <tr> <td> \ a </td> <td> Bell
+</td> </tr> <tr> <td> \ b </td> <td> Backspace
+</td> </tr> <tr> <td> \ f </td> <td> Page feed (clear)
+</td> </tr> <tr> <td>\n </td> <td> Line break (line break)
+</td> </tr> <tr> <td> \ r </td> <td> Page breaks
+</td> </tr> <tr> <td> \ t </td> <td> tab
+</td> </tr> <tr> <td> \ v </td> <td> Vertical tab
+</td> </tr> <tr> <td> \\ </td> <td> \
+</td> </tr> <tr> <td> \? </td> <td>?
+</td> </tr> <tr> <td> \'</td> <td> Single Quotation (')
+</td> </tr> <tr> <td> \ "</td> <td> Double quotation (")
+</td> </tr> <tr> <td> \ 0 </td> <td> Null character
+</td> </tr> <tr> <td> \ N </td> <td> Octal constant
+</td> </tr> <tr> <td> \ xN </td> <td> Hexadecimal constant
+</td> </tr>
 </table>
 
   </div>
@@ -227,8 +225,7 @@ a
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

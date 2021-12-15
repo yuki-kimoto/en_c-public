@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>uint64_t - 符号なし64bit整数型 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="「uint64_t」は符号なし64bit整数型です。「stdint.h」ヘッダをインクルードすることで使えます。C99で導入された型です。">
+<title> uint64_t --Unsigned 64-bit integer type  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content=""Uint64_t" is an unsigned 64-bit integer type. It can be used by including the " stdint.h" header. This is the type introduced in  C99.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="uint64_t - 符号なし64bit整数型 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="「uint64_t」は符号なし64bit整数型です。「stdint.h」ヘッダをインクルードすることで使えます。C99で導入された型です。" />
+<meta name="twitter:title" content=" uint64_t --Unsigned 64-bit integer type  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content=""Uint64_t" is an unsigned 64-bit integer type. It can be used by including the " stdint.h" header. This is the type introduced in  C99." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/types.html">
-        <span itemprop="name">C言語の型</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C type </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20201109150850.html">uint64_t - 符号なし64bit整数型</a></h2>
+<h2><a href="/blog/20201109150850.html"> uint64_t --Unsigned 64-bit integer type </a></h2>
 <p>
-  「uint64_t」は符号なし64bit整数型です。「<a href="/blog/20210220132505.html">stdint.h</a>」ヘッダをインクルードすることで使えます。<a href="/blog/20201206125815.html">C99</a>で導入された型です。
+  "Uint64_t" is an unsigned 64-bit integer type. It can be used by including the "<a href="/blog/20210220132505.html"> stdint.h</a>" header. This is the type introduced in <a href="/blog/20201206125815.html"> C99</a>.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,31 +100,31 @@
 
 
 <pre>
-# 符号なし64bit整数型
+# Unsigned 64-bit integer type
 uint64_t
 </pre>
 <p>
-  符号なし64bit整数型が表現できる整数の最大値は「4294967295」、最小値は「0」です。
+  The maximum value of an integer that can be represented by an unsigned 64-bit integer type is "4294967295", and the minimum value is "0".
 </p>
 <p>
-  最大値は「<a href="/blog/20201108150850.html">UINT64_MAX - uint64_tの最大値を表す定数</a>」というマクロで定義されています。
+  The maximum value is defined by the macro "<a href="/blog/20201108150850.html"> UINT64_MAX --constant representing the maximum value of uint64_t</a>".
 </p>
-<h3>uint64_tのサンプルコード</h3>
+<h3> uint64_t sample code </h3>
 <p>
-  uint64_tを使ったサンプルコードです。符号あり64bit整数の値を超えおり、符号なし64bit整数であることを示すために、<a href="/blog/20210419083246.html">printf関数</a>のフォーマット指定子で「%llu」、整数リテラルで「ULL」サフィックスを使っています。
+  This is a sample code using uint64_t. "%Llu" in the format specifier of the <a href="/blog/20210419083246.html"> printf function</a> to indicate that it exceeds the value of a signed 64-bit integer and is an unsigned 64-bit integer. , Integer literals with "ULL" suffix.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   uint64_t num = 18446744073709551615ULL;
   
   printf("%llu\n", num);
 }
 </pre>
 <p>
-  出力結果。
+  Output result.
 </p>
 <pre>
 18446744073709551615
@@ -157,8 +155,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

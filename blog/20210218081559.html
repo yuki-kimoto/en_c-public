@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>暗黙の型変換 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="C言語における暗黙の型変換について解説します。">
+<title> Implicit type conversion  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="Explains implicit type conversion in C language.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="暗黙の型変換 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="C言語における暗黙の型変換について解説します。" />
+<meta name="twitter:title" content=" Implicit type conversion  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="Explains implicit type conversion in C language." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210218081559.html">暗黙の型変換</a></h2>
+<h2><a href="/blog/20210218081559.html"> Implicit type conversion </a></h2>
 <p>
-  C言語における暗黙の型変換について解説します。
+  Explains implicit type conversion in C language.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -101,15 +99,15 @@
 </div>
 
 
-<h3>異なる型への代入</h3>
+<h3> Assignment to a different type </h3>
 <p>
-  C言語では異なる型へ代入を行うと、その型の値に型変換されます。
+  In C language, if you assign to a different type, it will be converted to the value of that type.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-int main(void) {
+int main (void) {
   int32_t num_i32 = 1000;
   int8_t num_i8 = num_i32;
   
@@ -117,17 +115,17 @@ int main(void) {
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
--24
+-twenty four
 </pre>
 <p>
-  1000のはずが、-24になっていますね。これは、int32_t型からint8_t型へ、暗黙の型変換が行われためです。なぜ「-24」になるのかは、型変換規則を解説するところまで待ってください。
+  It should be 1000, but it is -24. This is due to the implicit type conversion from int32_t to int8_t. Please wait until the type conversion rule is explained to explain why it becomes "-24".
 </p>
-<h3>異なる型の関数の引数に渡す</h3>
+<h3> Pass to arguments of different types of functions </h3>
 <p>
-  関数の引数に渡すときも、異なる型への代入と同じ暗黙の型変換が行われます。引数の型がint8_tで、呼び出し側で渡している値の型はint32_t型なので、これがint8_t型に変換されます。
+  When you pass it to a function argument, it does the same implicit type conversion as an assignment to a different type. Since the argument type is int8_t and the type of the value passed by the caller is int32_t type, this is converted to int8_t type.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
@@ -137,76 +135,76 @@ void print_i8 (int8_t num_i8) {
   printf("%d\n", num_i8);
 }
 
-int main(void) {
+int main (void) {
   int32_t num_i32 = 1000;
-  print_i8(num_i32);
+  print_i8 (num_i32);
 }
 </pre>
-<h3>整数拡張 - int型より小さな値の演算はint型へ変換される</h3>
+<h3> Integral promotion --Operations with values ​​smaller than int type are converted to int type </h3>
 <p>
-  <a href="/blog/20210130143859.html">int型</a>より小さな値の演算はint型へ変換されます。これは整数拡張と呼ばれます。これは、<a href="/blog/20210108153045.html">整数の四則演算</a>や<a href="/blog/20201218105336.html">浮動小数点の四則演算</a>を行う場合、単項の「-」を使う場合、<a href="/blog/20210216082204.html">比較演算子</a>を使う場合に発生します。
+  <a href="/blog/20210130143859.html"> int type</a> Operations with values ​​smaller than <a href="/blog/20210130143859.html"> int type are converted to int type. This is called integral promotion. This is for <a href="/blog/20210108153045.html"> integer unary operations</a> and <a href="/blog/20201218105336.html"> floating point unary operations</a>. , When using the unary "-", it occurs when using <a href="/blog/20210216082204.html"> comparison operator</a>.
 </p>
 <p>
-  たとえばint8_tの値の演算を行ったとしましょう。int8_tのサイズのまま演算されるのではなく、int型へ型変換され、数値の計算が行われ、再びint8_tに型変換されます。
+  For example, let's say you have calculated the value of int8_t. Instead of being calculated with the size of int8_t, it is type-converted to an int type, a numerical value is calculated, and then it is type-converted to int8_t again.
 </p>
 <p>
-  以下のサンプルでは、<a href="/blog/20210217081559.html">型キャスト</a>を使って明示的に書いてみました。
+  In the sample below, I wrote it explicitly using <a href="/blog/20210217081559.html"> type cast</a>.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   int8_t num1 = 5;
   int8_t num2 = 10;
 
-  /*
+  / *
     int8_t num3 = num1 + num2;
-  */
-  // 上記の処理を型キャストを使って明示的に書く
-  int8_t num3 = (int8_t)((int)num1 + (int)num2);
+  * / /
+  // Write the above process explicitly using typecast
+  int8_t num3 = (int8_t) ((int) num1 + (int) num2);
 
-  /*
+  / *
     int8_t num4 = -num3;
-  */
+  * / /
   
-  // 明示的に書くと上記の処理は以下の記述になる
-  int8_t num4 = (int8_t)(-(int)num3);
+  // If written explicitly, the above process will be as follows
+  int8_t num4 = (int8_t) (-(int) num3);
 }
 </pre>
-<h3>演算において型の順序が小さい方の型は大きい方の型に変換される</h3>
+<h3> In the operation, the type with the smaller order is converted to the larger type </h3>
 <p>
-  <a href="/blog/20210108153045.html">整数の四則演算</a>や<a href="/blog/20201218105336.html">浮動小数点の四則演算</a>を行う場合、単項の「-」を使う場合、<a href="/blog/20210216082204.html">比較演算子</a>を使う場合には、型の順序が小さい方の型は大きい方の型に変換されます。
+  <a href="/blog/20210108153045.html"> Four arithmetic operations on integers</a> and <a href="/blog/20201218105336.html"> Four arithmetic operations on floating point numbers</a> are unary When using "-", when using <a href="/blog/20210216082204.html"> comparison operator</a>, the type with the smaller type order is converted to the larger type. ..
 </p>
 <p>
-  C言語のすべての型順序の規則を覚えておくのは、辛いので、以下の順序だけは、少なくとも覚えておきましょう。
+  It's hard to remember all the type ordering rules in C, so at least remember the following order:
 </p>
 <p>
-  符号あり整数と符号なし整数は、混ぜて使わず、日常的な計算は、符号あり整数と浮動小数点で行っていると想定します。
+  Signed and unsigned integers are not mixed, and it is assumed that routine calculations are done with signed integers and floating point numbers.
 </p>
 <table>
-  <tr><td>浮動小数点型と<br>符号あり整数型の型の順序<br>(左が大きい)</td><td><a href="/blog/20201203133213.html">double</a>, <a href="/blog/20201202133213.html">float</a>, <a href="/blog/20201127082751.html">int64_t</a>, <a href="/blog/20201130082751.html">int32_t</a>, <a href="/blog/20201126090559.html">int16_t</a>, <a href="/blog/20201117090747.html">int8_t</a></td></tr>
-  <tr><td>符号なし整数型の型の順序<br>(左が大きい)</td><td><a href="/blog/20201109150850.html">uint64_t</a>, <a href="/blog/20201111150850.html">uint32_t</a>, <a href="/blog/20201120084622.html">uint16_t</a>, <a href="/blog/20201122084622.html">uint8_t</a></td></tr>
+  <tr> <td> Floating point and <br> Signed integer type order <br> (larger left) </td> <td> <a href="/blog/20201203133213.html"> double</a>, <a href="/blog/20201202133213.html"> float</a>, <a href="/blog/20201127082751.html"> int64_t</a>, <a href="/blog" /20201130082751.html"> int32_t</a>, <a href="/blog/20201126090559.html"> int16_t</a>, <a href="/blog/20201117090747.html"> int8_t</a> < / td> </tr>
+  <tr> <td> Unsigned integer type order <br> (larger left) </td> <td> <a href="/blog/20201109150850.html"> uint64_t</a>, <a href = "/ blog / 20201111150850.html"> uint32_t</a>, <a href="/blog/20201120084622.html"> uint16_t</a>, <a href="/blog/20201122084622.html"> uint8_t</a> </td> </tr>
 </table>
 <p>
-  浮動小数点型は、どの整数型よりも型の順序は大きいです。bit数の大きな整数型は、bit数の小さな整数型よりも大きいです。
+  Floating-point types have the largest order of types than any integer type. An integer type with a large number of bits is larger than an integer type with a small number of bits.
 </p>
 <p>
-  以下のサンプルでは、<a href="/blog/20210217081559.html">型キャスト</a>を使って明示的に書いてみました。int32_t型の値は、型の順序が大きいdouble型に変換されます。
+  In the sample below, I wrote it explicitly using <a href="/blog/20210217081559.html"> type cast</a>. A value of type int32_t is converted to a double type with a large type order.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   int32_t num1 = 5;
   double num2 = 10.5;
 
-  /*
+  / *
     double num3 = num1 + num2;
-  */
-  // 上記の処理を型キャストを使って明示的に書く
-  double num3 = (double)num1 + num2;
+  * / /
+  // Write the above process explicitly using typecast
+  double num3 = (double) num1 + num2;
   
   printf("%f", num3);
 }
@@ -237,8 +235,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>ヘッダファイルの読み込み - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="includeマクロを使ってヘッダファイルを読み込む方法を解説します。">
+<title> Read header file  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="I will explain how to read the header file using the include macro.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="ヘッダファイルの読み込み - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="includeマクロを使ってヘッダファイルを読み込む方法を解説します。" />
+<meta name="twitter:title" content=" Read header file  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="I will explain how to read the header file using the include macro." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20201213140830.html">ヘッダファイルの読み込み</a></h2>
+<h2><a href="/blog/20201213140830.html"> Read header file </a></h2>
 <p>
-  includeマクロを使ってヘッダファイルを読み込む方法を解説します。
+  I will explain how to read the header file using the include macro.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,80 +100,80 @@
 
 
 <pre>
-#include ヘッダファイル名
+#include header file name
 </pre>
 <p>
-  ヘッダファイル名は、システムのヘッダ読み込みパスである場合は「<ヘッダファイル名>」と書きます。
+  The header file name is written as "<header file name>" if it is the header read path of the system.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 </pre>
 <p>
-  自作のライブラリで、システムのヘッダファイルの読み込みパスではない場所から、ライブラリのヘッダを読み込む場合は、「"ヘッダファイル名"」と書きます。
+  If you want to read the header of the library from a location other than the system header file reading path in your own library, write "" header file name "".
 </p>
 <pre>
 #include "mylib.h"
 </pre>
-<h3>ヘッダファイル以外を読み込むことはできますか?</h3>
+<h3> Is it possible to read other than the header file? </h3>
 <p>
-  はい。ヘッダファイル以外を読み込むことはできます。でもおそらく、基本的には、それは望ましいことではないはずです。C言語を始めた段階で、もしヘッダファイル以外を読み込む必要があると考えたときは、少し立ち止まって考えてください。
+  Yes. It is possible to read other than the header file. But perhaps, basically, that's not what you want. If you're just starting out in C and think you need to read something other than a header file, stop for a moment and think about it.
 </p>
 <p>
-  ひとつの用途としては、大量の静的にデータを定義(Unicodeの文字の定義など)する場合に、ファイルを分けておきたいという理由で、利用されている例を見たことがあります。
+  One use is to see an example where a large amount of static data is defined(such as Unicode character definition) because you want to keep the files separate.
 </p>
-<h3>システムのヘッダファイルの読み込みパスはどこで定義されていますか?</h3>
+<h3> Where is the read path for the system header file defined? </h3>
 <p>
-  システムのヘッダの読み込みパスの一つはたとえば<a href="https://en.ubuntu.perlzemi.com/">Ubuntu</a>では「/usr/include」です。他の<a href="https://en.linux.perlzemi.com/">UNIX/Linux</a>ディストリビューションの場合は、異なったりします。
-</p>
-<p>
-  システムのヘッダファイルの読み込みパスを調べるにはどうすればよいのでしょうか?
+  One of the system header read paths is "/ usr / include" in <a href="https://en.ubuntu.perlzemi.com/"> Ubuntu</a>, for example. It may be different for other <a href="https://en.linux.perlzemi.com/"> UNIX / Linux</a> distributions.
 </p>
 <p>
-  実は、ヘッダーファイルの読み込みパスは、C言語のプリプロセッサに書き込まれています。
+  How can I find out the read path of the system header file?
 </p>
 <p>
-  まず、gccが使っているプリプロセッサのパスを調べます。
+  In fact, the header file read path is written to the C preprocessor.
 </p>
-<pre>
-gcc -print-prog-name=cc1
-</pre>
 <p>
-  以下のように出力されます。
+  First, find out the path of the preprocessor used by gcc.
 </p>
 <pre>
-/usr/lib/gcc/x86_64-linux-gnu/7/cc1
+gcc -print-prog-name = cc1
 </pre>
 <p>
-  プリプロセッサのバージョンを表示すると、インクルードパスをが表示されます。
+  The output is as follows.
 </p>
 <pre>
-/usr/lib/gcc/x86_64-linux-gnu/7/cc1 -v
+/ usr / lib / gcc / x86_64-linux-gnu / 7 / cc1
 </pre>
 <p>
-  デフォルトのヘッダーファイルの読み込みパスが表示されます。
+  When viewing the preprocessor version, the include path is displayed.
+</p>
+<pre>
+/ usr / lib / gcc / x86_64-linux-gnu / 7 / cc1 -v
+</pre>
+<p>
+  The default header file read path is displayed.
 </p>
 <pre>
 ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/7/../../../../x86_64-linux-gnu/include"
 #include "..." search starts here:
 #include &lt;...&gt; search starts here:
- /usr/lib/gcc/x86_64-linux-gnu/7/include
- /usr/local/include
- /usr/lib/gcc/x86_64-linux-gnu/7/include-fixed
- /usr/include
+ / usr / lib / gcc / x86_64-linux-gnu / 7 / include
+ / usr / local / include
+ / usr / lib / gcc / x86_64-linux-gnu / 7 / include-fixed
+ / usr / include
 </pre>
-<h3>なぜ標準ライブラリはヘッダファイルの読み込みだけで関数が利用できるのですか?</h3>
+<h3> Why can the standard library use functions just by reading the header file? </h3>
 <p>
-  通常は、ヘッダファイルを読み込み、ライブラリあるいはオブジェクトファイルをリンクしないと、関数は利用できませんね。
+  Normally, you have to read the header file and link the library or object file before you can use the function.
 </p>
 <p>
-  「stdio.h」など、C言語標準のライブラリの場合は、この作業が必要ないですね。
+  For C language standard libraries such as "stdio.h", this work is not necessary.
 </p>
 <p>
-  実は、gccのリンクで実行ファイルが生成されるときに、C言語の関数が実装されたglibc(libc)と呼ばれるライブラリがリンクされます。
+  In fact, when an executable is generated by gcc linking, a library called glibc (libc) that implements C language functions is linked.
 </p>
-<h3>マクロとは何ですか?</h3>
+<h3> What is a macro? </H3>
 <p>
-  C言語のマクロとは、#ではじまる一つの構文です。マクロの記述は、ソースコードのコンパイルが始まる前に、C言語プロプロセッサによってソースコードに展開されます。
+  A C language macro is a syntax that starts with #. The description of the macro is expanded into the source code by the C language processor before the source code begins to compile.
 </p>
 
   </div>
@@ -203,8 +201,7 @@ ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/7/../../../../x86_
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

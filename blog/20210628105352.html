@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>共有ライブラリの作成と利用方法 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="Unix/Linuxにおける共有ライブラリの作成と利用方法を解説します。この記事は、分割コンパイル手法を理解していることが前提です。">
+<title> How to create and use a shared library  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="Explains how to create and use shared libraries on Unix / Linux. This article assumes that you understand the  split compilation technique.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="共有ライブラリの作成と利用方法 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="Unix/Linuxにおける共有ライブラリの作成と利用方法を解説します。この記事は、分割コンパイル手法を理解していることが前提です。" />
+<meta name="twitter:title" content=" How to create and use a shared library  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="Explains how to create and use shared libraries on Unix / Linux. This article assumes that you understand the  split compilation technique." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/compile.html">
-        <span itemprop="name">コンパイル</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Compile </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210628105352.html">共有ライブラリの作成と利用方法</a></h2>
+<h2><a href="/blog/20210628105352.html"> How to create and use a shared library </a></h2>
 <p>
-  Unix/Linuxにおける共有ライブラリの作成と利用方法を解説します。この記事は、<a href="/blog/20210622081112.html">分割コンパイル手法</a>を理解していることが前提です。
+  Explains how to create and use shared libraries on Unix / Linux. This article assumes that you understand the <a href="/blog/20210622081112.html"> split compilation technique</a>.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -101,37 +99,37 @@
 </div>
 
 
-<h3>共有ライブラリとは</h3>
+<h3> What is a shared library? </H3>
 <p>
-  共有ライブラリとは、実行ファイル生成時に、静的にリンクせず、実行時に、リンク可能なオブジェクトファイルのことです。共有ライブラリは、リンク時にリンクすることが可能で、かつ、実行時に読み込むこともできます。拡張子は「.so」です。
+  A shared library is an object file that is not statically linked when an executable file is generated, but can be linked at run time. Shared libraries can be linked at link time and can also be loaded at run time. The extension is ".so".
 </p>
 <p>
-  ここで解説する、共有ライブラリは、UNIX/Linuxの仕組みであって、MacやWindowsの仕組みではないことに注意してください。Macの場合は、拡張子が異なります。Windowsには、DLL(ダイナミックリンクライブラリ)という似た仕組みがありますが、UNIX/Linuxの共有ライブラリとは異なります。
+  Please note that the shared libraries described here are a UNIX / Linux mechanism, not a Mac or Windows mechanism. For Mac, the extension is different. Windows has a similar mechanism called DLL (Dynamic Link Library), but it is different from UNIX / Linux shared libraries.
 </p>
-<h3>共有ライブラリの作成方法</h3>
+<h3> How to create a shared library </h3>
 <p>
-  共有ライブラリを作成するには「-shared」オプションを指定します。一般的には、「-fPIC」を指定して<a href="https://ja.wikipedia.org/wiki/%E4%BD%8D%E7%BD%AE%E7%8B%AC%E7%AB%8B%E3%82%B3%E3%83%BC%E3%83%89">位置独立コード</a>として作成します。
+  Specify the "-shared" option to create a shared library. Generally, specify "-fPIC" and <a href="https://ja.wikipedia.org/wiki/%E4%BD%8D%E7%BD%AE%E7%8B%AC%E7" %AB%8B%E3%82%B3%E3%83%BC%E3%83%89 "> Position-independent code</a>.
 </p>
 <p>
-  オブジェクトファイル生成する手順に、「-shared」と「-fPIC」オプションを追加して、以下のようにします。
+  Add the "-shared" and "-fPIC" options to the procedure for creating the object file so that:
 </p>
 <pre>
-# 通常のコンパイル - オブジェクトファイルの作成
-gcc -Iinclude -c -o mylib1.o src/mylib1.c
+#Normal compilation-Create object file
+gcc -Iinclude -c -o mylib1.o src / mylib1.c
 
-# 共有ライブラリの作成
-gcc -Iinclude -c -shared -fPIC -o mylib1.so src/mylib1.c
+#Create a shared library
+gcc -Iinclude -c -shared -fPIC -o mylib1.so src / mylib1.c
 </pre>
-<h3>共有ライブラリを作成してリンクする</h3>
+<h3> Create and link a shared library </h3>
 <p>
-  この手順は<a href="/blog/20210622081112.html">分割コンパイル手法</a>で使った手順を流用できます。ライブラリを共有ライブラリとして作成します。
+  For this procedure, you can use the procedure used in <a href="/blog/20210622081112.html"> Split compilation method</a>. Create the library as a shared library.
 </p>
-<h4>アプリケーションのソースファイル</h4>
+<h4> Application source files </h4>
 <p>
-  アプリケーションのソースファイル「myapp.c」です。
+  The source file "myapp.c" for the application.
 </p>
 <p>
-  <b>myapp.c</b>
+  <b> myapp.c </b>
 </p>
 <pre>
 #include &lt;stdio.h&gt;
@@ -139,18 +137,18 @@ gcc -Iinclude -c -shared -fPIC -o mylib1.so src/mylib1.c
 #include "mylib1.h"
 #include "mylib2.h"
 
-int main(void) {
+int main (void) {
   
-  mylib1_print();
-  mylib2_print();
+  mylib1_print ();
+  mylib2_print ();
 }
 </pre>
-<h4>ライブラリのヘッダファイル</h4>
+<h4> Library header file </h4>
 <p>
-  ライブラリのヘッダファイル「mylib1.h」と「mylib2.h」です。
+  The library header files "mylib1.h" and "mylib2.h".
 </p>
 <p>
-  <b>mylib1.h</b>
+  <b> mylib1.h </b>
 </p>
 <pre>
 #ifndef MYLIB1_H
@@ -161,7 +159,7 @@ void mylib1_print (void);
 #endif
 </pre>
 <p>
-  <b>mylib2.h</b>
+  <b> mylib2.h </b>
 </p>
 <pre>
 #ifndef MYLIB2_H
@@ -171,12 +169,12 @@ void mylib2_print (void);
 
 #endif
 </pre>
-<h4>ライブラリのソースファイル</h4>
+<h4> Library source files </h4>
 <p>
-  ライブラリのソースファイル「mylib1.c」と「mylib2.c」です。
+  The library source files "mylib1.c" and "mylib2.c".
 </p>
 <p>
-  <b>mylib1.c</b>
+  <b> mylib1.c </b>
 </p>
 <pre>
 #include &lt;stdio.h&gt;
@@ -188,7 +186,7 @@ void mylib1_print (void) {
 }
 </pre>
 <p>
-  <b>mylib2.c</b>
+  <b> mylib2.c </b>
 </p>
 <pre>
 #include &lt;stdio.h&gt;
@@ -199,61 +197,61 @@ void mylib2_print (void) {
   printf("mylib2_print\n");
 }
 </pre>
-<h4>コンパイル</h4>
+<h4> Compile </h4>
 <p>
-  アプリケーションのソースファイルと、共有ライブラリのソースファイルを、それぞれ<a href="/blog/20201214140830.html">コンパイルし</a>ます。ヘッダファイルの場所をオプション「-I」で指定します。「-shared」と「-fPIC」オプションを使って、共有ライブラリを作成します。
+  <a href="/blog/20201214140830.html"> Compile</a> the application source file and the shared library source file respectively. Specify the location of the header file with the option "-I". Create a shared library with the "-shared" and "-fPIC" options.
 </p>
 <pre>
-gcc -Iinclude -c -o myapp.o src/myapp.c
-gcc -Iinclude -c -shared -fPIC -o mylib1.so src/mylib1.c
-gcc -Iinclude -c -shared -fPIC -o mylib2.so src/mylib2.c
+gcc -Iinclude -c -o myapp.o src / myapp.c
+gcc -Iinclude -c -shared -fPIC -o mylib1.so src / mylib1.c
+gcc -Iinclude -c -shared -fPIC -o mylib2.so src / mylib2.c
 </pre>
-<h4>リンク - 実行ファイルの作成</h4>
+<h4> Link-Create executable file </h4>
 <p>
-  <a href="/blog/20201215105104.html">リンク</a>して実行ファイルを作成します。関数名などのシンボルが、実体に結びつけられます。
+  <a href="/blog/20201215105104.html"> Link</a> to create an executable file. Symbols such as function names are tied to the entity.
 </p>
 <pre>
 gcc -o myapp myapp.o mylib1.so mylib2.so
 </pre>
-<h4>実行</h4>
+<h4> Execution </h4>
 <p>
-  実行ファイルを<a href="/blog/20201216101527.html">実行</a>してみましょう。
+  Let's <a href="/blog/20201216101527.html"> execute</a> the executable file.
 </p>
 <pre>
 ./myapp
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 mylib1_print
 mylib2_print
 </pre>
 <p>
-  共有ライブラリを作成して、実行ファイルを作成するときに、リンクする方法をマスターしました。
+  I've mastered how to create a shared library and link it when creating an executable.
 </p>
-<h3>実行時に共有ライブラリを読み込んで、関数を実行するには?</h3>
+<h3> How to load a shared library at runtime and execute a function? </h3>
 <p>
-  実行時に共有ライブラリを読み込んで、関数を実行する手順だけを公開します。
-</p>
-<p>
-  1. dlopen関数で、共有ライブラリをオープンします。
+  Load the shared library at run time and expose only the steps to execute the function.
 </p>
 <p>
-  2. dlsymで関数名を指定して、関数ポインタを取得します。
+  1. Open the shared library with the dlopen function.
 </p>
 <p>
-  3. 関数ポインタから関数を実行します。
+  2. Specify the function name with dlsym to get the function pointer.
 </p>
-<h3>共有ライブラリに含まれている関数名などのシンボルを知るには?</h3>
 <p>
-  共有ライブラリに含まれている関数名などのシンボルを知るには「nm」コマンドを使用します。「name」の略のようです。
+  3. Execute the function from the function pointer.
+</p>
+<h3> How to know the symbols such as function names included in the shared library? </H3>
+<p>
+  Use the "nm" command to find out the symbols such as function names contained in the shared library. It seems to be an abbreviation for "name".
 </p>
 <pre>
 nm mylib1.so
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
                  U _GLOBAL_OFFSET_TABLE_
@@ -261,23 +259,23 @@ nm mylib1.so
                  U puts
 </pre>
 <p>
-  nmコマンドは、共有ライブラリだけでなく、実行ファイルやオブジェクトファイルにも使えます。
+  The nm command can be used not only for shared libraries, but also for executables and object files.
 </p>
-<h3>共有ライブラリの検索</h3>
+<h3> Search for shared libraries </h3>
 <p>
-  共有ライブラリは、衝突を回避する仕組みを持っています。共有ライブラリは、ファイル名を直接してししなくても「-L」オプションで、共有ライブラリの検索ディレクトリを指定できます。ライブラリ名は「lib」で始まっている必要があります。
-</p>
-<p>
-  共有ライブラリの検索ディレクトリに、共有ライブラリを配置すれば、「-l」オプションで指定された、最初に見つかった共有ライブラリを利用します。「-l」オプションでは、先頭の「lib」と「.so」を省略します。
+  Shared libraries have a mechanism to avoid collisions. For shared libraries, you can specify the shared library search directory with the "-L" option without having to name the file directly. The library name must start with "lib".
 </p>
 <p>
-  <b>共有ライブラリ</b>
+  If you place a shared library in the shared library search directory, the first shared library found specified by the "-l" option will be used. The "-l" option omits the leading "lib" and ".so".
+</p>
+<p>
+  <b> Shared library </b>
 </p>
 <pre>
 /foo/lib/libmylib1.so
 </pre>
 <p>
-  <b>共有ライブラリのリンク</b>
+  <b> Shared library links </b>
 </p>
 <pre>
 gcc -o myapp myapp.o -L /foo/lib -l mylib1
@@ -308,8 +306,7 @@ gcc -o myapp myapp.o -L /foo/lib -l mylib1
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

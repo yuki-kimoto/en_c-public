@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>char* - 文字列を表現する型 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="文字列を表現するにはcharのポインタ型である「char*」を使います。">
+<title> char * --Type that represents a string  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="To express  string, use "char *" which is a pointer type of char.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="char* - 文字列を表現する型 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="文字列を表現するにはcharのポインタ型である「char*」を使います。" />
+<meta name="twitter:title" content=" char * --Type that represents a string  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="To express  string, use "char *" which is a pointer type of char." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/types.html">
-        <span itemprop="name">C言語の型</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C type </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20201208125815.html">char* - 文字列を表現する型</a></h2>
+<h2><a href="/blog/20201208125815.html"> char * --Type that represents a string </a></h2>
 <p>
-  <a href="/blog/20210331101342.html">文字列</a>を表現するにはcharのポインタ型である「char*」を使います。
+  To express <a href="/blog/20210331101342.html"> string</a>, use "char *" which is a pointer type of char.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,98 +100,98 @@
 
 
 <pre>
-char*
+char *
 </pre>
 <p>
-  「char*」型には、文字列リテラルを代入できます。
+  You can assign a string literal to the "char *" type.
 </p>
 <pre>
-char* name = "Perl";
+char * name = "Perl";
 </pre>
 <p>
-  一般的には、文字列リテラルを代入する場合の用途で「char*」型を使う場合は、const修飾子をつけて、文字の変更を行わないようにしておくのが望ましいです。
+  In general, when using the "char *" type for assigning string literals, it is advisable to add a constant qualifier to prevent character changes.
 </p>
 <pre>
-const char* name = "Perl";
+const char * name = "Perl";
 </pre>
 <p>
-  C言語における文字列とは、末尾が「\0」で終わる文字の配列だということを意識しておきましょう。要素を書くと以下のようになります。
+  Keep in mind that a string in C is an array of characters ending in "\ 0". If you write the element, it will be as follows.
 </p>
 <pre>
 0 1 2 3 4
-P e r l \0
+P e r l \ 0
 </pre>
 <p>
-  意味的には、文字列リテラルの代入は以下のコードと同じになります。
+  Semantically, the assignment of a string literal is the same as the code below.
 </p>
 <p>
-  文字列リテラルを代入して出力するサンプルです。
+  This is a sample that substitutes a string literal and outputs it.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 
-int main(void) {
-  const char* name = "Perl";
+int main (void) {
+  const char * name = "Perl";
   printf("%s\n", name);
 }
 </pre>
-<h3>実行時に文字列を生成する場合</h3>
+<h3> When generating a character string at runtime </h3>
 <p>
-  実行時に動的に文字列を生成するには、mallocでメモリを確保します。Perlという文字は4文字ですが、末尾に「\0」が必要なため、5バイトを確保します。charのサイズは1バイトです。
+  To dynamically generate a string at run time, allocate memory with malloc. The character Perl is 4 characters, but 5 bytes are reserved because "\ 0" is required at the end. The size of char is 1 byte.
 </p>
 <pre>
 #include &lt;stdlib.h&gt;
 
-char* name = malloc(sizeof(char) * 5);
+char * name = malloc (sizeof (char) * 5);
 
 // Perl
-name[0] = 'P';
-name[1] = 'e';
-name[2] = 'r';
-name[3] = 'l';
-name[4] = '\0';
+name [0] ='P';
+name [1] ='e';
+name [2] ='r';
+name [3] ='l';
+name [4] ='\ 0';
 </pre>
 <p>
-  動的に生成した文字列を出力するサンプルです。
+  This is a sample that outputs a dynamically generated character string.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-int main(void) {
+int main (void) {
 
-  char* name = malloc(sizeof(char) * 5);
+  char * name = malloc (sizeof (char) * 5);
 
   // Perl
-  name[0] = 'P';
-  name[1] = 'e';
-  name[2] = 'r';
-  name[3] = 'l';
-  name[4] = '\0';
+  name [0] ='P';
+  name [1] ='e';
+  name [2] ='r';
+  name [3] ='l';
+  name [4] ='\ 0';
 
   printf("%s\n", name);
 }
 </pre>
-<h3>途中に\0を含む文字列を作成することはできないの?</h3>
+<h3> Is it possible to create a string containing \ 0 in the middle? </h3>
 <p>
-  含むことは可能ですが、文字列に関するC言語関数は、文字列の終わりを「\0」と想定しています。文字列の途中に「\0」を含んだ場合は、その位置を文字列の終了位置として認識します。文字列定数の表現も、末尾に「\0」を自動的につけます。C言語では、文字列の末尾は「\0」であると文法や関数が想定していると考えておくほうがよいでしょう。
+  Although it can be included, C language functions for strings assume that the end of the string is "\ 0". If "\ 0" is included in the middle of the character string, that position is recognized as the end position of the character string. The expression of the character string constant is also automatically added with "\ 0" at the end. In C, it's best to assume that the grammar or function expects the string to end with "\ 0".
 </p>
-<h3>C言語の文字列は長さの情報を含んでいないの?</h3>
+<h3> Does the C language string contain length information? </H3>
 <p>
-  はい。C言語の文字列は長さの情報を含んでいません。「\0」を終了位置とみなしますので、長さを取得する場合は「\0」までの文字数を数える必要があります。文字列の長さを取得するstrlen関数は「\0」までの文字数を数えます。
+  Yes. C language strings do not contain length information. Since "\ 0" is regarded as the end position, it is necessary to count the number of characters up to "\ 0" when acquiring the length. The strlen function that gets the length of the string counts the number of characters up to "\ 0".
 </p>
-<h3>C言語の文字列のセキュリティリスク</h3>
+<h3> C language string security risk </h3>
 <p>
-  C言語の文字列は末尾が「\0」までを文字列としてみなすという仕様があるために、もし文字列の末尾に「\0」を含むことを忘れると、C言語の文字列関数(最大処理文字数を指定できないもの)は、意図しない位置まで読み込みます。この位置で書き込みを行ってしまうと、バッファオーバーランが発生します。
-</p>
-<p>
-  これは、C言語を記述する場合のメモリ操作で、容易に起こりうることです。
+  Since there is a specification that a character string in C language is regarded as a character string up to "\ 0" at the end, if you forget to include "\ 0" at the end of the character string, the character string function in C language (maximum) If the number of characters to be processed cannot be specified), it will be read to an unintended position. If you write at this position, a buffer overrun will occur.
 </p>
 <p>
-  C言語の文字列関数を扱う場合は、意図しない領域まで読み込んでいないか、バッファオーバーランをしないかどうかを、常に考える必要があります。
+  This is a memory operation when writing C language, which can easily happen.
 </p>
 <p>
-  C言語でなぜ文字列の扱いが難しいのかという理由のひとつが見えてきますね。
+  When dealing with C string functions, you should always consider whether you are reading an unintended area or not doing a buffer overrun.
+</p>
+<p>
+  You can see one of the reasons why it is difficult to handle strings in C language.
 </p>
 
   </div>
@@ -221,8 +219,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

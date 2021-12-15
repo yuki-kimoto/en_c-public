@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>fseek関数 - ファイルストリームの位置指定子を位置を設定 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="fseek関数を使うと、ファイルストリームの位置指定子が指す位置を設定できます。stdio.hヘッダを読み込むと使えます。">
+<title> fseek function-sets the position of the file stream position specifier  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="You can use the fseek function to set the position pointed to by the file stream position specifier. You can use it by reading the  stdio.h header.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="fseek関数 - ファイルストリームの位置指定子を位置を設定 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="fseek関数を使うと、ファイルストリームの位置指定子が指す位置を設定できます。stdio.hヘッダを読み込むと使えます。" />
+<meta name="twitter:title" content=" fseek function-sets the position of the file stream position specifier  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="You can use the fseek function to set the position pointed to by the file stream position specifier. You can use it by reading the  stdio.h header." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,34 +60,34 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library.html">
-        <span itemprop="name">C標準ライブラリ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C standard library </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library/stdio.html">
-        <span itemprop="name">stdio.h</span>
-      </a>
-      <meta itemprop="position" content="3" />
+        <span itemprop = "name"> stdio.h </span>
+     </a>
+      <meta itemprop = "position" content = "3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210525075439.html">fseek関数 - ファイルストリームの位置指定子を位置を設定</a></h2>
+<h2><a href="/blog/20210525075439.html"> fseek function-sets the position of the file stream position specifier </a></h2>
 <p>
-  fseek関数を使うと、ファイルストリームの位置指定子が指す位置を設定できます。<a href="/blog/20210418083246.html">stdio.h</a>ヘッダを読み込むと使えます。
+  You can use the fseek function to set the position pointed to by the file stream position specifier. You can use it by reading the <a href="/blog/20210418083246.html"> stdio.h</a> header.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -109,55 +107,55 @@
 
 <pre>
 #include &lt;stdio.h&gt;
-int fseek(FILE *fp, long offset, int origin);
+int fseek (FILE * fp, long offset, int origin);
 </pre>
 <p>
-  第一引数は、ファイルストリームです。第二引数は、ファイルストリームの位置指定子が指す相対位置です。第三引数を基準位置とします。第三引数は、基準とする位置です。「SEEK_SET」でファイルの先頭、「SEEK_CUR」でファイルの現在位置、「SEEK_END」で、ファイルの末尾を指定できます。
+  The first argument is the file stream. The second argument is the relative position pointed to by the file stream position specifier. The third argument is used as the reference position. The third argument is the reference position. You can specify the beginning of the file with "SEEK_SET", the current position of the file with "SEEK_CUR", and the end of the file with "SEEK_END".
 </p>
 <p>
-  fseek関数が使用される主な用途は、データが固定長のファイルの読み書きをするときと、ファイルサイズを取得したいときです。
+  The main uses of the fseek function are when reading and writing files with fixed length data and when you want to get the file size.
 </p>
-<h3>ファイルサイズを取得するサンプル</h3>
+<h3> Sample to get the file size </h3>
 <p>
-  fseek関数と<a href="/blog/20210526085256.html">ftell関数</a>を使って、ファイルサイズを取得するサンプルです。
+  This is a sample to get the file size using the fseek function and <a href="/blog/20210526085256.html"> ftell function</a>.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 #include &lt;stdlib.h&gt;
 
-int main(void) {
-  // ファイルを開く
-  const char* in_file = "input.txt";
-  FILE* in_fp = fopen(in_file, "r");
+int main (void) {
+  // Open the file
+  const char * in_file = "input.txt";
+  FILE * in_fp = fopen (in_file, "r");
   if (in_fp == NULL) {
-    fprintf(stderr, "Can't open file %s\n", in_file);
-    exit(1);
+    fprintf (stderr, "Can't open file%s\n", in_file);
+    exit (1);
   }
   
-  // ファイルの末尾に位置指定子を移動
-  fseek(in_fp, 0, SEEK_END);
+  // Move the position specifier to the end of the file
+  fseek (in_fp, 0, SEEK_END);
   
-  // ファイルの末尾の位置を取得。これは、ファイサイズになります。
-  int32_t file_size = (int32_t)ftell(in_fp);
+  // Get the position of the end of the file. This will be phi size.
+  int32_t file_size = (int32_t) ftell (in_fp);
   
   printf("%d\n", file_size);
   
-  // ファイルを閉じる
-  fclose(in_fp);
+  // Close the file
+  fclose (in_fp);
 }
 </pre>
 <p>
-  入力ファイル。末尾に改行はありません。
+  Input file. There is no newline at the end.
 </p>
 <pre>
-HelloWorld!
+Hello World!
 </pre>
 <p>
-  出力結果。ファイルサイズが取得できています。
+  Output result. The file size has been obtained.
 </p>
 <pre>
-11
+11 11
 </pre>
 
   </div>
@@ -185,8 +183,7 @@ HelloWorld!
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

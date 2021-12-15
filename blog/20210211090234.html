@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>ポインタとアドレス - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="ポインタとアドレスについて詳しく解説します。">
+<title> Pointers and addresses  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="Let's take a closer look at pointers and addresses.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="ポインタとアドレス - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="ポインタとアドレスについて詳しく解説します。" />
+<meta name="twitter:title" content=" Pointers and addresses  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="Let's take a closer look at pointers and addresses." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210211090234.html">ポインタとアドレス</a></h2>
+<h2><a href="/blog/20210211090234.html"> Pointers and addresses </a></h2>
 <p>
-  ポインタとアドレスについて詳しく解説します。
+  Let's take a closer look at pointers and addresses.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -101,239 +99,239 @@
 </div>
 
 
-<h3>アドレスとは</h3>
+<h3> What is an address? </H3>
 <p>
-  アドレスとは、メモリ上の番地のことをいいます。メモリは、左から右に一直線に伸びている道路のようのものだと想像してみてください。そして、番地ごとに区画にわかれています。
+  An address is an address in memory. Imagine memory like a road that stretches straight from left to right. And it is divided into sections for each street address.
 </p>
 <p>
-  64bitのアドレスが扱えるCPUでは、番地は「0」から「2の64乗 - 1」までです。単位はバイトです。0から始まります。
-</p>
-<pre>
-|    |    |    |     ...    |             |          |
-0    1    2    3           「2の64乗 - 2」「2の64乗 - 1」
-(単位はバイト)
-</pre>
-<p>
-  実際の物理メモリがこんなに広く利用可能かどうかはここではおいておいて、アプリケーションから見える仮想的なメモリは、このようなものだと想像してください。
-</p>
-<p>
-  これがアプリケーションのデータの保存できる領域です。作業をするためのとても大きな机のようなものですね。
-</p>
-<h3>ポインタとは</h3>
-<p>
-  ポインタとは、アドレスを保存するための変数のことです。ポインタ変数とも呼ばれます。
-</p>
-<p>
-  「えっ、それだけ?」
-</p>
-<p>
-  はい。解説終了ですね(笑)。あとは、文法を覚えるだけですね。
-</p>
-<h3>ポインタ変数の宣言</h3>
-<p>
-  ポインタ変数を宣言してみましょう。ポインタ変数を宣言するには「型名* 変数名;」とします。
+  For CPUs that can handle 64-bit addresses, the address is from "0" to "2 to the 64th power -1". The unit is bytes. It starts from 0.
 </p>
 <pre>
-// int32_tのポインタ型の変数の宣言
-int32_t* num_ptr;
-
-// int64_tのポインタ型の変数の宣言
-int64_t* num_ptr;
-
-// floatのポインタ型の変数の宣言
-float* num_ptr;
-
-// doubleのポインタ型の変数の宣言
-double* num_ptr;
-
-// struct myapp_bookのポインタ型の変数の宣言
-struct myapp_book* book_ptr;
-
-// union myapp_valueのポインタ型の変数の宣言
-union myapp_value* value;
+| | | | ... | | |
+0 1 2 3 "2 to the 64th power --2" "2 to the 64th power --1"
+(Unit is bytes)
 </pre>
 <p>
-  規則をみてください。実際の型名の後ろに「*」をつけます。
+  Imagine if the virtual memory that your application sees is like this, aside from whether the actual physical memory is so widely available.
 </p>
 <p>
-  <a href="/blog/20201130082751.html">int32_t</a>のポインタ型, <a href="/blog/20201127082751.html">int64_t</a>のポインタ型、<a href="/blog/20201202133213.html">float</a>のポインタ型、<a href="/blog/20201203133213.html">double</a>のポインタ型、<a href="/blog/20210208155548.html">構造体</a>のポインタ型、<a href="/blog/20210206155548.html">共用体</a>のポインタ型のサンプルを書いてみました。
+  This is the area where application data can be stored. It's like a very big desk for working.
+</p>
+<h3> What is a pointer? </H3>
+<p>
+  A pointer is a variable that stores an address. Also known as a pointer variable.
 </p>
 <p>
-  以下のように、「*」を変数名の直前に記述している参考書もあるかと思います。これは、これで正しいです。
+  "Well, that's it?"
+</p>
+<p>
+  Yes. The commentary is over (laughs). All you have to do is learn the grammar.
+</p>
+<h3> Declaration of pointer variables </h3>
+<p>
+  Let's declare a pointer variable. To declare a pointer variable, use "type name * variable name;".
 </p>
 <pre>
-int32_t *num_ptr;
+// Declaration of pointer type variable of int32_t
+int32_t * num_ptr;
+
+// Declaration of pointer type variable of int64_t
+int64_t * num_ptr;
+
+// Declaration of a pointer type variable of float
+float * num_ptr;
+
+// Declaration of double pointer type variable
+double * num_ptr;
+
+// Declaration of pointer type variable of struct myapp_book
+struct myapp_book * book_ptr;
+
+// Declaration of pointer type variable of union myapp_value
+union myapp_value * value;
 </pre>
 <p>
-  C99対応のC言語入門では「*」の理解を、一貫してポインタ型として扱います。これは、ある意味では、厳密に正しいC言語の解説ではないのではないかと感じる面もありますが、実用上で、矛盾が生じることはないですし、理解が簡単です。
+  Look at the rules. Add "*" after the actual model name.
 </p>
-<h3>アドレスの取得</h3>
 <p>
-  アドレスを取得するにはアドレス演算子「&」を使用します。
+  <a href="/blog/20201130082751.html"> int32_t</a> pointer type, <a href="/blog/20201127082751.html"> int64_t</a> pointer type, <a href="/ blog / 20201202133213.html "> float</a> pointer type, <a href="/blog/20201203133213.html"> double</a> pointer type, <a href="/blog/20210208155548.html" I wrote a sample of pointer type of> structure</a> and pointer type of <a href="/blog/20210206155548.html"> union</a>.
+</p>
+<p>
+  As shown below, I think there is a reference book that describes "*" just before the variable name. This is correct with this.
 </p>
 <pre>
-&amp;変数名
+int32_t * num_ptr;
 </pre>
 <p>
-  アドレスを取得して、ポインタに代入してみましょう。int32_tのポインタ、doubleのポインタ、構造体のポインタの例を書いてみます。アドレスの値はprintf関数の「%p」フォーマット指定子で出力できます。
+  The C99-compatible introduction to C language consistently treats the understanding of "*" as a pointer type. In a sense, I feel that this is not a strictly correct explanation of C language, but in practice, there is no contradiction and it is easy to understand.
+</p>
+<h3> Get the address </h3>
+<p>
+  Use the address operator "&" to get the address.
+</p>
+<pre>
+&amp;Variable name
+</pre>
+<p>
+  Let's get the address and assign it to the pointer. Let's write an example of an int32_t pointer, a double pointer, and a structure pointer. The address value can be output with the "%p" format specifier of the printf function.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-// 構造体
+// Structure
 struct myapp_book {
   int32_t id;
-  const char* name;
+  const char * name;
   int32_t price;
-};
+};;
 
-int main(void) {
-  // int32_tの実際の値
+int main (void) {
+  // Actual value of int32_t
   int32_t numi = 5;
   
-  // int32_tのポインタ型のポインタを宣言して、アドレスを取得して代入
-  int32_t* numi_ptr = &amp;numi;
+  // Declare a pointer type pointer of int32_t to get the address and assign it
+  int32_t * numi_ptr = &amp; numi;
 
-  // アドレスを出力
-  printf("numi_ptr %p\n", numi_ptr);
+  // Output address
+  printf("numi_ptr%p\n", numi_ptr);
   
-  // doubleの実際の値
+  // Actual value of double
   double numd = 2.5;
 
-  // doubleのポインタ型のポインタを宣言して、アドレスを取得して代入
-  double* numd_ptr = &amp;numd;
+  // Declare a double pointer type pointer to get the address and assign it
+  double * numd_ptr = &amp; numd;
 
-  // アドレスを出力
-  printf("numd_ptr %p\n", numd_ptr);
+  // Output address
+  printf("numd_ptr%p\n", numd_ptr);
   
-  // myapp_bookの実際の値
-  struct myapp_book book = {id:1, name: "C99 Book", price : 1500};
+  // Actual value of myapp_book
+  struct myapp_book book = {id: 1, name: "C99 Book", price: 1500};
   
-  // myapp_bookのポインタ型のポインタを宣言して、アドレスを取得して代入
-  struct myapp_book* book_ptr = &amp;book;
+  // Declare a pointer type pointer of myapp_book to get the address and assign it
+  struct myapp_book * book_ptr = &amp; book;
   
-  // アドレスを出力
-  printf("book_ptr %p\n", book_ptr);
+  // Output address
+  printf("book_ptr%p\n", book_ptr);
 }
 </pre>
 <p>
-  僕の環境での出力結果です。16進数でアドレスが出力されています。
+  This is the output result in my environment. The address is output in hexadecimal.
 </p>
 <pre>
 numi_ptr 0x7fff6d615824
 numd_ptr 0x7fff6d615818
 book_ptr 0x7fff6d615800
 </pre>
-<h3>ポインタから実体を取り出す</h3>
+<h3> Extract the entity from the pointer </h3>
 <p>
-  ポインタから実際の値(実体と呼びます)を取り出してみましょう。これは、アドレスを取得する操作と逆の操作になります。
+  Let's get the actual value (called an entity) from the pointer. This is the opposite of getting the address.
 </p>
 <p>
-  実体を取り出すには変数名の前に「*」をつけます。
+  To retrieve the entity, add "*" before the variable name.
 </p>
 <pre>
-*ポインタ変数
+* Pointer variable
 </pre>
 <p>
-  実体を取得するサンプルを書いてみます。
+  Let's write a sample to get the entity.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-// 構造体
+// Structure
 struct myapp_book {
   int32_t id;
-  const char* name;
+  const char * name;
   int32_t price;
-};
+};;
 
-int main(void) {
-  // int32_tの実際の値
+int main (void) {
+  // Actual value of int32_t
   int32_t numi = 5;
   
-  // int32_tのポインタ型のポインタを宣言して、アドレスを取得して代入
-  int32_t* numi_ptr = &amp;numi;
+  // Declare a pointer type pointer of int32_t to get the address and assign it
+  int32_t * numi_ptr = &amp; numi;
   
-  // 実体を取得して出力
-  int32_t numi_real = *numi_ptr;
-  printf("numi_real %d\n", numi_real);
+  // Get the entity and output
+  int32_t numi_real = * numi_ptr;
+  printf("numi_real%d\n", numi_real);
   
-  // doubleの実際の値
+  // Actual value of double
   double numd = 2.5;
 
-  // doubleのポインタ型のポインタを宣言して、アドレスを取得して代入
-  double* numd_ptr = &amp;numd;
+  // Declare a double pointer type pointer to get the address and assign it
+  double * numd_ptr = &amp; numd;
 
-  // 実体を取得して出力
-  double numd_real = *numd_ptr;
-  printf("numd_real %f\n", numd_real);
+  // Get the entity and output
+  double numd_real = * numd_ptr;
+  printf("numd_real%f\n", numd_real);
   
-  // myapp_bookの実際の値
-  struct myapp_book book = {id:1, name: "C99 Book", price : 1500};
+  // Actual value of myapp_book
+  struct myapp_book book = {id: 1, name: "C99 Book", price: 1500};
   
-  // myapp_bookのポインタ型のポインタを宣言して、アドレスを取得して代入
-  struct myapp_book* book_ptr = &amp;book;
+  // Declare a pointer type pointer of myapp_book to get the address and assign it
+  struct myapp_book * book_ptr = &amp; book;
   
-  // 実体を取得して出力
-  struct myapp_book book_real = *book_ptr;
-  printf("book_real id: %d, name: %s, price: %d\n", book_real.id, book_real.name, book_real.price);
+  // Get the entity and output
+  struct myapp_book book_real = * book_ptr;
+  printf("book_real id:%d, name:%s, price:%d\n", book_real.id, book_real.name, book_real.price);
 }
 </pre>
 <p>
-  出力結果です。実際の値になっています。
+  This is the output result. It is the actual value.
 </p>
 <pre>
 numi_real 5
 numd_real 2.500000
 book_real id: 1, name: C99 Book, price: 1500
 </pre>
-<h3>ポインタから直接、構造体のメンバ変数へアクセス</h3>
+<h3> Access the member variables of the structure directly from the pointer </h3>
 <p>
-  ポインタから直接、構造体のメンバ変数へアクセスするには「.」の代わりに「->」を使用します。
+  Use "->" instead of "." To access the structure's member variables directly from the pointer.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-// 構造体
+// Structure
 struct myapp_book {
   int32_t id;
-  const char* name;
+  const char * name;
   int32_t price;
-};
+};;
 
-int main(void) {
+int main (void) {
   
-  // myapp_bookの実際の値
-  struct myapp_book book = {id:1, name: "C99 Book", price : 1500};
+  // Actual value of myapp_book
+  struct myapp_book book = {id: 1, name: "C99 Book", price: 1500};
   
-  // myapp_bookのポインタ型のポインタを宣言して、アドレスを取得して代入
-  struct myapp_book* book_ptr = &amp;book;
+  // Declare a pointer type pointer of myapp_book to get the address and assign it
+  struct myapp_book * book_ptr = &amp; book;
   
-  // アドレスを出力
-  printf("id: %d, name: %s, price: %d", book_ptr-&gt;id, book_ptr-&gt;name, book_ptr-&gt;book_ptr %p\n", book_ptr);
+  // Output address
+  printf("id:%d, name:%s, price:%d", book_ptr-&gt;id, book_ptr-&gt;name, book_ptr-&gt;book_ptr%p\n ", book_ptr);
 }
 </pre>
-<h3>実務で書く場合のポインタの変数名はどんな感じですか?</h3>
+<h3> What is the variable name of the pointer when writing in practice? </H3>
 <p>
-  実務で書く場合は「book_ptr」のように「_ptr」をつけることは、あまり多くありません。僕の場合は、明示的にポインタであることを示したい例外を除いて「_ptr」はつけないですね。
+  When writing in practice, it is not so common to add "_ptr" like "book_ptr". In my case, I don't add "_ptr" except for the exception that I want to explicitly indicate that it is a pointer.
 </p>
 <pre>
-// 構造体を動的にメモリ確保する場合の変数名のサンプル
-struct myapp_book* book = calloc(sizeof(struct myapp_book), 1);
+// Variable name sample when allocating memory dynamically for structure
+struct myapp_book * book = calloc (sizeof (struct myapp_)book), 1);
 </pre>
 <p>
-  <a href="/blog/20210209082644.html">calloc関数</a>と<a href="/blog/20210207155548.html">sizeof演算子</a>を使って、構造体のデータのメモリ確保を行って、構造体のポインタに代入しています。
+  Memory of structure data using <a href="/blog/20210209082644.html"> calloc function</a> and <a href="/blog/20210207155548.html"> sizeof operator</a> It is allocated and assigned to the pointer of the structure.
 </p>
-<h3>ポインタ演算はどこで解説されていますか?</h3>
+<h3> Where is the pointer operation explained? </H3>
 <p>
-  ポインタ演算は、近く解説予定です。
+  Pointer operations will be explained soon.
 </p>
-<h3>汎用ポインタはどこで解説されていますか?</h3>
+<h3> Where are general pointers explained? </H3>
 <p>
-  汎用ポインタは、近く解説予定です。
+  General-purpose pointers will be explained soon.
 </p>
 
   </div>
@@ -361,8 +359,7 @@ struct myapp_book* book = calloc(sizeof(struct myapp_book), 1);
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

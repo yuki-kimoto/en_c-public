@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>sizeof演算子 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="sizeof演算子は、その型を配列の要素とした場合の型のサイズを返します。単位はバイトです。">
+<title> sizeof operator  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="The sizeof operator returns the size of a type if that type is an element of an array. The unit is bytes.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="sizeof演算子 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="sizeof演算子は、その型を配列の要素とした場合の型のサイズを返します。単位はバイトです。" />
+<meta name="twitter:title" content=" sizeof operator  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="The sizeof operator returns the size of a type if that type is an element of an array. The unit is bytes." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210207155548.html">sizeof演算子</a></h2>
+<h2><a href="/blog/20210207155548.html"> sizeof operator </a></h2>
 <p>
-  sizeof演算子は、その型を配列の要素とした場合の型のサイズを返します。単位はバイトです。
+  The sizeof operator returns the size of a type if that type is an element of an array. The unit is bytes.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,47 +100,47 @@
 
 
 <pre>
-sizeof(型名)
+sizeof (type name)
 </pre>
 <p>
-  「その型を配列の要素とした場合の型のサイズ」とわかりにくい表現であるのは、sizeof演算子は、定義したサイズを必ずしも返すわけではないからです。これは、構造体のサイズをsizeof演算子で見た場合に、違いが確認できます。
+  The confusing expression "the size of a type when that type is an element of an array" is because the sizeof operator does not always return the defined size. You can see the difference when you look at the size of the structure with the sizeof operator.
 </p>
-<h3>数値型の型のサイズ</h3>
+<h3> Numeric type size </h3>
 <p>
-  まず、<a href="/blog/20201130082751.html">int32_t</a>、<a href="/blog/20201127082751.html">int64_t</a>、<a href="/blog/20201202133213.html">float</a>、<a href="/blog/20201203133213.html">double</a>の型のサイズを見てみましょう。
+  First, <a href="/blog/20201130082751.html"> int32_t</a>, <a href="/blog/20201127082751.html"> int64_t</a>, <a href="/blog/20201202133213. Let's look at the size of the html "> float</a>, <a href="/blog/20201203133213.html"> double</a> type.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-int main(void) {
-  printf("int32_t: %d, int64_t: %d, float: %d, double: %d",
-    sizeof(int32_t), sizeof(int64_t), sizeof(float), sizeof(double));
+int main (void) {
+  printf("int32_t:%d, int64_t:%d, float:%d, double:%d",
+    sizeof (int32_t), sizeof (int64_t), sizeof (float), sizeof (double));
 }
 </pre>
 <p>
-  出力結果です。int32_tは4バイト、int64_tは8バイト、floatは4バイト、doubleは8バイトです。
+  This is the output result. int32_t is 4 bytes, int64_t is 8 bytes, float is 4 bytes, and double is 8 bytes.
 </p>
 <pre>
 int32_t: 4, int64_t: 8, float: 4, double: 8
 </pre>
-<h3>void*型の型のサイズ</h3>
+<h3> Void * type type size </h3>
 <p>
-  汎用ポインタ型「void*」のサイズを見てみましょう。汎用ポインタ型と他のポインタ型のサイズは必ず一致します。
+  Let's take a look at the size of the general-purpose pointer type "void *". The sizes of generic pointer types and other pointer types always match.
 </p>
 <p>
-  メモリ空間が32bitのCPUでは4バイト、メモリ空間が64bitのCPUでは8バイトになります。
+  A CPU with a memory space of 32 bits has 4 bytes, and a CPU with a memory space of 64 bits has 8 bytes.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 
-int main(void) {
-  printf("void*: %d\n", sizeof(void*));
+int main (void) {
+  printf("void *:%d\n", sizeof (void *));
 }
 </pre>
-<h3>共用体のサイズ</h3>
+<h3> Union size </h3>
 <p>
-  共用体を定義した場合は、最も大きなメンバのサイズの型を配列の要素にした場合のサイズになります。
+  If you define a union, it will be the size if the type of the size of the largest member is an element of the array.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
@@ -153,24 +151,24 @@ union myapp_value {
   int16_t int16_val;
   int32_t int32_val;
   int64_t int64_val;
-};
+};;
 
-int main(void) {
-  printf("union myapp_value: %d\n", sizeof(union myapp_value));
+int main (void) {
+  printf("union myapp_value:%d\n", sizeof (union myapp_value));
 }
 </pre>
 <p>
-  出力結果。
+  Output result.
 </p>
 <pre>
 union myapp_value: 8
 </pre>
 <p>
-  一番大きなメンバのint64_tのサイズと同じになりました。
+  It is now the same size as the largest member, int64_t.
 </p>
-<h3>構造体のサイズ</h3>
+<h3> Structure size </h3>
 <p>
-  <a href="/blog/20210208155548.html">構造体</a>のサイズを理解するのは、少し難しいです。さて以下のsizeof演算子は、どのような値を返すでしょうか?
+  Understanding the size of the <a href="/blog/20210208155548.html"> structure</a> is a bit tricky. So what value does the following sizeof operator return?
 </p>
 <pre>
 #include &lt;stdint.h&gt;
@@ -180,98 +178,98 @@ struct myapp_data {
   int64_t int64_val;
   int8_t int8_val1;
   int8_t int8_val2;
-};
+};;
 
-int main(void) {
-  printf("struct myapp_data: %d\n", sizeof(struct myapp_data));
+int main (void) {
+  printf("struct myapp_data:%d\n", sizeof (struct myapp_data));
 }
 </pre>
 <p>
-  int64_tは8バイト、int8_tが二つで2バイト、合わせて10バイトです。
+  int64_t is 8 bytes, int8_t is 2 bytes, and the total is 10 bytes.
 </p>
 <p>
-  出力結果は以下です。
+  The output result is as follows.
 </p>
 <pre>
 struct myapp_data: 16
 </pre>
 <p>
-  あら、結果は16です。どうして?
+  Oh, the result is 16. why?
 </p>
 <p>
-  最初に書いたようにsizeof演算子は、型のサイズというよりも「その型を配列の要素とした場合の型のサイズ」を返すからです。
+  This is because, as I wrote at the beginning, the sizeof operator returns "the size of the type when the type is an element of the array" rather than the size of the type.
 </p>
-<h3>構造体のアラインメント</h3>
+<h3> Structure alignment </h3>
 <p>
-  「その型を配列の要素とした場合の型のサイズ」はどのように決められるのでしょうか?
-</p>
-<p>
-  次の規則です。
+  How is "the size of the type when that type is an element of the array" determined?
 </p>
 <p>
-  sizeofが返す構造体のサイズは、必ずメンバ変数の最大サイズの倍数になります(上記の例では一番大きなint64_tは8バイトですので、8の倍数です)。それより小さなサイズのメンバは、メンバ変数の最大サイズの倍数を超えない位置に先頭からつめて、並べられます。ただし、メンバ変数は、そのメンバ変数のサイズの倍数の位置から、並べられます。
+  The following rules.
 </p>
 <p>
-  これらをデータのアラインメントと呼びます。これは、CPUの演算が速くなるような位置に、データを並べるための規則だと考えてください。
+  The size of the structure returned by sizeof is always a multiple of the maximum size of the member variable (in the above example, the largest int64_t is 8 bytes, so it is a multiple of 8). Members of smaller sizes are sorted from the beginning to a position that does not exceed a multiple of the maximum size of the member variable. However, the member variables are sorted from the position that is a multiple of the size of the member variable.
 </p>
 <p>
-  上記の規則によって並べられて空いた隙間をパディングと呼びます。
+  These are called data alignments. Think of this as a rule for arranging data in a position that speeds up CPU operations.
+</p>
+<p>
+  The gaps that are lined up according to the above rules are called padding.
 </p>
 <pre>
-// sizeofは16を返す
+// sizeof returns 16
 struct myapp_data {
-  int64_t int64_val; // 8バイト
-  int8_t int8_val1;  // 1バイト
-  int8_t int8_val2;  // 1バイト
-                     // 6バイトのパディング
-};
+  int64_t int64_val; // 8 bytes
+  int8_t int8_val1; // 1 byte
+  int8_t int8_val2; // 1 byte
+                     // 6 byte padding
+};;
 </pre>
 <p>
-  後は、実際に例をいくつかみてみましょう。
+  Now let's take a look at some examples.
 </p>
 <pre>
-// sizeofは16を返す
+// sizeof returns 16
 struct myapp_data {
-  int64_t a; // 8バイト
-  int8_t b;  // 1バイト
-  int8_t c;  // 1バイト
-  int32_t d; // 4バイト
-             // 2バイトのパディング
-};
+  int64_t a; // 8 bytes
+  int8_t b; // 1 byte
+  int8_t c; // 1 byte
+  int32_t d; // 4 bytes
+             // 2-byte padding
+};;
 </pre>
 <pre>
-// sizeofは24を返す
+// sizeof returns 24
 struct myapp_data {
-  int64_t a; // 8バイト
-  int8_t b;  // 1バイト
-  int8_t c;  // 1バイト
-  int32_t d; // 4バイト
-             // 2バイトのパディング
-  int32_t e; // 4バイト
-             // 4バイトのパディング
-};
+  int64_t a; // 8 bytes
+  int8_t b; // 1 byte
+  int8_t c; // 1 byte
+  int32_t d; // 4 bytes
+             // 2-byte padding
+  int32_t e; // 4 bytes
+             // 4-byte padding
+};;
 </pre>
 <pre>
-// sizeofは12を返す
+// sizeof returns 12
 struct myapp_data {
-  int32_t a; // 4バイト
-  int8_t b;  // 1バイト
-  int8_t c;  // 1バイト
-             // 2バイトのパディング
-  int32_t d; // 4バイト
-};
+  int32_t a; // 4 bytes
+  int8_t b; // 1 byte
+  int8_t c; // 1 byte
+             // 2-byte padding
+  int32_t d; // 4 bytes
+};;
 </pre>
 <pre>
-// sizeofは16を返す
+// sizeof returns 16
 struct myapp_data {
-  int32_t a; // 4バイト
-  int8_t b;  // 1バイト
-             // 1バイトのパディング
-  int16_t c; // 2バイト
-  int8_t d;  // 1バイト
-             // 3バイトのパディング
-  int32_t e; // 4バイト
-};
+  int32_t a; // 4 bytes
+  int8_t b; // 1 byte
+             // 1 byte padding
+  int16_t c; // 2 bytes
+  int8_t d; // 1 byte
+             // 3 byte padding
+  int32_t e; // 4 bytes
+};;
 </pre>
 
   </div>
@@ -299,8 +297,7 @@ struct myapp_data {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

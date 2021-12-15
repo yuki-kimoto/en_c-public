@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>calloc関数 - メモリの動的確保と0初期化 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="calloc関数を使用するとメモリを動的に確保できます。メモリ領域は0初期化されます。「stdlib.h」を読み込む必要があります。">
+<title> calloc function --dynamic allocation of memory and zero initialization  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="Memory can be allocated dynamically by using the calloc function. The memory area is initialized to 0. You need to load "stdlib.h".">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="calloc関数 - メモリの動的確保と0初期化 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="calloc関数を使用するとメモリを動的に確保できます。メモリ領域は0初期化されます。「stdlib.h」を読み込む必要があります。" />
+<meta name="twitter:title" content=" calloc function --dynamic allocation of memory and zero initialization  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="Memory can be allocated dynamically by using the calloc function. The memory area is initialized to 0. You need to load "stdlib.h"." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,34 +60,34 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library.html">
-        <span itemprop="name">C標準ライブラリ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C standard library </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library/stdlib.html">
-        <span itemprop="name">stdlib.h</span>
-      </a>
-      <meta itemprop="position" content="3" />
+        <span itemprop = "name"> stdlib.h </span>
+     </a>
+      <meta itemprop = "position" content = "3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210209082644.html">calloc関数 - メモリの動的確保と0初期化</a></h2>
+<h2><a href="/blog/20210209082644.html"> calloc function --dynamic allocation of memory and zero initialization </a></h2>
 <p>
-  calloc関数を使用するとメモリを動的に確保できます。メモリ領域は0初期化されます。「stdlib.h」を読み込む必要があります。
+  Memory can be allocated dynamically by using the calloc function. The memory area is initialized to 0. You need to load "stdlib.h".
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -110,106 +108,106 @@
 <pre>
 #include &lt;stdlib.h&gt;
 
-void *calloc(size_t n, size_t size);
+void * calloc (size_t n, size_t size);
 </pre>
 <p>
-  calloc関数はヒープ領域にメモリを確保します。
+  The calloc function allocates memory in the heap area.
 </p>
 <p>
-  第一引数は、一単位のデータのサイズをバイト単位で指定します。第二引数は、データの個数を指定します。これらの型はsize_t型です。size_t型は、環境によって、幅が異なりますが、16bit以上の符号なし整数とC言語仕様で定義されています。現代的な環境であれば、0～<a href="/blog/20201129082751.html">符号あり32bit整数型の最大値</a>の範囲(0～2147483647)で、値を指定すれば安心だと想定します。(例外的な環境があれば、プリーズテルミー)。
+  The first argument specifies the size of the data in one unit, in bytes. The second argument specifies the number of data. These types are of type size_t. The size_t type has a different width depending on the environment, but it is defined by an unsigned integer of 16 bits or more and the C language specification. In a modern environment, it is safe to specify a value in the range of 0 to <a href="/blog/20201129082751.html"> Signed 32-bit integer type maximum value</a> (0 to 2147483647). I assume that. (If there is an exceptional environment, please thermy).
 </p>
 <p>
-  戻り値は、確保されたメモリ領域の先頭のアドレスです。戻り値の型は、汎用ポインタ型「void*」です。どんなポインタ型にも代入できます。
+  The return value is the address at the beginning of the reserved memory area. The return type is the generic pointer type "void *". You can assign it to any pointer type.
 </p>
 <p>
-  一般的なアプリケーションやライブラリで動的メモリ確保する場合は、<a href="/blog/20210210082644.html">malloc関数</a>よりも0初期化されるcalloc関数をお勧めしています。
+  When allocating dynamic memory for general applications and libraries, we recommend the calloc function, which is initialized to 0, rather than the <a href="/blog/20210210082644.html"> malloc function</a>.
 </p>
 <p>
-  callocで確保したメモリ領域は、使い終わったら、free関数を使って解放しましょう。解放し忘れるとメモリリークになります。
+  When you have finished using the memory area allocated by calloc, use the free function to free it. If you forget to release it, a memory leak will occur.
 </p>
-<h3>calloc関数のサンプル</h3>
+<h3> sample calloc function </h3>
 <p>
-  calloc関数のサンプルを書いてみます。
+  Let's write a sample calloc function.
 </p>
-<h4>配列の動的な生成</h4>
+<h4> Dynamic array generation </h4>
 <p>
-  <a href="/blog/20210129143859.html">配列</a>を動的に生成するサンプルです。
+  This is a sample that dynamically generates <a href="/blog/20210129143859.html"> array</a>.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-int main(void) {
-  // int32_tのサイズで、10の長さのメモリ領域を確保(4バイト*10=40バイト)
+int main (void) {
+  // Allocate a memory area of ​​10 length with the size of int32_t (4 bytes * 10 = 40 bytes)
   int32_t nums_length = 10;
-  int32_t* nums = calloc(sizeof(int32_t), nums_length);
+  int32_t * nums = calloc (sizeof (int32_t), nums_length);
   
-  // 配列の操作
-  nums[0] = 10;
-  printf("%d\n", nums[0]);
+  // Array operations
+  nums [0] = 10;
+  printf("%d\n", nums [0]);
   
-  // 解放
-  free(nums);
+  // Release
+  free (nums);
 }
 </pre>
-<h4>構造体データの動的な生成</h4>
+<h4> Dynamic generation of structure data </​​h4>
 <p>
-  <a href="/blog/20210208155548.html">構造体</a>のデータを動的に生成するサンプルです。
+  This is a sample that dynamically generates the data of <a href="/blog/20210208155548.html"> structure</a>.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-// 書籍情報を表現する構造体の定義
+// Definition of a structure that represents book information
 struct myapp_book {
   int32_t id;
-  const char* name;
+  const char * name;
   int32_t price;
-};
+};;
 
-int main(void) {
-  // 構造体の動的メモリ確保(calloc)
-  struct myapp_book* book = calloc(sizeof(struct myapp_book), 1);
-  book-&gt;id = 1;
-  book-&gt;name = "C99 Book";
-  book-&gt;price = 2000;
+int main (void) {
+  // Structure dynamic memory allocation (calloc)
+  struct myapp_book * book = calloc (sizeof (struct myapp_book), 1);
+  book-&gt;id= 1;
+  book-&gt;name= "C99 Book";
+  book-&gt;price= 2000;
   
-  printf("id: %d, name: %s, price: %d\n", book-&gt;id, book-&gt;name, book-&gt;price);
+  printf("id:%d, name:%s, price:%d\n", book-&gt;id, book-&gt;name, book-&gt;price);
   
-  // メモリ解放
-  free(book);
+  // Memory release
+  free (book);
 }
 </pre>
-<h4>構造体の配列の動的な生成</h4>
+<h4> Dynamic generation of an array of structures </h4>
 <p>
-  <a href="/blog/20210208155548.html">構造体</a>の<a href="/blog/20210129143859.html">配列</a>を動的に生成するサンプルです。
+  This is a sample to dynamically generate <a href="/blog/20210129143859.html"> array</a> of <a href="/blog/20210208155548.html"> structure</a>.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-// 書籍情報を表現する構造体の定義
+// Definition of a structure that represents book information
 struct myapp_book {
   int32_t id;
-  const char* name;
+  const char * name;
   int32_t price;
-};
+};;
 
-int main(void) {
-  // 構造体の配列を動的メモリ確保(calloc。0初期化してくれるので安全)
+int main (void) {
+  // Dynamic memory allocation for the structure array (calloc .0 is safe because it initializes)
   int32_t books_length = 10;
-  struct myapp_book* books = calloc(sizeof(struct myapp_book), books_length);
-  books[0].id = 1;
-  books[0].name = "C99 Book";
-  books[0].price = 2000;
+  struct myapp_book * books = calloc (sizeof (struct myapp_book), books_length);
+  books [0] .id = 1;
+  books [0] .name = "C99 Book";
+  books [0] .price = 2000;
   
-  printf("books[0] id: %d, name: %s, price: %d\n", books[0].id, books[0].name, books[0].price);
+  printf("books [0] id:%d, name:%s, price:%d\n", books [0] .id, books [0] .name, books [0] .price);
   
-  // メモリ解放
-  free(books);
+  // Memory release
+  free (books);
 }
 </pre>
 
@@ -238,8 +236,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>C言語の開発環境の構築 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="C言語の開発環境の構築方法を解説します。gccコマンドが使えるようになれば、C言語をコンパイルして実行できるようになります。gccコマンドは、UNIX/Linux上でC言語をコンパイルする方法ですが、現在(2021年6月21日記述)では、MacやWindowsにも移植され利用できます。初心者向けの他のサイトでは、C言語の開発環境構築は、難しいと書かれているのを見たことがありますが、簡単な方だと思います。">
+<title> Building a C language development environment  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="I will explain how to build a C language development environment. Once you can use the  gcc command, you will be able to compile and run C language. The gcc command is a method of compiling C language on UNIX / Linux, but now (written on June 21, 2021), it can be ported to Mac and Windows. I've seen other sites for beginners say that building a C language development environment is difficult, but I think it's easy.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="C言語の開発環境の構築 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="C言語の開発環境の構築方法を解説します。gccコマンドが使えるようになれば、C言語をコンパイルして実行できるようになります。gccコマンドは、UNIX/Linux上でC言語をコンパイルする方法ですが、現在(2021年6月21日記述)では、MacやWindowsにも移植され利用できます。初心者向けの他のサイトでは、C言語の開発環境構築は、難しいと書かれているのを見たことがありますが、簡単な方だと思います。" />
+<meta name="twitter:title" content=" Building a C language development environment  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="I will explain how to build a C language development environment. Once you can use the  gcc command, you will be able to compile and run C language. The gcc command is a method of compiling C language on UNIX / Linux, but now (written on June 21, 2021), it can be ported to Mac and Windows. I've seen other sites for beginners say that building a C language development environment is difficult, but I think it's easy." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,9 +60,9 @@
     
   </div>
   <div class="middle">
-    <h2><a href="/blog/20201124085008.html">C言語の開発環境の構築</a></h2>
+    <h2><a href="/blog/20201124085008.html"> Building a C language development environment </a></h2>
 <p>
-  C言語の開発環境の構築方法を解説します。<a href="https://en.linux.perlzemi.com/blog/20201216103956.html">gccコマンド</a>が使えるようになれば、C言語をコンパイルして実行できるようになります。gccコマンドは、UNIX/Linux上でC言語をコンパイルする方法ですが、現在(2021年6月21日記述)では、MacやWindowsにも移植され利用できます。初心者向けの他のサイトでは、C言語の開発環境構築は、難しいと書かれているのを見たことがありますが、簡単な方だと思います。
+  I will explain how to build a C language development environment. Once you can use the <a href="https://en.linux.perlzemi.com/blog/20201216103956.html"> gcc command</a>, you will be able to compile and run C language. The gcc command is a method of compiling C language on UNIX / Linux, but now (written on June 21, 2021), it can be ported to Mac and Windows. I've seen other sites for beginners say that building a C language development environment is difficult, but I think it's easy.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -82,50 +80,50 @@
 </div>
 
 
-<h3>WindowsにおけるC言語の開発環境の開発環境の構築</h3>
+<h3> Building a development environment for C language development environment on Windows </h3>
 <p>
-  Windowsであれば「MinGWを使う方法」「<a href="https://en.perlzemi.com/blog/20180806153350.html">msys2を使う方法</a>」「WSL2を使ってLinux環境を作る方法」などがあります。
+  For Windows, "How to use MinGW" "<a href="https://en.perlzemi.com/blog/20180806153350.html"> How to use msys2</a>" "Use WSL2 to create a Linux environment" How to make it "and so on.
 </p>
-<h4>MinGW</h4>
+<h4> MinGW </h4>
 <p>
-  MinGWは、個別にダウンロードしてインストールすることが可能ですが、Strawberry Perlをインストールすると付属しているので、<a href="https://en.perlzemi.com/blog/20180808153368.html">Strawberry Perlをインストール</a>してみるのも一つの方法です。これが一番簡単です。
+  MinGW can be downloaded and installed individually, but it comes with Strawberry Perl, so <a href="https://en.perlzemi.com/blog/20180808153368.html"> Strawberry One way is to try installing Perl</a>. This is the easiest.
 </p>
-<h4>msys2</h4>
+<h4> msys2 </h4>
 <p>
-  <a href="https://en.perlzemi.com/blog/20180806153350.html">msys2を使う方法</a>では、Perlの開発環境の構築の手順が終われば、自然とC言語の開発環境の手順が完成しています。
+  <a href="https://en.perlzemi.com/blog/20180806153350.html"> How to use msys2</a>, once the procedure for building the Perl development environment is completed, C language development will occur naturally. The environmental procedure is complete.
 </p>
-<h4>WSL2</h4>
+<h4> WSL2 </h4>
 <p>
-  WSL2を使う方法は、Ubuntuをインストールするのが、自然な流れになると思いますので、WSL2のインストール後は、<a href="https://en.ubuntu.perlzemi.com/blog/20201123133738.html">UbuntuでC言語/C++開発環境構築</a>を参考にしてください。
+  I think that installing Ubuntu is a natural way to use WSL2, so after installing WSL2, <a href="https://en.ubuntu.perlzemi.com/blog/20201123133738.html" Please refer to "> C language / C ++ development environment construction on Ubuntu</a>.
 </p>
-<h3>MacにおけるC言語の開発環境の開発環境の構築</h3>
+<h3> Construction of development environment for C language development environment on Mac </h3>
 <p>
-  Macでは、Command line tools for Xcodeをインストールするとgccコマンドが利用できるようになります。Macのgccコマンドは、clangのラッパーです。
-</p>
-<ul>
-  <li><a href="https://www.embarcadero.com/starthere/xe5/mobdevsetup/ios/ja/installing_the_commandline_tools.html">Mac での Xcode コマンド ライン ツールのインストール</a></li>
-</ul>
-<h3>UNIX/LinuxでのC言語の開発環境の構築</h3>
-<p>
-  <a href="https://en.linux.perlzemi.com/">Unix/Linux</a>で、C言語の開発環境を構築しましょう。
-</p>
-<p>
-  ディストリビューションで用意されているパッケージをインストールするコマンド(yumやapt)を使ってgccをインストールできます。
-</p>
-<p>
-  UbuntuにおけるC言語開発環境であれば、以下のコンテンツを参考にできます。
+  On Mac, you can use the gcc command by installing the Command line tools for Xcode. The Mac gcc command is a wrapper for clang.
 </p>
 <ul>
-  <li><a href="https://en.ubuntu.perlzemi.com/blog/20201123133738.html">UbuntuでC言語/C++開発環境構築</a></li>
+  <li> <a href="https://www.embarcadero.com/starthere/xe5/mobdevsetup/ios/ja/installing_the_commandline_tools.html"> Installing Xcode command line tools on Mac</a> </li>
+</ul>
+<h3> Building a C language development environment on UNIX / Linux </h3>
+<p>
+  Let's build a C language development environment with <a href="https://en.linux.perlzemi.com/"> Unix / Linux</a>.
+</p>
+<p>
+  You can install gcc using the commands (yum and apt) that install the packages provided by your distribution.
+</p>
+<p>
+  If you are in the C language development environment on Ubuntu, you can refer to the following contents.
+</p>
+<ul>
+  <li> <a href="https://en.ubuntu.perlzemi.com/blog/20201123133738.html"> C language / C ++ development environment construction on Ubuntu</a> </li>
 </ul>
 <p>
-  Ubuntuにおけるgccのインストールのサンプル。
+  A sample installation of gcc on Ubuntu.
 </p>
 <pre>
 sudo apt install -y gcc
 </pre>
 <p>
-  Debian、CentOS, FreeBSDなどの他の<a href="https://en.linux.perlzemi.com/">Unix/Linux</a>の環境でも、ディストリビューションで用意されているパッケージをインストールするコマンド(yumやapt)を使って、同じようにできます。
+  Install packages provided by the distribution in other <a href="https://en.linux.perlzemi.com/"> Unix / Linux</a> environments such as Debian, CentOS, FreeBSD, etc. You can do the same with commands (yum and apt).
 </p>
 
   </div>
@@ -153,8 +151,7 @@ sudo apt install -y gcc
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

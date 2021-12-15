@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>アサーション - assertマクロ - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="assertマクロを使うとアサーションをソースコードに挿入できます。">
+<title> Assertion --assertion macro  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="You can insert assertions into your source code using the assert macro.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="アサーション - assertマクロ - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="assertマクロを使うとアサーションをソースコードに挿入できます。" />
+<meta name="twitter:title" content=" Assertion --assertion macro  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="You can insert assertions into your source code using the assert macro." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,34 +60,34 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library.html">
-        <span itemprop="name">C標準ライブラリ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C standard library </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library/assert.html">
-        <span itemprop="name">assert.h</span>
-      </a>
-      <meta itemprop="position" content="3" />
+        <span itemprop = "name"> assert.h </span>
+     </a>
+      <meta itemprop = "position" content = "3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210317082708.html">アサーション - assertマクロ</a></h2>
+<h2><a href="/blog/20210317082708.html"> Assertion --assertion macro </a></h2>
 <p>
-  assertマクロを使うとアサーションをソースコードに挿入できます。
+  You can insert assertions into your source code using the assert macro.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -108,85 +106,85 @@
 
 
 <pre>
-assert(条件)
+assert (condition)
 </pre>
 <p>
-  assertマクロの条件が真であるときは、何も起こりません。条件が偽である場合は、エラーメッセージを出力し、プログラムが終了します。コアダンプ出力を有効にしている場合は、コアダンプも出力されます。ある値が、期待している値であることをチェックしたい場合に便利です。
+  If the condition of the assert macro is true, nothing happens. If the condition is false, an error message will be output and the program will terminate. If core dump output is enabled, core dump output is also output. This is useful if you want to check that a value is what you expect.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 #include &lt;assert.h&gt;
 
-int main(void) {
+int main (void) {
   int32_t num = 3;
   
-  // numが1より大きいことをチェック
-  assert(num &gt; 1);
+  // Check that num is greater than 1
+  assert (num&gt; 1);
   
   printf("%d\n", num);
 }
 </pre>
 <p>
-  出力結果です。「num」が「1」より大きいので普通に実行されます。
+  This is the output result. Since "num" is larger than "1", it will be executed normally.
 </p>
 <pre>
 3
 </pre>
 <p>
-  「num」を「-1」にしてみましょう。
+  Let's change "num" to "-1".
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 #include &lt;assert.h&gt;
 
-int main(void) {
+int main (void) {
   int32_t num = -1;
   
-  // numが1より大きいことをチェック
-  assert(num &gt; 1);
+  // Check that num is greater than 1
+  assert (num&gt; 1);
   
   printf("%d\n", num);
 }
 </pre>
 <p>
-  <a href="https://en.linux.perlzemi.com/blog/20201216103956.html">gcc</a>の場合の出力結果です。
+  This is the output result for <a href="https://en.linux.perlzemi.com/blog/20201216103956.html"> gcc</a>.
 </p>
 <pre>
-a: a.c:9: main: Assertion `num &gt; 1' failed.
+a: a.c: 9: main: Assertion `num&gt; 1'failed.
 Aborted (core dumped)
 </pre>
 <p>
-  <a href="https://en.linux.perlzemi.com/blog/20191126082723.html">lsコマンド</a>と<a href="https://en.linux.perlzemi.com/blog/20200602093211.html">grepコマンド</a>で確認すると、コアダンプも出力されています。
+  <a href="https://en.linux.perlzemi.com/blog/20191126082723.html"> ls command</a> and <a href="https://en.linux.perlzemi.com/blog/ If you check with 20200602093211.html "> grep command</a>, a core dump is also output.
 </p>
 <pre>
-$ ls | grep core
+$ls | grep core
 core.28560
 </pre>
 <p>
-  コアダンプは、プログラムのデバッグに関する情報が格納されているファイルだと考えてください。コアダンプを使ってプログラムをデバッグする方法については、別の箇所で解説します。
+  Think of a core dump as a file that contains information about debugging your program. We will discuss how to debug a program using a core dump elsewhere.
 </p>
-<h3>assertマクロを取り除く</h3>
+<h3> Remove assert macros </h3>
 <p>
-  assertマクロは、NDEBUGマクロを、コンパイル時に指定することで、取り除くことができます。デバッグするときにだけassertマクロを使い、最終的な製品の出力にはassertマクロを入れたくないという場合に便利です。
+  The assert macro can be removed by specifying the NDEBUG macro at compile time. This is useful if you only use the assert macro when debugging and you don't want to include the assert macro in the final product output.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 #include &lt;assert.h&gt;
 
-int main(void) {
+int main (void) {
   int32_t num = -1;
   
-  // numが1より大きいことをチェック
-  assert(num &gt; 1);
+  // Check that num is greater than 1
+  assert (num&gt; 1);
   
   printf("%d\n", num);
 }
 </pre>
 <p>
-  次のようにgccの「-D」オプションで「NDEBUGマクロ」を定義して、実行してみましょう。assertマクロの部分が実行されません。
+  Let's define and execute the "NDEBUG macro" with the "-D" option of gcc as follows. The assert macro part is not executed.
 </p>
 <pre>
 gcc -DNDEBUG -o a a.c &amp;&amp; ./a
@@ -217,8 +215,7 @@ gcc -DNDEBUG -o a a.c &amp;&amp; ./a
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

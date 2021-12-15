@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>オブジェクト指向C言語 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="C言語をオブジェクト指向で書く方法を解説します。">
+<title> Object-oriented C language  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="I will explain how to write C language in an object-oriented manner.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="オブジェクト指向C言語 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="C言語をオブジェクト指向で書く方法を解説します。" />
+<meta name="twitter:title" content=" Object-oriented C language  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="I will explain how to write C language in an object-oriented manner." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,9 +60,9 @@
     
   </div>
   <div class="middle">
-    <h2><a href="/blog/20210212090234.html">オブジェクト指向C言語</a></h2>
+    <h2><a href="/blog/20210212090234.html"> Object-oriented C language </a></h2>
 <p>
-  C言語をオブジェクト指向で書く方法を解説します。
+  I will explain how to write C language in an object-oriented manner.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -83,156 +81,160 @@
 
 
 <p>
-  オブジェクト指向型言語とは、僕の解釈では、オブジェクト指向の考え方を使いやすくした言語のことです。
+  An object-oriented language, in my interpretation, is a language that makes it easier to use object-oriented thinking.
 </p>
 <p>
-  つまり、オブジェクト指向プログラミングは、どんなプログラミング言語でもできるのだけれど、それをやりやすくしたプログラミング言語が存在するというわけです。
+  In other words, object-oriented programming can be done in any programming language, but there is a programming language that makes it easier to do.
 </p>
 <p>
-  結論を書くと「C言語でもオブジェクト指向できるよ! 記述はちょっと面倒だけどね。」
+  When I write the conclusion, "It can be object-oriented even in C language! The description is a little troublesome."
 </p>
-<h3>クラスに該当するのは構造体</h3>
 <p>
-  クラスに該当するのは<a href="/blog/20210208155548.html">構造体</a>です。フィールドに該当するのは構造体のメンバ変数です。ヘッダの相互参照などの問題を解決するために、typedef文で、別名をつけています(このテクニックについては<a href="/blog/20210202153503.html">型宣言ヘッダ</a>を参照してください)。
+  The <h3> class is a structure </h3>
+</p>
+<p>
+  The class corresponds to <a href="/blog/20210208155548.html"> structure</a>. The fields correspond to the member variables of the structure. To solve problems such as header cross-references, we use aliases in typedef statements (see <a href="/blog/20210202153503.html"> type declaration headers</a> for this technique. please).
 </p>
 <pre>
-// strcut myapp_lib に MYAPP_LIBという別名をつける
+// Give strcut myapp_lib the alias MYAPP_LIB
 typedef struct myapp_lib MYAPP_LIB;
 
-// クラスに該当するのは構造体
+// The class corresponds to the structure
 struct myapp_lib {
-  // フィールドに該当するのはメンバ変数
+  // Fields are member variables
   int32_t flag;
-};
+};;
 </pre>
-<h3>コンストラクタは関数</h3>
+<h3> Constructor is a function </h3>
 <p>
-  コンストラクタはオブジェクトを返す関数です。このページでは、動的にメモリに割り当てられた構造体のメモリ領域を指すポインタを、オブジェクトと呼ぶことにします。
+  A constructor is a function that returns an object. On this page, we will refer to pointers that point to the memory areas of structures that are dynamically allocated to memory as objects.
 </p>
 <pre>
-// コンストラクタは関数
-MYAPP_LIB* MYAPP_LIB_new() {
-  // 動的メモリ割り当てでオブジェクトを生成
-  MYAPP_LIB* self = calloc(sizeof(MYAPP_LIB), 1);
+// Constructor is a function
+MYAPP_LIB * MYAPP_LIB_new () {
+  // Create an object with dynamic memory allocation
+  MYAPP_LIB * self = calloc (sizeof (MYAPP_LIB), 1);
   
-  // オブジェクトを返す
+  // return an object
   return self;
 }
 
-// フラグをセットできるコンストラクタ
-MYAPP_LIB* MYAPP_LIB_new_with_flag(int32_t flag) {
+// Constructor that can set flags
+MYAPP_LIB * MYAPP_LIB_new_with_flag (int32_t flag) {
   
-  MYAPP_LIB* self = MYAPP_LIB_new();
-  self-&gt;flag = flag;
+  MYAPP_LIB * self = MYAPP_LIB_new ();
+  self-&gt;flag= flag;
   
   return self;
 }
 </pre>
-<h3>メソッドは、オブジェクトを第一引数に取る関数</h3>
 <p>
-  メソッドは、オブジェクトを第一引数に取る関数です。
+  The <h3> method is a function that takes an object as the first argument </h3>
+</p>
+<p>
+  A method is a function that takes an object as its first argument.
 </p>
 <pre>
-// フラグをセット
-void MYAPP_LIB_set_flag(MYAPP_LIB* self, int32_t flag) {
-  self-&gt;flag = flag;
+// Set the flag
+void MYAPP_LIB_set_flag (MYAPP_LIB * self, int32_t flag) {
+  self-&gt;flag= flag;
 }
 
-// フラグをゲット
-int32_t MYAPP_LIB_get_flag(MYAPP_LIB* self) {
+// get the flag
+int32_t MYAPP_LIB_get_flag (MYAPP_LIB * self) {
   return self-&gt;flag;
 }
 </pre>
-<h3>デストラクタは関数</h3>
+<h3> Destructor is a function </h3>
 <p>
-  デストラクタは関数です。これは、手動で呼ぶ必要があります。
+  Destructors are functions. This has to be called manually.
 </p>
 <pre>
-void MYAPP_LIB_free(MYAPP_LIB* self) {
+void MYAPP_LIB_free (MYAPP_LIB * self) {
   
-  // メモリ割り当て解放
-  free(self);
+  // Free memory allocation
+  free (self);
 }
 </pre>
-<h3>オブジェクト指向プログラミングのサンプル</h3>
+<h3> Object-oriented programming sample </h3>
 <p>
-  オブジェクト指向プログラミングのサンプルです。
+  This is a sample of object-oriented programming.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-// strcut myapp_lib に MYAPP_LIBという別名をつける
+// Give strcut myapp_lib the alias MYAPP_LIB
 typedef struct myapp_lib MYAPP_LIB;
 
-// クラスに該当するのは構造体
+// The class corresponds to the structure
 struct myapp_lib {
-  // フィールドに該当するのはメンバ変数
+  // Fields are member variables
   int32_t flag;
-};
+};;
 
-// コンストラクタは関数
-MYAPP_LIB* MYAPP_LIB_new() {
-  // 動的メモリ割り当てでオブジェクトを生成
-  MYAPP_LIB* self = calloc(sizeof(MYAPP_LIB), 1);
+// Constructor is a function
+MYAPP_LIB * MYAPP_LIB_new () {
+  // Create an object with dynamic memory allocation
+  MYAPP_LIB * self = calloc (sizeof (MYAPP_LIB), 1);
   
-  // オブジェクトを返す
+  // return an object
   return self;
 }
 
-// フラグをセットできるコンストラクタ
-MYAPP_LIB* MYAPP_LIB_new_with_flag(int32_t flag) {
+// Constructor that can set flags
+MYAPP_LIB * MYAPP_LIB_new_with_flag (int32_t flag) {
   
-  MYAPP_LIB* self = MYAPP_LIB_new();
-  self-&gt;flag = flag;
+  MYAPP_LIB * self = MYAPP_LIB_new ();
+  self-&gt;flag= flag;
   
   return self;
 }
 
-// フラグをセット
-void MYAPP_LIB_set_flag(MYAPP_LIB* self, int32_t flag) {
-  self-&gt;flag = flag;
+// Set the flag
+void MYAPP_LIB_set_flag (MYAPP_LIB * self, int32_t flag) {
+  self-&gt;flag= flag;
 }
 
-// フラグをゲット
-int32_t MYAPP_LIB_get_flag(MYAPP_LIB* self) {
+// get the flag
+int32_t MYAPP_LIB_get_flag (MYAPP_LIB * self) {
   return self-&gt;flag;
 }
 
-void MYAPP_LIB_free(MYAPP_LIB* self) {
+void MYAPP_LIB_free (MYAPP_LIB * self) {
   
-  // メモリ割り当て解放
-  free(self);
+  // Free memory allocation
+  free (self);
 }
 
-int main(void) {
-  // オブジェクト生成
-  MYAPP_LIB* myapp_lib = MYAPP_LIB_new();
+int main (void) {
+  // Object creation
+  MYAPP_LIB * myapp_lib = MYAPP_LIB_new ();
   
-  // メソッド呼び出し
-  MYAPP_LIB_set_flag(myapp_lib, 5);
-  int32_t myapp_lib_flag = MYAPP_LIB_get_flag(myapp_lib);
+  // Method call
+  MYAPP_LIB_set_flag (myapp_lib, 5);
+  int32_t myapp_lib_flag = MYAPP_LIB_get_flag (myapp_lib);
   printf("%d\n", myapp_lib_flag);
   
-  // オブジェクトの解放
-  MYAPP_LIB_free(myapp_lib);
+  // Release the object
+  MYAPP_LIB_free (myapp_lib);
 }
 </pre>
-<h3>分割コンパイル対応 - オブジェクト指向プログラミングのサンプル</h3>
+<h3> Split compilation support-Object-oriented programming sample </h3>
 <p>
-  オブジェクト指向プログラミングのサンプルを分割コンパイル対応してみましょう。これでC言語のプログラムが、実戦で大きなプログラムになってきた場合も安心です。
+  Let's support split compilation of object-oriented programming samples. With this, it is safe even if the C language program becomes a big program in the actual battle.
 </p>
-<h4>myapp_typedecl.h</h4>
+<h4> myapp_typedecl.h </h4>
 <pre>
 #ifndef MYAPP_TYPEDECL_H
 #define MYAPP_TYPEDECL_H
 
-// strcut mylib に MYLIBという別名をつける
+// Give strcut mylib the alias MYLIB
 typedef struct myapp_lib MYAPP_LIB;
 
 #endif
 </pre>
-<h4>myapp_lib.h</h4>
+<h4> myapp_lib.h </h4>
 <pre>
 #ifndef MYAPP_LIB_H
 #define MYAPP_LIB_H
@@ -241,92 +243,92 @@ typedef struct myapp_lib MYAPP_LIB;
 
 struct myapp_lib {
   int32_t flag;
-};
+};;
 
-MYAPP_LIB* MYAPP_LIB_new();
-MYAPP_LIB* MYAPP_LIB_new_with_flag(int32_t flag);
-void MYAPP_LIB_set_flag(MYAPP_LIB* self, int32_t flag);
-int32_t MYAPP_LIB_get_flag(MYAPP_LIB* self);
-void MYAPP_LIB_free(MYAPP_LIB* self);
+MYAPP_LIB * MYAPP_LIB_new ();
+MYAPP_LIB * MYAPP_LIB_new_with_flag (int32_t flag);
+void MYAPP_LIB_set_flag (MYAPP_LIB * self, int32_t flag);
+int32_t MYAPP_LIB_get_flag (MYAPP_LIB * self);
+void MYAPP_LIB_free (MYAPP_LIB * self);
 
 #endif
 </pre>
-<h4>myapp_lib.c</h4>
+<h4> myapp_lib.c </h4>
 <pre>
 #include &lt;stdlib.h&gt;
 
 #include "myapp_lib.h"
 
-// コンストラクタは関数
-MYAPP_LIB* MYAPP_LIB_new() {
-  // 動的メモリ割り当てでオブジェクトを生成
-  MYAPP_LIB* self = calloc(sizeof(MYAPP_LIB), 1);
+// Constructor is a function
+MYAPP_LIB * MYAPP_LIB_new () {
+  // Create an object with dynamic memory allocation
+  MYAPP_LIB * self = calloc (sizeof (MYAPP_LIB), 1);
   
-  // オブジェクトを返す
+  // return an object
   return self;
 }
 
-// フラグをセットできるコンストラクタ
-MYAPP_LIB* MYAPP_LIB_new_with_flag(int32_t flag) {
+// Constructor that can set flags
+MYAPP_LIB * MYAPP_LIB_new_with_flag (int32_t flag) {
   
-  MYAPP_LIB* self = MYAPP_LIB_new();
-  self-&gt;flag = flag;
+  MYAPP_LIB * self = MYAPP_LIB_new ();
+  self-&gt;flag= flag;
   
   return self;
 }
 
-// フラグをセット
-void MYAPP_LIB_set_flag(MYAPP_LIB* self, int32_t flag) {
-  self-&gt;flag = flag;
+// Set the flag
+void MYAPP_LIB_set_flag (MYAPP_LIB * self, int32_t flag) {
+  self-&gt;flag= flag;
 }
 
-// フラグをゲット
-int32_t MYAPP_LIB_get_flag(MYAPP_LIB* self) {
+// get the flag
+int32_t MYAPP_LIB_get_flag (MYAPP_LIB * self) {
   return self-&gt;flag;
 }
 
-void MYAPP_LIB_free(MYAPP_LIB* self) {
+void MYAPP_LIB_free (MYAPP_LIB * self) {
   
-  // メモリ割り当て解放
-  free(self);
+  // Free memory allocation
+  free (self);
 }
 </pre>
-<h4>myapp.c</h4>
+<h4> myapp.c </h4>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
 #include "myapp_lib.h"
 
-int main(void) {
-  // オブジェクト生成
-  MYAPP_LIB* myapp_lib = MYAPP_LIB_new();
+int main (void) {
+  // Object creation
+  MYAPP_LIB * myapp_lib = MYAPP_LIB_new ();
   
-  // メソッド呼び出し
-  MYAPP_LIB_set_flag(myapp_lib, 5);
-  int32_t myapp_lib_flag = MYAPP_LIB_get_flag(myapp_lib);
+  // Method call
+  MYAPP_LIB_set_flag (myapp_lib, 5);
+  int32_t myapp_lib_flag = MYAPP_LIB_get_flag (myapp_lib);
   printf("%d\n", myapp_lib_flag);
   
-  // オブジェクトの解放
-  MYAPP_LIB_free(myapp_lib);
+  // Release the object
+  MYAPP_LIB_free (myapp_lib);
 }
 </pre>
-<h4>コンパイル・リンク・実行</h4>
+<h4> Compile / Link / Execute </h4>
 <pre>
 gcc -c myapp_lib.c
 gcc -c myapp.c
 gcc -o myapp myapp.o myapp_lib.o
 ./myapp
 </pre>
-<h3>継承はできますか?</h3>
+<h3> Is it possible to inherit? </H3>
 <p>
-  C言語では、継承の機能を手動で実装することは容易ではないので、移譲を使いましょう。
+  In C, it's not easy to manually implement the inheritance feature, so let's use delegation.
 </p>
 <p>
-  移譲は、メンバ変数に、必要な機能を提供するオブジェクトを保存しておくテクニックのことです。
+  Transfer is a technique for storing objects that provide the required functionality in member variables.
 </p>
 <p>
-  継承がないから、アプリケーションの機能を満たせないということはないので、安心してください。
+  Rest assured that there is no inheritance that will prevent you from failing to meet the functionality of your application.
 </p>
 
   </div>
@@ -354,8 +356,7 @@ gcc -o myapp myapp.o myapp_lib.o
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

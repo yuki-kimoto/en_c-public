@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>memcpy関数 - メモリ領域をバイト単位でコピーする - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="memcpy関数は、メモリ領域をバイト単位でコピーする関数です。「string.h」をインクルードします。">
+<title> memcpy function-copy memory area in bytes  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="The memcpy function is a function that copies a memory area in bytes. Include "string.h".">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="memcpy関数 - メモリ領域をバイト単位でコピーする - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="memcpy関数は、メモリ領域をバイト単位でコピーする関数です。「string.h」をインクルードします。" />
+<meta name="twitter:title" content=" memcpy function-copy memory area in bytes  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="The memcpy function is a function that copies a memory area in bytes. Include "string.h"." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,34 +60,34 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library.html">
-        <span itemprop="name">C標準ライブラリ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C standard library </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library/string.html">
-        <span itemprop="name">string.h</span>
-      </a>
-      <meta itemprop="position" content="3" />
+        <span itemprop = "name"> string.h </span>
+     </a>
+      <meta itemprop = "position" content = "3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210221132505.html">memcpy関数 - メモリ領域をバイト単位でコピーする</a></h2>
+<h2><a href="/blog/20210221132505.html"> memcpy function-copy memory area in bytes </a></h2>
 <p>
-  memcpy関数は、メモリ領域をバイト単位でコピーする関数です。「string.h」をインクルードします。
+  The memcpy function is a function that copies a memory area in bytes. Include "string.h".
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -110,23 +108,23 @@
 <pre>
 #include &lt;string.h&gt;
 
-void *memcpy(void *buf1, const void *buf2, size_t n);
+void * memcpy (void * buf1, const void * buf2, size_t n);
 </pre>
 <p>
-  第一引数はコピー先の<a href="/blog/20210211090234.html">アドレス</a>です。<a href="/blog/20210215090234.html">汎用ポインタ型</a>ですので、どのポインタ型でも大丈夫です。
+  The first argument is the <a href="/blog/20210211090234.html"> address</a> of the copy destination. <a href="/blog/20210215090234.html"> General-purpose pointer type</a>, so any pointer type is fine.
 </p>
 <p>
-  第二引数はコピー元の<a href="/blog/20210211090234.html">アドレス</a>です。<a href="/blog/20210215090234.html">汎用ポインタ型</a>ですので、どのポインタ型でも大丈夫です。
+  The second argument is the <a href="/blog/20210211090234.html"> address</a> of the copy source. <a href="/blog/20210215090234.html"> General-purpose pointer type</a>, so any pointer type is fine.
 </p>
 <p>
-  第三引数にバイトサイズを指定します。size_t型です。<a href="/blog/20201130082751.html">int32_t</a>型までの範囲で0以上の数値であれば、まず安心です。0の指定は有効な引数で、この場合コピーは行われません。
+  Specify the byte size in the third argument. It is size_t type. <a href="/blog/20201130082751.html"> int32_t</a> If the value is 0 or more in the range up to the type, it is safe first. Specifying 0 is a valid argument, in which case no copy will be done.
 </p>
 <p>
-  コピー先とコピー元のデータ領域が重なっていた場合には、動作は保証されません。コピー先とコピー元のデータ領域が重なっていた場合でも正しく動作させる場合は<a href="/blog/20210412082820.html">memmove関数</a>を使用してください。重ならない場合は、性能が優先されるmemcpy関数を使いましょう。
+  Operation is not guaranteed if the copy destination and copy source data areas overlap. Use the <a href="/blog/20210412082820.html"> memmove function</a> to operate correctly even if the copy destination and copy source data areas overlap. If they do not overlap, use the memcpy function, which gives priority to performance.
 </p>
-<h3>文字列をコピーする</h3>
+<h3> Copy the string </h3>
 <p>
-  memcpy関数で文字列をコピーするサンプルです。<a href="/blog/20210405101342.html">strlen関数</a>で、文字列の長さを取得、<a href="/blog/20210209082644.html">calloc関数</a>で、メモリ領域を確保、その領域にmemcpy関数でコピーという処理を行っています。コピー先の変数にconst修飾子がついていると、コピーできないので、const修飾子がつかない一時的な文字列にコピーしています。
+  This is a sample to copy a character string with the memcpy function. Get the length of the string with <a href="/blog/20210405101342.html"> strlen function</a>, with <a href="/blog/20210209082644.html"> calloc function</a> A memory area is secured, and a process called copying is performed to that area with the memcpy function. If the copy destination variable has the const qualifier, it cannot be copied, so it is copied to a temporary character string without the const qualifier.
 </p>
 <pre>
 #include &lt;stddef.h&gt;
@@ -134,35 +132,35 @@ void *memcpy(void *buf1, const void *buf2, size_t n);
 #include &lt;stdlib.h&gt;
 #include &lt;stdio.h&gt;
 
-int main(void) {
-  // 文字列
-  const char* message = "Hello";
+int main (void) {
+  // string
+  const char * message = "Hello";
   
-  // 文字列の長さ
-  int32_t message_length = strlen(message);
+  // String length
+  int32_t message_length = strlen (message);
   
-  // メモリ領域を確保
-  char* new_message_tmp = calloc(sizeof(char), message_length + 1);
+  // Secure memory area
+  char * new_message_tmp = calloc (sizeof (char), message_length + 1);
   
-  // memcpy関数で一時的な文字列にコピー
-  memcpy(new_message_tmp, message, message_length);
+  // Copy to a temporary string with the memcpy function
+  memcpy (new_message_tmp, message, message_length);
   
-  // 新しい文字列に代入(const修飾子をつけたいので)
-  const char* new_message = new_message_tmp;
+  // Assign to a new string (because I want to add the const modifier)
+  const char * new_message = new_message_tmp;
   new_message_tmp = NULL;
   
   printf("%s\n", new_message);
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 Hello
 </pre>
-<h3>符号あり32bit整数の配列をコピーする</h3>
+<h3> Copy an array of signed 32-bit integers </h3>
 <p>
-  memcpy関数で<a href="/blog/20201130082751.html">int32_t - 符号あり32bit整数</a>の<a href="/blog/20210129143859.html">配列</a>をコピーするサンプルです。<a href="/blog/20210209082644.html">calloc関数</a>で、メモリ領域を確保、その領域にmemcpy関数でコピーという処理を行っています。コピーする長さは「要素の型のサイズ × 配列の長さ」になることに注意してください。<a href="/blog/20210115151850.html">for文</a>で、配列の要素を出力しています。
+  This is a sample to copy <a href="/blog/20210129143859.html"> array</a> of <a href="/blog/20201130082751.html"> int32_t --signed 32-bit integer</a> with the memcpy function. .. The <a href="/blog/20210209082644.html"> calloc function</a> allocates a memory area, and the memcpy function copies it to that area. Note that the length to copy is "element type size x array length". The <a href="/blog/20210115151850.html"> for statement</a> outputs the elements of the array.
 </p>
 <pre>
 #include &lt;string.h&gt;
@@ -170,29 +168,29 @@ Hello
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
-  // 配列
+int main (void) {
+  // arrangement
   int32_t nums_length = 3;
-  int32_t nums[] = {3, 5, 7};
+  int32_t nums [] = {3, 5, 7};
   
-  // メモリ領域を確保
-  int32_t* new_nums = calloc(sizeof(int32_t), nums_length);
+  // Secure memory area
+  int32_t * new_nums = calloc (sizeof (int32_t), nums_length);
   
-  // memcpy関数でint32_t型の配列をコピー
-  memcpy(new_nums, nums, sizeof(int32_t) * nums_length);
+  // Copy an array of type int32_t with the memcpy function
+  memcpy (new_nums, nums, sizeof (int32_t) * nums_length);
   
-  for (int32_t i = 0; i &lt; nums_length; i++) {
-    printf("nums[%d]: %d\n", i, new_nums[i]);
+  for (int32_t i = 0; i &lt;nums_length; i ++) {
+    printf("nums [%d]:%d\n", i, new_nums [i]);
   }
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
-nums[0]: 3
-nums[1]: 5
-nums[2]: 7
+nums [0]: 3
+nums [1]: 5
+nums [2]: 7
 </pre>
 
   </div>
@@ -220,8 +218,7 @@ nums[2]: 7
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

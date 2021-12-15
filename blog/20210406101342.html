@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>strstr関数 - 文字列が含まれているかをチェックする - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="文字列が含まれているかをチェックするにはstrstr関数を使用します。string.hを読み込むと、strstr関数を使用できます。">
+<title> strstr function-check if a string is included  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="Use the strstr function to check if a string is included. You can use the strstr function by loading  string.h.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="strstr関数 - 文字列が含まれているかをチェックする - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="文字列が含まれているかをチェックするにはstrstr関数を使用します。string.hを読み込むと、strstr関数を使用できます。" />
+<meta name="twitter:title" content=" strstr function-check if a string is included  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="Use the strstr function to check if a string is included. You can use the strstr function by loading  string.h." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,34 +60,34 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library.html">
-        <span itemprop="name">C標準ライブラリ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C standard library </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library/string.html">
-        <span itemprop="name">string.h</span>
-      </a>
-      <meta itemprop="position" content="3" />
+        <span itemprop = "name"> string.h </span>
+     </a>
+      <meta itemprop = "position" content = "3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210406101342.html">strstr関数 - 文字列が含まれているかをチェックする</a></h2>
+<h2><a href="/blog/20210406101342.html"> strstr function-check if a string is included </a></h2>
 <p>
-  文字列が含まれているかをチェックするにはstrstr関数を使用します。<a href="/blog/20210303101711.html">string.h</a>を読み込むと、strstr関数を使用できます。
+  Use the strstr function to check if a string is included. You can use the strstr function by loading <a href="/blog/20210303101711.html"> string.h</a>.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -109,31 +107,31 @@
 
 <pre>
 #include &lt;string.h&gt;
-char * strstr(const char *str1, const char *str2);
+char * strstr (const char * str1, const char * str2);
 </pre>
 <p>
-  str1の中にstr2が含まれている場合は、マッチした最初のアドレスを返します。見つからなかった場合は、NULLを返します。
+  If str1 contains str2, the first matching address is returned. If not found, returns NULL.
 </p>
 <p>
-  C言語では<a href="/blog/20210331101342.html">文字列</a>は「\0」で終わるという約束事があります。strstr関数は、この約束事を前提として、文字列の検索を行います。
+  In C language, there is a promise that <a href="/blog/20210331101342.html"> string</a> ends with "\ 0". The strstr function presupposes this convention and searches for a string.
 </p>
 <p>
-  strstr関数を使う場合は、引数の二つの文字列が「\0」で終わっていることを必ず確認してください。
+  When using the strstr function, make sure that the two strings of the argument end with "\ 0".
 </p>
-<h3>文字列が含まれているかどうかをチェックする</h3>
+<h3> Check if a string is included </h3>
 <p>
-  strstr関数で、文字列が含まれているかをチェックするサンプルです。NULLでないことを確認すればOKです。
+  This is a sample to check if a string is included with the strstr function. Make sure it's not NULL and you're good to go.
 </p>
 <pre>
 #include &lt;string.h&gt;
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-int main(void) {
-  const char* message = "I like orange\n";
-  const char* match = "orange";
+int main (void) {
+  const char * message = "I like orange\n";
+  const char * match = "orange";
   
-  if (strstr(message, match) != NULL) {
+  if (strstr (message, match)! = NULL) {
     printf("Match\n");
   }
   else {
@@ -142,43 +140,43 @@ int main(void) {
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 Match
 </pre>
-<h3>文字列が含まれている個数を数える</h3>
+<h3> Count the number of strings included </h3>
 <p>
-  strstr関数は、マッチした場合に、その位置を返すので、このことを利用して、文字列が含まれている個数を数えてみましょう。
+  The strstr function returns the position when there is a match, so let's use this to count the number of strings included.
 </p>
 <pre>
 #include &lt;string.h&gt;
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-int main(void) {
-  const char* message = "I like orangeorange and orange.\n";
-  const char* match = "orange";
-  int32_t match_length = strlen(match);
+int main (void) {
+  const char * message = "I like orangeorange and orange. \ N";
+  const char * match = "orange";
+  int32_t match_length = strlen (match);
   
   int32_t match_count = 0;
-  const char* message_ptr = message;
+  const char * message_ptr = message;
   while (1) {
-    message_ptr = strstr(message_ptr, match);
-    if (message_ptr != NULL) {
-      match_count++;
-      message_ptr += match_length;
+    message_ptr = strstr (message_ptr, match);
+    if (message_ptr! = NULL) {
+      match_count ++;
+      message_ptr + = match_length;
     }
     else {
       break;
     }
   }
   
-  printf("Match Count %d\n", match_count);
+  printf("Match Count%d\n", match_count);
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 Match Count 3
@@ -209,8 +207,7 @@ Match Count 3
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

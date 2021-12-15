@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>enum - 列挙型 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="列挙型enumを使うと、連続した整数定数を簡単に記述できます。定数名1は0、定数名2は1、定数名3は2になります。">
+<title> enum --enumeration  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="The enum enum makes it easy to write consecutive integer constants. Constant name 1 is 0, constant name 2 is 1, and constant name 3 is 2.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="enum - 列挙型 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="列挙型enumを使うと、連続した整数定数を簡単に記述できます。定数名1は0、定数名2は1、定数名3は2になります。" />
+<meta name="twitter:title" content=" enum --enumeration  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="The enum enum makes it easy to write consecutive integer constants. Constant name 1 is 0, constant name 2 is 1, and constant name 3 is 2." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210120133501.html">enum - 列挙型</a></h2>
+<h2><a href="/blog/20210120133501.html"> enum --enumeration </a></h2>
 <p>
-  列挙型enumを使うと、連続した整数定数を簡単に記述できます。定数名1は0、定数名2は1、定数名3は2になります。
+  The enum enum makes it easy to write consecutive integer constants. Constant name 1 is 0, constant name 2 is 1, and constant name 3 is 2.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -103,14 +101,14 @@
 
 <pre>
 enum {
-  定数名1,
-  定数名2,
-  定数名3,
+  Constant name 1,
+  Constant name 2,
+  Constant name 3,
   ...
-};
+};;
 </pre>
 <p>
-  列挙型enumを使ったサンプルです。enumは、<a href="/blog/20210122133501.html">switch文</a>と組み合わせて使うことが多いので、switch文のサンプルにしました。
+  This is a sample using enum type enum. Since enum is often used in combination with <a href="/blog/20210122133501.html"> switch statement</a>, I used it as a sample of switch statement.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
@@ -122,9 +120,9 @@ enum {
   SPVM_OP_C_ID_ELSIF,
   SPVM_OP_C_ID_ELSE,
   SPVM_OP_C_ID_FOR,
-};
+};;
 
-int main(void) {
+int main (void) {
   
   int32_t id = SPVM_OP_C_ID_UNLESS;
   
@@ -156,62 +154,62 @@ int main(void) {
 }
 </pre>
 <p>
-  列挙型の識別子は、識別子名であればなんでもよいですが、C言語には名前空間がないので、サンプルでは、名前空間を持っているかのような名前「SPVM_OP_C_XXX」(spvm_op.cのソースコードの中の定数「constant」定義という意味)を使用しています。
+  The enumerated identifier can be any identifier name, but since there is no namespace in C language, in the sample, the name "SPVM_OP_C_XXX" (spvm_op.c source code) as if it had a namespace. It uses the constant "constant" definition in).
 </p>
-<h3>列挙型はマクロによる定数定義と意味的に同じ</h3>
+<h3> Enums are semantically the same as macro constant definitions </h3>
 <p>
-  列挙型はマクロによる定数定義と意味的に同じです。
+  Enums are semantically the same as macro constant definitions.
 </p>
 <pre>
-// 列挙型を使った整数定義
+// Integer definition using enumeration
 enum {
   SPVM_OP_C_ID_IF,
   SPVM_OP_C_ID_UNLESS,
   SPVM_OP_C_ID_ELSIF,
 }
 
-// マクロを使った整数定義
+// Integer definition using macro
 #define SPVM_OP_C_ID_IF 0
 #define SPVM_OP_C_ID_UNLESS 1
 #define SPVM_OP_C_ID_ELSIF 2
 </pre>
 <p>
-  意味的には同じですが、列挙型は、マクロとことなりプリプロセッサではなく、コンパイラで処理されることが特徴です。コンパイラによって、定数に展開されます。
+  Although semantically the same, enums are characterized by being processed by the compiler rather than the preprocessor, unlike macros. Expanded to a constant by the compiler.
 </p>
 <p>
-  C言語のベストプラクティスは、マクロを必要な部分以外では使わないということですので、連続した整数定数が欲しい場合は、列挙型を使うのがお勧めです。
+  The best practice in C is to use macros only where they are needed, so if you want contiguous integer constants, it's best to use enums.
 </p>
-<h3>列挙型の疑問</h3>
+<h3> Enumeration questions </h3>
 <p>
-  列挙型の疑問を列挙します。
+  Enumerates enumerated questions.
 </p>
-<h4>列挙型で整数の開始値を変えることはできますか?</h4>
+<h4> Is it possible to change the starting value of an integer in an enum? </h4>
 <p>
-  はい、できます。整数の開始値を変えるには「定数名 = 数値」のように書きます。次の低数値は、インクリメントされた値になります。
+  Yes, I can. To change the starting value of an integer, write "constant name = number". The next low number will be the incremented value.
 </p>
 <pre>
 enum {
-  SPVM_OP_C_ID_IF = 3,    # 3
-  SPVM_OP_C_ID_UNLESS,    # 4
-  SPVM_OP_C_ID_ELSIF,     # 5
+  SPVM_OP_C_ID_IF = 3, # 3
+  SPVM_OP_C_ID_UNLESS, # 4
+  SPVM_OP_C_ID_ELSIF, # 5
   SPVM_OP_C_ID_ELSE = 10, # 10
-  SPVM_OP_C_ID_FOR,       # 11
-};
+  SPVM_OP_C_ID_FOR, # 11
+};;
 </pre>
-<h4>列挙型で浮動小数点を使うことはできますか?</h4>
+<h4> Is it possible to use floating point in enums? </h4>
 <p>
-  できません。浮動小数点の定数を定義したい場合は、マクロを使用してください。
+  can not. If you want to define a floating point constant, use a macro.
 </p>
 <pre>
 #define SPVM_OP_C_ID_IF 5.23
 </pre>
-<h4>列挙型の識別子は大文字ですか?</h4>
+<h4> Are enum identifiers uppercase? </H4>
 <p>
-  C言語の一般的な慣習として、定数は大文字で書くのがよいと思われます。
+  As a general practice in C, it's best to write constants in uppercase.
 </p>
-<h4>列挙型はどの辺が型なのですか?</h4>
+<h4> Which side of the enum is the type? </H4>
 <p>
-  列挙型には、型のように名前をつけて、型のように扱うことができます。
+  Enums can be named like types and treated like types.
 </p>
 <pre>
 enum SPVM_OP_C_ID_TYPE {
@@ -220,44 +218,44 @@ enum SPVM_OP_C_ID_TYPE {
   SPVM_OP_C_ID_ELSIF,
   SPVM_OP_C_ID_ELSE,
   SPVM_OP_C_ID_FOR,
-};
+};;
 </pre>
 <p>
-  ただし列挙型に代入したときの挙動はC言語仕様では定義されておらず、処理系依存ですので、型としての列挙型は、あまり使わない方がよいのではないかと考えます。
+  However, the behavior when assigning to an enumeration type is not defined in the C language specification and depends on the processing system, so I think that it is better not to use the enumeration type as a type too much.
 </p>
-<h4>列挙型ではなく文字列を使ってはいけないのですか?</h4>
+<h4> Shouldn't I use strings instead of enums? </h4>
 <p>
-  列挙型は、整数に対して識別子、つまり名前をつける機能です。それならば最初から、<a href="/blog/20210331101342.html">文字列</a>を使ってはいけないのでしょうか?
+  Enumerations are the ability to give an identifier, or name, to an integer. If so, shouldn't I use <a href="/blog/20210331101342.html"> strings</a> from the beginning?
 </p>
 <p>
-  動的な型を持つ<a href="https://perlzemi.com/">Perl</a>のようなプログラミング言語であれば、この方法がベストだと思います。
+  I think this is the best option for programming languages ​​like <a href="https://perlzemi.com/"> Perl</a> that have dynamic types.
 </p>
 <pre>
-if ($id eq 'if') {
+if ($id eq'if') {
   
 }
-elsif ($id eq 'unless') {
+elsif ($id eq'unless') {
   
 }
 </pre>
 <p>
-  ただしC言語を使うのであれば、パフォーマンスを速くしたいという動機を持って使っているのでしょう。識別子がある数を超える場合(10個くらい?)は、switch文で整数判定して、ジャンプするのが、最速です。
+  However, if you use C language, you probably use it with the motive of wanting to speed up performance. If the number of identifiers exceeds a certain number (about 10?), It is the fastest to make an integer judgment with a switch statement and jump.
 </p>
 <p>
-  またC言語の文字列比較は、strcmp関数を使う必要がありますし「\0」で文字列が終わっておらず、意図しない領域まで読み込む可能性もあります。
+  Also, for C language string comparison, you need to use the strcmp function, and the string does not end with "\ 0", and there is a possibility that it will be read to an unintended area.
 </p>
 <p>
-  このようにC言語の文字列では、考えるべきことがたくさんあるので、列挙型で整数を定義しておくのが、やりやすいです。
+  As you can see, there are many things to think about in C strings, so it is easier to define integers in enumerations.
 </p>
-<h4>分割コンパイルする場合は、列挙型はどこで定義しますか?</h4>
+<h4> Where do you define enums when compiling separately? </H4>
 <p>
-  分割コンパイルを使ったヘッダとソースコードに分けてコンパイルする場合の構成としては、列挙型はヘッダファイルに記述します。
-</p>
-<p>
-  マクロ定数や列挙型などの定数定義は、ヘッダに記述します。
+  The enumeration type is described in the header file as the configuration when compiling the header using split compilation and the source code separately.
 </p>
 <p>
-  <b>spvm_op.h</b>
+  Constant definitions such as macro constants and enumerated types are described in the header.
+</p>
+<p>
+  <b> spvm_op.h </b>
 </p>
 <pre>
 enum {
@@ -266,10 +264,10 @@ enum {
   SPVM_OP_C_ID_ELSIF,
   SPVM_OP_C_ID_ELSE,
   SPVM_OP_C_ID_FOR,
-};
+};;
 </pre>
 <p>
-  <b>spvm_op.c</b>
+  <b> spvm_op.c </b>
 </p>
 <pre>
 #include &lt;stdint.h&gt;
@@ -277,7 +275,7 @@ enum {
 
 #include "spvm_op.h"
 
-int main(void) {
+int main (void) {
   
   int32_t id = SPVM_OP_C_ID_UNLESS;
   
@@ -334,8 +332,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

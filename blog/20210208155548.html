@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>構造体 - 複合データ型 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="構造体は、複数の種類のデータを保存できる複合データ型です。">
+<title> Structure-Composite Data Type  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="Structures are composite data types that can store multiple types of data.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="構造体 - 複合データ型 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="構造体は、複数の種類のデータを保存できる複合データ型です。" />
+<meta name="twitter:title" content=" Structure-Composite Data Type  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="Structures are composite data types that can store multiple types of data." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210208155548.html">構造体 - 複合データ型</a></h2>
+<h2><a href="/blog/20210208155548.html"> Structure-Composite Data Type </a></h2>
 <p>
-  構造体は、複数の種類のデータを保存できる複合データ型です。
+  Structures are composite data types that can store multiple types of data.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,357 +100,357 @@
 
 
 <p>
-  書籍のデータを考えてみましょう。書籍は、「ID」「名前」「価格」という情報を持つとします。この情報を構造体で表現します。
+  Consider the data in a book. Suppose a book has the information "ID", "name", and "price". This information is represented by a structure.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 
-// 書籍情報を表現する構造体の定義
+// Definition of a structure that represents book information
 struct myapp_book {
   int32_t id;
-  const char* name;
+  const char * name;
   int32_t price;
-};
+};;
 </pre>
 <p>
-  構造体の要素となるデータをメンバ変数と呼びます。「id」「name」「price」はメンバ変数です。
+  The data that is the element of the structure is called a member variable. "Id", "name" and "price" are member variables.
 </p>
 <p>
-  「id」「price」は「<a href="/blog/20201130082751.html">int32_t型</a>」、「name」は「<a href="/blog/20201208125815.html">const char*型</a>」です。
+  "Id" and "price" are "<a href="/blog/20201130082751.html"> int32_t type</a>", and "name" is "<a href="/blog/20201208125815.html"> const char * Type</a> ".
 </p>
 <p>
-  メンバ変数のアクセスには「構造体変数名.メンバ変数名」とします。
+  To access a member variable, use "structure variable name.member variable name".
 </p>
-<h3>構造体の使用</h3>
+<h3> Use of structures </h3>
 <p>
-  構造体を使用してみましょう。構造体は、型として利用できます。構造体を宣言して、メンバ変数に値を代入して、内容を出力しています。
+  Let's use a structure. Structures are available as types. The structure is declared, the value is assigned to the member variable, and the content is output.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-// 書籍情報を表現する構造体の定義
+// Definition of a structure that represents book information
 struct myapp_book {
   int32_t id;
-  const char* name;
+  const char * name;
   int32_t price;
-};
+};;
 
-int main(void) {
-  // 構造体変数の宣言
+int main (void) {
+  // Declaration of structure variables
   struct myapp_book book;
   
-  // メンバ変数に値を代入
+  // Assign a value to a member variable
   book.id = 1;
   book.name = "C99 Book";
   book.price = 2000;
   
-  printf("id: %d, name: %s, price: %d\n", book.id, book.name, book.price);
+  printf("id:%d, name:%s, price:%d\n", book.id, book.name, book.price);
 }
 </pre>
-<h3>構造体変数の初期化</h3>
+<h3> Initialization of structure variables </h3>
 <p>
-  構造体変数は、最初に初期化できます。
+  Structure variables can be initialized first.
 </p>
-<h4>構造体のメンバ変数の順序通りに値を指定</h4>
+<h4> Specify the values ​​in the order of the member variables of the structure </h4>
 <p>
-  構造体のメンバ変数の順序通りに値を指定する方法です。
+  It is a method to specify the values ​​in the order of the member variables of the structure.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-// 書籍情報を表現する構造体の定義
+// Definition of a structure that represents book information
 struct myapp_book {
   int32_t id;
-  const char* name;
+  const char * name;
   int32_t price;
-};
+};;
 
-int main(void) {
-  // 構造体変数の宣言と初期化(メンバ変数の順序通りに値を指定)
+int main (void) {
+  // Declare and initialize structure variables (specify values ​​in the order of member variables)
   struct myapp_book book = {1, "C99 Book", 2000};
   
-  printf("id: %d, name: %s, price: %d\n", book.id, book.name, book.price);
+  printf("id:%d, name:%s, price:%d\n", book.id, book.name, book.price);
 }
 </pre>
-<h4>構造体のメンバ変数を0で初期化</h4>
+<h4> Initialize structure member variables with 0 </h4>
 <p>
-  構造体を0で初期化するための簡単な構文があるので紹介します。これは、初期化の構文で、初期値が指定されなかった場合は、0(すべてのビットが0)が初期値として使われるというC言語仕様を利用したものです。
+  I will introduce a simple syntax for initializing a structure with 0. This is an initialization syntax that takes advantage of the C language specification that 0 (all bits are 0) is used as the initial value if no initial value is specified.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-// 書籍情報を表現する構造体の定義
+// Definition of a structure that represents book information
 struct myapp_book {
   int32_t id;
-  const char* name;
+  const char * name;
   int32_t price;
-};
+};;
 
-int main(void) {
-  // 構造体変数の宣言と0初期化
+int main (void) {
+  // Declaration of structure variables and 0 initialization
   struct myapp_book book = {0};
   
-  printf("id: %d, name: %s, price: %d\n", book.id, book.name, book.price);
+  printf("id:%d, name:%s, price:%d\n", book.id, book.name, book.price);
 }
 </pre>
 <p>
-  出力結果。
+  Output result.
 </p>
 <pre>
 id: 0, name: (null), price: 0
 </pre>
-<h4>構造体のメンバ変数名を指定して値を指定</h4>
+<h4> Specify the member variable name of the structure and specify the value </h4>
 <p>
-  構造体のメンバ変数名を指定して値を指定できます。これは<a href="/blog/20201206125815.html">C99</a>で追加された構文です。
+  You can specify a value by specifying the member variable name of the structure. This is the syntax added in <a href="/blog/20201206125815.html"> C99</a>.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-// 書籍情報を表現する構造体の定義
+// Definition of a structure that represents book information
 struct myapp_book {
   int32_t id;
-  const char* name;
+  const char * name;
   int32_t price;
-};
+};;
 
-int main(void) {
-  // 構造体変数の宣言と初期化(メンバ変数名を指定して値を指定)
+int main (void) {
+  // Declare and initialize structure variables (specify member variable names and specify values)
   struct myapp_book book = {.id = 1, .name = "C99 Book", .price = 2000};
   
-  printf("id: %d, name: %s, price: %d\n", book.id, book.name, book.price);
+  printf("id:%d, name:%s, price:%d\n", book.id, book.name, book.price);
 }
 </pre>
-<h3>構造体の動的メモリ確保</h3>
+<h3> Structure dynamic memory allocation </h3>
 <p>
-  構造体をヒープ領域に動的メモリ確保してみましょう。動的にメモリを割り当てる場合は、構造体のポインタ型を使います。この例では「struct myapp_book*」です。
+  Let's allocate dynamic memory for the structure in the heap area. If you want to allocate memory dynamically, use the pointer type of the structure. In this example it is "struct myapp_book *".
 </p>
 <p>
-  <a href="/blog/20210210082644.html">malloc関数</a>とcalloc関数を使うサンプルです。callocが0初期化してくれるのでお勧めですが、malloc関数も標準的な方法なので覚えておきましょう。
+  This is a sample that uses <a href="/blog/20210210082644.html"> malloc function</a> and calloc function. It is recommended because calloc initializes to 0, but remember that the malloc function is also a standard method.
 </p>
 <p>
-  malloc関数,calloc関数は「stdlib.h」を読み込むと使える用になります。
+  The malloc function and calloc function can be used by reading "stdlib.h".
 </p>
 <p>
-  malloc関数の引数は、構造体のサイズを指定します。構造体のサイズは<a href="/blog/20210207155548.html">sizeof演算子</a>でサイズを取得できます。
+  The argument of the malloc function specifies the size of the structure. You can get the size of the structure with <a href="/blog/20210207155548.html"> sizeof operator</a>.
 </p>
 <p>
-  malloc関数の第一引数は、構造体のサイズを指定します。構造体のサイズは<a href="/blog/20210207155548.html">sizeof演算子</a>でサイズを取得できます。第二引数は要素の個数ですが、ここでは、一つだけなので「1」です。
+  The first argument of the malloc function specifies the size of the structure. You can get the size of the structure with <a href="/blog/20210207155548.html"> sizeof operator</a>. The second argument is the number of elements, but here it is "1" because there is only one.
 </p>
 <p>
-  メンバ変数には構造体のポインタ型からアクセスする場合は「.」の代わりに「->」を使います。
+  When accessing a member variable from the pointer type of a structure, use "->" instead of ".".
 </p>
 <p>
-  確保して使用した後は、freeで解放します。
+  After securing and using it, release it with free.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-// 書籍情報を表現する構造体の定義
+// Definition of a structure that represents book information
 struct myapp_book {
   int32_t id;
-  const char* name;
+  const char * name;
   int32_t price;
-};
+};;
 
-int main(void) {
-  // 構造体の動的メモリ確保(malloc)
-  struct myapp_book* book0 = malloc(sizeof(struct myapp_book));
-  book0-&gt;id = 1;
-  book0-&gt;name = "C99 Book";
-  book0-&gt;price = 2000;
+int main (void) {
+  // Structure dynamic memory allocation (malloc)
+  struct myapp_book * book0 = malloc (sizeof (struct myapp_book));
+  book0-&gt;id= 1;
+  book0-&gt;name= "C99 Book";
+  book0-&gt;price= 2000;
   
-  // 構造体の動的メモリ確保(calloc。0初期化してくれるので安全)
-  struct myapp_book* book1 = calloc(sizeof(struct myapp_book), 1);
-  book1-&gt;id = 2;
-  book1-&gt;name = "C Function Book";
-  book1-&gt;price = 3000;
+  // Dynamic memory allocation of structure (calloc .0 safe because it initializes)
+  struct myapp_book * book1 = calloc (sizeof (struct myapp_book), 1);
+  book1-&gt;id= 2;
+  book1-&gt;name= "C Function Book";
+  book1-&gt;price= 3000;
   
-  printf("[book0]id: %d, name: %s, price: %d\n", book0-&gt;id, book0-&gt;name, book0-&gt;price);
-  printf("[book1]id: %d, name: %s, price: %d\n", book1-&gt;id, book1-&gt;name, book1-&gt;price);
+  printf("[book0] id:%d, name:%s, price:%d\n", book0-&gt;id, book0-&gt;name, book0-&gt;price);
+  printf("[book1] id:%d, name:%s, price:%d\n", book1-&gt;id, book1-&gt;name, book1-&gt;price);
   
-  // メモリ解放
-  free(book0);
-  free(book1);
+  // Memory release
+  free (book0);
+  free (book1);
 }
 </pre>
 <p>
-  出力結果。
+  Output result.
 </p>
 <pre>
-[book0]id: 1, name: C99 Book, price: 2000
-[book1]id: 2, name: C Function Book, price: 3000
+[book0] id: 1, name: C99 Book, price: 2000
+[book1] id: 2, name: C Function Book, price: 3000
 </pre>
-<h3>構造体の配列</h3>
+<h3> Structure array </h3>
 <p>
-  構造体の配列を作ってみましょう。配列については<a href="/blog/20210129143859.html">C言語の配列</a>の記事を参考にしてください。
+  Let's create an array of structures. Please refer to the <a href="/blog/20210129143859.html"> C language array</a> article for the array.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-// 書籍情報を表現する構造体の定義
+// Definition of a structure that represents book information
 struct myapp_book {
   int32_t id;
-  const char* name;
+  const char * name;
   int32_t price;
-};
+};;
 
-int main(void) {
-  // 構造体の配列の宣言
-  struct myapp_book books[2];
+int main (void) {
+  // Declaring an array of structures
+  struct myapp_book books [2];
   
-  // 配列の要素のメンバ変数に値を代入
-  books[0].id = 1;
-  books[0].name = "C99 Book";
-  books[0].price = 2000;
+  // Assign values ​​to member variables of array elements
+  books [0] .id = 1;
+  books [0] .name = "C99 Book";
+  books [0] .price = 2000;
 
-  books[1].id = 2;
-  books[1].name = "C Function Book";
-  books[1].price = 3000;
+  books [1] .id = 2;
+  books [1] .name = "C Function Book";
+  books [1] .price = 3000;
   
-  printf("books[0]id: %d, name: %s, price: %d\n", books[0].id, books[0].name, books[0].price);
-  printf("books[1]id: %d, name: %s, price: %d\n", books[1].id, books[1].name, books[1].price);
+  printf("books [0] id:%d, name:%s, price:%d\n", books [0] .id, books [0] .name, books [0] .price);
+  printf("books [1] id:%d, name:%s, price:%d\n", books [1] .id, books [1] .name, books [1] .price);
 }
 </pre>
 <p>
-  出力結果。
+  outputresult.
 </p>
 <pre>
-books[0]id: 1, name: C99 Book, price: 2000
-books[1]id: 2, name: C Function Book, price: 3000
+books [0] id: 1, name: C99 Book, price: 2000
+books [1] id: 2, name: C Function Book, price: 3000
 </pre>
-<h3>構造体の配列のメモリを動的確保</h3>
+<h3> Dynamic allocation of structure array memory </h3>
 <p>
-  構造体の配列のメモリを動的確保してみましょう。callocで確保する方法を紹介します。callocは、要素を0初期化してくれるので安全でお勧め。
+  Let's dynamically allocate memory for an array of structures. I will show you how to secure with calloc. calloc is safe and recommended as it will initialize the element to 0.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-// 書籍情報を表現する構造体の定義
+// Definition of a structure that represents book information
 struct myapp_book {
   int32_t id;
-  const char* name;
+  const char * name;
   int32_t price;
-};
+};;
 
-int main(void) {
-  // 構造体の配列を動的メモリ確保(calloc。0初期化してくれるので安全)
-  struct myapp_book* books = calloc(sizeof(struct myapp_book), 2);
-  books[0].id = 1;
-  books[0].name = "C99 Book";
-  books[0].price = 2000;
+int main (void) {
+  // Dynamic memory allocation for the structure array (calloc .0 is safe because it initializes)
+  struct myapp_book * books = calloc (sizeof (struct myapp_book), 2);
+  books [0] .id = 1;
+  books [0] .name = "C99 Book";
+  books [0] .price = 2000;
   
-  books[1].id = 2;
-  books[1].name = "C Function Book";
-  books[1].price = 3000;
+  books [1] .id = 2;
+  books [1] .name = "C Function Book";
+  books [1] .price = 3000;
   
-  printf("books[0] id: %d, name: %s, price: %d\n", books[0].id, books[0].name, books[0].price);
-  printf("books[1] id: %d, name: %s, price: %d\n", books[1].id, books[1].name, books[1].price);
+  printf("books [0] id:%d, name:%s, price:%d\n", books [0] .id, books [0] .name, books [0] .price);
+  printf("books [1] id:%d, name:%s, price:%d\n", books [1] .id, books [1] .name, books [1] .price);
   
-  // メモリ解放
-  free(books);
+  // Memory release
+  free (books);
 }
 </pre>
 <p>
-  出力結果。
+  Output result.
 </p>
 <pre>
-books[0] id: 1, name: C99 Book, price: 2000
-books[1] id: 2, name: C Function Book, price: 3000
+books [0] id: 1, name: C99 Book, price: 2000
+books [1] id: 2, name: C Function Book, price: 3000
 </pre>
 <p>
-  mallocの場合は、callocの箇所を以下のように変えてください。この場合は、配列の要素(構造体の各メンバ変数)が0初期化されていないことに注意してください。
+  For malloc, change the calloc part as follows. In this case, note that the elements of the array (each member variable of the structure) are not zero-initialized.
 </p>
 <pre>
-  struct myapp_book* books = malloc(sizeof(struct myapp_book) * 2);
+  struct myapp_book * books = malloc (sizeof (struct myapp_book) * 2);
 </pre>
-<h3>構造体の定義ってどこに書くの?</h3>
+<h3> Where do you write the definition of the structure? </H3>
 <p>
-  構造体の定義はヘッダファイルに書きます。構造体定義をヘッダに分割した場合の分割コンパイルのサンプルコードです。
+  The structure definition is written in the header file. This is a sample code for split compilation when the structure definition is split into headers.
 </p>
-<h4>myapp_book.h</h4>
+<h4> myapp_book.h </h4>
 <pre>
 #ifndef MYAPP_BOOK_H
 #define MYAPP_BOOK_H
 
 #include &lt;stdint.h&gt;
 
-// 書籍情報を表現する構造体の定義
+// Definition of a structure that represents book information
 struct myapp_book {
   int32_t id;
-  const char* name;
+  const char * name;
   int32_t price;
-};
+};;
 
 #endif
 </pre>
-<h4>myapp.c</h4>
+<h4> myapp.c </h4>
 <pre>
 #include &lt;stdio.h&gt;
 #include "myapp_book.h"
 
-int main(void) {
-  // 構造体変数の宣言
+int main (void) {
+  // Declaration of structure variables
   struct myapp_book book;
   
-  // メンバ変数に値を代入
+  // Assign a value to a member variable
   book.id = 1;
   book.name = "C99 Book";
   book.price = 2000;
   
-  printf("id: %d, name: %s, price: %d\n", book.id, book.name, book.price);
+  printf("id:%d, name:%s, price:%d\n", book.id, book.name, book.price);
 }
 </pre>
-<h4>コンパイルして実行</h4>
+<h4> Compile and run </h4>
 <pre>
 gcc -o myapp myapp.c &amp;&amp; ./myapp
 </pre>
-<h3>「struct ○○」っていつでも書かないといけないの?</h3>
+<h3> Do I have to write "struct ○○" at any time? </H3>
 <p>
-  typedef文を使うと「struct 〇〇」という型名に別名をつけることもできます。
+  You can also use the typedef statement to give an alias to the type name "struct 〇〇".
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-// 「struct myapp_book」に「MYAPP_BOOK」という別名をつける
+// Give "struct myapp_book" another name "MYAPP_BOOK"
 typedef struct myapp_book MYAPP_BOOK;
 
-// 書籍情報を表現する構造体の定義
+// Definition of a structure that represents book information
 struct myapp_book {
   int32_t id;
-  const char* name;
+  const char * name;
   int32_t price;
-};
+};;
 
-int main(void) {
-  // 構造体変数の宣言と初期化(メンバ変数名を指定して値を指定)
+int main (void) {
+  // Declare and initialize structure variables (specify member variable names and specify values)
   MYAPP_BOOK book = {.id = 1, .name = "C99 Book", .price = 2000};
   
-  printf("id: %d, name: %s, price: %d\n", book.id, book.name, book.price);
+  printf("id:%d, name:%s, price:%d\n", book.id, book.name, book.price);
 }
 </pre>
 <p>
-  以下のコンテンツを参考にしてください。
+  Please refer to the following contents.
 </p>
 <ul>
-  <li><a href="/blog/20210204153019.html">typedef文 - 型の別名を作成する</a></li>
-  <li><a href="/blog/20210202153503.html">型宣言ヘッダ - ヘッダファイル間の読み込みを減らす</a></li>
+  <li> <a href="/blog/20210204153019.html"> typedef statement-create a type alias</a> </li>
+  <li> <a href="/blog/20210202153503.html"> Type Declaration Header-Reduces loading between header files</a> </li>
 </ul>
-<h3>構造体のメモリ領域は?</h3>
+<h3> What is the memory area of ​​the structure? </H3>
 <p>
-  構造体変数として宣言された場合は、構造体はコールスタック上にメモリ確保されます。
+  If declared as a structure variable, the structure will be allocated on the call stack.
 </p>
 <p>
-  一方で、mallocやcallocを使って、動的にメモリ確保した場合は、ヒープ領域に確保されます。
+  On the other hand, if memory is dynamically allocated using malloc or calloc, it will be allocated in the heap area.
 </p>
 
   </div>
@@ -480,8 +478,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

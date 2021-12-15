@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>関数マクロ - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="関数マクロについて解説します。関数マクロは、プリプロセッサによってコンパイル前に展開される疑似的な関数です。">
+<title> Function macro  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="I will explain about function macros. Function macros are pseudo-functions that the preprocessor expands before compilation.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="関数マクロ - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="関数マクロについて解説します。関数マクロは、プリプロセッサによってコンパイル前に展開される疑似的な関数です。" />
+<meta name="twitter:title" content=" Function macro  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="I will explain about function macros. Function macros are pseudo-functions that the preprocessor expands before compilation." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/preprocessor.html">
-        <span itemprop="name">プリプロセッサ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> preprocessor </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210124140655.html">関数マクロ</a></h2>
+<h2><a href="/blog/20210124140655.html"> Function macro </a></h2>
 <p>
-  関数マクロについて解説します。関数マクロは、プリプロセッサによってコンパイル前に展開される疑似的な関数です。
+  I will explain about function macros. Function macros are pseudo-functions that the preprocessor expands before compilation.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,38 +100,38 @@
 
 
 <pre>
-#define マクロ関数名(引数1, 引数2, ...) 処理の内容
+#define Macro function name (argument 1, argument 2, ...) Processing content
 </pre>
 <p>
-  <a href="http://www.dd.e-mansion.com/~kumada/laboratory/column/c_macro.html">関数マクロは副作用をもたらす危険性</a>がとても大きいので、まず使わないことを推奨します。
+  <a href="http://www.dd.e-mansion.com/~kumada/laboratory/column/c_macro.html"> Function macros have a very high risk of causing side effects</a>, so use them first. We recommend that you do not.
 </p>
 <p>
-  ただし、最速にチューニングしたい場合に、コンパイラのインライン展開に依存するのが、どうしても嫌だという場合もあるでしょうし、また、どうしても関数マクロを使いたいエッジなケースもあるでしょう。
+  However, in some cases you may not want to rely on the inline expansion of the compiler for the fastest tuning, and in other cases you may want to use function macros.
 </p>
 <p>
-  そのような場合は「do { } while (0)」で処理を囲むと副作用を減らすことができます。この場合は、戻り値を戻せません。マクロ関数では、直接値を書き換えることもできますが、変更したい値がある場合は、C言語の関数の仕様に合わせるために、ポインタで渡すのをお勧めします。
+  In such a case, you can reduce the side effects by surrounding the process with "do {} while (0)". In this case, the return value cannot be returned. In the macro function, you can rewrite the value directly, but if there is a value you want to change, it is recommended to pass it with a pointer to match the specifications of the C language function.
 </p>
-<h3>関数マクロのサンプルプログラム</h3>
+<h3> Function macro sample program </h3>
 <p>
-  関数マクロを使った、二つの数を足し算するサンプルです。処理が複数行にわたるときは改行を「\」でエスケープしましょう。
+  This is a sample that adds two numbers using a function macro. If the process spans multiple lines, escape the line breaks with "\".
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-// 関数マクロの定義
-#define MYAPP_ADD(in1, in2, out_ptr) \
+// Definition of function macro
+#define MYAPP_ADD (in1, in2, out_ptr) \
 do {\
-  *out_ptr = in1 + in2;\
-} while (0)\
+  * out_ptr = in1 + in2; \
+} while (0) \
 
-int main(void) {
+int main (void) {
   int32_t num1 = 3;
   int32_t num2 = 2;
   int32_t total = 0;
   
-  // 関数マクロの使用
-  MYAPP_ADD(num1, num2, &amp;total);
+  // Use function macros
+  MYAPP_ADD (num1, num2, &amp; total);
   
   printf("%d\n", total);
 }
@@ -164,8 +162,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

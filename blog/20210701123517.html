@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>makeコマンドとMakefile - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="makeは、ソースファイルの依存関係を定義して、コンパイルの必要のあるソースファイルだけをコンパイルするためのツールです。Makefileと呼ばれる設定ファイルを記述します。makeには、nmakeやdmakeやcmakeなどの方言がありますが、ここで紹介するmakeはGNU makeです。">
+<title> make command and Makefile  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="make is a tool for defining source file dependencies and compiling only the source files that need to be compiled. Write a configuration file called Makefile. There are dialects such as nmake, dmake, and cmake in make, but the make introduced here is GNU make.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="makeコマンドとMakefile - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="makeは、ソースファイルの依存関係を定義して、コンパイルの必要のあるソースファイルだけをコンパイルするためのツールです。Makefileと呼ばれる設定ファイルを記述します。makeには、nmakeやdmakeやcmakeなどの方言がありますが、ここで紹介するmakeはGNU makeです。" />
+<meta name="twitter:title" content=" make command and Makefile  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="make is a tool for defining source file dependencies and compiling only the source files that need to be compiled. Write a configuration file called Makefile. There are dialects such as nmake, dmake, and cmake in make, but the make introduced here is GNU make." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,9 +60,9 @@
     
   </div>
   <div class="middle">
-    <h2><a href="/blog/20210701123517.html">makeコマンドとMakefile</a></h2>
+    <h2><a href="/blog/20210701123517.html"> make command and Makefile </a></h2>
 <p>
-  makeは、ソースファイルの依存関係を定義して、コンパイルの必要のあるソースファイルだけをコンパイルするためのツールです。Makefileと呼ばれる設定ファイルを記述します。makeには、nmakeやdmakeやcmakeなどの方言がありますが、ここで紹介するmakeはGNU makeです。
+  make is a tool for defining source file dependencies and compiling only the source files that need to be compiled. Write a configuration file called Makefile. There are dialects such as nmake, dmake, and cmake in make, but the make introduced here is GNU make.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -82,98 +80,97 @@
 </div>
 
 
-<h3>makeをなぜ使うのか?</h3>
+<h3> Why use make? </h3>
 <p>
-  makeをなぜ使うのかという動機について書きます。
+  I will write about the motivation for using make.
 </p>
-<h4>C言語のソースファイルのコンパイルを待つのが辛い</h4>
+<h4> It's hard to wait for the C language source file to compile </h4>
 <p>
-  makeを記述する一番の動機は、C言語のソースファイルが増え、記述量も増えてくると、C言語のソースファイルのコンパイルを待つのが辛いということです。
-</p>
-<p>
-  C言語のパフォーマンスを最大にするために「-O3」オプションを<a href="https://en.linux.perlzemi.com/blog/20201216103956.html">gcc</a>に与えることが多いと思います。これは、ソースファイルが大きくなってくるとコンパイルに非常に時間がかかります。
+  The main motivation for writing make is that as the number of C language source files increases and the amount of description increases, it is difficult to wait for the C language source files to compile.
 </p>
 <p>
-  修正したファイルに依存しているものだけが、再コンパイルされると、時間の短縮になります。
+  Often gives <a href="https://en.linux.perlzemi.com/blog/20201216103956.html"> gcc</a> the "-O3" option to maximize C performance. I think. This takes a lot of time to compile as the source files get bigger.
 </p>
-<h4>UNIX/Linuxにおける一般的なインストール手順</h4>
 <p>
-  UNIX/Linuxにおける一般的なソフトウェアのインストール手順は、次のように定型化されています。「./configure」などのコマンドで、OSの設定を調べて、Makefileを生成します。生成されたMakefileをmakeで実行して、コンパイルを行い「make install」で、ソフトウェアを配置します。
+  Recompiling only those that depend on the modified file will save time.
+</p>
+<h4> General installation procedure on UNIX / Linux </h4>
+<p>
+  The general software installation procedure for UNIX / Linux is standardized as follows. Check the OS settings with a command such as "./configure" and generate a Makefile. Execute the generated Makefile with make, compile it, and install the software with "make install".
 </p>
 <pre>
 ./configure
 make
 make install
 </pre>
-<h3>Makefileの基礎</h3>
+<h3> Makefile basics </h3>
 <p>
-  ここではMakefileの基本的なことだけを解説します。<a href="/blog/20210622081112.html">分割コンパイル</a>で解説したアプリケーションの実行ファイルを生成するためのMakefileを書いてみます。「make」でアプリケーションの実行ファイルを生成、「make clean」で、途中できるオブジェクトファイルと実行ファイルを削除します。
+  Here, I will explain only the basics of Makefile. Let's write a Makefile to generate the executable file of the application explained in <a href="/blog/20210622081112.html"> Split compilation</a>. Use "make" to generate an executable file of the application, and "make clean" to delete the object files and executable files that can be created in the middle.
 </p>
 <p>
-  以下が、Makefileの中身です。「all」の記述は「make」の動作を記述します。「clean」の記述で「make clean」の動作を記述します。先頭がタブになっている部分は、実行したいコマンドです。「::」の後ろは、依存しているファイル(あるいは単なるシンボル)を記述します。二行目以降は、タブで始め(空白ではない)、実行したいコマンドを記述します。
+  Below is the contents of the Makefile. The description of "all" describes the operation of "make". The description of "clean" describes the operation of "make clean". The part with a tab at the beginning is the command you want to execute. After "::", describe the dependent file (or just a symbol). From the second line onward, start with a tab (not blank) and write the command you want to execute.
 </p>
 <p>
-  依存関係は連続して記述でき、依存先のファイルに更新があった場合は、コマンドが実行されます。
+  Dependencies can be described continuously, and if the dependent file is updated, the command will be executed.
 </p>
 <p>
-  <a href="/blog/20210622081112.html">分割コンパイル</a>で解説したファイルに対してMakefileを記述してみます。「make」コマンドで分割コンパイルとリンクをして実行ファイルを生成します。「make clean」で、生成されたオブジェクトファイルと実行ファイルを削除します。
-</p>
-<pre>
-all :: myapp
-
-myapp : myapp.o mylib1.o mylib2.o
-	gcc -o myapp myapp.o mylib1.o mylib2.o
-
-myapp.o :: src/myapp.c
-	gcc -Iinclude -c -o myapp.o src/myapp.c
-
-mylib1.o :: src/mylib1.c include/mylib1.h
-	gcc -Iinclude -c -o mylib1.o src/mylib1.c
-
-mylib2.o :: src/mylib2.c include/mylib2.h
-	gcc -Iinclude -c -o mylib2.o src/mylib2.c
-
-clean ::
-	rm *.o
-	rm -f myapp
-</pre>
-<p>
-  makeを実行してみましょう。
+  Let's write a Makefile for the file explained in <a href="/blog/20210622081112.html"> Split compilation</a>. Use the "make" command to link with split compilation to generate an executable file. Use "make clean" to delete the generated object files and executable files.
 </p>
 <pre>
-$ make
-gcc -Iinclude -c -o myapp.o src/myapp.c
-gcc -Iinclude -c -o mylib1.o src/mylib1.c
-gcc -Iinclude -c -o mylib2.o src/mylib2.c
+all::myapp
+
+myapp: myapp.o mylib1.o mylib2.o
 gcc -o myapp myapp.o mylib1.o mylib2.o
-</pre>
-<p>
-  実行ファイル「myapp」が生成されます。試しに「src/mylib1.c」だけを修正してみましょう。makeを実行すると必要なコマンドだけが実行されます。
-</p>
-<pre>
-$ make
-gcc -Iinclude -c -o mylib1.o src/mylib1.c
-gcc -o myapp myapp.o mylib1.o mylib2.o
-</pre>
-<p>
-  「make clean」を実行しましょう。オブジェクトファイルと、実行ファイルが削除されます。
-</p>
-<pre>
-$ make clean
-rm *.o
+
+myapp.o::src / myapp.c
+gcc -Iinclude -c -o myapp.o src / myapp.c
+
+mylib1.o::src / mylib1.c include / mylib1.h
+gcc -Iinclude -c -o mylib1.o src / mylib1.c
+
+mylib2.o::src / mylib2.c include / mylib2.h
+gcc -Iinclude -c -o mylib2.o src / mylib2.c
+
+clean::rm * .o
 rm -f myapp
 </pre>
-<h3>makeは依存しているファイルの更新があったことをどのように検知しますか?</h3>
 <p>
-  たとえば「mylib.c」は「mylib1.h」に依存しているとします。この場合は「mylib.c」の更新時刻よりも「mybli1.h」の更新時刻が新しかった場合に、ファイルの更新があったと判断します。
+  Let's run make.
 </p>
-<h3>Makefileの生成を自動化したい</h3>
+<pre>
+$make
+gcc -Iinclude -c -o myapp.o src / myapp.c
+gcc -Iinclude -c -o mylib1.o src / mylib1.c
+gcc -Iinclude -c -o mylib2.o src / mylib2.c
+gcc -o myapp myapp.o mylib1.o mylib2.o
+</pre>
 <p>
-  Makefileはテキストファイルですので、<a href="https://en.linux.perlzemi.com/">Linux/UNIX</a>における実用的なテキスト処理プログラミング言語である<a href="https://perlzemi.com/">Perl</a>で生成するのも簡単です。Makefileはmakeの種類によって方言があるので、Perlの側で吸収してあげるという使い方も可能です。
+  The executable file "myapp" is generated. Let's try to modify only "src / mylib1.c". Running make will only execute the commands you need.
 </p>
-<h3>Windowsでもmakeは使えるの?</h3>
+<pre>
+$make
+gcc -Iinclude -c -o mylib1.o src / mylib1.c
+gcc -o myapp myapp.o mylib1.o mylib2.o
+</pre>
 <p>
-  WindowsでMinGWを使う場合は、makeコマンドではなく「gmake」コマンドを使用します。Makefileの記述は、紹介したものと同じです。Windowsの場合は、makeは「nmake」を意味しており、衝突が起こるために、gmakeになっていると考えられます。
+  Run "make clean". The object file and the executable file are deleted.
+</p>
+<pre>
+$make clean
+rm * .o
+rm -f myapp
+</pre>
+<h3> How does make detect that a dependent file has been updated? </h3>
+<p>
+  For example, suppose "mylib.c" depends on "mylib1.h". In this case, if the update time of "mybli1.h" is newer than the update time of "mylib.c", it is judged that the file has been updated.
+</p>
+<h3> I want to automate the generation of Makefile </h3>
+<p>
+  Since Makefile is a text file, it is a practical text processing programming language in <a href="https://en.linux.perlzemi.com/"> Linux / UNIX</a> <a href="https:: It's also easy to generate at //perlzemi.com/ "> Perl</a>. Makefile has dialects depending on the type of make, so you can use it to absorb it on the Perl side.
+</p>
+<h3> Can make be used on Windows? </H3>
+<p>
+  When using MinGW on Windows, use the "gmake" command instead of the make command. The description of Makefile is the same as the one introduced. On Windows, make means "nmake", which is probably gmake because of the conflict.
 </p>
 
   </div>
@@ -201,8 +198,7 @@ rm -f myapp
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>int型 - 16bit以上の符号あり整数型 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="int型は、16bit以上であることが仕様上保証される符号あり整数型です。多くの処理系では、32bit符号あり整数型として実装されているかもしれませんが、それは、C言語の仕様上保証されたものではありません。">
+<title> int type --signed integer type of 16 bits or more  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="The int type is a signed integer type that is guaranteed to be 16 bits or more by specification. In many implementations, it may be implemented as a 32-bit signed integer type, but that is not guaranteed by the C language specifications.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="int型 - 16bit以上の符号あり整数型 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="int型は、16bit以上であることが仕様上保証される符号あり整数型です。多くの処理系では、32bit符号あり整数型として実装されているかもしれませんが、それは、C言語の仕様上保証されたものではありません。" />
+<meta name="twitter:title" content=" int type --signed integer type of 16 bits or more  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="The int type is a signed integer type that is guaranteed to be 16 bits or more by specification. In many implementations, it may be implemented as a 32-bit signed integer type, but that is not guaranteed by the C language specifications." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/types.html">
-        <span itemprop="name">C言語の型</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C type </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210130143859.html">int型 - 16bit以上の符号あり整数型</a></h2>
+<h2><a href="/blog/20210130143859.html"> int type --signed integer type of 16 bits or more </a></h2>
 <p>
-  int型は、16bit以上であることが仕様上保証される符号あり整数型です。多くの処理系では、32bit符号あり整数型として実装されているかもしれませんが、それは、C言語の仕様上保証されたものではありません。
+  The int type is a signed integer type that is guaranteed to be 16 bits or more by specification. In many implementations, it may be implemented as a 32-bit signed integer type, but that is not guaranteed by the C language specifications.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -109,36 +107,36 @@ int main (void) {
   printf("%d\n", num);
 }
 </pre>
-<h3>C99で導入された幅と符号あり・なしが保証される整数型</h3>
+<h3> Integer type that guarantees width and signing / unsigned introduced in C99 </h3>
 <p>
-  ビット幅と符号あり・なしを確実に指定するにはC99で導入された以下の整数型を使用します。数値計算を行う場合は、こちらを使用するのがお勧めです。
+  To ensure that the bit width and signed / unsigned are specified, use the following integer types introduced in C99. This is recommended for numerical calculations.
 </p>
 <ul>
-  <li><a href="/blog/20201117090747.html">int8_t - 符号あり8bit整数型</a></li>
-  <li><a href="/blog/20201126090559.html">int16_t - 符号あり16bit整数型</a></li>
-  <li><a href="/blog/20201130082751.html">int32_t - 符号あり32bit整数型</a></li>
-  <li><a href="/blog/20201127082751.html">int64_t - 符号あり64bit整数型</a></li>
-  <li><a href="/blog/20201122084622.html">uint8_t - 符号なし8bit整数型</a></li>
-  <li><a href="/blog/20201120084622.html">uint16_t - 符号なし16bit整数型</a></li>
-  <li><a href="/blog/20201111150850.html">uint32_t - 符号なし32bit整数型</a></li>
-  <li><a href="/blog/20201109150850.html">uint64_t - 符号なし64bit整数型</a></li>
+  <li> <a href="/blog/20201117090747.html"> int8_t --Signed 8-bit integer type</a> </li>
+  <li> <a href="/blog/20201126090559.html"> int16_t --Signed 16bit integer type</a> </li>
+  <li> <a href="/blog/20201130082751.html"> int32_t --Signed 32-bit integer type</a> </li>
+  <li> <a href="/blog/20201127082751.html"> int64_t --Signed 64-bit integer type</a> </li>
+  <li> <a href="/blog/20201122084622.html"> uint8_t --Unsigned 8bit integer type</a> </li>
+  <li> <a href="/blog/20201120084622.html"> uint16_t --Unsigned 16bit integer type</a> </li>
+  <li> <a href="/blog/20201111150850.html"> uint32_t --Unsigned 32bit integer type</a> </li>
+  <li> <a href="/blog/20201109150850.html"> uint64_t --Unsigned 64-bit integer type</a> </li>
 </ul>
-<h3>mainの戻り値はint型ですか?</h3>
+<h3> Is the return value of main an int type? </h3>
 <p>
-  mainの戻り値はint型、またはint型と互換性のある型です。
+  The return value of main is an int or a type compatible with the int.
 </p>
 <p>
-  処理系で、int型の幅が32bitの場合は、int32_t型をmain関数の戻り値の型にしても大丈夫ですが、処理系に依存する記述を書くのは、お勧めしません。
+  In the implementation, if the width of the int type is 32bit, it is okay to use the int32_t type as the return type of the main function, but it is not recommended to write a description that depends on the implementation.
 </p>
 <p>
-  素直にint型にしておきましょう。
+  Let's make it an int type obediently.
 </p>
-<h3>数値の演算を行う場合は暗黙の型変換で、int型より小さな値がint型になる</h3>
+<h3> When performing numerical operations, implicit type conversion is used, and values ​​smaller than int type become int type </h3>
 <p>
-  数値の演算を行う場合は暗黙の型変換で、int型より小さな値がint型に型変換されます。以下の記事で詳しく扱っています。
+  When performing numerical operations, implicit type conversion is used to convert values ​​smaller than int type to int type. It is covered in detail in the following articles.
 </p>
 <ul>
-  <li><a href="/blog/20210218081559.html">暗黙の型変換と型変換規則</a></li>
+  <li> <a href="/blog/20210218081559.html"> Implicit type conversion and type conversion rules</a> </li>
 </ul>
 
   </div>
@@ -166,8 +164,7 @@ int main (void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

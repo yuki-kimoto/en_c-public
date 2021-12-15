@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>演算子の優先順位 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="C言語の演算子の優先順位です。">
+<title> Operator precedence  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="The precedence of C language operators.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="演算子の優先順位 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="C言語の演算子の優先順位です。" />
+<meta name="twitter:title" content=" Operator precedence  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="The precedence of C language operators." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,9 +60,9 @@
     
   </div>
   <div class="middle">
-    <h2><a href="/blog/20210704071720.html">演算子の優先順位</a></h2>
+    <h2><a href="/blog/20210704071720.html"> Operator precedence </a></h2>
 <p>
-  C言語の演算子の優先順位です。
+  The precedence of C language operators.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -83,61 +81,61 @@
 
 
 <table>
-  <tr><th>優先順位</th><th>演算子</th><th>文法</th><th>名称</th><th>結合方向</th></tr>
-  <tr><td rowspan=6>1
-      <td>()<td>x(y)<td>関数呼出し演算子<td>左</tr>
-  <tr><td>[]<td>x[y]<td>添字演算子<td>左</tr>
-  <tr><td>．<td>x . y<td>.演算子（ドット演算子）<td>左</tr>
-  <tr><td>-><td>x -> y<td>->演算子（アロー演算子）<td>左</tr>
-  <tr><td>++<td>x++<td>後置増分演算子<td>左</tr>
-  <tr><td>--<td>y--<td>後置減分演算子<td>左</tr>
-  <tr><td rowspan=9>2
-      <td>++<td>++x<td>前置増分演算子<td>右</tr>
-  <tr><td>--<td>--y<td>前置減分演算子<td>右</tr>
-  <tr><td>sizeof<td>sizeof x<td>sizeof演算子<td>右</tr>
-  <tr><td>&<td>&x<td>単項&演算子（アドレス演算子）<td>右</tr>
-  <tr><td>*<td>*x<td>単項*演算子（間接演算子）<td>右</tr>
-  <tr><td>+<td>+x<td>単項+演算子<td>右</tr>
-  <tr><td>-<td>-x<td>単項-演算子<td>右</tr>
-  <tr><td>~<td>~x<td>~演算子（補数演算子）<td>右</tr>
-  <tr><td>!<td>!x<td>論理否定演算子<td>右</tr>
-  <tr><td>3
-      <td>()<td>(x)y<td>キャスト演算子<td>右</tr>
-  <tr><td rowspan=3>4
-      <td>*<td>x * y<td>２項*演算子<td>左</tr>
-  <tr><td>/<td>x / y<td>/演算子<td>左</tr>
-  <tr><td>%<td>x % y<td>%演算子<td>左</tr>
-  <tr><td rowspan=2>5
-      <td>+<td>x + y<td>２項+演算子<td>左</tr>
-  <tr><td>-<td>x - y<td>２項-演算子<td>左</tr>
-  <tr><td rowspan=2>6
-      <td><<<td>x << y<td><<演算子<td>左</tr>
-  <tr><td>>><td>x >> y<td>>>演算子<td>左</tr>
-  <tr><td rowspan=4>7
-      <td><<td>x < y<td><演算子<td>左</tr>
-  <tr><td><=<td>x <= y<td><=演算子<td>左</tr>
-  <tr><td>><td>x > y<td>>演算子<td>左</tr>
-  <tr><td>>=<td>x >= y<td>>=演算子<td>左</tr>
-  <tr><td rowspan=2>8
-      <td>==<td>x == y<td>==演算子<td>左</tr>
-  <tr><td>!=<td>x != y<td>!=演算子<td>左</tr>
-  <tr><td>9
-      <td>&<td>x & y<td>ビット単位のand演算子<td>左</tr>
-  <tr><td>10
-      <td>^<td>x ^ y<td>ビット単位の排他or演算子<td>左</tr>
-  <tr><td>11
-      <td>|<td>x | y<td>ビット単位のor演算子<td>左</tr>
-  <tr><td>12
-      <td>&&<td>x && y<td>論理and演算子<td>左</tr>
-  <tr><td>13
-      <td>||<td>x || y<td>論理or演算子<td>左</tr>
-  <tr><td>14
-      <td>? :<td>x ? y : z<td>条件演算子<td>右</tr>
-  <tr><td rowspan=2>15
-      <td>=<td>x = y<td>単純代入演算子<td>右</tr>
-  <tr><td>+=  -=  *=  /=  %=  <<=  >>=  &=  ^=  |=<td>x += y<td>複合代入演算子<td>右</tr>
-  <tr><td>16
-      <td>,<td>x , y<td>コンマ演算子<td>左</tr>
+  <tr> <th> Priority </th> <th> Operator </th> <th> Grammar </th> <th> Name </th> <th> Join Direction </th> </tr>
+  <tr> <td rowspan = 6> 1
+      <td> () <td> x (y) <td> Function call operator <td> Left </tr>
+  <tr> <td> [] <td> x [y] <td> Subscript operator <td> Left </tr>
+  <tr> <td>. <td> x. y <td>. Operator (dot operator) <td> left </tr>
+  <tr> <td>-><td> x->y<td>->operator(arrow operator) <td> left </tr>
+  <tr> <td> ++ <td> x ++ <td> Post-increment operator <td> Left </tr>
+  <tr> <td>-<td> y- <td> Post-decrease operator <td> Left </tr>
+  <tr> <td rowspan = 9> 2
+      <td> ++ <td> ++ x <td> Prefix increment operator <td> right </tr>
+  <tr> <td>-<td>-y <td> Prefix subtraction operator <td> right </tr>
+  <tr> <td> sizeof <td> sizeof x <td> sizeof operator <td> right </tr>
+  <tr> <td> & <td> & x <td> unary & operator (address operator) <td> right </tr>
+  <tr> <td> * <td> * x <td> unary * operator (indirect operator) <td> right </tr>
+  <tr> <td> + <td> + x <td> unary + operator <td> right </tr>
+  <tr> <td>-<td> -x <td> unary-operator <td> right </tr>
+  <tr> <td> ~ <td> ~ x <td> ~ operator (complement operator) <td> right </tr>
+  <tr> <td>! <td>! x <td> logical negation operator <td> right </tr>
+  <tr> <td> 3
+      <td> () <td> (x) y <td> Cast operator <td> right </tr>
+  <tr> <td rowspan = 3> 4
+      <td> * <td> x * y <td> Binary * operator <td> left </tr>
+  <tr> <td> / <td> x / y <td> / operator <td> left </tr>
+  <tr> <td>%<td> x%y <td>%operator <td> left </tr>
+  <tr> <td rowspan = 2> 5
+      <td> + <td> x + y <td> Binary + operator <td> left </tr>
+  <tr> <td>-<td> x-y <td> Binary-operator <td> left </tr>
+  <tr> <td rowspan = 2> 6
+      <td> <<<< td> x << y <td> << operator <td> left </tr>
+  <tr> <td >>> <td> x >> y <td >>> operator <td> left </tr>
+  <tr> <td rowspan = 4> 7
+      <td> << td> x <y <td> <operator <td> left </tr>
+  <tr> <td> <= <td> x <= y <td> <= operator <td> left </tr>
+  <tr> <td >> <td> x> y <td >> operator <td> left </tr>
+  <tr> <td >> = <td> x> = y <td >> = operator <td> left </tr>
+  <tr> <td rowspan = 2> 8
+      <td> == <td> x == y <td> == operator <td> left </tr>
+  <tr> <td>! = <td> x! = y <td>! = Operator <td> left </tr>
+  <tr> <td> 9
+      <td> & <td> x & y <td> Bitwise and operator <td> left </tr>
+  <tr> <td> 10
+      <td> ^ <td> x ^ y <td> Bitwise exclusive or operator <td> left </tr>
+  <tr> <td> 11
+      <td> | <td> x | y <td> Bitwise or operator <td> Left </tr>
+  <tr> <td> 12
+      <td> && <td> x && y <td> logical and operator <td> left </tr>
+  <tr> <td> 13
+      <td> || <td> x || y <td> logical or operator <td> left </tr>
+  <tr> <td> 14
+      <td>?: <td> x? y: z <td> conditional operator <td> right </tr>
+  <tr> <td rowspan = 2> 15
+      <td> = <td> x = y <td> Simple assignment operator <td> right </tr>
+  <tr> <td> + =-= * = / =%= << = >> = & = ^ = | = <td> x + = y <td> Composite assignment operator <td> right </tr>
+  <tr> <td> 16
+      <td>, <td> x, y <td> Comma operator <td> left </tr>
 </table>
 
   </div>
@@ -165,8 +163,7 @@
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

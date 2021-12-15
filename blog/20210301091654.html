@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>size_t型 - サイズを表す型 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="size_t型はサイズを表す型です。16bit以上の符号なし整数であることが、仕様上での必要な条件です。">
+<title> size_t type --type representing size  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="The size_t type is a type that represents the size. An unsigned integer of 16 bits or more is a necessary condition in the specifications.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="size_t型 - サイズを表す型 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="size_t型はサイズを表す型です。16bit以上の符号なし整数であることが、仕様上での必要な条件です。" />
+<meta name="twitter:title" content=" size_t type --type representing size  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="The size_t type is a type that represents the size. An unsigned integer of 16 bits or more is a necessary condition in the specifications." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/types.html">
-        <span itemprop="name">C言語の型</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C type </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210301091654.html">size_t型 - サイズを表す型</a></h2>
+<h2><a href="/blog/20210301091654.html"> size_t type --type representing size </a></h2>
 <p>
-  size_t型はサイズを表す型です。16bit以上の符号なし整数であることが、仕様上での必要な条件です。
+  The size_t type is a type that represents the size. An unsigned integer of 16 bits or more is a necessary condition in the specifications.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,84 +100,84 @@
 
 
 <p>
-  32bitアドレス空間を扱う処理系では、符号なし32bit整数、64bitアドレス空間を扱う処理系では、符号なし64bit整数として定義されていると想定してください。
+  Assume that it is defined as an unsigned 32-bit integer in a processing system that handles a 32-bit address space, and as an unsigned 64-bit integer in a processing system that handles a 64-bit address space.
 </p>
 <pre>
-// サイズを表す型
+// Type representing size
 size_t
 </pre>
-<h3>そもそもsize_t型が意図しているサイズって何よ?</h3>
+<h3> What is the size intended by the size_t type in the first place? </h3>
 <p>
-  size_t型に出会ってわからないのは、サイズっていうけど、そもそもsize_t型が意図しているサイズって何よということではないでしょうか?
+  What I don't understand when I encounter the size_t type is the size, but what is the size that the size_t type intends to do in the first place?
 </p>
 <p>
-  意図はおそらく、アドレス空間のサイズの抽象化です。32bitCPUであれば、扱えるメモリ空間が32bitで、64bitCPUであれば、扱えるメモリ空間は64bitです。
+  The intent is probably an abstraction of address space size. If it is a 32bit CPU, the memory space that can be handled is 32bit, and if it is a 64bit CPU, the memory space that can be handled is 64bit.
 </p>
 <p>
-  これらを抽象化して、同一のソースコードで、表現できるようにしたいということが、size_tの意図だと思われます。
+  It seems that the intention of size_t is to abstract these so that they can be expressed in the same source code.
 </p>
-<h3>size_t型の最大値</h3>
+<h3> Maximum size_t type </h3>
 <p>
-  size_t型の最大値は<a href="/blog/20210228091654.html">SIZE_MAX</a>で定義されています。
+  The maximum value of size_t type is defined by <a href="/blog/20210228091654.html"> SIZE_MAX</a>.
 </p>
 <p>
-  64bitの<a href="https://en.linux.perlzemi.com/">Linux</a>の環境で、SIZE_MAXを出力してみたサンプルです。%zuは、size_t型の値をポータブルに出力できる書式指定子です。
+  This is a sample that outputs SIZE_MAX in a 64-bit <a href="https://en.linux.perlzemi.com/"> Linux</a> environment. %zu is a format specifier that can output a value of type size_t in a portable way.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   
   printf("%zu\n", SIZE_MAX);
 }
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 18446744073709551615
 </pre>
 <p>
-  この値以下であれば、その処理系で安全につかえるsize_tの値です。たとえば、callocの引数など。ただし、実際のメモリが足りるかどうかは、別の問題です。
+  If it is less than this value, it is the value of size_t that can be safely used in the processing system. For example, the argument of calloc. However, whether or not the actual memory is sufficient is another matter.
 </p>
 <p>
-  仕様上安全かどうかと、実際の物理的な環境において安全かは、別の問題ですので、分けて考えましょう。
+  Whether it is safe in terms of specifications and whether it is safe in the actual physical environment are different issues, so let's consider them separately.
 </p>
-<h3>標準関数の引数におけるsize_t型</h3>
+<h3> size_t type in standard function argument </h3>
 <p>
-  標準関数の引数には、strlenや<a href="/blog/20210221132505.html">memcpy関数</a>や<a href="/blog/20210209082644.html">calloc関数</a>など、size_t型で受け取るものがたくさんあります。
+  Standard function arguments include strlen, <a href="/blog/20210221132505.html"> memcpy function</a>, <a href="/blog/20210209082644.html"> calloc function</a>, etc. There are many things to receive in size_t type.
 </p>
 <pre>
-size_t strlen(const char *s);
-void *memcpy(void *buf1, const void *buf2, size_t n);
-void *calloc(size_t n, size_t size);
+size_t strlen (const char * s);
+void * memcpy (void * buf1, const void * buf2, size_t n);
+void * calloc (size_t n, size_t size);
 </pre>
 <p>
-  結局、私たちは、何を渡しておけば、大丈夫といえるのでしょうか?
+  After all, what should we pass?
 </p>
 <p>
-  すべての環境が32bit以上であるということを、前提にしてしまうと、32bit環境以上で、安全に動作させるには、符号なし32bit整数型以下で扱うと安全です。
+  Assuming that all environments are 32bit or more, it is safe to handle unsigned 32bit integer type or less in order to operate safely in 32bit environment or more.
 </p>
 <p>
-  ただし、整数を扱う場合は、まず符号あり32bit整数型の<a href="/blog/20201130082751.html">int32_t</a>で扱うということを考えると、<a href="/blog/20201129082751.html">符号あり32bit整数型の最大値</a>以下で扱うのがよいでしょう。
+  However, when dealing with integers, considering that it is handled with the signed 32-bit integer type <a href="/blog/20201130082751.html"> int32_t</a>, <a href="/blog/20201129082751" .html "> Signed 32-bit integer type maximum value</a> It is better to handle it below.
 </p>
 <p>
-  結論を書くと、size_t型の引数に渡す値は、int32_tで扱い、0以上、2147483647以下の値であること。
+  To write the conclusion, the value passed to the argument of size_t type should be treated as int32_t and should be 0 or more and 2147483647 or less.
 </p>
 <p>
-  作成する文字列や配列のサイズも、2147483647以下であること。
+  The size of the character string or array to be created must also be 2147483647 or less.
 </p>
 <p>
-  このようにコーディングすると、広い環境でポータブルに動き、size_tについて迷ったり考えたりする必要が、かなり少なくなります。
+  Coding this way makes it portable in large environments and significantly reduces the need to wonder or think about size_t.
 </p>
 <pre>
 #include &lt;stdlib.h&gt;
 
-int main(void) {
+int main (void) {
   int32_t length = 100;
-  void* memory_block = calloc(sizeof(int32_t), length);
-  free(memory_block);
+  void * memory_block = calloc (sizeof (int32_t), length);
+  free (memory_block);
 }
 </pre>
 
@@ -208,8 +206,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>プリプロセッサ条件分岐 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="プリプロセッサは、条件分岐の構文を持っています。">
+<title> Preprocessor conditional branching  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="The preprocessor has a conditional branching syntax.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="プリプロセッサ条件分岐 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="プリプロセッサは、条件分岐の構文を持っています。" />
+<meta name="twitter:title" content=" Preprocessor conditional branching  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="The preprocessor has a conditional branching syntax." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/preprocessor.html">
-        <span itemprop="name">プリプロセッサ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> preprocessor </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210305101711.html">プリプロセッサ条件分岐</a></h2>
+<h2><a href="/blog/20210305101711.html"> Preprocessor conditional branching </a></h2>
 <p>
-  プリプロセッサは、条件分岐の構文を持っています。
+  The preprocessor has a conditional branching syntax.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -101,26 +99,26 @@
 </div>
 
 
-<h3>#ifdef - マクロが定義されていたら</h3>
+<h3> #ifdef-if a macro is defined </h3>
 <p>
-  あるマクロが定義されていたらは「#ifdef」で表現できます。
+  If a macro is defined, it can be expressed by "#ifdef".
 </p>
 <pre>
-#ifdef マクロ名
+#ifdef macro name
 
-// 処理
+// process
 
 #endif
 </pre>
 <p>
-  「#ifdef」のサンプルです。
+  This is a sample of "#ifdef".
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 
 #define MYAPP_FOO
 
-int main(void) {
+int main (void) {
 
 #ifdef MYAPP_FOO
   printf("Hello\n");
@@ -129,29 +127,29 @@ int main(void) {
 }
 </pre>
 <p>
-  #defineで「MYAPP_FOO」という<a href="/blog/20210302083009.html">マクロ</a>が定義されている場合は「Hello」が出力され、この行を取り除くと、何も出力されません。
+  If <a href="/blog/20210302083009.html"> macro</a> called "MYAPP_FOO" is defined in #define, "Hello" is output, and if this line is removed, nothing is output. Hmm.
 </p>
-<h3>#ifndef - マクロが定義されていなかったら</h3>
+<h3> #ifndef --If the macro is not defined </h3>
 <p>
-  あるマクロが定義されていなかったら、は「#ifndef」で表現できます。
+  If a macro is not defined, can be represented by "#ifndef".
 </p>
 <pre>
-#ifndef マクロ名
+#ifndef macro name
 
-// 処理
+// process
 
 #endif
 </pre>
 <p>
-  「#ifndef」は<a href="/blog/20210201153503.html">インクルードガード</a>を書くときによく使います。
+  "#Ifndef" is often used when writing <a href="/blog/20210201153503.html"> include guard</a>.
 </p>
 <p>
-  「#ifndef」のサンプルです。
+  This is a sample of "#ifndef".
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 
-int main(void) {
+int main (void) {
 
 #ifndef MYAPP_FOO
   printf("Hello\n");
@@ -160,81 +158,81 @@ int main(void) {
 }
 </pre>
 <p>
-  #defineで「MYAPP_FOO」という<a href="/blog/20210302083009.html">マクロ</a>が定義されていなかった場合は、「Hello」が出力され、定義されていると、何も出力されません。
+  If the <a href="/blog/20210302083009.html"> macro</a> called "MYAPP_FOO" is not defined in #define, "Hello" is output, and if it is defined, nothing is output. It will not be.
 </p>
-<h3>#if - 条件がみたされたら</h3>
+<h3> #if --If the conditions are met </h3>
 <p>
-  条件がみたされた場合の処理を「#if」で記述することができます。比較演算子、否定演算子、definedが使えます。比較演算は、整数定数のみで行えます。比較演算でマクロが定義されていなかった場合は、値は0とみなされます。
+  You can describe the processing when the condition is met with "#if". You can use the comparison operator, negation operator, and defined. Comparison operations can be performed using only integer constants. If the comparison operation did not define a macro, the value is assumed to be 0.
 </p>
 <pre>
-#if 条件
+#if condition
 
-// 処理
+// process
 
 #endif
 </pre>
 <p>
-  「#if」のサンプルです。
+  This is a sample of "#if".
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 
 #define MYAPP_FOO 5
 
-int main(void) {
+int main (void) {
 
 #if defined(MYAPP_FOO)
   printf("MYAPP_FOO is defined\n");
 #endif
 
-#if !defined(MYAPP_FOO)
+#if! defined(MYAPP_FOO)
   printf("MYAPP_FOO is not defined\n");
 #endif
 
 #if defined(MYAPP_FOO)
-#  if MYAPP_FOO &gt; 3
+#if MYAPP_FOO&gt; 3
   printf("MYAPP_FOO is defined and greater than 3\n");
-#  endif
+# endif
 #endif
 }
 </pre>
-<h3>#elif, #else</h3>
+<h3> #elif, #else </h3>
 <p>
-  「#elif」で複数条件、「#else」で条件が成り立たなかった場合の処理がかけます。
+  Multiple conditions are applied with "#elif", and processing is applied when the conditions are not satisfied with "#else".
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 
 #define MYAPP_FOO 5
 
-int main(void) {
+int main (void) {
 
-#if MYAPP_FOO &gt; 10
+#if MYAPP_FOO&gt; 10
   printf("MYAPP_FOO is greater than 10\n");
-#elif MYAPP_FOO &gt; 3
+#elif MYAPP_FOO&gt; 3
   printf("MYAPP_FOO is greater than 3\n");
 #else
   printf("MYAPP_FOO is others\n");
 #endif
 }
 </pre>
-<h3>比較演算子でsizeof演算子は使えないのですか?</h3>
+<h3> Is it possible to use the sizeof operator with the comparison operator? </H3>
 <p>
-  はい、プリプロセッサの比較演算子では、<a href="/blog/20210207155548.html">sizeof演算子</a>を、使うことができません。
+  Yes, you cannot use the <a href="/blog/20210207155548.html"> sizeof operator</a> with the preprocessor comparison operator.
 </p>
 <p>
-  このことは、原理的に32bitや64bitの判定をプリプロセッサを使って行うことができないことを意味しています。
+  This means that in principle it is not possible to make 32-bit or 64-bit decisions using the preprocessor.
 </p>
 <p>
-  C言語の外側からマクロ定義として与える必要があります。
+  It must be given as a macro definition from outside C.
 </p>
 <p>
-  またすでに判定するためのマクロ定義が与えられていた場合は、それを利用できます。たとえば<a href="https://en.linux.perlzemi.com/blog/20201216103956.html">gcc</a>で32bitを判定する場合の例。
+  Also, if a macro definition for judgment has already been given, it can be used. For example, <a href="https://en.linux.perlzemi.com/blog/20201216103956.html"> gcc</a> is used to judge 32bit.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 
-int main() {
+int main () {
 #ifdef __code_model_32__
 
 #else
@@ -268,8 +266,7 @@ int main() {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

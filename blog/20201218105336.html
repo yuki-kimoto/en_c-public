@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>浮動小数点の四則演算 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="浮動小数点の四則演算を行いましょう。浮動小数点の足し算・引き算・掛け算・割り算を行います。">
+<title> Floating point arithmetic operations  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="Let's perform  floating-point arithmetic operations . Adds, subtracts, multiplies, and divides floating point numbers.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="浮動小数点の四則演算 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="浮動小数点の四則演算を行いましょう。浮動小数点の足し算・引き算・掛け算・割り算を行います。" />
+<meta name="twitter:title" content=" Floating point arithmetic operations  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="Let's perform  floating-point arithmetic operations . Adds, subtracts, multiplies, and divides floating point numbers." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20201218105336.html">浮動小数点の四則演算</a></h2>
+<h2><a href="/blog/20201218105336.html"> Floating point arithmetic operations </a></h2>
 <p>
-  <b>浮動小数点の四則演算</b>を行いましょう。浮動小数点の足し算・引き算・掛け算・割り算を行います。
+  Let's perform <b> floating-point arithmetic operations </b>. Adds, subtracts, multiplies, and divides floating point numbers.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -101,37 +99,37 @@
 </div>
 
 
-<h3>double型を使った64bit浮動小数点の四則演算</h3>
+<h3> 64-bit floating-point arithmetic operations using double type </h3>
 <p>
-  <a href="/blog/20201203133213.html">double型</a>を使った64bit浮動小数点の四則演算です。浮動小数点を出力する場合は、フォーマット指定子には「%f」を使います。
+  It is a 64-bit floating point four arithmetic operation using <a href="/blog/20201203133213.html"> double type</a>. If you want to output floating point, use "%f" for the format specifier.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 
-int main(void) {
+int main (void) {
   double num1 = 1.45;
   double num2 = 4.67;
   
-  // 足し算
+  // Addition
   double num_add = num1 + num2;
   
-  // 引き算
-  double num_sub = num1 - num2;
+  // Subtraction
+  double num_sub = num1 --num2;
   
-  // 掛け算
+  // Multiplication
   double num_mul = num1 * num2;
   
-  // 割り算
+  // Division
   double num_div = num1 / num2;
   
-  printf("Add %f\n", num_add);
-  printf("Subtract %f\n", num_sub);
-  printf("Multiply %f\n", num_mul);
-  printf("Division %f\n", num_div);
+  printf("Add%f\n", num_add);
+  printf("Subtract%f\n", num_sub);
+  printf("Multiply%f\n", num_mul);
+  printf("Division%f\n", num_div);
 }
 </pre>
 <p>
-  出力結果。
+  Output result.
 </p>
 <pre>
 Add 6.120000
@@ -139,37 +137,37 @@ Subtract -3.220000
 Multiply 6.771500
 Division 0.310493
 </pre>
-<h3>float型を使った32bit浮動小数点の四則演算</h3>
+<h3> 32-bit floating point four arithmetic operations using float type </h3>
 <p>
-  <a href="/blog/20201202133213.html">float型</a>を使った32bit浮動小数点の四則演算です。浮動小数点リテラルのfサフィックスを使って、float型にしています。浮動小数点を出力する場合は、フォーマット指定子には「%f」を使います。
+  It is a 32-bit floating point four arithmetic operation using <a href="/blog/20201202133213.html"> float type</a>. I'm using the floating point literal f suffix to make it a float type. If you want to output floating point, use "%f" for the format specifier.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 
-int main(void) {
+int main (void) {
   float num1 = 1.45f;
   float num2 = 4.67f;
   
-  // 足し算
+  // Addition
   float num_add = num1 + num2;
   
-  // 引き算
-  float num_sub = num1 - num2;
+  // Subtraction
+  float num_sub = num1 --num2;
   
-  // 掛け算
+  // Multiplication
   float num_mul = num1 * num2;
   
-  // 割り算
+  // Division
   float num_div = num1 / num2;
   
-  printf("Add %f\n", num_add);
-  printf("Subtract %f\n", num_sub);
-  printf("Multiply %f\n", num_mul);
-  printf("Division %f\n", num_div);
+  printf("Add%f\n", num_add);
+  printf("Subtract%f\n", num_sub);
+  printf("Multiply%f\n", num_mul);
+  printf("Division%f\n", num_div);
 }
 </pre>
 <p>
-  出力結果。
+  Output result.
 </p>
 <pre>
 Add 6.120000
@@ -177,35 +175,35 @@ Subtract -3.220000
 Multiply 6.771500
 Division 0.310493
 </pre>
-<h3>浮動小数点演算の特徴</h3>
+<h3> Features of floating point arithmetic </h3>
 <p>
-  浮動小数点演算の特徴です。
+  It is a feature of floating point arithmetic.
 </p>
-<h4>正確な値ではなく誤差が存在する</h4>
+<h4> There is an error, not an exact value </h4>
 <p>
-  浮動小数点は、2進数で表現できる数を除いて、内部的には誤差が発生しています。
-</p>
-<p>
-  たとえば、0.5, 0.25, 0.125などは、2進数で0.1, 0.01, 0.001と表現できますから、誤差はありませんが、そうではない数の場合は、数学で扱う正確な値とは誤差が発生しています。
-</p>
-<h4>浮動小数点演算は0除算してもエラーにならない</h4>
-<p>
-  浮動小数点演算は、整数演算と異なり、0除算しても、エラーになりません。nan(Not A Number)と呼ばれる値が設定されます。整数除算のように計算前にチェックする必然性はありません。
-</p>
-<h4>無限大という値を表現できる</h4>
-<p>
-  doubleやfloatで表現できる値の最大値を超えた場合は、Infと呼ばれる無限大の値が設定されます。符号に応じて、正の無限大、負の無限大があります。
-</p>
-<h4>同じ0でも、符号が異なる0が存在する</h4>
-<p>
-  同じ0でも、符号が正の0と符号が負の0が存在します。正の0と負の0は、比較演算では、等価とみなされますが、内部表現が異なり、それを意識する演算では異なる結果になります。
-</p>
-<h4>CPUによって計算結果が異なる場合がある</h4>
-<p>
-  double型は64bit浮動小数点を表現しますが、実はCPUは、64bitの精度を超えて、計算している場合があります。ひとつの例として、IntelのCPUは、80bitの浮動小数点計算用の領域を持ちます。
+  Floating point has an internal error, except for numbers that can be represented in binary.
 </p>
 <p>
-  つまり、64bit浮動小数点としての本来予想される計算結果と、異なる場合があるということです。
+  For example, 0.5, 0.25, 0.125, etc. can be expressed as 0.1, 0.01, 0.001 in binary, so there is no error, but if it is not, there is an error from the exact value handled in mathematics. increase.
+</p>
+<h4> Floating-point arithmetic does not result in an error even if it is divided by zero </h4>
+<p>
+  Floating-point arithmetic, unlike integer arithmetic, does not result in an error when divided by zero. A value called nan (Not A Number) is set. There is no need to check before calculation like integer division.
+</p>
+<h4> Can express the value of infinity </h4>
+<p>
+  If the maximum value that can be expressed by double or float is exceeded, an infinite value called Inf is set. Depending on the sign, there are positive infinity and negative infinity.
+</p>
+<h4> Even if the same 0 exists, there are 0s with different signs </h4>
+<p>
+  Even with the same 0, there are 0s with a positive sign and 0s with a negative sign. Positive 0s and negative 0s are considered equivalent in comparison operations, but they have different internal representations and different results in conscious operations.
+</p>
+<h4> Calculation results may differ depending on the CPU </h4>
+<p>
+  The double type represents a 64-bit floating point number, but the CPU may actually calculate beyond the 64-bit precision. As an example, Intel CPU has an area for 80bit floating point calculation.
+</p>
+<p>
+  In other words, it may differ from the originally expected calculation result as a 64-bit floating point number.
 </p>
 
   </div>
@@ -233,8 +231,7 @@ Division 0.310493
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

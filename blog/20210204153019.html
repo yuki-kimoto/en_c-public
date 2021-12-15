@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>typedef文 - 型の別名を作成する - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="typedef文を使うと型の別名を作成できます。">
+<title> typedef statement-create a type alias  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="You can use a typedef statement to create a type alias.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="typedef文 - 型の別名を作成する - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="typedef文を使うと型の別名を作成できます。" />
+<meta name="twitter:title" content=" typedef statement-create a type alias  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="You can use a typedef statement to create a type alias." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210204153019.html">typedef文 - 型の別名を作成する</a></h2>
+<h2><a href="/blog/20210204153019.html"> typedef statement-create a type alias </a></h2>
 <p>
-  typedef文を使うと型の別名を作成できます。
+  You can use a typedef statement to create a type alias.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,36 +100,36 @@
 
 
 <pre>
-typedef 型名 型の別名
+typedef typename type alias
 </pre>
-<h4>構造体の別名を作成</h4>
+<h4> Create another name for the structure </h4>
 <p>
-  構造体の別名を作成してみましょう。「struct spvm_field」という構造体に「SPVM_FIELD」という名前をつけます。
+  Let's create an alias for the structure. Name the structure "struct spvm_field" "SPVM_FIELD".
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 
-// 構造体定義
+// Structure definition
 struct spvm_field {
   int32_t id;
-  const char* name;
-};
+  const char * name;
+};;
 
-// 構造体の別名を作成
+// Create another name for the structure
 typedef struct spvm_field SPVM_FIELD;
 
 </pre>
 <p>
-  構造体は、一つの型です。typedef文の型名として指定できます。
+  A structure is a type. It can be specified as the type name of a typedef statement.
 </p>
-<h4>共用体型の別名を作成</h4>
+<h4> Create alias for shared type </h4>
 <p>
-  共用体型の別名を作成してみましょう。「union spvm_value」という共用体型に「SPVM_VALUE」という名前をつけます。
+  Let's create an alias for the union type. Name the shared type "union spvm_value" "SPVM_VALUE".
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 
-// 共用体定義
+// Union definition
 union spvm_value {
   int8_t bval;
   int16_t sval;
@@ -139,46 +137,46 @@ union spvm_value {
   int64_t lval;
   float fval;
   double dval;
-  void* oval;
-};
+  void * oval;
+};;
 
-// 共用体の別名を作成
+// Create a union alias
 typedef union spvm_value SPVM_VALUE;
 </pre>
 <p>
-  共用体は、一つの型です。typedef文の型名として指定できます。
+  Unions are a type. It can be specified as the type name of a typedef statement.
 </p>
-<h3>構造体や共用体の定義の前に、型の別名をつける方法</h3>
+<h3> How to give a type alias before defining a structure or union </h3>
 <p>
-  上記の方法は、構造体や共用体の定義を行った後に、typedef文を使って型の別名を作成していました。
-</p>
-<p>
-  この順番を入れ替える方法があるのでしょうか? あります。
+  The above method used a typedef statement to create a type alias after defining a structure or union.
 </p>
 <p>
-  構造体や共用体の定義の前に、型の別名をつけてみましょう。
+  Is there a way to change this order?
 </p>
 <p>
-  構造体や共用体の名前だけを先に宣言できるというC言語の仕様を利用します。
+  Let's add a type alias before defining a structure or union.
+</p>
+<p>
+  It uses the C language specification that only the names of structures and unions can be declared first.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 
-// 構造体の別名を作成
+// Create another name for the structure
 struct spvm_field;
 typedef struct spvm_field SPVM_FIELD;
 
-// 構造体定義
+// Structure definition
 struct spvm_field {
   int32_t id;
-  const char* name;
-};
+  const char * name;
+};;
 
-// 共用体の別名を作成
+// Create a union alias
 union spvm_value;
 typedef union spvm_value SPVM_VALUE;
 
-// 共用体定義
+// Union definition
 union spvm_value {
   int8_t bval;
   int16_t sval;
@@ -186,31 +184,31 @@ union spvm_value {
   int64_t lval;
   float fval;
   double dval;
-  void* oval;
-};
+  void * oval;
+};;
 </pre>
 <p>
-  さて、これに何の意味があるのでしょうか?
+  So what does this mean?
 </p>
 <p>
-  これは、ヘッダ間読み込みを減らすための、<a href="/blog/20210202153503.html">型宣言ヘッダ</a>を作成する場合に役に立ちます。
+  This is useful if you want to create a <a href="/blog/20210202153503.html"> type declaration header</a> to reduce inter-header loading.
 </p>
-<h3>typedef文はどんなときに使われている?</h3>
+<h3> When is the typedef statement used? </H3>
 <p>
-  typedef文はどんなときに使われているでしょうか?
+  When is the typedef statement used?
 </p>
-<h4>型を抽象化するため</h4>
+<h4> To abstract the type </h4>
 <p>
-  typedef文は、型を抽象化するために、使われることがあります。
-</p>
-<p>
-  たとえば、size_t型は、C言語で、長さを表現するために使われますが、32bit環境と64bit環境では定義が異なったりします。
+  Typedef statements are sometimes used to abstract types.
 </p>
 <p>
-  size_tは、C言語仕様では、「少なくとも16bitの符号なし整数型」と定義されているためです。
+  For example, the size_t type is used in C to express length, but the definition may differ between the 32-bit environment and the 64-bit environment.
 </p>
 <p>
-  C言語の仕様に従っていれば、処理系によって、定義を変えてよいのです。
+  This is because size_t is defined in the C language specification as "at least 16-bit unsigned integer type".
+</p>
+<p>
+  If you follow the C language specifications, you can change the definition depending on the processing system.
 </p>
 <pre>
 typedef unsigned int size_t;
@@ -220,25 +218,25 @@ typedef unsigned long size_t;
 typedef unsigned long long size_t;
 </pre>
 <p>
-  処理系によって、実際の定義は異なりますが、ソースコード上ではsize_tとして抽象化することができます。
+  The actual definition differs depending on the processing system, but it can be abstracted as size_t in the source code.
 </p>
-<h4>structやunionを書くのがめんどくさいため</h4>
+<h4> Because it is troublesome to write structs and unions </h4>
 <p>
-  統一的に、型名として扱いたい場合は「struct ほにゃ」「union ほにゃ」と書くのは、少し面倒に感じます。
-</p>
-<p>
-  typedefを使うと、一つの型名のように扱えます。
-</p>
-<h4>ヘッダの相互参照や循環参照をなくすため</h4>
-<p>
-  <a href="/blog/20210202153503.html">型宣言ヘッダ</a>を作成すると、ヘッダの相互参照や循環参照を回避することができます。
+  If you want to treat it as a type name in a unified way, writing "struct honya" and "union honya" feels a little troublesome.
 </p>
 <p>
-  これはtypdef文の実用的な使用で非常に重要なものだと考えます。
+  If you use a typedef, you can treat it like a single type name.
 </p>
-<h3>typedef文はどこに書きますか?</h3>
+<h4> To eliminate cross-references and circular references in headers </h4>
 <p>
-  typedef文は、ヘッダファイルに書きます。
+  You can avoid cross-references and circular references in headers by creating a <a href="/blog/20210202153503.html"> type declaration header</a>.
+</p>
+<p>
+  I think this is very important for the practical use of the typdef statement.
+</p>
+<h3> Where do you write the typedef statement? </h3>
+<p>
+  Write the typedef statement in the header file.
 </p>
 
   </div>
@@ -266,8 +264,7 @@ typedef unsigned long long size_t;
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

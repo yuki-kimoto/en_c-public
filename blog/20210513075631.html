@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>fopen関数 - ファイルを開く - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="fopen関数を使うと、ファイルを開くことができます。stdio.hヘッダを読み込むと使えます。">
+<title> fopen function-open file  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="You can use the fopen function to open a file. You can use it by reading the  stdio.h header.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="fopen関数 - ファイルを開く - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="fopen関数を使うと、ファイルを開くことができます。stdio.hヘッダを読み込むと使えます。" />
+<meta name="twitter:title" content=" fopen function-open file  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="You can use the fopen function to open a file. You can use it by reading the  stdio.h header." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,34 +60,34 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library.html">
-        <span itemprop="name">C標準ライブラリ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C standard library </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library/stdio.html">
-        <span itemprop="name">stdio.h</span>
-      </a>
-      <meta itemprop="position" content="3" />
+        <span itemprop = "name"> stdio.h </span>
+     </a>
+      <meta itemprop = "position" content = "3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210513075631.html">fopen関数 - ファイルを開く</a></h2>
+<h2><a href="/blog/20210513075631.html"> fopen function-open file </a></h2>
 <p>
-  fopen関数を使うと、ファイルを開くことができます。<a href="/blog/20210418083246.html">stdio.h</a>ヘッダを読み込むと使えます。
+  You can use the fopen function to open a file. You can use it by reading the <a href="/blog/20210418083246.html"> stdio.h</a> header.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -108,117 +106,117 @@
 
 
 <pre>
-FILE* fopen(const char *file_name, const char *mode);
+FILE * fopen (const char * file_name, const char * mode);
 </pre>
 <p>
-  第一引数は、開きたいファイルのファイル名です。第二引数は、モードです。ファイルオープンに成功すると、ファイルストリームを表現する「FILE*型」の値が返されます。
+  The first argument is the filename of the file you want to open. The second argument is the mode. If the file is opened successfully, a value of "FILE * type" representing the file stream is returned.
 </p>
-<h4>モードの一覧</h4>
+<h4> List of modes </h4>
 <p>
-  モードの一覧です。
+  A list of modes.
 </p>
 <table>
-  <tr><th>モード</th><th>動作</th></tr>
-  <tr><td>r</td><td>読み込み(ファイルがないときはエラー)</td></tr>
-  <tr><td>w</td><td>書き込み(ファイルがないときは新規作成)</td></tr>
-  <tr><td>a</td><td>追加書き込み(ファイルがないときは新規作成)</td></tr>
-  <tr><td>r+</td><td>読み込みと書き込み(ファイルがないときはエラー)</td></tr>
-  <tr><td>w+</td><td>読み込みと書き込み(ファイルがないときは新規作成)</td></tr>
-  <tr><td>a+</td><td>読み込みと追加書き込み(ファイルがないときは新規作成)</td></tr>
+  <tr> <th> Mode </th> <th> Behavior </th> </tr>
+  <tr> <td> r </td> <td> Read (error if there is no file) </td> </tr>
+  <tr> <td> w </td> <td> Write (create new if there is no file) </td> </tr>
+  <tr> <td> a </td> <td> Additional write (create new if there is no file) </td> </tr>
+  <tr> <td> r + </td> <td> Read and write (error if there is no file) </td> </tr>
+  <tr> <td> w + </td> <td> Read and write (create new if there is no file) </td> </tr>
+  <tr> <td> a + </td> <td> Read and add write (create new if there is no file) </td> </tr>
 </table>
 <p>
-  書き込みは、ファイルの内容がクリアされ、新しい内容で書き込むことを意味します。追加書き込みは、ファイルの末尾に追加して、書き込むことを意味します。
+  Writing means that the contents of the file are cleared and you are writing with new contents. Additional write means to add to the end of the file and write.
 </p>
 <p>
-  上記のモードはバイナリモードを意味する「b」と組み合わせることができます。
+  The above modes can be combined with "b" which means binary mode.
 </p>
 <pre>
 br
 bw
 </pre>
 <p>
-  デフォルトの動作は、テキストモードオープンされ、Windowsの場合にはファイルに含まれる改行文字である「CR」「LF」の並びが「\n」に置き換えられます。
+  The default behavior is to open in text mode, and in the case of Windows, the line feed characters "CR" and "LF" contained in the file are replaced with "\ n".
 </p>
 <p>
-  バイナリモードでは、このような置き換えはされません。
+  In binary mode, this replacement is not possible.
 </p>
-<h3>fopen関数のサンプル</h3>
+<h3> sample fopen function </h3>
 <p>
-  fopen関数のサンプルです。
+  This is a sample of the fopen function.
 </p>
-<h4>ファイルを読み込む</h4>
+<h4> Read the file </h4>
 <p>
-  fopen関数で読み込みモードでファイルを開き、fgetc関数で読み込み、標準出力に出力しています。
+  The fopen function opens the file in read mode, the fgetc function reads it, and outputs it to standard output.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // ファイルを読み込みモードで開く
-  const char* in_file = "input.txt";
-  FILE* in_fp = fopen(in_file, "r");
+  // Open the file in read mode
+  const char * in_file = "input.txt";
+  FILE * in_fp = fopen (in_file, "r");
   if (in_fp == NULL) {
-    fprintf(stderr, "Can't open file %s\n", in_file);
-    exit(1);
+    fprintf (stderr, "Can't open file%s\n", in_file);
+    exit (1);
   }
   
-  // 読み込んで、標準出力に出力
+  // Read and output to standard output
   int32_t ch;
-  while(ch = fgetc(in_fp)) {
+  while (ch = fgetc (in_fp)) {
     if (ch == EOF) {
       break;
     }
-    fputc(ch, stdout);
+    fputc (ch, stdout);
   }
   
-  // ファイルに書き込む
-  const char* message = "Hello";
-  fprintf(in_fp, "%s\n", message);
+  // write to file
+  const char * message = "Hello";
+  fprintf (in_fp, "%s\n", message);
   
-  // fopen関数でファイルを閉じる
-  fclose(in_fp);
+  // Close the file with the fopen function
+  fclose (in_fp);
 }
 </pre>
 <p>
-  入力ファイル「input.txt」です。
+  It is an input file "input.txt".
 </p>
 <pre>
 Hello
 World!
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 Hello
 World!
 </pre>
-<h4>ファイルに書き込む</h4>
+<h4> Write to file </h4>
 <p>
-  fopen関数で書き込みモードでファイルを開き、<a href="/blog/20210510093506.html">fprintf関数</a>で内容を書きこみ、<a href="/blog/20210509093506.html">fclose関数</a>で、ファイルを閉じています。
+  Open the file in write mode with the fopen function, write the contents with the <a href="/blog/20210510093506.html"> fprintf function</a>, and use the <a href="/blog/20210509093506.html"> fclose function.</a> closes the file.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // ファイルを書き込みモードで開く
-  const char* out_file = "output.txt";
-  FILE* out_fp = fopen(out_file, "w");
+  // Open the file in write mode
+  const char * out_file = "output.txt";
+  FILE * out_fp = fopen (out_file, "w");
   if (out_fp == NULL) {
-    fprintf(stderr, "Can't open file %s\n", out_file);
-    exit(1);
+    fprintf (stderr, "Can't open file%s\n", out_file);
+    exit (1);
   }
   
-  // ファイルに書き込む
-  const char* message = "Hello";
-  fprintf(out_fp, "%s\n", message);
+  // write to file
+  const char * message = "Hello";
+  fprintf (out_fp, "%s\n", message);
   
-  // fopen関数でファイルを閉じる
-  fopen(out_fp);
+  // Close the file with the fopen function
+  fopen (out_fp);
 }
 </pre>
 
@@ -247,8 +245,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

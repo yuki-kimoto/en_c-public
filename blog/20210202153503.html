@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>型宣言ヘッダ - ヘッダファイル間の読み込みを減らす - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="C言語でヘッダファイル間の読み込みを減らすためのテクニックとして、型宣言ヘッダを紹介します。">
+<title> Type Declaration Header-Reduces reading between header files  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="As a technique to reduce the reading between header files in C language, I will introduce the type declaration header.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="型宣言ヘッダ - ヘッダファイル間の読み込みを減らす - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="C言語でヘッダファイル間の読み込みを減らすためのテクニックとして、型宣言ヘッダを紹介します。" />
+<meta name="twitter:title" content=" Type Declaration Header-Reduces reading between header files  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="As a technique to reduce the reading between header files in C language, I will introduce the type declaration header." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/compile.html">
-        <span itemprop="name">コンパイル</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Compile </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210202153503.html">型宣言ヘッダ - ヘッダファイル間の読み込みを減らす</a></h2>
+<h2><a href="/blog/20210202153503.html"> Type Declaration Header-Reduces reading between header files </a></h2>
 <p>
-  C言語でヘッダファイル間の読み込みを減らすためのテクニックとして、型宣言ヘッダを紹介します。
+  As a technique to reduce the reading between header files in C language, I will introduce the type declaration header.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,17 +100,17 @@
 
 
 <p>
-  型宣言ヘッダとは<a href="/blog/20210204153019.html">typedef文</a>を使って、構造体の別名を作成したヘッダファイルのことです。
+  A type declaration header is a header file that uses a <a href="/blog/20210204153019.html"> typedef statement</a> to create an alias for a structure.
 </p>
 <p>
-  このファイル名は「spvm_typedecl.h」とします。
+  The file name is "spvm_typedecl.h".
 </p>
-<h3>型宣言ヘッダ</h3>
+<h3> Type declaration header </h3>
 <p>
-  型宣言ヘッダで行っていることはtypedef文を使って「struct spvm_field」という構造体に「SPVM_FIELD」という型の別名をつけていることと、「struct spvm_package」という構造体に「SPVM_PACKAGE」という型の別名をつけていることです。ついでに、幅が保証された整数型を使える用にするために、「<a href="/blog/20210220132505.html">stdint.h</a>」を読み込んでいます。NULLを使えるようにするために、<a href="/blog/20210125140655.html">stddef.h</a>を読み込んでいます。
+  What we are doing in the type declaration header is to use a typedef statement to give the structure "struct spvm_field" an alias of the type "SPVM_FIELD" and to the structure "struct spvm_package" of the type "SPVM_PACKAGE". It has an alias. By the way, in order to use the integer type with guaranteed width, "<a href="/blog/20210220132505.html"> stdint.h</a>" is read. I'm loading <a href="/blog/20210125140655.html"> stddef.h</a> to allow NULL.
 </p>
 <p>
-  <b>spvm_typedecl.h</b>
+  <b> spvm_typedecl.h </b>
 </p>
 <pre>
 #ifndef SPVM_TYPEDECL_H
@@ -131,27 +129,27 @@ typedef struct spvm_package SPVM_PACKAGE;
 #endif
 </pre>
 <p>
-  構造体の定義は、一度しか定義してはいけませんが、構造体の名前は、単独で宣言でき、後で、構造体の定義を書くことができます。
+  The definition of a structure can only be defined once, but the name of the structure can be declared independently and the definition of the structure can be written later.
 </p>
 <pre>
-// 構造体の名前は先に宣言してOK
+// Declare the name of the structure first and OK
 struct spvm_field;
 
-// 構造体定義を行う前に型の別名をつける
+// Give a type alias before defining the structure
 typedef struct spvm_package SPVM_PACKAGE;
 
-// 構造体定義
+// Structure definition
 struct spvm_field {
   int32_t id;
-  const char* name;
-  SPVM_PACKAGE* package;
-};
+  const char * name;
+  SPVM_PACKAGE * package;
+};;
 </pre>
 <p>
-  このことを理解しておくと、構造体の定義を行う前に、構造体の名前を宣言して、typedef文で、別名をつけることができます。
+  With this in mind, you can declare the name of a structure and give it an alias in a typedef statement before defining the structure.
 </p>
 <p>
-  以下の部分は、<a href="/blog/20210201153503.html">インクルードガード</a>です。
+  The following part is <a href="/blog/20210201153503.html"> include guard</a>.
 </p>
 <pre>
 #ifndef SPVM_TYPEDECL_H
@@ -160,12 +158,12 @@ struct spvm_field {
 #endif
 </pre>
 <p>
-  次に「spvm_filed.h」と「spvm_package.h」という個別のヘッダファイルを見てみましょう。
+  Next, let's look at the separate header files "spvm_filed.h" and "spvm_package.h".
 </p>
-<h3>個別のヘッダファイル</h3>
-<h4>spvm_filed.h</h4>
+<h3> Individual header file </h3>
+<h4> spvm_filed.h </h4>
 <p>
-  「spvm_filed.h」の中では、SPVM_PACKAGEという型を参照しています。
+  In "spvm_filed.h", we refer to the type SPVM_PACKAGE.
 </p>
 <pre>
 #ifndef SPVM_FIELD_H
@@ -175,18 +173,18 @@ struct spvm_field {
 
 struct spvm_field {
   int32_t id;
-  const char* name;
-  SPVM_PACKAGE* package;
-};
+  const char * name;
+  SPVM_PACKAGE * package;
+};;
 
 #endif
 </pre>
 <p>
-  「spvm_package.h」を取り込んでいるのではなく「spvm_typedecl.h」を取り込んでいるところに注目しましょう。
+  Notice that we are including "spvm_typedecl.h" instead of "spvm_package.h".
 </p>
-<h4>spvm_package.h</h4>
+<h4> spvm_package.h </h4>
 <p>
-  「spvm_package.h」の中では、SPVM_FIELDという型を参照しています。
+  In "spvm_package.h", we refer to the type SPVM_FIELD.
 </p>
 <pre>
 #ifndef SPVM_PACKAGE_H
@@ -196,20 +194,20 @@ struct spvm_field {
 
 struct spvm_package {
   int32_t id;
-  const char* name;
-  SPVM_FIELD* fields;
-};
+  const char * name;
+  SPVM_FIELD * fields;
+};;
 
 #endif
 </pre>
 <p>
-  「spvm_field.h」を取り込んでいるのではなく「spvm_typedecl.h」を取り込んでいるところに注目しましょう。
+  Notice that we are importing "spvm_typedecl.h" instead of "spvm_field.h".
 </p>
 <p>
-  このように、ヘッダファイルの取り込みあいをするのではなく、個別のヘッダファイルから型宣言ヘッダを読み込むことで、解決しています。
+  In this way, instead of importing header files, the problem is solved by reading the type declaration header from individual header files.
 </p>
 <p>
-  型宣言ヘッダをつかうと、コードの見通しが良くなり、循環参照の問題も気にする必要がなくなります。
+  Using type declaration headers gives your code a better view and you don't have to worry about circular reference issues.
 </p>
 
   </div>
@@ -237,8 +235,7 @@ struct spvm_package {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

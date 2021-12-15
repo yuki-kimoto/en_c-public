@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>ビット演算子 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="C言語のビット演算子について解説します。ビット演算とは、1ビット単位で行われる演算のことをいいます。">
+<title> Bitwise operator  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="This section describes bit operators in C language. Bitwise operations are operations performed in 1-bit units.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="ビット演算子 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="C言語のビット演算子について解説します。ビット演算とは、1ビット単位で行われる演算のことをいいます。" />
+<meta name="twitter:title" content=" Bitwise operator  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="This section describes bit operators in C language. Bitwise operations are operations performed in 1-bit units." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210308101711.html">ビット演算子</a></h2>
+<h2><a href="/blog/20210308101711.html"> Bitwise operator </a></h2>
 <p>
-  C言語のビット演算子について解説します。ビット演算とは、1ビット単位で行われる演算のことをいいます。
+  This section describes bit operators in C language. Bitwise operations are operations performed in 1-bit units.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,21 +100,21 @@
 
 
 <table>
-  <tr><th>ビットAND演算子</th><td>&</td></tr>
-  <tr><th>ビットOR演算子</th><td>|</td></tr>
-  <tr><th>ビットXOR演算子</th><td>^</td></tr>
-  <tr><th>ビットNOT演算子</th><td>~</td></tr>
+  <tr> <th> Bit AND operator </th> <td> & </td> </tr>
+  <tr> <th> Bit OR operator </th> <td> | </td> </tr>
+  <tr> <th> Bit XOR operator </th> <td> ^ </td> </tr>
+  <tr> <th> Bit NOT operator </th> <td> ~ </td> </tr>
 </table>
-<h3>ビットAND演算子</h3>
+<h3> Bit AND operator </h3>
 <p>
-  ビットAND演算子「&」は、二つのオペランドに含まれるあるビットが両方とも1の場合に、返却する値の対応する位置に1に設定し、あるビットのどちらかが0の場合は0を設定します。
+  The bit AND operator "&" sets 1 at the corresponding position of the value to be returned if both of the bits contained in the two operands are 1, and 0 if either of the bits is 0. Set.
 </p>
 <pre>
-# ビットAND
+#Bit AND
 x &amp; y
 </pre>
 <p>
-  xとyが両方とも<a href="/blog/20201122084622.html">8bit符号なし整数型</a>であるとしましょう。zがビットAND演算子の結果の値です。xとyのある位置の両方のビットが1の場合に、対応するzのビットも1になり、それ以外の場合は0になります。
+  Let's assume that both x and y are <a href="/blog/20201122084622.html"> 8-bit unsigned integer type</a>. z is the resulting value of the bit AND operator. If both the bits at the x and y positions are 1, the corresponding z bits are also 1, otherwise they are 0.
 </p>
 <pre>
 x 01001100
@@ -125,13 +123,13 @@ y 01000101
 z 01000100
 </pre>
 <p>
-  ビットAND演算子のサンプルです。
+  A sample bit AND operator.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   // 01001100
   uint8_t x = 0x4C;
   
@@ -145,21 +143,21 @@ int main(void) {
 }
 </pre>
 <p>
-  出力結果です。16進数での出力ですが、2進数であれば「01000100」です。
+  This is the output result. The output is in hexadecimal, but if it is binary, it is "01000100".
 </p>
 <pre>
 44
 </pre>
-<h3>ビットOR演算子</h3>
+<h3> Bit OR operator </h3>
 <p>
-  ビットOR演算子「|」は、二つのオペランドに含まれるあるビットのどちらかが1(どちらも1でもよい)の場合に、返却する値の対応する位置に1に設定し、あるビットの両方が0の場合は0を設定します。
+  The bit OR operator "|" is set to 1 at the corresponding position of the value to be returned when either of the bits contained in the two operands is 1 (both may be 1), and both of the bits are set. If is 0, set it to 0.
 </p>
 <pre>
-# ビットOR
+# Bit OR
 x | y
 </pre>
 <p>
-  xとyが両方とも<a href="/blog/20201122084622.html">8bit符号なし整数型</a>であるとしましょう。zがビットOR演算子の結果の値です。xとyのある位置のどちらかのビットが1の場合に、対応するzのビットも1になり、両方とも0の場合は0になります。
+  Let's assume that both x and y are <a href="/blog/20201122084622.html"> 8-bit unsigned integer type</a>. z is the resulting value of the bit OR operator. If either the bit at the position of x or y is 1, the corresponding bit of z is also 1, and if both are 0, it is 0.
 </p>
 <pre>
 x 01001100
@@ -168,13 +166,13 @@ y 01000101
 z 01001101
 </pre>
 <p>
-  ビットOR演算子のサンプルです。
+  This is a sample of the bit OR operator.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   // 01001100
   uint8_t x = 0x4C;
   
@@ -188,21 +186,21 @@ int main(void) {
 }
 </pre>
 <p>
-  出力結果です。16進数での出力ですが、2進数であれば「01001101」です。
+  This is the output result. The output is in hexadecimal, but if it is binary, it is "01001101".
 </p>
 <pre>
 4D
 </pre>
-<h3>ビットXOR演算子</h3>
+<h3> Bit XOR operator </h3>
 <p>
-  ビットXOR演算子「^」は、二つのオペランドに含まれるあるビットがのどちらかだけが1の場合に、返却する値の対応する位置に1に設定し、あるビットの両方が0あるいは1の場合は0を設定します。
+  The bit XOR operator "^" is set to 1 at the corresponding position of the value to be returned if only one of the bits contained in the two operands is 1, and both of the bits are 0 or 1. If so, set it to 0.
 </p>
 <pre>
-# ビットXOR
+#Bit XOR
 x ^ y
 </pre>
 <p>
-  xとyが両方とも<a href="/blog/20201122084622.html">8bit符号なし整数型</a>であるとしましょう。zがビットXOR演算子の結果の値です。xとyのある位置のどちらかだけのビットが1の場合に、対応するzのビットも1になり、両方とも0または1の場合は0になります。
+  Let's assume that both x and y are <a href="/blog/20201122084622.html"> 8-bit unsigned integer type</a>. z is the resulting value of the bit XOR operator. If only one bit at one of the x and y positions is 1, the corresponding z bit is also 1, and if both are 0 or 1, it is 0.
 </p>
 <pre>
 x 01001100
@@ -211,13 +209,13 @@ y 01000101
 z 00001001
 </pre>
 <p>
-  ビットXOR演算子のサンプルです。
+  A sample bit XOR operator.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   // 01001100
   uint8_t x = 0x4C;
   
@@ -231,21 +229,21 @@ int main(void) {
 }
 </pre>
 <p>
-  出力結果です。16進数での出力ですが、2進数であれば「0001001」です。
+  This is the output result. The output is in hexadecimal, but if it is binary, it is "0001001".
 </p>
 <pre>
 9
 </pre>
-<h3>ビットNOT演算子</h3>
+<h3> Bit NOT operator </h3>
 <p>
-  ビットNOT演算子「~」は、オペランドに含まれるあるビットを反転させます。
+  The bit NOT operator "~" inverts a bit contained in the operand.
 </p>
 <pre>
-# ビットNOT
-~x
+# Bit NOT
+~ x
 </pre>
 <p>
-  xとyが両方とも<a href="/blog/20201122084622.html">8bit符号なし整数型</a>であるとしましょう。zがビットNOT演算子の結果の値です。xのビットが反転しています。
+  Let's assume that both x and y are <a href="/blog/20201122084622.html"> 8-bit unsigned integer type</a>. z is the result value of the bit NOT operator. The x bit is inverted.
 </p>
 <pre>
 x 01001100
@@ -253,13 +251,13 @@ x 01001100
 z 10110011
 </pre>
 <p>
-  ビットNOT演算子のサンプルです。出力結果は、<a href="http://59.106.185.196:3000/blog/20210218081559.html">整数型拡張</a>の影響をなくすために「0xFF」とのビットANDをとっています。
+  This is a sample of the bit NOT operator. The output result is bit ANDed with "0xFF" to eliminate the effect of <a href="http://59.106.185.196:3000/blog/20210218081559.html"> integer type extension</a>. ..
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   // 01001100
   uint8_t x = 0x4C;
   
@@ -267,43 +265,43 @@ int main(void) {
   uint8_t y = 0x45;
   
   // 10110011
-  uint8_t z = ~x;
+  uint8_t z = ~ x;
   
   printf("%X\n", z);
 }
 </pre>
 <p>
-  出力結果です。16進数での出力で、すが、2進数であれば「01000100」です。
+  This is the output result. The output is in hexadecimal, but if it is binary, it is "01000100".
 </p>
 <pre>
 B3
 </pre>
-<h3>ビット演算子と「=」を組み合わせた特殊演算子</h3>
+<h3> Special operator that combines bit operator and "=" </h3>
 <p>
-  ビット演算子と「=」を組み合わせた特殊演算子があります。
+  There are special operators that combine bitwise operators with "=".
 </p>
 <pre>
-# 「x = x &amp; y」 と同じ意味
-x &amp;= y
+# Same meaning as "x = x &amp; y"
+x &amp; = y
 
-# 「x = x | y」 と同じ意味
-x |= y
+# Same meaning as "x = x | y"
+x | = y
 
-# 「x = x ^ y」 と同じ意味
-x ^= y
+# Same meaning as "x = x ^ y"
+x ^ = y
 </pre>
-<h3>ビット演算子は実務ではどのような場合に使用しますか?</h3>
+<h3> When do you use bitwise operators in practice? </h3>
 <p>
-  ビット演算子を一番使う場面は、フラグを関数の引数に渡す場合です。C言語では、フラグを、整数で渡すことが多いのですが、その場合に、ビットの位置で意味を定めます。<a href="/blog/20210120133501.html">列挙型enum</a>を使って、各ビットのフラグを定義します。1(二進で1), 2(二進で10), 4(二進で100), 8(二進で1000)。
+  The most common use of bitwise operators is when passing flags to function arguments. In C language, flags are often passed as integers, but in that case, the meaning is determined by the position of the bit. Use <a href="/blog/20210120133501.html"> enum enum</a> to define a flag for each bit. 1 (1 in binary), 2 (10 in binary), 4 (100 in binary), 8 (1000 in binary).
 </p>
 <p>
-  各ビットを立てるときはビットOR「|=」、落とすときはビットXOR「^=」です。
+  Bit OR "| =" to set each bit, and bit XOR "^ =" to drop each bit.
 </p>
 <p>
-  ビットが立っているかをチェックするときは「&」を使います。
+  Use "&" to check if a bit is set.
 </p>
 <p>
-  関数の引数に渡すフラグを作成するサンプルコードです。
+  Sample code to create a flag to pass to a function argument.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
@@ -320,30 +318,30 @@ enum {
   MYAPP_FLAG8 = 128,
   MYAPP_FLAG9 = 256,
   MYAPP_FLAG10 = 512,
-};
+};;
 
-int main(void) {
+int main (void) {
   uint32_t flag = 0;
   
-  // MYAPP_FLAG4をたてる
-  flag |= MYAPP_FLAG4;
+  // Build MYAPP_FLAG4
+  flag | = MYAPP_FLAG4;
   
   // 00000000 00000000 00000000 00001000
   printf("%X\n", flag);
   
-  // MYAPP_FLAG10をたてる
-  flag |= MYAPP_FLAG10;
+  // Build MYAPP_FLAG10
+  flag | = MYAPP_FLAG10;
 
   // 00000000 00000000 00000010 00001000
   printf("%X\n", flag);
   
-  // MyAPP_FLAG4を落とす
-  flag ^= MYAPP_FLAG4;
+  // Drop MyAPP_FLAG4
+  flag ^ = MYAPP_FLAG4;
   
   // 00000000 00000000 00000010 00000000
   printf("%X\n", flag);
   
-  // ビットが立っているかチェック
+  // Check if the bit is set
   if (flag &amp; MYAPP_FLAG10) {
     printf("MYAPP_FLAG10 ok\n");
   }
@@ -375,8 +373,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

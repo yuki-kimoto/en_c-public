@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>fwrite関数 - バイト数を指定してファイルへ書き込み - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="fwrite関数を使うと、バイト数を指定してファイルへ書き込むことができます。stdio.hヘッダを書き込むと使えます。">
+<title> fwrite function-write to file with specified number of bytes  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="You can use the  fwrite function  to write to a file by specifying the number of bytes. You can use it by writing the  stdio.h header.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="fwrite関数 - バイト数を指定してファイルへ書き込み - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="fwrite関数を使うと、バイト数を指定してファイルへ書き込むことができます。stdio.hヘッダを書き込むと使えます。" />
+<meta name="twitter:title" content=" fwrite function-write to file with specified number of bytes  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="You can use the  fwrite function  to write to a file by specifying the number of bytes. You can use it by writing the  stdio.h header." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,34 +60,34 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library.html">
-        <span itemprop="name">C標準ライブラリ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C standard library </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library/stdio.html">
-        <span itemprop="name">stdio.h</span>
-      </a>
-      <meta itemprop="position" content="3" />
+        <span itemprop = "name"> stdio.h </span>
+     </a>
+      <meta itemprop = "position" content = "3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210613143712.html">fwrite関数 - バイト数を指定してファイルへ書き込み</a></h2>
+<h2><a href="/blog/20210613143712.html"> fwrite function-write to file with specified number of bytes </a></h2>
 <p>
-  <b>fwrite関数</b>を使うと、バイト数を指定してファイルへ書き込むことができます。<a href="/blog/20210418083246.html">stdio.h</a>ヘッダを書き込むと使えます。
+  You can use the <b> fwrite function </b> to write to a file by specifying the number of bytes. You can use it by writing the <a href="/blog/20210418083246.html"> stdio.h</a> header.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -109,143 +107,143 @@
 
 <pre>
 #include &lt;stdio.h&gt;
-size_t fwrite(const void *buf, size_t size, size_t n, FILE *fp);
+size_t fwrite (const void * buf, size_t size, size_t n, FILE * fp);
 </pre>
 <p>
-  第一引数は、書き込みたい内容が含まれたバッファです。第二引数は、書き込むデータのバイトの単位です。第三引数は、書き込むデータの個数です。実際に書き込まれるバイトサイズは「size * n」になります。第四引数は、書き込みたいファイルのファイルストリームです。
+  The first argument is the buffer that contains the content you want to write. The second argument is the unit of bytes of data to write. The third argument is the number of data to write. The actual byte size written will be "size * n". The fourth argument is the file stream of the file you want to write.
 </p>
 <p>
-  戻り値は、書き込んだデータの個数です。第三引数で指定したデータの個数に対応しています。バイトサイズではないので注意してください。書き込みエラーが発生した場合、戻り値は、第三引数で指定したデータの個数より小さくなります。
+  The return value is the number of data written. It corresponds to the number of data specified by the third argument. Please note that it is not a byte size. If a write error occurs, the return value will be less than the number of data specified by the third argument.
 </p>
-<h3>fwrite関数で書き込むサンプル</h3>
+<h3> Sample to write with fwrite function </h3>
 <p>
-  fwrite関数で書き込むサンプルです。<a href="/blog/20210513075631.html">fopen関数</a>でファイルを開き、<a href="/blog/20210520080906.html">fread関数</a>で、4バイトずつ読み込み、fwrite関数で4バイトづつファイルに書き込み、<a href="/blog/20210509093506.html">fclose関数</a>でファイルを閉じています。
+  This is a sample to write with the fwrite function. Open the file with <a href="/blog/20210513075631.html"> fopen function</a>, and read 4 bytes at a time with <a href="/blog/20210520080906.html"> fread function</a>. The fwrite function writes to the file 4 bytes at a time, and the <a href="/blog/20210509093506.html"> fclose function</a> closes the file.
 </p>
 <p>
-  ファイルは、読み書きする場合に、バイナリモードで開いています。
+  The file is open in binary mode when reading and writing.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // ファイルを読み込みモードで開く
-  const char* in_file = "input.txt";
-  FILE* in_fp = fopen(in_file, "rb");
+  // Open the file in read mode
+  const char * in_file = "input.txt";
+  FILE * in_fp = fopen (in_file, "rb");
   if (in_fp == NULL) {
-    fprintf(stderr, "Can't open file %s\n", in_file);
-    exit(1);
+    fprintf (stderr, "Can't open file%s\n", in_file);
+    exit (1);
   }
 
-  // ファイルを書き込みモードで開く
-  const char* out_file = "output.txt";
-  FILE* out_fp = fopen(out_file, "wb");
+  // Open the file in write mode
+  const char * out_file = "output.txt";
+  FILE * out_fp = fopen (out_file, "wb");
   if (out_fp == NULL) {
-    fprintf(stderr, "Can't open file %s\n", out_file);
-    exit(1);
+    fprintf (stderr, "Can't open file%s\n", out_file);
+    exit (1);
   }
 
-  // 読み込んで、他のファイルに出力
-  while(1) {
+  // Read and output to another file
+  while (1) {
     
-    // 4バイトづつ読み込み
-    char buffer[16];
+    // Read 4 bytes at a time
+    char buffer [16];
     int32_t read_unit = 1;
     int32_t read_count = 4;
-    size_t real_read_count = fread(buffer, read_unit, read_count, in_fp);
+    size_t real_read_count = fread (buffer, read_unit, read_count, in_fp);
     
-    // 4バイトづつ書き込み
-    fwrite(buffer, read_unit, real_read_count, out_fp);
+    // Write 4 bytes at a time
+    fwrite (buffer, read_unit, real_read_count, out_fp);
     
-    if (real_read_count &lt; read_count) {
+    if (real_read_count &lt;read_count) {
       break;
     }
   }
   
-  // fclose関数でファイルを閉じる
-  fclose(in_fp);
+  // Close the file with the fclose function
+  fclose (in_fp);
 }
 </pre>
 <p>
-  入力ファイル「input.txt」です。
+  It is an input file "input.txt".
 </p>
 <pre>
 Hello
 World!
 </pre>
 <p>
-  出力ファイル「output.txt」です。
+  The output file is "output.txt".
 </p>
 <pre>
 Hello
 World!
 </pre>
-<h3>ファイル全体を読み書きする</h3>
+<h3> Read and write the entire file </h3>
 <p>
-  ファイル全体を読み書きするサンプルです。<a href="/blog/20210526085256.html">ftell関数</a>と<a href="/blog/20210525075439.html">fseek関数</a>を使って、ファイルのサイズを取得して、<a href="/blog/20210209082644.html">calloc関数</a>でメモリを確保し、<a href="/blog/20210520080906.html">fread関数</a>で、ファイル全体を読み込み、fwrite関数で、書き込んでいます。
+  This is a sample to read and write the entire file. Use the <a href="/blog/20210526085256.html"> ftell function</a> and the <a href="/blog/20210525075439.html"> fseek function</a> to get the size of the file. , <a href="/blog/20210209082644.html"> calloc function</a> to allocate memory, and <a href="/blog/20210520080906.html"> fread function</a> to fill the entire file. Read and write with the fwrite function.
 </p>
 <p>
-  ファイルは、読み書きする場合に、バイナリモードで開いています。
+  The file is open in binary mode when reading and writing.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 #include &lt;stdlib.h&gt;
 
-int main(void) {
-  // ファイルを開く
-  const char* in_file = "input.txt";
-  FILE* in_fp = fopen(in_file, "rb");
+int main (void) {
+  // Open the file
+  const char * in_file = "input.txt";
+  FILE * in_fp = fopen (in_file, "rb");
   if (in_fp == NULL) {
-    fprintf(stderr, "Can't open file %s at %s line %d\n", in_file, __FILE__, __LINE__);
-    exit(1);
+    fprintf (stderr, "Can't open file%s at%s line%d\n", in_file, __FILE__, __LINE__);
+    exit (1);
   }
 
-  // ファイルを書き込みモードで開く
-  const char* out_file = "output.txt";
-  FILE* out_fp = fopen(out_file, "wb");
+  // Open the file in write mode
+  const char * out_file = "output.txt";
+  FILE * out_fp = fopen (out_file, "wb");
   if (out_fp == NULL) {
-    fprintf(stderr, "Can't open file %s\n", out_file);
-    exit(1);
+    fprintf (stderr, "Can't open file%s\n", out_file);
+    exit (1);
   }
 
-  // ファイルの末尾に位置指定子を移動
-  fseek(in_fp, 0, SEEK_END);
+  // Move the position specifier to the end of the file
+  fseek (in_fp, 0, SEEK_END);
   
-  // ファイルの末尾の位置を取得。これは、ファイサイズになります。
-  size_t file_size = (int32_t)ftell(in_fp);
+  // Get the position of the end of the file. This will be phi size.
+  size_t file_size = (int32_t) ftell (in_fp);
   
-  // メモリ確保
-  char* buffer = calloc(file_size + 1, sizeof(char));
+  // Allocate memory
+  char * buffer = calloc (file_size + 1, sizeof (char));
 
-  // ファイルの先頭に位置指定子を移動
-  fseek(in_fp, 0, SEEK_SET);
+  // Move the position specifier to the beginning of the file
+  fseek (in_fp, 0, SEEK_SET);
   
-  // ファイルを読み込み
-  size_t read_count = fread(buffer, sizeof(char), file_size, in_fp);
-  if (read_count != file_size) {
-    fprintf(stderr, "Can't read file %s at %s line %d\n", in_file, __FILE__, __LINE__);
-    exit(1);
+  // Read the file
+  size_t read_count = fread (buffer, sizeof (char), file_size, in_fp);
+  if (read_count! = file_size) {
+    fprintf (stderr, "Can't read file%s at%s line%d\n", in_file, __FILE__, __LINE__);
+    exit (1);
   }
   
-  // 出力ファイルへ書き込み
-  fwrite(buffer, sizeof(char), file_size, out_fp);
+  // Write to output file
+  fwrite (buffer, sizeof (char), file_size, out_fp);
   
-  // ファイルを閉じる
-  fclose(in_fp);
+  // Close the file
+  fclose (in_fp);
 }
 </pre>
 <p>
-  入力ファイル「input.txt」です。
+  It is an input file "input.txt".
 </p>
 <pre>
 Hello
 World!
 </pre>
 <p>
-  出力ファイル「output.txt」です。
+  The output file is "output.txt".
 </p>
 <pre>
 Hello
@@ -277,8 +275,7 @@ World!
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

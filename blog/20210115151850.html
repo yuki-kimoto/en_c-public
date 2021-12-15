@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>for文 - 繰り返しの構文 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="for文を使用すると繰り返しが書けます。">
+<title> for statement-repeated syntax  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="You can write iteratively using the for statement.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="for文 - 繰り返しの構文 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="for文を使用すると繰り返しが書けます。" />
+<meta name="twitter:title" content=" for statement-repeated syntax  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="You can write iteratively using the for statement." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210115151850.html">for文 - 繰り返しの構文</a></h2>
+<h2><a href="/blog/20210115151850.html"> for statement-repeated syntax </a></h2>
 <p>
-  for文を使用すると繰り返しが書けます。
+  You can write iteratively using the for statement.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,97 +100,97 @@
 
 
 <pre>
-for (ループ変数の初期化;繰り返し条件;ループ変数の更新) {
+for (Initialization of loop variable; Iteration condition; Update of loop variable) {
   
 }
 </pre>
 <p>
-  for文で合計を求めるサンプルです。
+  This is a sample to calculate the total with the for statement.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // for文で合計を求める
+  // Find the total with a for statement
   int32_t total = 0;
   int32_t i;
-  for (i = 0; i &lt; 10; i++) {
-    total += i;
+  for (i = 0; i &lt;10; i ++) {
+    total + = i;
   }
   
   printf("%d\n", total);
 }
 </pre>
 <p>
-  0～9までの合計が出力されます。
+  The total from 0 to 9 is output.
 </p>
 <pre>
-45
+45 45
 </pre>
 <p>
-  for文は<a href="/blog/20210119082326.html">while文</a>のシンタックスシュガーです。以下のwhile文とfor文は等価です。
+  The for statement is syntactic sugar for <a href="/blog/20210119082326.html"> while statement</a>. The following while statement and for statement are equivalent.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // for文で合計を求める
+  // Find the total with a for statement
   int32_t total = 0;
   int32_t i = 0;
-  while (i &lt; 10) {
-    total += i;
-    i++;
+  while (i &lt;10) {
+    total + = i;
+    i ++;
   }
   
   printf("%d\n", total);
 }
 </pre>
-<h3>C99で追加されたforのループ変数初期化部における変数宣言</h3>
+<h3> Variable declaration in the loop variable initialization part of for added in C99 </h3>
 <p>
-  <a href="/blog/20201206125815.html">C99</a>で追加されたforのループ変数初期化部における<a href="/blog/20201217105308.html">変数宣言</a>の機能が便利です。
+  <a href="/blog/20201217105308.html"> Variable declaration</a> in the loop variable initialization part of for added in <a href="/blog/20201206125815.html"> C99</a> The function is convenient.
 </p>
 <pre>
-for (ループ変数の宣言と初期化;繰り返し条件;ループ変数の更新) {
+for (declaration and initialization of loop variables; repeat condition; update of loop variables) {
   
 }
 </pre>
 <p>
-  for文で合計を求めるサンプルです。C99の機能を使って、変数宣言と同時に初期化を行っています。
+  This is a sample to calculate the total with the for statement. Initialization is performed at the same time as variable declaration using the function of C99.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // for文で合計を求める
+  // Find the total with a for statement
   int32_t total = 0;
-  for (int32_t i = 0; i &lt; 10; i++) {
-    total += i;
+  for (int32_t i = 0; i &lt;10; i ++) {
+    total + = i;
   }
   
   printf("%d\n", total);
 }
 </pre>
 <p>
-  意味的には次のコードのシンタックスシュガーとなっています。
+  It is semantically syntactic sugar with the following code.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // for文で合計を求める
+  // Find the total with a for statement
   int32_t total = 0;
   {
     int32_t i;
-    for (i = 0; i &lt; 10; i++) {
-      total += i;
+    for (i = 0; i &lt;10; i ++) {
+      total + = i;
     }
   }
   
@@ -200,12 +198,12 @@ int main(void) {
 }
 </pre>
 <p>
-  新しめのgccであれば、オプションなしで動くと思います。古めのgccであれば次のオプションをつけます。
+  If it's a new gcc, I think it works without options. For older gcc, add the following options.
 </p>
 <pre>
-gcc -std=c99 -o a a.c &amp;&amp; ./a
+gcc -std = c99 -o a a.c &amp;&amp; ./a
 
-gcc -std=gnu99 -o a a.c &amp;&amp; ./a
+gcc -std = gnu99 -o a a.c &amp;&amp; ./a
 </pre>
 
   </div>
@@ -233,8 +231,7 @@ gcc -std=gnu99 -o a a.c &amp;&amp; ./a
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

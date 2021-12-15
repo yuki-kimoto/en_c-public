@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>コマンドライン引数 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="C言語でコマンドライン引数を受け取る方法についての解説です。コマンドライン引数は、main関数の引数として受け取ることができます。">
+<title> Command line arguments  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="A description of how to receive command line arguments in C. Command line arguments can be taken as arguments to the  main function.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="コマンドライン引数 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="C言語でコマンドライン引数を受け取る方法についての解説です。コマンドライン引数は、main関数の引数として受け取ることができます。" />
+<meta name="twitter:title" content=" Command line arguments  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="A description of how to receive command line arguments in C. Command line arguments can be taken as arguments to the  main function." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210318082708.html">コマンドライン引数</a></h2>
+<h2><a href="/blog/20210318082708.html"> Command line arguments </a></h2>
 <p>
-  C言語でコマンドライン引数を受け取る方法についての解説です。コマンドライン引数は、<a href="/blog/20210314140759.html">main関数</a>の引数として受け取ることができます。
+  A description of how to receive command line arguments in C. Command line arguments can be taken as arguments to the <a href="/blog/20210314140759.html"> main function</a>.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,57 +100,57 @@
 
 
 <pre>
-int main(int argc, char *argv[]) {
+int main (int argc, char * argv []) {
 
 }
 </pre>
 <p>
-  第一引数は、コマンドライン引数の個数です。int型です。
+  The first argument is the number of command line arguments. It is an int type.
 </p>
 <p>
-  第二引数は「char*」の<a href="/blog/20210129143859.html">配列</a>型です。コマンドライン引数が文字列の配列で渡されます。
+  The second argument is the <a href="/blog/20210129143859.html"> array</a> type of "char *". Command line arguments are passed as an array of strings.
 </p>
 <p>
-  C言語では、実行したプログラム名も、コマンドライン引数の一部として入ってくることに注意しましょう。
+  Note that in C, the name of the executed program is also included as part of the command line arguments.
 </p>
 <p>
-  たとえば
+  for example
 </p>
 <pre>
 ./test apple orange banana
 </pre>
 <p>
-  で実行されるとargvは以下のようになります。
+  When executed with, argv becomes as follows.
 </p>
 <pre>
 "./test", "apple", "orange", "banana"
 </pre>
 <p>
-  argcとargvという名前は何でもよいですが、C言語仕様で記述されている名前で紹介しておきます。
+  The names argc and argv can be anything, but I will introduce them with the names described in the C language specification.
 </p>
-<h3>コマンドライン引数のサンプル</h3>
+<h3> Sample command line arguments </h3>
 <p>
-  コマンドライン引数を受け取って、内容をそのまま出力しています。
+  It receives command line arguments and outputs the contents as they are.
 </p>
 <pre>
 // test.c
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(int argc, char *argv[]) {
-  for (int32_t i = 0; i &lt; argc; i++) {
-    printf("%s\n", argv[i]);
+int main (int argc, char * argv []) {
+  for (int32_t i = 0; i &lt;argc; i ++) {
+    printf("%s\n", argv [i]);
   }
 }
 </pre>
 <p>
-  コンパイルして次のように実行してみましょう。
+  Let's compile and run it like this:
 </p>
 <pre>
 gcc -o test test.c &amp;&amp; ./test apple orange banana
 </pre>
 <p>
-  出力結果は以下のようになります。
+  The output result is as follows.
 </p>
 <pre>
 ./test
@@ -186,8 +184,7 @@ banana
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

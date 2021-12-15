@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>型キャスト - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="型キャストとは、ある型を他の型に変換する構文のことです。">
+<title> Type cast  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="A type cast is a syntax that converts one type to another.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="型キャスト - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="型キャストとは、ある型を他の型に変換する構文のことです。" />
+<meta name="twitter:title" content=" Type cast  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="A type cast is a syntax that converts one type to another." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/syntax.html">
-        <span itemprop="name">基本文法</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Basic grammar </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210217081559.html">型キャスト</a></h2>
+<h2><a href="/blog/20210217081559.html"> Type cast </a></h2>
 <p>
-  型キャストとは、ある型を他の型に変換する構文のことです。
+  A type cast is a syntax that converts one type to another.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -102,48 +100,48 @@
 
 
 <pre>
-(変換後の型名)値
+(Type name after conversion) Value
 </pre>
 <p>
-  int8_t型の値をint32_t型の値に変換する場合は以下のようになります。
+  To convert an int8_t type value to an int32_t type value:
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;
 
-int main(void) {
+int main (void) {
   int8_t num_i8 = 5;
-  int32_t num_i32 = (int32_t)num_i8;
+  int32_t num_i32 = (int32_t) num_i8;
   
   printf("%d\n", num_i32);
 }
 </pre>
 <p>
-  型変換の結果、精度が落ちてしまったり、型に互換性がないため、予期せぬ値になる場合もあるので、注意しましょう。
+  Be aware that type conversions can result in inaccuracies and incompatible types that can lead to unexpected values.
 </p>
 <p>
-  コンパイラによっては、型に互換性がないなど、間違いの可能性が高いものに警告を出すものもあります。
+  Some compilers warn you of things that are likely to be wrong, such as incompatible types.
 </p>
 <p>
-  たとえば<a href="https://en.linux.perlzemi.com/blog/20201216103956.html">gcc</a>で「<a href="/blog/20201130082751.html">int32_t型</a>」を<a href="/blog/20210215090234.html">汎用ポインタ型「void*」</a>に型キャストした場合は、コンパイルは通りますが、警告が発生します。
+  For example, in <a href="https://en.linux.perlzemi.com/blog/20201216103956.html"> gcc</a>, "<a href="/blog/20201130082751.html"> int32_t type</a> If you typecast ">" to <a href="/blog/20210215090234.html"> general-purpose pointer type "void *"</a>, the compilation will pass, but a warning will be issued.
 </p>
 <pre>
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   int32_t num = 5;
-  void* ptr = (void*)num;
+  void * ptr = (void *) num;
 }
 </pre>
 <p>
-  警告内容。
+  Warning content.
 </p>
 <pre>
-a.c:5: warning: cast to pointer from integer of different size
+a.c: 5: warning: cast to pointer from integer of different size
 </pre>
-<h3>暗黙の型変換と型変換規則</h3>
+<h3> Implicit type conversion and type conversion rules </h3>
 <p>
-  型変換の結果がどうなるかとういことは、暗黙の型変換と型変換規則で解説します。
+  What happens to the result of type conversion is explained in Implicit type conversion and type conversion rules.
 </p>
 
   </div>
@@ -171,8 +169,7 @@ a.c:5: warning: cast to pointer from integer of different size
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

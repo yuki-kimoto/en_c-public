@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>ftell関数 - ファイルストリームの位置指定子の位置を取得 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="ftell関数を使うと、ファイルストリームの位置指定子が指す位置を取得できます。stdio.hヘッダを読み込むと使えます。">
+<title> ftell function-get the position of the file stream position specifier  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="You can use the ftell function to get the position pointed to by the file stream position specifier. You can use it by reading the  stdio.h header.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="ftell関数 - ファイルストリームの位置指定子の位置を取得 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="ftell関数を使うと、ファイルストリームの位置指定子が指す位置を取得できます。stdio.hヘッダを読み込むと使えます。" />
+<meta name="twitter:title" content=" ftell function-get the position of the file stream position specifier  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="You can use the ftell function to get the position pointed to by the file stream position specifier. You can use it by reading the  stdio.h header." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,34 +60,34 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library.html">
-        <span itemprop="name">C標準ライブラリ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C standard library </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library/stdio.html">
-        <span itemprop="name">stdio.h</span>
-      </a>
-      <meta itemprop="position" content="3" />
+        <span itemprop = "name"> stdio.h </span>
+     </a>
+      <meta itemprop = "position" content = "3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210526085256.html">ftell関数 - ファイルストリームの位置指定子の位置を取得</a></h2>
+<h2><a href="/blog/20210526085256.html"> ftell function-get the position of the file stream position specifier </a></h2>
 <p>
-  ftell関数を使うと、ファイルストリームの位置指定子が指す位置を取得できます。<a href="/blog/20210418083246.html">stdio.h</a>ヘッダを読み込むと使えます。
+  You can use the ftell function to get the position pointed to by the file stream position specifier. You can use it by reading the <a href="/blog/20210418083246.html"> stdio.h</a> header.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -109,14 +107,14 @@
 
 <pre>
 #include &lt;stdio.h&gt;
-long int ftell(FILE *fp);
+long int ftell (FILE * fp);
 </pre>
 <p>
-  引数は、ファイルストリームです。戻り値は、ファイルストリームの位置指定子が指す位置です。
+  The argument is a file stream. The return value is the position pointed to by the file stream's position specifier.
 </p>
-<h3>ファイルサイズを取得するサンプル</h3>
+<h3> Sample to get the file size </h3>
 <p>
-  fseek関数とftell関数を使って、ファイルサイズを取得するサンプルを<a href="/blog/20210525075439.html">fseek関数</a>の記事で書きましたので参考にしてください。
+  Please refer to the <a href="/blog/20210525075439.html"> fseek function</a> article for a sample to get the file size using the fseek and ftell functions.
 </p>
 
   </div>
@@ -144,8 +142,7 @@ long int ftell(FILE *fp);
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

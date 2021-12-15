@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>分割コンパイル手法の解説 - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="C言語の分割コンパイル手法を解説します。コンパイラにはgccを使用します。実務で十分に使える分割コンパイル手法です。分割コンパイル手法とは、ここでは、アプリケーションのソースファイル、ライブラリのヘッダファイル、ライブラリのソースファイルに分けて記述し、それらをコンパイルし、リンクして実行ファイルを生成する手法のことをいいます。">
+<title> Explanation of split compilation method  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="I will explain the division compilation method of C language. Use  gcc for the compiler. This is a split compilation method that can be used in practice. The split compilation method is described here by dividing it into the application source file, library header file, and library source file, and  compiling them. ,  Link to generate an executable file.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="分割コンパイル手法の解説 - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="C言語の分割コンパイル手法を解説します。コンパイラにはgccを使用します。実務で十分に使える分割コンパイル手法です。分割コンパイル手法とは、ここでは、アプリケーションのソースファイル、ライブラリのヘッダファイル、ライブラリのソースファイルに分けて記述し、それらをコンパイルし、リンクして実行ファイルを生成する手法のことをいいます。" />
+<meta name="twitter:title" content=" Explanation of split compilation method  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="I will explain the division compilation method of C language. Use  gcc for the compiler. This is a split compilation method that can be used in practice. The split compilation method is described here by dividing it into the application source file, library header file, and library source file, and  compiling them. ,  Link to generate an executable file." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,28 +60,28 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/compile.html">
-        <span itemprop="name">コンパイル</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Compile </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210622081112.html">分割コンパイル手法の解説</a></h2>
+<h2><a href="/blog/20210622081112.html"> Explanation of split compilation method </a></h2>
 <p>
-  C言語の分割コンパイル手法を解説します。コンパイラには<a href="https://en.linux.perlzemi.com/blog/20201216103956.html">gcc</a>を使用します。実務で十分に使える分割コンパイル手法です。分割コンパイル手法とは、ここでは、アプリケーションのソースファイル、ライブラリのヘッダファイル、ライブラリのソースファイルに分けて記述し、それらを<a href="/blog/20201214140830.html">コンパイル</a>し、<a href="/blog/20201215105104.html">リンクして実行ファイルを生成</a>する手法のことをいいます。
+  I will explain the division compilation method of C language. Use <a href="https://en.linux.perlzemi.com/blog/20201216103956.html"> gcc</a> for the compiler. This is a split compilation method that can be used in practice. The split compilation method is described here by dividing it into the application source file, library header file, and library source file, and <a href="/blog/20201214140830.html"> compiling</a> them. , <a href="/blog/20201215105104.html"> Link to generate an executable file</a>.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -101,66 +99,66 @@
 </div>
 
 
-<h3>分割コンパイル手法の概要</h3>
+<h3> Overview of split compilation method </h3>
 <p>
-  分割コンパイル手法の概要について、解説します。
+  I will explain the outline of the split compilation method.
 </p>
-<h4>アプリケーションのソースファイル</h4>
+<h4> Application source files </h4>
 <p>
-  アプリケーションのソースファイルとは<a href="/blog/20210314140759.html">main関数</a>が含まれるソースファイルのことです。アプリケーションは、ここから実行されます。
-</p>
-<p>
-  アプリケーションのソースファイルを、コンパイルするためには、アプリケーションで利用されている関数や構造体が、<a href="/blog/20210203153019.html">インクルード</a>したヘッダに存在する必要があります。
+  The application source file is the source file that contains the <a href="/blog/20210314140759.html"> main function</a>. The application runs from here.
 </p>
 <p>
-  アプリケーションのソースファイルのコンパイルを行うときには、関数や構造体などの名前の解決だけが行われればよく、他のライブラリのソースファイルを知る必要はありません。リンクする場合には、ライブラリのソースファイルをコンパイルし、オブジェクトファイルになったものが、必要になります。
-</p>
-<h4>ライブラリのヘッダファイル</h4>
-<p>
-  自作のライブラリのヘッダファイルです。<a href="/blog/20210208155548.html">構造体定義</a>、<a href="/blog/20210204153019.html">typedef文</a>、<a href="/blog/20210120133501.html">列挙型</a>、<a href="/blog/20210302083009.html">定数マクロ</a>、<a href="/blog/20210124140655.html">関数マクロ</a>、<a href="/blog/20210625091605.html">関数プロトタイプ宣言</a>は、ヘッダファイルで行います。
+  In order to compile the application source files, the functions and structures used in the application must be present in the <a href="/blog/20210203153019.html"> included</a> header. ..
 </p>
 <p>
-  アプリケーションのソースファイル、または、ライブラリのソースファイルの中で、<a href="/blog/20210203153019.html">インクルード</a>されます。
+  When compiling the source files of your application, you only need to resolve the names of functions, structs, etc., and you don't need to know the source files of other libraries. If you want to link, you will need to compile the source files of the library into object files.
 </p>
-<h4>ライブラリのソースファイル</h4>
+<h4> Library header file </h4>
 <p>
-  自作のライブラリのソースファイルです。ライブラリのソースファイルの中では、<a href="/blog/20210214090234.html">関数定義</a>を行います。関数のプロトタイプ宣言は、ヘッダファイルで行います。
-</p>
-<p>
-  ライブラリのソースファイルの中では、ライブラリのヘッダファイルを<a href="/blog/20210203153019.html">インクルード</a>します。
+  This is the header file of my own library. <a href="/blog/20210208155548.html"> Structure definition</a>, <a href="/blog/20210204153019.html"> typedef statement</a>, <a href="/blog/20210120133501" .html "> enums</a>, <a href="/blog/20210302083009.html"> constant macros</a>, <a href="/blog/20210124140655.html"> function macros</a> , <a href="/blog/20210625091605.html"> Function prototype declaration</a> is done in the header file.
 </p>
 <p>
-  ライブラリのソースファイルを、コンパイルするためには、ライブラリのソースファイルで利用されている関数や構造体が、インクルードしたヘッダに存在する必要があります。
+  It is <a href="/blog/20210203153019.html"> included</a> in the source file of the application or the source file of the library.
+</p>
+<h4> Library source files </h4>
+<p>
+  This is the source file of my own library. In the source file of the library, <a href="/blog/20210214090234.html"> function definition</a> is performed. Function prototype declarations are made in the header file.
 </p>
 <p>
-  ライブラリのソースファイルのコンパイルを行うときには、関数や構造体などの名前の解決だけが行われればよく、他のライブラリのソースファイルを知る必要はありません。リンクする場合には、ライブラリのソースファイルをコンパイルし、オブジェクトファイルになったものが、必要になります。
-</p>
-<h4>分割コンパイルの手順</h4>
-<p>
-  分割コンパイルの手順です。
+  In the library source file, <a href="/blog/20210203153019.html"> include</a> the library header file.
 </p>
 <p>
-  1.ライブラリのソースファイルをコンパイルして、オブジェクトファイルを生成する。すべての、ライブラリのソースファイルで行う。
+  In order to compile the library source file, the functions and structures used in the library source file must be present in the included header.
 </p>
 <p>
-  2.アプリケーションのソースファイルをコンパイルして、オブジェクトファイルを生成する。
+  When compiling the source files of a library, you only need to resolve the names of functions, structs, etc., and you don't need to know the source files of other libraries. If you want to link, you will need to compile the source files of the library into object files.
+</p>
+<h4> Split compilation procedure </h4>
+<p>
+  This is the procedure for split compilation.
 </p>
 <p>
-  3.上記で生成したすべてのオブジェクトファイルをリンクして、実行ファイルを生成する。
+  1. Compile the library source files to generate object files. All done in the library source files.
 </p>
 <p>
-  ヘッダファイルは「include」というディレクトリの中に格納することにします。アプリケーションのソースファイルとライブラリのソースファイルは「src」というディレクトリの中に格納することにします。ヘッダファイルでは、<a href="/blog/20210201153503.html">インクルードガード</a>を行います。
-</p>
-<h3>分割コンパイルのサンプル</h3>
-<p>
-  分割コンパイルのサンプルです。
-</p>
-<h4>アプリケーションのソースファイル</h4>
-<p>
-  アプリケーションのソースファイル「myapp.c」です。
+  2. Compile the application source file to generate an object file.
 </p>
 <p>
-  <b>myapp.c</b>
+  3. Link all the object files generated above to generate an executable file.
+</p>
+<p>
+  The header file will be stored in a directory called "include". We will store the application source files and library source files in a directory called "src". In the header file, <a href="/blog/20210201153503.html"> include guard</a> is performed.
+</p>
+<h3> Split compilation sample </h3>
+<p>
+  This is a sample of split compilation.
+</p>
+<h4> Application source files </h4>
+<p>
+  The source file "myapp.c" for the application.
+</p>
+<p>
+  <b> myapp.c </b>
 </p>
 <pre>
 #include &lt;stdio.h&gt;
@@ -168,18 +166,18 @@
 #include "mylib1.h"
 #include "mylib2.h"
 
-int main(void) {
+int main (void) {
   
-  mylib1_print();
-  mylib2_print();
+  mylib1_print ();
+  mylib2_print ();
 }
 </pre>
-<h4>ライブラリのヘッダファイル</h4>
+<h4> Library header file </h4>
 <p>
-  ライブラリのヘッダファイル「mylib1.h」と「mylib2.h」です。
+  The library header files "mylib1.h" and "mylib2.h".
 </p>
 <p>
-  <b>mylib1.h</b>
+  <b> mylib1.h </b>
 </p>
 <pre>
 #ifndef MYLIB1_H
@@ -190,7 +188,7 @@ void mylib1_print (void);
 #endif
 </pre>
 <p>
-  <b>mylib2.h</b>
+  <b> mylib2.h </b>
 </p>
 <pre>
 #ifndef MYLIB2_H
@@ -200,12 +198,12 @@ void mylib2_print (void);
 
 #endif
 </pre>
-<h4>ライブラリのソースファイル</h4>
+<h4> Library source files </h4>
 <p>
-  ライブラリのソースファイル「mylib1.c」と「mylib2.c」です。
+  The library source files "mylib1.c" and "mylib2.c".
 </p>
 <p>
-  <b>mylib1.c</b>
+  <b> mylib1.c </b>
 </p>
 <pre>
 #include &lt;stdio.h&gt;
@@ -217,7 +215,7 @@ void mylib1_print (void) {
 }
 </pre>
 <p>
-  <b>mylib2.c</b>
+  <b> mylib2.c </b>
 </p>
 <pre>
 #include &lt;stdio.h&gt;
@@ -228,64 +226,64 @@ void mylib2_print (void) {
   printf("mylib2_print\n");
 }
 </pre>
-<h4>コンパイル</h4>
+<h4> Compile </h4>
 <p>
-  アプリケーションのソースファイルと、ライブラリファイルを、それぞれ<a href="/blog/20201214140830.html">コンパイルし</a>ます。ヘッダファイルの場所をオプション「-I」で指定します。
+  <a href="/blog/20201214140830.html"> Compile</a> the application source file and the library file respectively. Specify the location of the header file with the option "-I".
 </p>
 <pre>
-gcc -Iinclude -c -o myapp.o src/myapp.c
-gcc -Iinclude -c -o mylib1.o src/mylib1.c
-gcc -Iinclude -c -o mylib2.o src/mylib2.c
+gcc -Iinclude -c -o myapp.o src / myapp.c
+gcc -Iinclude -c -o mylib1.o src / mylib1.c
+gcc -Iinclude -c -o mylib2.o src / mylib2.c
 </pre>
 <p>
-  コンパイルされるとオブジェクトファイルになります。オブジェクトファイルは機械語になっていますが、まだ実行ファイルではありません。
+  When compiled, it becomes an object file. The object file is in machine language, but it is not an executable yet.
 </p>
-<h4>リンク - 実行ファイルの作成</h4>
+<h4> Link-Create executable file </h4>
 <p>
-  <a href="/blog/20201215105104.html">リンク</a>して実行ファイルを作成します。関数名などのシンボルが、実体に結びつけられます。
+  <a href="/blog/20201215105104.html"> Link</a> to create an executable file. Symbols such as function names are tied to the entity.
 </p>
 <pre>
 gcc -o myapp myapp.o mylib1.o mylib2.o
 </pre>
-<h4>実行</h4>
+<h4> Execution </h4>
 <p>
-  実行ファイルを<a href="/blog/20201216101527.html">実行</a>してみましょう。
+  Let's <a href="/blog/20201216101527.html"> execute</a> the executable file.
 </p>
 <pre>
 ./myapp
 </pre>
 <p>
-  出力結果です。
+  This is the output result.
 </p>
 <pre>
 mylib1_print
 mylib2_print
 </pre>
 <p>
-  これで、C言語の分割コンパイル手法をマスターできました。ライブラリファイルが増えても同じです。
+  You have now mastered the C language split compilation technique. It is the same even if the number of library files increases.
 </p>
 <p>
-  今回の例では、ヘッダには関数のプロトタイプ宣言、ソースファイルには関数定義しか行っていませんが、大事なことは、ヘッダに何を定義すべきかを、きっちり理解することです。
+  In this example, only the function prototype declaration is made in the header and the function definition is made in the source file, but the important thing is to understand exactly what should be defined in the header.
 </p>
 <p>
-  ヘッダファイルでは、<a href="/blog/20210208155548.html">構造体定義</a>、<a href="/blog/20210204153019.html">typedef文</a>、<a href="/blog/20210120133501.html">列挙型</a>、<a href="/blog/20210302083009.html">定数マクロ</a>、<a href="/blog/20210124140655.html">関数マクロ</a>、関数のプロトタイプ宣言を行います。
+  In the header file, <a href="/blog/20210208155548.html"> structure definition</a>, <a href="/blog/20210204153019.html"> typedef statement</a>, <a href=" /blog/20210120133501.html"> Enumeration</a>, <a href="/blog/20210302083009.html"> Constant macro</a>, <a href="/blog/20210124140655.html"> Function macro</a>, declare the function as a prototype.
 </p>
 <p>
-  ソースファイルでは、<a href="/blog/20210214090234.html">関数定義</a>を行います。
+  In the source file, <a href="/blog/20210214090234.html"> function definition</a> is performed.
 </p>
-<h3>型の循環参照を避ける方法</h3>
+<h3> How to avoid circular references of type </h3>
 <p>
-  上記の分割コンパイル方法で、ひとつ問題になるのは、型の循環参照が発生してしまうということです。ライブラリが相互参照することは、実務のプログラミングで、普通に起こりうることですが、これを解決する手段に、型宣言ヘッダという手法があります。ヘッダファイル間の読み込みを減らし、循環参照を解決できます。
+  One problem with the above split compilation method is that it creates a circular reference of the type. Cross-references between libraries are a common occurrence in practical programming, and one way to solve this is with a technique called type declaration headers. You can reduce the reading between header files and resolve circular references.
 </p>
 <ul>
-  <li><a href="/blog/20210202153503.html">型宣言ヘッダ</a></li>
+  <li> <a href="/blog/20210202153503.html"> Type declaration header</a> </li>
 </ul>
-<h3>オブジェクト指向C言語</h3>
+<h3> Object-oriented C language </h3>
 <p>
-  分割コンパイルの応用としてオブジェクト指向C言語も紹介しています。
+  We also introduce the object-oriented C language as an application of split compilation.
 </p>
 <ul>
-  <li><a href="/blog/20210212090234.html">オブジェクト指向C言語</a></li>
+  <li> <a href="/blog/20210212090234.html"> Object-oriented C language</a> </li>
 </ul>
 
   </div>
@@ -313,8 +311,7 @@ mylib2_print
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

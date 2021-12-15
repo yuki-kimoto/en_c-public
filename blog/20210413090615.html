@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>strcmp関数 - 文字列を比較する - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="strcmp関数は、文字列を比較する関数です。辞書順で「s1」が「s2」より大きい場合は、正の数を、同じ場合は0を、小さい場合は負の数を返します。">
+<title> strcmp function-Compare strings  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="The  strcmp function  is a function that compares strings. Returns a positive number if "s1" is greater than "s2" in lexicographical order, 0 if they are the same, and a negative number if they are smaller.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="strcmp関数 - 文字列を比較する - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="strcmp関数は、文字列を比較する関数です。辞書順で「s1」が「s2」より大きい場合は、正の数を、同じ場合は0を、小さい場合は負の数を返します。" />
+<meta name="twitter:title" content=" strcmp function-Compare strings  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="The  strcmp function  is a function that compares strings. Returns a positive number if "s1" is greater than "s2" in lexicographical order, 0 if they are the same, and a negative number if they are smaller." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,34 +60,34 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library.html">
-        <span itemprop="name">C標準ライブラリ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C standard library </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library/string.html">
-        <span itemprop="name">string.h</span>
-      </a>
-      <meta itemprop="position" content="3" />
+        <span itemprop = "name"> string.h </span>
+     </a>
+      <meta itemprop = "position" content = "3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210413090615.html">strcmp関数 - 文字列を比較する</a></h2>
+<h2><a href="/blog/20210413090615.html"> strcmp function-Compare strings </a></h2>
 <p>
-  <b>strcmp関数</b>は、文字列を比較する関数です。辞書順で「s1」が「s2」より大きい場合は、正の数を、同じ場合は0を、小さい場合は負の数を返します。
+  The <b> strcmp function </b> is a function that compares strings. Returns a positive number if "s1" is greater than "s2" in lexicographical order, 0 if they are the same, and a negative number if they are smaller.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -108,28 +106,28 @@
 
 
 <p>
-  「<a href="/blog/20210303101711.html">string.h</a>」をインクルードすると使えます。
+  You can use it by including "<a href="/blog/20210303101711.html"> string.h</a>".
 </p>
 <pre>
 #include &lt;string.h&gt;
-int strcmp(const char *s1, const char *s2);
+int strcmp (const char * s1, const char * s2);
 </pre>
 <p>
-  <a href="/blog/20210331101342.html">C言語の文字列</a>は「\0」で終わるという約束事があります。strcmp関数は、この約束事を前提として、文字列の比較を行います。
+  There is a promise that <a href="/blog/20210331101342.html"> C string</a> ends with "\ 0". The strcmp function assumes this convention and compares strings.
 </p>
-<h3>strcmp関数のサンプル</h3>
+<h3> Strcmp function sample </h3>
 <p>
-  strcmp関数で文字列を比較するサンプルです。一致した場合に、Matchと表示します。
+  This is a sample that compares strings with the strcmp function. If there is a match, Match is displayed.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
 
-int main(void) {
-  const char* message = "Hello";
+int main (void) {
+  const char * message = "Hello";
   
-  // 文字列を比較
-  if (strcmp(message, "Hello") == 0) {
+  // Compare strings
+  if (strcmp (message, "Hello") == 0) {
     printf("Match\n");
   }
   else {
@@ -163,8 +161,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

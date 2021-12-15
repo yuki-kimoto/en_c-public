@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-FTCP0SKTW5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,12 +33,12 @@
   gtag('config', 'G-FTCP0SKTW5');
 </script>
 
-<title>fputc関数 - ファイルストリームに1文字書き込む - C Language Zemi -  All Examples are support C99 C Language</title>
-<meta name="description" content="fputc関数を使うと、ファイルストリームに1文字書き込むことができます。">
+<title> fputc function-write one character to the file stream  - C Language Zemi -  All Examples are support C99 C Language</title>
+<meta name="description" content="You can use the fputc function to write a single character to a file stream.">
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="fputc関数 - ファイルストリームに1文字書き込む - C Language Zemi -  All Examples are support C99 C Language" />
-<meta name="twitter:description" content="fputc関数を使うと、ファイルストリームに1文字書き込むことができます。" />
+<meta name="twitter:title" content=" fputc function-write one character to the file stream  - C Language Zemi -  All Examples are support C99 C Language" />
+<meta name="twitter:description" content="You can use the fputc function to write a single character to a file stream." />
 <meta name="twitter:image" content="https://en.c.perlzemi.com/images/twitter_card_large_kaeru.png" />
 
 
@@ -62,34 +60,34 @@
     
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">C言語</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> C language </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library.html">
-        <span itemprop="name">C標準ライブラリ</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> C standard library </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/library/stdio.html">
-        <span itemprop="name">stdio.h</span>
-      </a>
-      <meta itemprop="position" content="3" />
+        <span itemprop = "name"> stdio.h </span>
+     </a>
+      <meta itemprop = "position" content = "3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210614143712.html">fputc関数 - ファイルストリームに1文字書き込む</a></h2>
+<h2><a href="/blog/20210614143712.html"> fputc function-write one character to the file stream </a></h2>
 <p>
-  fputc関数を使うと、ファイルストリームに1文字書き込むことができます。
+  You can use the fputc function to write a single character to a file stream.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -109,54 +107,54 @@
 
 <pre>
 #include &lt;stdio.h&gt;
-int fputc(int c, FILE *fp);
+int fputc (int c, FILE * fp);
 </pre>
 <p>
-  第一引数は、書き込みたい文字です。第二引数は、ファイルストリームです。
+  The first argument is the character you want to write. The second argument is the file stream.
 </p>
-<h3>ファイルを1文字づつ書き込むサンプル</h3>
+<h3> Sample to write a file character by character </h3>
 <p>
-  fputc関数を使って、ファイルを1文字づつ書き込むサンプルです。
+  This is a sample to write a file character by character using the fputc function.
 </p>
 <pre>
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;stdint.h&gt;
 
-int main(void) {
+int main (void) {
   
-  // ファイルを読み込みモードで開く
-  const char* in_file = "input.txt";
-  FILE* in_fp = fopen(in_file, "r");
+  // Open the file in read mode
+  const char * in_file = "input.txt";
+  FILE * in_fp = fopen (in_file, "r");
   if (in_fp == NULL) {
-    fprintf(stderr, "Can't open file %s\n", in_file);
-    exit(1);
+    fprintf (stderr, "Can't open file%s\n", in_file);
+    exit (1);
   }
 
-  // ファイルを書き込みモードで開く
-  const char* out_file = "output.txt";
-  FILE* out_fp = fopen(out_file, "w");
+  // Open the file in write mode
+  const char * out_file = "output.txt";
+  FILE * out_fp = fopen (out_file, "w");
   if (out_fp == NULL) {
-    fprintf(stderr, "Can't open file %s\n", out_file);
-    exit(1);
+    fprintf (stderr, "Can't open file%s\n", out_file);
+    exit (1);
   }
   
-  // 読み込んで、ファイルにに出力
+  // Read and output to file
   int32_t ch;
-  while(ch = fgetc(in_fp)) {
-    // EOFが返ってきた場合
+  while (ch = fgetc (in_fp)) {
+    // If EOF is returned
     if (ch == EOF) {
-      // ファイルの末尾かチェックする
-      if (feof(in_fp)) {
+      // Check if it is the end of the file
+      if (feof (in_fp)) {
         break;
       }
     }
-    fputc(ch, out_fp);
+    fputc (ch, out_fp);
   }
   
-  // fclose関数でファイルを閉じる
-  fclose(in_fp);
-  fclose(out_fp);
+  // Close the file with the fclose function
+  fclose (in_fp);
+  fclose (out_fp);
 }
 </pre>
 
@@ -185,8 +183,7 @@ int main(void) {
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"
